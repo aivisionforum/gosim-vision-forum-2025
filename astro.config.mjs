@@ -6,7 +6,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://gosimfoundation.github.io',
-  base: '/gosim-vision-forum-2025',
   i18n: {
     defaultLocale: "zh",
     locales: ["zh", "en"],
