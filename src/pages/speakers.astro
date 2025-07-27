@@ -1,0 +1,603 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { t } from '../i18n/translations.js';
+
+const locale = 'zh';
+---
+
+<Layout title="参会者 - GOSIM AI Vision Forum">
+	<nav class="top-nav">
+		<div class="nav-container">
+			<div class="logo">
+				<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
+			</div>
+			<div class="nav-links">
+				<a href="/" class="nav-link">{t('nav.home', locale)}</a>
+				<a href="/about" class="nav-link">{t('nav.about', locale)}</a>
+				<a href="/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
+				<a href="/speakers" class="nav-link active">{t('nav.speakers', locale)}</a>
+				<a href="/en/speakers" class="nav-link lang-switch">English</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section class="page-header">
+			<div class="container">
+				<h1>参会者 Participants</h1>
+				<p>汇聚全球顶尖高校、研究机构及企业代表</p>
+			</div>
+		</section>
+
+		<section class="participants-overview">
+			<div class="container">
+				<div class="overview-content">
+					<h2>参会群体 Target Participants</h2>
+					<p>本次论坛采用邀请制、非公开、小规模的深度交互机制，预计70-100人参与。我们将汇聚来自不同领域的思想者、实践者、政策制定者和用户，营造跨领域融合与"不同认知结构"的对话场景。</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="participant-categories">
+			<div class="container">
+				<h2>核心参会群体 Core Participant Groups</h2>
+				<div class="categories-grid">
+					<div class="category-card">
+						<div class="category-icon">🎓</div>
+						<h3>学术机构 Academic Institutions</h3>
+						<div class="category-details">
+							<h4>参与方向：</h4>
+							<ul>
+								<li>认知科学教授</li>
+								<li>教育学专家</li>
+								<li>伦理学研究者</li>
+								<li>学校校长</li>
+								<li>教育政策研究者</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">认知科学</span>
+								<span class="focus-tag">教育革新</span>
+								<span class="focus-tag">伦理研究</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="category-card">
+						<div class="category-icon">🔬</div>
+						<h3>技术开发者 Technology Developers</h3>
+						<div class="category-details">
+							<h4>参与方向：</h4>
+							<ul>
+								<li>大模型首席科学家</li>
+								<li>开源社区负责人</li>
+								<li>AIGC工具创作者</li>
+								<li>AI研发工程师</li>
+								<li>技术架构师</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">大语言模型</span>
+								<span class="focus-tag">开源创新</span>
+								<span class="focus-tag">AIGC技术</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="category-card">
+						<div class="category-icon">🏢</div>
+						<h3>产业代表 Industry Representatives</h3>
+						<div class="category-details">
+							<h4>参与方向：</h4>
+							<ul>
+								<li>AI产业核心公司高管</li>
+								<li>创新公司创始人</li>
+								<li>产品经理</li>
+								<li>商业战略专家</li>
+								<li>投资人</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">产业落地</span>
+								<span class="focus-tag">商业模式</span>
+								<span class="focus-tag">创新应用</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="category-card">
+						<div class="category-icon">⚖️</div>
+						<h3>政策与伦理 Policy & Ethics</h3>
+						<div class="category-details">
+							<h4>参与方向：</h4>
+							<ul>
+								<li>政府科技顾问</li>
+								<li>数字政策专家</li>
+								<li>AI产业创新研究员</li>
+								<li>治理研究员</li>
+								<li>法律专家</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">政策制定</span>
+								<span class="focus-tag">伦理治理</span>
+								<span class="focus-tag">法律框架</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="category-card">
+						<div class="category-icon">🎨</div>
+						<h3>艺术与人文 Arts & Humanities</h3>
+						<div class="category-details">
+							<h4>参与方向：</h4>
+							<ul>
+								<li>数字艺术家</li>
+								<li>作家与文学创作者</li>
+								<li>博物馆创新负责人</li>
+								<li>出版机构负责人</li>
+								<li>文化研究学者</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">文化创造</span>
+								<span class="focus-tag">艺术创新</span>
+								<span class="focus-tag">人文价值</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="forum-format">
+			<div class="container">
+				<h2>论坛形式 Forum Format</h2>
+				<div class="format-grid">
+					<div class="format-card">
+						<h3>主题演讲 Keynote Speeches</h3>
+						<p>邀请各领域顶尖专家进行主题分享，深入探讨AI在不同维度的价值创造与挑战</p>
+						<ul>
+							<li>60分钟深度分享</li>
+							<li>跨学科视角</li>
+							<li>理论与实践结合</li>
+						</ul>
+					</div>
+
+					<div class="format-card">
+						<h3>闭门深度圆桌 Closed Roundtables</h3>
+						<p>每组话题8–10人参与的小规模深度讨论，确保每位参与者都能充分表达观点</p>
+						<ul>
+							<li>小组深度交流</li>
+							<li>多元观点碰撞</li>
+							<li>务实问题导向</li>
+						</ul>
+					</div>
+
+					<div class="format-card">
+						<h3>AIGC Spotlight 展示</h3>
+						<p>"技术产品" 与 "艺术创意" 双单元的全球作品展示，构建跨越技术逻辑与人文视角的思想共同体</p>
+						<ul>
+							<li>作品展示与评选</li>
+							<li>创作者分享</li>
+							<li>技术与艺术融合</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="participation-criteria">
+			<div class="container">
+				<div class="criteria-content">
+					<h2>参与标准 Participation Criteria</h2>
+					<div class="criteria-grid">
+						<div class="criteria-item">
+							<h3>🎯 专业背景</h3>
+							<p>在AI相关领域具有深厚的专业背景或丰富的实践经验</p>
+						</div>
+						<div class="criteria-item">
+							<h3>🌐 国际视野</h3>
+							<p>具备跨文化理解能力，能够从全球视角思考AI发展问题</p>
+						</div>
+						<div class="criteria-item">
+							<h3>💡 创新思维</h3>
+							<p>对AI未来发展具有前瞻性思考和独特见解</p>
+						</div>
+						<div class="criteria-item">
+							<h3>🤝 协作精神</h3>
+							<p>愿意开放交流，参与跨领域深度对话</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="networking-opportunities">
+			<div class="container">
+				<h2>交流机会 Networking Opportunities</h2>
+				<div class="networking-grid">
+					<div class="networking-card">
+						<h3>🍽️ 迎宾早餐 & 晚餐交流</h3>
+						<p>在轻松的用餐环境中进行初步交流和深度讨论，建立持久的合作关系</p>
+					</div>
+					<div class="networking-card">
+						<h3>☕ 茶歇自由讨论</h3>
+						<p>主题演讲间隙的自由交流时间，延续话题讨论，促进思想碰撞</p>
+					</div>
+					<div class="networking-card">
+						<h3>🎯 专题圆桌对话</h3>
+						<p>围绕具体议题的小组讨论，让不同背景的参与者深入交流专业见解</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="invitation-info">
+			<div class="container">
+				<div class="invitation-card">
+					<h2>邀请机制 Invitation Process</h2>
+					<p>本次论坛采用严格的邀请制，确保参会者的质量和讨论的深度。我们将通过以下渠道识别和邀请合适的参会者：</p>
+					<div class="invitation-channels">
+						<div class="channel">
+							<strong>学术推荐</strong> - 通过顶尖高校和研究机构推荐
+						</div>
+						<div class="channel">
+							<strong>行业提名</strong> - 由知名企业和组织提名优秀代表
+						</div>
+						<div class="channel">
+							<strong>社区推举</strong> - 开源社区和专业社群推举活跃贡献者
+						</div>
+						<div class="channel">
+							<strong>专家推荐</strong> - 由论坛组委会专家推荐合适人选
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+</Layout>
+
+<style>
+	/* Navigation styles now use global CSS */
+	
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Page header styles now use global CSS */
+
+	.participants-overview {
+		padding: 3rem 2rem;
+		background: #f8f9fa;
+	}
+
+	.overview-content {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.overview-content h2 {
+		color: #2c3e50;
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.overview-content p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: #555;
+	}
+
+	.participant-categories {
+		padding: 4rem 2rem;
+		background: white;
+	}
+
+	.participant-categories h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.categories-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.category-card {
+		background: #f8f9fa;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.category-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.category-icon {
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.category-card h3 {
+		color: #2c3e50;
+		font-size: 1.4rem;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.category-details h4 {
+		color: #e67e22;
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+	}
+
+	.category-details ul {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.category-details li {
+		padding: 0.4rem 0;
+		color: #666;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.category-details li:before {
+		content: "•";
+		position: absolute;
+		left: 0;
+		color: #e67e22;
+		font-weight: bold;
+	}
+
+	.focus-areas {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	.focus-tag {
+		background: #fff3cd;
+		color: #856404;
+		padding: 0.3rem 0.8rem;
+		border-radius: 15px;
+		font-size: 0.8rem;
+		border: 1px solid #ffeaa7;
+	}
+
+	.forum-format {
+		padding: 4rem 2rem;
+		background: #f8f9fa;
+	}
+
+	.forum-format h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.format-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.format-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid #e67e22;
+	}
+
+	.format-card h3 {
+		color: #2c3e50;
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+	}
+
+	.format-card p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.format-card ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.format-card li {
+		padding: 0.4rem 0;
+		color: #555;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.format-card li:before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: #27ae60;
+		font-weight: bold;
+	}
+
+	.participation-criteria {
+		padding: 4rem 2rem;
+		background: white;
+	}
+
+	.criteria-content h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.criteria-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.criteria-item {
+		text-align: center;
+		padding: 2rem;
+		background: #f8f9fa;
+		border-radius: 15px;
+		border: 2px solid transparent;
+		transition: border-color 0.3s ease;
+	}
+
+	.criteria-item:hover {
+		border-color: #e67e22;
+	}
+
+	.criteria-item h3 {
+		color: #2c3e50;
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.criteria-item p {
+		color: #666;
+		line-height: 1.6;
+	}
+
+	.networking-opportunities {
+		padding: 4rem 2rem;
+		background: #f8f9fa;
+	}
+
+	.networking-opportunities h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.networking-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.networking-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.networking-card h3 {
+		color: #2c3e50;
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.networking-card p {
+		color: #666;
+		line-height: 1.6;
+	}
+
+	.invitation-info {
+		padding: 4rem 2rem;
+		background: white;
+	}
+
+	.invitation-card {
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.invitation-card h2 {
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 2rem;
+	}
+
+	.invitation-card p {
+		color: #555;
+		font-size: 1.1rem;
+		line-height: 1.8;
+		margin-bottom: 2.5rem;
+	}
+
+	.invitation-channels {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.channel {
+		background: #f8f9fa;
+		padding: 1.5rem;
+		border-radius: 10px;
+		border-left: 4px solid #e67e22;
+		text-align: left;
+	}
+
+	.channel strong {
+		color: #2c3e50;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.lang-switch {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.nav-container {
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.nav-links {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 1rem;
+		}
+
+		.logo span {
+			font-size: 1.1rem;
+		}
+
+		.logo img {
+			height: 32px;
+		}
+
+		.categories-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.format-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.criteria-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.networking-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.invitation-channels {
+			grid-template-columns: 1fr;
+		}
+
+		/* Page header responsive styles now use global CSS */
+	}
+</style>

@@ -1,0 +1,538 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t } from '../../i18n/translations.js';
+
+const locale = 'en';
+---
+
+<Layout title="Participants - GOSIM AI Vision Forum">
+	<nav class="top-nav">
+		<div class="nav-container">
+			<div class="logo">
+				<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
+			</div>
+			<div class="nav-links">
+				<a href="/en/" class="nav-link">{t('nav.home', locale)}</a>
+				<a href="/en/about" class="nav-link">{t('nav.about', locale)}</a>
+				<a href="/en/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
+				<a href="/en/speakers" class="nav-link active">{t('nav.speakers', locale)}</a>
+				<a href="/speakers" class="nav-link lang-switch">中文</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section class="page-header">
+			<div class="container">
+				<h1>{t('speakers.title', locale)}</h1>
+				<p>{t('speakers.subtitle', locale)}</p>
+			</div>
+		</section>
+
+		<section class="participants-overview">
+			<div class="container">
+				<div class="overview-content">
+					<h2>Target Participants</h2>
+					<p>This forum adopts an invitation-only, non-public, small-scale deep interaction mechanism, with an expected 70-100 participants. We will bring together thinkers, practitioners, policy makers and users from different fields to create cross-disciplinary integration and dialogue scenarios with "different cognitive structures".</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="participant-categories">
+			<div class="container">
+				<h2>Core Participant Groups</h2>
+				<div class="categories-grid">
+					<div class="category-card">
+						<div class="category-icon">🎓</div>
+						<h3>Academic Institutions</h3>
+						<div class="category-details">
+							<h4>Participation Areas:</h4>
+							<ul>
+								<li>Cognitive Science Professors</li>
+								<li>Education Experts</li>
+								<li>Ethics Researchers</li>
+								<li>University Presidents</li>
+								<li>Education Policy Researchers</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">Cognitive Science</span>
+								<span class="focus-tag">Educational Innovation</span>
+								<span class="focus-tag">Ethics Research</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="category-card">
+						<div class="category-icon">🔬</div>
+						<h3>Technology Developers</h3>
+						<div class="category-details">
+							<h4>Participation Areas:</h4>
+							<ul>
+								<li>Large Model Chief Scientists</li>
+								<li>Open Source Community Leaders</li>
+								<li>AIGC Tool Creators</li>
+								<li>AI R&D Engineers</li>
+								<li>Technical Architects</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">Large Language Models</span>
+								<span class="focus-tag">Open Source Innovation</span>
+								<span class="focus-tag">AIGC Technology</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="category-card">
+						<div class="category-icon">🏢</div>
+						<h3>Industry Representatives</h3>
+						<div class="category-details">
+							<h4>Participation Areas:</h4>
+							<ul>
+								<li>AI Industry Core Company Executives</li>
+								<li>Innovative Company Founders</li>
+								<li>Product Managers</li>
+								<li>Business Strategy Experts</li>
+								<li>Investors</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">Industry Implementation</span>
+								<span class="focus-tag">Business Models</span>
+								<span class="focus-tag">Innovative Applications</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="category-card">
+						<div class="category-icon">⚖️</div>
+						<h3>Policy & Ethics</h3>
+						<div class="category-details">
+							<h4>Participation Areas:</h4>
+							<ul>
+								<li>Government Technology Advisors</li>
+								<li>Digital Policy Experts</li>
+								<li>AI Industry Innovation Researchers</li>
+								<li>Governance Researchers</li>
+								<li>Legal Experts</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">Policy Making</span>
+								<span class="focus-tag">Ethics Governance</span>
+								<span class="focus-tag">Legal Framework</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="category-card">
+						<div class="category-icon">🎨</div>
+						<h3>Arts & Humanities</h3>
+						<div class="category-details">
+							<h4>Participation Areas:</h4>
+							<ul>
+								<li>Digital Artists</li>
+								<li>Writers and Literary Creators</li>
+								<li>Museum Innovation Directors</li>
+								<li>Publishing Institution Directors</li>
+								<li>Cultural Studies Scholars</li>
+							</ul>
+							<div class="focus-areas">
+								<span class="focus-tag">Cultural Creation</span>
+								<span class="focus-tag">Artistic Innovation</span>
+								<span class="focus-tag">Humanistic Values</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="forum-format">
+			<div class="container">
+				<h2>Forum Format</h2>
+				<div class="format-grid">
+					<div class="format-card">
+						<h3>Keynote Speeches</h3>
+						<p>Invite top experts from various fields to share themes, deeply exploring AI's value creation and challenges in different dimensions</p>
+						<ul>
+							<li>60-minute deep sharing</li>
+							<li>Cross-disciplinary perspectives</li>
+							<li>Theory and practice integration</li>
+						</ul>
+					</div>
+
+					<div class="format-card">
+						<h3>Closed Roundtables</h3>
+						<p>Small-scale deep discussions with 8-10 participants per topic, ensuring every participant can fully express their views</p>
+						<ul>
+							<li>Small group deep exchanges</li>
+							<li>Diverse viewpoint collisions</li>
+							<li>Practical problem-oriented</li>
+						</ul>
+					</div>
+
+					<div class="format-card">
+						<h3>AIGC Spotlight Showcase</h3>
+						<p>"Technical Products" and "Artistic Creativity" dual-unit global work display, building a community of thought spanning technical logic and humanistic perspectives</p>
+						<ul>
+							<li>Work display and selection</li>
+							<li>Creator sharing</li>
+							<li>Technology and art integration</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="participation-criteria">
+			<div class="container">
+				<div class="criteria-content">
+					<h2>Participation Criteria</h2>
+					<div class="criteria-grid">
+						<div class="criteria-item">
+							<h3>🎯 Professional Background</h3>
+							<p>Deep professional background or rich practical experience in AI-related fields</p>
+						</div>
+						<div class="criteria-item">
+							<h3>🌐 Global Perspective</h3>
+							<p>Cross-cultural understanding ability, able to think about AI development issues from a global perspective</p>
+						</div>
+						<div class="criteria-item">
+							<h3>💡 Innovative Thinking</h3>
+							<p>Forward-thinking and unique insights on the future development of AI</p>
+						</div>
+						<div class="criteria-item">
+							<h3>🤝 Collaborative Spirit</h3>
+							<p>Willingness to openly communicate and participate in cross-disciplinary deep dialogue</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="networking-opportunities">
+			<div class="container">
+				<h2>Networking Opportunities</h2>
+				<div class="networking-grid">
+					<div class="networking-card">
+						<h3>🍽️ Welcome Breakfast & Dinner Networking</h3>
+						<p>Initial networking and deep discussions in a relaxed dining environment, building lasting partnerships</p>
+					</div>
+					<div class="networking-card">
+						<h3>☕ Tea Break Free Discussion</h3>
+						<p>Free networking time between keynote speeches, continuing topic discussions and promoting idea exchanges</p>
+					</div>
+					<div class="networking-card">
+						<h3>🎯 Thematic Roundtable Dialogue</h3>
+						<p>Small group discussions around specific topics, allowing participants from different backgrounds to exchange professional insights</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="invitation-info">
+			<div class="container">
+				<div class="invitation-card">
+					<h2>Invitation Process</h2>
+					<p>This forum adopts a strict invitation system to ensure the quality of participants and the depth of discussions. We will identify and invite suitable participants through the following channels:</p>
+					<div class="invitation-channels">
+						<div class="channel">
+							<strong>Academic Recommendations</strong> - Through recommendations from top universities and research institutions
+						</div>
+						<div class="channel">
+							<strong>Industry Nominations</strong> - Outstanding representatives nominated by well-known enterprises and organizations
+						</div>
+						<div class="channel">
+							<strong>Community Endorsements</strong> - Active contributors recommended by open source communities and professional groups
+						</div>
+						<div class="channel">
+							<strong>Expert Recommendations</strong> - Suitable candidates recommended by forum organizing committee experts
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	/* Speakers page specific styles - other common styles are in global.css */
+	.categories-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.category-card {
+		background: #f8f9fa;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.category-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.category-icon {
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.category-card h3 {
+		color: #2c3e50;
+		font-size: 1.4rem;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.category-details h4 {
+		color: #e67e22;
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+	}
+
+	.category-details ul {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.category-details li {
+		padding: 0.4rem 0;
+		color: #666;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.category-details li:before {
+		content: "•";
+		position: absolute;
+		left: 0;
+		color: #e67e22;
+		font-weight: bold;
+	}
+
+	.focus-areas {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	.focus-tag {
+		background: #fff3cd;
+		color: #856404;
+		padding: 0.3rem 0.8rem;
+		border-radius: 15px;
+		font-size: 0.8rem;
+		border: 1px solid #ffeaa7;
+	}
+
+	.forum-format {
+		padding: 4rem 2rem;
+		background: #f8f9fa;
+	}
+
+	.forum-format h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.format-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.format-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid #e67e22;
+	}
+
+	.format-card h3 {
+		color: #2c3e50;
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+	}
+
+	.format-card p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.format-card ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.format-card li {
+		padding: 0.4rem 0;
+		color: #555;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.format-card li:before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: #27ae60;
+		font-weight: bold;
+	}
+
+	.participation-criteria {
+		padding: 4rem 2rem;
+		background: white;
+	}
+
+	.criteria-content h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.criteria-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.criteria-item {
+		text-align: center;
+		padding: 2rem;
+		background: #f8f9fa;
+		border-radius: 15px;
+		border: 2px solid transparent;
+		transition: border-color 0.3s ease;
+	}
+
+	.criteria-item:hover {
+		border-color: #e67e22;
+	}
+
+	.criteria-item h3 {
+		color: #2c3e50;
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.criteria-item p {
+		color: #666;
+		line-height: 1.6;
+	}
+
+	.networking-opportunities {
+		padding: 4rem 2rem;
+		background: #f8f9fa;
+	}
+
+	.networking-opportunities h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.networking-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.networking-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.networking-card h3 {
+		color: #2c3e50;
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.networking-card p {
+		color: #666;
+		line-height: 1.6;
+	}
+
+	.invitation-info {
+		padding: 4rem 2rem;
+		background: white;
+	}
+
+	.invitation-card {
+		max-width: 800px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.invitation-card h2 {
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 2rem;
+	}
+
+	.invitation-card p {
+		color: #555;
+		font-size: 1.1rem;
+		line-height: 1.8;
+		margin-bottom: 2.5rem;
+	}
+
+	.invitation-channels {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.channel {
+		background: #f8f9fa;
+		padding: 1.5rem;
+		border-radius: 10px;
+		border-left: 4px solid #e67e22;
+		text-align: left;
+	}
+
+	.channel strong {
+		color: #2c3e50;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.lang-switch {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.categories-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.format-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.criteria-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.networking-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.invitation-channels {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

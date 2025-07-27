@@ -1,0 +1,264 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t } from '../../i18n/translations.js';
+
+const locale = 'en';
+---
+
+<Layout title="About the Forum - GOSIM AI Vision Forum">
+	<nav class="top-nav">
+		<div class="nav-container">
+			<div class="logo">
+				<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
+			</div>
+			<div class="nav-links">
+				<a href="/en/" class="nav-link">{t('nav.home', locale)}</a>
+				<a href="/en/about" class="nav-link active">{t('nav.about', locale)}</a>
+				<a href="/en/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
+				<a href="/en/speakers" class="nav-link">{t('nav.speakers', locale)}</a>
+				<a href="/about" class="nav-link lang-switch">中文</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section class="page-header">
+			<div class="container">
+				<h1>{t('about.title', locale)}</h1>
+				<p>{t('about.subtitle', locale)}</p>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<div class="container">
+				<div class="content-grid">
+					<div class="main-content">
+						<h2>Forum Background</h2>
+						<p>
+							As a global open source innovation platform, GOSIM has always adhered to the core spirit of open source — 
+							with openness and inclusiveness as the foundation, global collaboration as the link, 
+							and community-driven as the driving force. Based on this concept, the platform unites multiple forces 
+							to jointly launch the AI Vision Forum, focusing on the key proposition of 
+							"what core value can AI create for humanity".
+						</p>
+
+						<p>
+							In recent years, large language models (LLM), generative AI and intelligent agents have rapidly iterated. 
+							In areas of high intellectual tasks that were once exclusive to humans, from mathematical proofs and code writing 
+							to literary writing and artistic creation, top AI models continue to break performance boundaries, 
+							refreshing people's understanding of machine intelligence.
+						</p>
+
+						<blockquote>
+							This breakthrough has stirred complex ripples in human society: on one hand, it seems that humans have found 
+							the key to unlocking the mysteries of the universe and opening the door to the next generation of civilization; 
+							on the other hand, when AI continues to advance in the "human-exclusive" intellectual highlands, 
+							people are also deeply worried: will human unique creativity and emotional perception be replaced?
+						</blockquote>
+
+						<h2>Forum Objectives</h2>
+						<p>
+							Around these questions, this AI Vision Forum jointly initiated by GOSIM and the Sino-French Artificial Intelligence Association 
+							brings together representatives from top universities, research institutions and enterprises worldwide, 
+							adopting an invitation-only, non-public, small-scale deep interaction mechanism.
+						</p>
+
+						<p>
+							The forum particularly focuses on the positive value of artificial intelligence in the human experience dimension, 
+							focusing on key areas such as educational innovation, cultural creation, emotional companionship, 
+							and technological equity, and deeply explores the deep proposition of how AI products balance 
+							functionality and ethics, efficiency and warmth in practical applications.
+						</p>
+
+						<h2>Core Philosophy</h2>
+						<p>
+							We advocate a paradigm leap from "tool enabling" to "value-oriented" — making AI not only a technical empowerment tool, 
+							but also result-oriented, effectively responding to and solving core human concerns.
+						</p>
+
+						<p>
+							In activity design, the forum specially sets up the "Technical Products" and "Artistic Creativity" dual-unit 
+							AIGC Spotlight global work display, aiming to build a community of thought that spans technical logic and humanistic perspectives.
+						</p>
+
+						<h2>International Collaboration</h2>
+						<p>
+							This event is not only a cross-border deep dialogue, but also an important practice for China and Europe 
+							to reshape consensus on AI social responsibility and value orientation, committed to creating an international 
+							cooperation platform with continuity, influence and ethical thinking tension.
+						</p>
+					</div>
+
+					<div class="sidebar">
+						<div class="info-card">
+							<h3>Event Details</h3>
+							<ul class="event-info">
+								<li><strong>Date:</strong> September 12, 2025 (Friday)</li>
+								<li><strong>Location:</strong> Hangzhou, China</li>
+								<li><strong>Scale:</strong> 70-100 participants</li>
+								<li><strong>Format:</strong> Invitation-only closed exchange</li>
+								<li><strong>Language:</strong> Chinese & English</li>
+							</ul>
+						</div>
+
+						<div class="info-card">
+							<h3>Organizers</h3>
+							<ul class="organizers">
+								<li>GOSIM Global Open Source Innovation Platform</li>
+								<li>Sino-French Artificial Intelligence Association</li>
+							</ul>
+						</div>
+
+						<div class="info-card">
+							<h3>Forum Format</h3>
+							<ul class="format-list">
+								<li>Keynote speeches</li>
+								<li>Closed-door deep roundtables</li>
+								<li>AIGC Spotlight showcase</li>
+								<li>Cross-disciplinary dialogue</li>
+								<li>Free networking</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="outcomes-section">
+			<div class="container">
+				<h2>Expected Outcomes</h2>
+				<div class="outcomes-grid">
+					<div class="outcome-card">
+						<h3>China-Europe AI for Good Initiative</h3>
+						<p>Release the "China-Europe Artificial Intelligence Technology for Good Initiative Draft" to build a consensus document centered on "humanistic values guiding AI development"</p>
+					</div>
+					<div class="outcome-card">
+						<h3>AIGC Spotlight Mechanism</h3>
+						<p>Establish a permanent mechanism to promote project implementation and cross-border cooperation, and build an international recommendation and support mechanism</p>
+					</div>
+					<div class="outcome-card">
+						<h3>Trinity Integration Paradigm</h3>
+						<p>Form a "technology + humanities + governance" trinity integration forum paradigm to explore sustainable dialogue mechanisms for future cooperation</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	/* About page specific styles */
+	.content-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.main-content h2 {
+		color: #2c3e50;
+		font-size: 1.8rem;
+		margin: 2.5rem 0 1.5rem 0;
+		border-bottom: 2px solid #3498db;
+		padding-bottom: 0.5rem;
+	}
+
+	.main-content h2:first-of-type {
+		margin-top: 0;
+	}
+
+	.main-content p {
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+		color: #444;
+		font-size: 1.1rem;
+	}
+
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.info-card {
+		background: #f8f9fa;
+		padding: 2rem;
+		border-radius: 10px;
+		border: 1px solid #e9ecef;
+	}
+
+	.info-card h3 {
+		color: #2c3e50;
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+		border-bottom: 2px solid #3498db;
+		padding-bottom: 0.5rem;
+	}
+
+	.event-info, .organizers, .format-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.event-info li, .organizers li, .format-list li {
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #e9ecef;
+	}
+
+	.event-info li:last-child, .organizers li:last-child, .format-list li:last-child {
+		border-bottom: none;
+	}
+
+	.outcomes-section {
+		background: #f8f9fa;
+		padding: 4rem 2rem;
+	}
+
+	.outcomes-section h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.outcomes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.outcome-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid #3498db;
+	}
+
+	.outcome-card h3 {
+		color: #2c3e50;
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+	}
+
+	.outcome-card p {
+		color: #666;
+		line-height: 1.6;
+	}
+
+	.lang-switch {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.content-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.outcomes-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t } from '../../i18n/translations.js';
+
+const locale = 'en';
+---
+
+<Layout title="GOSIM AI Vision Forum 2025">
+	<nav class="top-nav">
+		<div class="nav-container">
+			<div class="logo">
+				<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
+			</div>
+			<div class="nav-links">
+				<a href="/en/" class="nav-link active">{t('nav.home', locale)}</a>
+				<a href="/en/about" class="nav-link">{t('nav.about', locale)}</a>
+				<a href="/en/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
+				<a href="/en/speakers" class="nav-link">{t('nav.speakers', locale)}</a>
+				<a href="/" class="nav-link lang-switch">中文</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section class="hero">
+			<div class="hero-content">
+				<h1>{t('home.title', locale)}</h1>
+				<h2>{t('home.subtitle', locale)}</h2>
+				<p class="subtitle">{t('home.description', locale)}<br><em>{t('home.englishDescription', locale)}</em></p>
+				<p class="tagline">{t('home.tagline', locale)}<br><em>{t('home.englishTagline', locale)}</em></p>
+				
+				<div class="event-details">
+					<div class="detail">
+						<strong>{t('home.eventDetails.date', locale)}</strong> {t('home.eventDetails.dateValue', locale)}
+					</div>
+					<div class="detail">
+						<strong>{t('home.eventDetails.location', locale)}</strong> {t('home.eventDetails.locationValue', locale)}
+					</div>
+					<div class="detail">
+						<strong>{t('home.eventDetails.scale', locale)}</strong> {t('home.eventDetails.scaleValue', locale)}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="introduction">
+			<div class="content">
+				<h3>{t('home.introduction.title', locale)}</h3>
+				<p>{t('home.introduction.p1', locale)}</p>
+				<p>{t('home.introduction.p2', locale)}</p>
+			</div>
+		</section>
+
+		<section class="themes">
+			<div class="content">
+				<h3>{t('home.themes.title', locale)}</h3>
+				<div class="theme-grid">
+					<div class="theme-card">
+						<h4>{t('home.themes.education.title', locale)}</h4>
+						<p>{t('home.themes.education.description', locale)}</p>
+					</div>
+					<div class="theme-card">
+						<h4>{t('home.themes.aigc.title', locale)}</h4>
+						<p>{t('home.themes.aigc.description', locale)}</p>
+					</div>
+					<div class="theme-card">
+						<h4>{t('home.themes.emotion.title', locale)}</h4>
+						<p>{t('home.themes.emotion.description', locale)}</p>
+					</div>
+					<div class="theme-card">
+						<h4>{t('home.themes.symbiosis.title', locale)}</h4>
+						<p>{t('home.themes.symbiosis.description', locale)}</p>
+					</div>
+					<div class="theme-card">
+						<h4>{t('home.themes.ethics.title', locale)}</h4>
+						<p>{t('home.themes.ethics.description', locale)}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	/* Home page specific styles */
+	.hero {
+		background: linear-gradient(135deg, rgba(248, 187, 217, 0.3) 0%, rgba(168, 230, 207, 0.3) 100%), url('/hero01.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color: white;
+		padding: 4rem 2rem;
+		text-align: center;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-content {
+		max-width: 800px;
+		width: 100%;
+	}
+
+	.hero h1 {
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+		color: white;
+	}
+
+	.hero h2 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		font-weight: normal;
+		opacity: 0.9;
+		color: white;
+	}
+
+	.subtitle {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+		line-height: 1.4;
+		color: white;
+	}
+
+	.tagline {
+		font-size: 1.1rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.9;
+		font-style: italic;
+		color: white;
+	}
+
+	.event-details {
+		background: rgba(255, 255, 255, 0.6);
+		padding: 1.5rem;
+		border-radius: 10px;
+		margin-bottom: 2.5rem;
+		backdrop-filter: blur(10px);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.detail {
+		margin-bottom: 0.8rem;
+		font-size: 1.1rem;
+		color: #2c3e50;
+	}
+
+	.detail:last-child {
+		margin-bottom: 0;
+	}
+
+	.introduction, .themes {
+		padding: 4rem 2rem;
+	}
+
+	.introduction {
+		background: #f8f9fa;
+	}
+
+	.theme-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.theme-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+		border-left: 4px solid #667eea;
+	}
+
+	.theme-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.theme-card h4 {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+		color: #333;
+	}
+
+	.theme-card p {
+		color: #666;
+		margin: 0;
+		font-size: 1rem;
+	}
+
+	.lang-switch {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.hero h1 {
+			font-size: 2.2rem;
+		}
+
+		.hero h2 {
+			font-size: 1.5rem;
+		}
+
+		.subtitle {
+			font-size: 1.1rem;
+		}
+
+		.theme-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

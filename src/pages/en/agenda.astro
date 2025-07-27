@@ -1,0 +1,452 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t } from '../../i18n/translations.js';
+
+const locale = 'en';
+---
+
+<Layout title="Forum Agenda - GOSIM AI Vision Forum">
+	<nav class="top-nav">
+		<div class="nav-container">
+			<div class="logo">
+				<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
+			</div>
+			<div class="nav-links">
+				<a href="/en/" class="nav-link">{t('nav.home', locale)}</a>
+				<a href="/en/about" class="nav-link">{t('nav.about', locale)}</a>
+				<a href="/en/agenda" class="nav-link active">{t('nav.agenda', locale)}</a>
+				<a href="/en/speakers" class="nav-link">{t('nav.speakers', locale)}</a>
+				<a href="/agenda" class="nav-link lang-switch">中文</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section class="page-header">
+			<div class="container">
+				<h1>{t('agenda.title', locale)}</h1>
+				<p>{t('agenda.subtitle', locale)}</p>
+			</div>
+		</section>
+
+		<section class="agenda-overview">
+			<div class="container">
+				<div class="overview-card">
+					<h2>Forum Overview</h2>
+					<p>This forum revolves around "AI for Good" as the main theme, setting up five core topics, taking into account education, humanities, emotion, social governance and ethical dilemmas.</p>
+					<div class="format-info">
+						<div class="format-item">
+							<strong>Format:</strong> Keynote speeches + closed-door deep roundtables (8-10 participants per topic)
+						</div>
+						<div class="format-item">
+							<strong>Features:</strong> Emphasis on cross-disciplinary integration and creating dialogue scenarios with "different cognitive structures"
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="schedule-section">
+			<div class="container">
+				<h2>Detailed Schedule</h2>
+				<div class="schedule-timeline">
+					<div class="schedule-item">
+						<div class="time-slot">09:00-09:30</div>
+						<div class="activity-content">
+							<h3>Registration & Welcome Breakfast</h3>
+							<p class="activity-desc">Participant registration, welcome breakfast, initial networking</p>
+						</div>
+					</div>
+
+					<div class="schedule-item">
+						<div class="time-slot">09:30-09:45</div>
+						<div class="activity-content">
+							<h3>Opening Remarks</h3>
+							<p class="activity-desc">Opening remarks by GOSIM representative or host, agenda introduction</p>
+						</div>
+					</div>
+
+					<div class="schedule-item keynote">
+						<div class="time-slot">09:45-10:45</div>
+						<div class="activity-content">
+							<h3>Keynote Speech 1</h3>
+							<h4>"Reconstruction of Learning Mechanisms Driven by AI: Insights from Cognitive Science"</h4>
+							<p class="activity-desc">Exploring how generative AI reshapes learning experiences and promotes educational equity and knowledge democratization</p>
+							<div class="topic-highlights">
+								<span class="highlight-tag">Personalized Learning</span>
+								<span class="highlight-tag">Educational Equity</span>
+								<span class="highlight-tag">Cognitive Science</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="schedule-item keynote">
+						<div class="time-slot">10:45-11:45</div>
+						<div class="activity-content">
+							<h3>Keynote Speech 2</h3>
+							<h4>AIGC and Cultural Creativity</h4>
+							<p class="activity-desc">Focusing on AI's creative potential in art, literature, design and other fields, discussing how human creativity collaborates with generative models</p>
+							<div class="topic-highlights">
+								<span class="highlight-tag">Artistic Creation</span>
+								<span class="highlight-tag">Human-AI Collaboration</span>
+								<span class="highlight-tag">Copyright Attribution</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="schedule-item break">
+						<div class="time-slot">11:45-13:00</div>
+						<div class="activity-content">
+							<h3>Lunch & AIGC Spotlight</h3>
+							<p class="activity-desc">Lunch, AIGC Spotlight awards ceremony and showcase</p>
+							<div class="special-note">
+								<strong>Special Session:</strong> "Technical Products" and "Artistic Creativity" dual-unit global showcase
+							</div>
+						</div>
+					</div>
+
+					<div class="schedule-item keynote">
+						<div class="time-slot">13:00-14:00</div>
+						<div class="activity-content">
+							<h3>Keynote Speech 3</h3>
+							<h4>AI and Emotional Relationship Reconstruction</h4>
+							<p class="activity-desc">Exploring how AI provides emotional support and empathetic design in elderly companionship, mental health, and child interaction</p>
+							<div class="topic-highlights">
+								<span class="highlight-tag">Emotional Companionship</span>
+								<span class="highlight-tag">Empathetic Design</span>
+								<span class="highlight-tag">Mental Health</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="schedule-item keynote">
+						<div class="time-slot">14:00-15:00</div>
+						<div class="activity-content">
+							<h3>Keynote Speech 4</h3>
+							<h4>From "AI Tools" to "AI Symbiosis"</h4>
+							<p class="activity-desc">Calling for transcending the efficiency narrative of "AI replacing humans" towards a "co-creation and complementary" collaboration paradigm</p>
+							<div class="topic-highlights">
+								<span class="highlight-tag">Symbiotic Model</span>
+								<span class="highlight-tag">Collaboration Paradigm</span>
+								<span class="highlight-tag">Complementarity</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="schedule-item break">
+						<div class="time-slot">15:00-15:30</div>
+						<div class="activity-content">
+							<h3>Tea Break</h3>
+							<p class="activity-desc">Free discussion and networking</p>
+						</div>
+					</div>
+
+					<div class="schedule-item keynote">
+						<div class="time-slot">15:30-16:30</div>
+						<div class="activity-content">
+							<h3>Keynote Speech 5</h3>
+							<h4>Ethical Paradoxes and Governance Challenges</h4>
+							<p class="activity-desc">In-depth discussion of institutional tensions of "technology for good" in reality, including value embedding, cross-cultural algorithmic bias</p>
+							<div class="topic-highlights">
+								<span class="highlight-tag">AI Ethics Theater</span>
+								<span class="highlight-tag">Black Box Forum</span>
+								<span class="highlight-tag">Governance Framework</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="schedule-item summary">
+						<div class="time-slot">16:30-17:30</div>
+						<div class="activity-content">
+							<h3>Panel Summary & Closing Remarks</h3>
+							<p class="activity-desc">Representative summaries + special expert closing remarks</p>
+						</div>
+					</div>
+
+					<div class="schedule-item networking">
+						<div class="time-slot">17:30-21:00</div>
+						<div class="activity-content">
+							<h3>Dinner & Deep Networking</h3>
+							<p class="activity-desc">Extended discussions, building connections</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="topics-section">
+			<div class="container">
+				<h2>Core Topics Deep Dive</h2>
+				<div class="topics-grid">
+					<div class="topic-card">
+						<h3>Educational Revolution: Is AI a "Cognitive Partner" or "Algorithmic Supervisor"?</h3>
+						<ul>
+							<li>Personalized learning vs privacy/fairness risks</li>
+							<li>Teacher role reconstruction</li>
+							<li>Implementation path for knowledge democratization</li>
+						</ul>
+					</div>
+
+					<div class="topic-card">
+						<h3>AIGC and Culture: Collaborative Innovation or Creative Death?</h3>
+						<ul>
+							<li>Copyright ownership and intellectual property protection</li>
+							<li>Human-AI co-creation model exploration</li>
+							<li>Cultural diversity protection</li>
+						</ul>
+					</div>
+
+					<div class="topic-card">
+						<h3>Emotional AI: Filling Loneliness or Creating Relationship Bubbles?</h3>
+						<ul>
+							<li>Case studies of elderly/child companionship</li>
+							<li>Ethical boundaries in empathetic design</li>
+							<li>Technical outsourcing of emotional relationships</li>
+						</ul>
+					</div>
+
+					<div class="topic-card">
+						<h3>Symbiosis Paradox: Are Humans Training AI or Is AI Domesticating Humans?</h3>
+						<ul>
+							<li>Critique of technological dependency</li>
+							<li>Complementary collaboration framework design</li>
+							<li>Maintaining human agency</li>
+						</ul>
+					</div>
+
+					<div class="topic-card">
+						<h3>The Cost of Doing Good: Who Pays for Ethical Dilemmas?</h3>
+						<ul>
+							<li>Cross-national governance conflicts</li>
+							<li>Algorithmic bias case analysis</li>
+							<li>"Black Box Debate" model</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	/* Agenda page specific styles - other common styles are in global.css */
+	.agenda-overview {
+		padding: 3rem 2rem;
+		background: #f8f9fa;
+	}
+
+	.overview-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.overview-card h2 {
+		color: #2c3e50;
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.overview-card p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: #555;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.format-info {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.format-item {
+		background: #f8f9fa;
+		padding: 1.5rem;
+		border-radius: 10px;
+		border-left: 4px solid #8e44ad;
+	}
+
+	.schedule-section {
+		padding: 4rem 2rem;
+		background: white;
+	}
+
+	.schedule-section h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.schedule-timeline {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.schedule-item {
+		display: grid;
+		grid-template-columns: 150px 1fr;
+		gap: 2rem;
+		padding: 2rem 0;
+		border-bottom: 1px solid #e9ecef;
+		align-items: start;
+	}
+
+	.schedule-item:last-child {
+		border-bottom: none;
+	}
+
+	.time-slot {
+		background: #2c3e50;
+		color: white;
+		padding: 1rem;
+		border-radius: 8px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 0.9rem;
+	}
+
+	.keynote .time-slot {
+		background: #8e44ad;
+	}
+
+	.break .time-slot {
+		background: #27ae60;
+	}
+
+	.summary .time-slot {
+		background: #e74c3c;
+	}
+
+	.networking .time-slot {
+		background: #f39c12;
+	}
+
+	.activity-content h3 {
+		color: #2c3e50;
+		font-size: 1.4rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.activity-content h4 {
+		color: #8e44ad;
+		font-size: 1.2rem;
+		margin-bottom: 1rem;
+		font-style: italic;
+	}
+
+	.activity-desc {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 1rem;
+	}
+
+	.topic-highlights {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	.highlight-tag {
+		background: #e8f4f8;
+		color: #2c3e50;
+		padding: 0.3rem 0.8rem;
+		border-radius: 15px;
+		font-size: 0.8rem;
+		border: 1px solid #bdc3c7;
+	}
+
+	.special-note {
+		background: #fff3cd;
+		border: 1px solid #ffeaa7;
+		padding: 1rem;
+		border-radius: 8px;
+		margin-top: 1rem;
+	}
+
+	.topics-section {
+		background: #f8f9fa;
+		padding: 4rem 2rem;
+	}
+
+	.topics-section h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.topics-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.topic-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid #8e44ad;
+	}
+
+	.topic-card h3 {
+		color: #2c3e50;
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+		line-height: 1.4;
+	}
+
+	.topic-card ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.topic-card li {
+		padding: 0.5rem 0;
+		color: #666;
+		border-bottom: 1px solid #f1f2f6;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.topic-card li:before {
+		content: "→";
+		position: absolute;
+		left: 0;
+		color: #8e44ad;
+		font-weight: bold;
+	}
+
+	.topic-card li:last-child {
+		border-bottom: none;
+	}
+
+	.lang-switch {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.schedule-item {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		.time-slot {
+			text-align: left;
+		}
+
+		.format-info {
+			grid-template-columns: 1fr;
+		}
+
+		.topics-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

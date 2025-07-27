@@ -1,11 +1,223 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { t } from '../i18n/translations.js';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const locale = 'zh';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="GOSIM AI Vision Forum 2025">
+	<nav class="top-nav">
+		<div class="nav-container">
+			<div class="logo">
+				<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
+			</div>
+			<div class="nav-links">
+				<a href="/" class="nav-link active">{t('nav.home', locale)}</a>
+				<a href="/about" class="nav-link">{t('nav.about', locale)}</a>
+				<a href="/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
+				<a href="/speakers" class="nav-link">{t('nav.speakers', locale)}</a>
+				<a href="/en/" class="nav-link lang-switch">English</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section class="hero">
+			<div class="hero-content">
+				<h1>GOSIM AI Vision Forum 2025</h1>
+				<h2>GOSIM 人工智能愿景论坛</h2>
+				<p class="subtitle">探索AI和人类的共生未来<br>Exploring a Symbiotic Future of AI and Humanity</p>
+				<p class="tagline">科技向善 · 价值共生<br><em>AI for Good · Co-Creating Value</em></p>
+
+				<div class="event-details">
+					<div class="detail">
+						<strong>日期 Date:</strong> 2025年9月12日 September 12, 2025
+					</div>
+					<div class="detail">
+						<strong>地点 Location:</strong> 中国·杭州 Hangzhou, China
+					</div>
+					<div class="detail">
+						<strong>规模 Scale:</strong> 70-100人邀请制 Invitation Only
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="introduction">
+			<div class="content">
+				<h3>论坛简介 Forum Introduction</h3>
+				<p>
+					GOSIM 作为全球开源创新平台，联合中法人工智能协会共同发起本次人工智能愿景论坛，
+					聚焦"AI 能为人类创造何种核心价值"这一关键命题，为思想者、实践者、政策制定者和用户
+					提供一个深度对话空间。
+				</p>
+				<p>
+					论坛采用邀请制、非公开、小规模的深度交互机制，汇聚全球顶尖高校、研究机构及企业代表，
+					尤为关注人工智能在人类体验维度的正向价值，聚焦教育革新、文化创造、情感陪伴、技术平权等关键领域。
+				</p>
+			</div>
+		</section>
+
+		<section class="themes">
+			<div class="content">
+				<h3>核心议题 Core Themes</h3>
+				<div class="theme-grid">
+					<div class="theme-card">
+						<h4>AI for Education</h4>
+						<p>探讨生成式AI如何重构学习体验、推动教育公平与知识民主化</p>
+					</div>
+					<div class="theme-card">
+						<h4>AIGC与文化创造力</h4>
+						<p>聚焦AI在艺术、文学、设计等领域的创作潜力</p>
+					</div>
+					<div class="theme-card">
+						<h4>AI与情感关系重构</h4>
+						<p>探索AI在老龄陪伴、心理健康、儿童互动中的情感支持</p>
+					</div>
+					<div class="theme-card">
+						<h4>从"AI工具"到"AI共生"</h4>
+						<p>超越效率叙事，转向"共创—互补"的协作范式</p>
+					</div>
+					<div class="theme-card">
+						<h4>伦理悖论与治理难题</h4>
+						<p>深度讨论"科技向善"在现实中的制度张力</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </Layout>
+
+<style>
+	/* Home page specific styles */
+	.hero {
+		background: linear-gradient(135deg, rgba(248, 187, 217, 0.3) 0%, rgba(168, 230, 207, 0.3) 100%), url('/hero01.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		color: white;
+		padding: 4rem 2rem;
+		text-align: center;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-content {
+		max-width: 800px;
+		width: 100%;
+	}
+
+	.hero h1 {
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+		color: white;
+	}
+
+	.hero h2 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		font-weight: normal;
+		opacity: 0.9;
+		color: white;
+	}
+
+	.subtitle {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+		line-height: 1.4;
+		color: white;
+	}
+
+	.tagline {
+		font-size: 1.1rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.9;
+		font-style: italic;
+		color: white;
+	}
+
+	.event-details {
+		background: rgba(255, 255, 255, 0.6);
+		padding: 1.5rem;
+		border-radius: 10px;
+		margin-bottom: 2.5rem;
+		backdrop-filter: blur(10px);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.detail {
+		margin-bottom: 0.8rem;
+		font-size: 1.1rem;
+		color: #2c3e50;
+	}
+
+	.detail:last-child {
+		margin-bottom: 0;
+	}
+
+	.introduction, .themes {
+		padding: 4rem 2rem;
+	}
+
+	.introduction {
+		background: #f8f9fa;
+	}
+
+	.theme-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.theme-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+		border-left: 4px solid #667eea;
+	}
+
+	.theme-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.theme-card h4 {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+		color: #333;
+	}
+
+	.theme-card p {
+		color: #666;
+		margin: 0;
+		font-size: 1rem;
+	}
+
+	.lang-switch {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.hero h1 {
+			font-size: 2.2rem;
+		}
+
+		.hero h2 {
+			font-size: 1.5rem;
+		}
+
+		.subtitle {
+			font-size: 1.1rem;
+		}
+
+		.theme-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

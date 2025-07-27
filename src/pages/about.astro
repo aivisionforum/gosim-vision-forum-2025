@@ -1,0 +1,257 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { t } from '../i18n/translations.js';
+
+const locale = 'zh';
+---
+
+<Layout title="关于论坛 - GOSIM AI Vision Forum">
+	<nav class="top-nav">
+		<div class="nav-container">
+			<div class="logo">
+				<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
+			</div>
+			<div class="nav-links">
+				<a href="/" class="nav-link">{t('nav.home', locale)}</a>
+				<a href="/about" class="nav-link active">{t('nav.about', locale)}</a>
+				<a href="/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
+				<a href="/speakers" class="nav-link">{t('nav.speakers', locale)}</a>
+				<a href="/en/about" class="nav-link lang-switch">English</a>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<section class="page-header">
+			<div class="container">
+				<h1>关于论坛 About the Forum</h1>
+				<p>探索AI和人类的共生未来</p>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<div class="container">
+				<div class="content-grid">
+					<div class="main-content">
+						<h2>论坛背景 Forum Background</h2>
+						<p>
+							GOSIM 作为全球开源创新平台，始终坚守开源精神内核 —— 以开放包容为底色、以全球协作为纽带、
+							以社区驱动为动力。基于这一理念，平台联合多方力量共同发起 AI Vision Forum，
+							聚焦 "AI 能为人类创造何种核心价值" 这一关键命题。
+						</p>
+
+						<p>
+							近年来，大语言模型（LLM）、生成式 AI 及智能体等技术迅猛迭代，在人类曾独占的高智力任务领域，
+							从数学证明、代码编写到文学写作、艺术创作，顶级 AI 模型不断突破性能边界，
+							刷新着人们对机器智能的认知。
+						</p>
+
+						<blockquote>
+							这种突破在人类社会激起复杂涟漪：一方面仿佛人类已找到破解宇宙奥秘、打开下一代文明之门的钥匙；
+							另一方面，当 AI 在 "人类专属" 的智力高地持续突进，人们也深深忧虑：
+							人类独特的创造力、情感感知力是否会被取代？
+						</blockquote>
+
+						<h2>论坛目标 Forum Objectives</h2>
+						<p>
+							围绕着这些问题，GOSIM 与中法人工智能协会联合发起的本次人工智能愿景论坛，
+							汇聚全球顶尖高校、研究机构及企业代表，采用邀请制、非公开、小规模的深度交互机制。
+						</p>
+
+						<p>
+							论坛尤为关注人工智能在人类体验维度的正向价值，聚焦教育革新、文化创造、情感陪伴、
+							技术平权等关键领域，深入探讨 AI 产品在落地应用中如何平衡功能性与伦理性、效率与温度的深层命题。
+						</p>
+
+						<h2>核心理念 Core Philosophy</h2>
+						<p>
+							我们倡导从 "工具使能" 向 "价值导向" 的范式跃迁 —— 让 AI 不仅是技术层面的赋能工具，
+							更能以结果为导向，切实回应并解决人类关切的核心问题。
+						</p>
+
+						<p>
+							在活动设计上，论坛特设 "技术产品" 与 "艺术创意" 双单元的 AIGC Spotlight 全球作品展示，
+							旨在构建跨越技术逻辑与人文视角的思想共同体。
+						</p>
+
+						<h2>国际合作 International Collaboration</h2>
+						<p>
+							本次活动不仅是一场跨界交融的深度对话，更是中欧在 AI 社会责任与价值导向上重塑共识的重要实践，
+							致力于打造具有延续性、影响力与伦理思辨张力的国际性合作平台。
+						</p>
+					</div>
+
+					<div class="sidebar">
+						<div class="info-card">
+							<h3>论坛详情 Event Details</h3>
+							<ul class="event-info">
+								<li><strong>时间:</strong> 2025年9月12日（星期五）</li>
+								<li><strong>地点:</strong> 中国·杭州</li>
+								<li><strong>规模:</strong> 70-100人</li>
+								<li><strong>形式:</strong> 邀请制闭门交流</li>
+								<li><strong>语言:</strong> 中英双语</li>
+							</ul>
+						</div>
+
+						<div class="info-card">
+							<h3>主办方 Organizers</h3>
+							<ul class="organizers">
+								<li>GOSIM 全球开源创新平台</li>
+								<li>中法人工智能协会</li>
+							</ul>
+						</div>
+
+						<div class="info-card">
+							<h3>论坛形式 Format</h3>
+							<ul class="format-list">
+								<li>主题演讲</li>
+								<li>闭门深度圆桌</li>
+								<li>AIGC Spotlight 作品展示</li>
+								<li>跨领域对话</li>
+								<li>自由交流</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="outcomes-section">
+			<div class="container">
+				<h2>预期成果 Expected Outcomes</h2>
+				<div class="outcomes-grid">
+					<div class="outcome-card">
+						<h3>中欧AI向善倡议</h3>
+						<p>发布《中欧人工智能科技向善倡议草案》，构建以"人文价值引导AI发展"为核心的共识性文件</p>
+					</div>
+					<div class="outcome-card">
+						<h3>AIGC Spotlight机制</h3>
+						<p>设立常设机制，推动项目落地与跨界合作，建立国际推荐与支持机制</p>
+					</div>
+					<div class="outcome-card">
+						<h3>三元融合范式</h3>
+						<p>形成"科技 + 人文 + 治理"三元融合的论坛范式，为未来合作探索可持续对话机制</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+</Layout>
+
+<style>
+	/* About page specific styles */
+	.content-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.main-content h2 {
+		color: #2c3e50;
+		font-size: 1.8rem;
+		margin: 2.5rem 0 1.5rem 0;
+		border-bottom: 2px solid #3498db;
+		padding-bottom: 0.5rem;
+	}
+
+	.main-content h2:first-of-type {
+		margin-top: 0;
+	}
+
+	.main-content p {
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+		color: #444;
+		font-size: 1.1rem;
+	}
+
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.info-card {
+		background: #f8f9fa;
+		padding: 2rem;
+		border-radius: 10px;
+		border: 1px solid #e9ecef;
+	}
+
+	.info-card h3 {
+		color: #2c3e50;
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+		border-bottom: 2px solid #3498db;
+		padding-bottom: 0.5rem;
+	}
+
+	.event-info, .organizers, .format-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.event-info li, .organizers li, .format-list li {
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #e9ecef;
+	}
+
+	.event-info li:last-child, .organizers li:last-child, .format-list li:last-child {
+		border-bottom: none;
+	}
+
+	.outcomes-section {
+		background: #f8f9fa;
+		padding: 4rem 2rem;
+	}
+
+	.outcomes-section h2 {
+		text-align: center;
+		color: #2c3e50;
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+
+	.outcomes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.outcome-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid #3498db;
+	}
+
+	.outcome-card h3 {
+		color: #2c3e50;
+		font-size: 1.4rem;
+		margin-bottom: 1rem;
+	}
+
+	.outcome-card p {
+		color: #666;
+		line-height: 1.6;
+	}
+
+	.lang-switch {
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.content-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.outcomes-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
