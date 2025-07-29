@@ -304,6 +304,55 @@ blockquote {
   .container {
     padding: 0 1rem;
   }
+
+  /* About page responsive */
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Speakers page responsive */
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .format-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .criteria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .networking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .invitation-channels {
+    grid-template-columns: 1fr;
+  }
+
+  /* Agenda page responsive */
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .time-slot {
+    text-align: left;
+  }
+
+  .format-info {
+    grid-template-columns: 1fr;
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -464,4 +513,590 @@ blockquote {
   .theme-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* About Page Styles */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.main-content h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1.5rem 0;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.main-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.main-content p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.info-card h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.event-info, .organizers, .format-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-info li, .organizers li, .format-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.event-info li:last-child, .organizers li:last-child, .format-list li:last-child {
+  border-bottom: none;
+}
+
+.outcomes-section {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+.outcomes-section h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.outcome-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+}
+
+.outcome-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.outcome-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Speakers Page Styles */
+.participants-overview {
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+}
+
+.overview-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.overview-content h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.overview-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.participant-categories {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.participant-categories h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.category-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.category-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.category-details h4 {
+  color: #e67e22;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.category-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.category-details li {
+  padding: 0.4rem 0;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.category-details li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.focus-areas {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.focus-tag {
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid #ffeaa7;
+}
+
+.forum-format {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.forum-format h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.format-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #e67e22;
+}
+
+.format-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.format-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.format-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.format-card li {
+  padding: 0.4rem 0;
+  color: #555;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.format-card li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.participation-criteria {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.criteria-content h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.criteria-item {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.criteria-item:hover {
+  border-color: #e67e22;
+}
+
+.criteria-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.criteria-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.networking-opportunities {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.networking-opportunities h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.networking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.networking-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.networking-card h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.networking-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.invitation-info {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.invitation-card {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.invitation-card h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.invitation-card p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.invitation-channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.channel {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #e67e22;
+  text-align: left;
+}
+
+.channel strong {
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Agenda Page Styles */
+.agenda-overview {
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+}
+
+.overview-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.overview-card h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.overview-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.format-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.format-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #8e44ad;
+}
+
+.schedule-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.schedule-section h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.schedule-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e9ecef;
+  align-items: start;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.time-slot {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.keynote .time-slot {
+  background: #8e44ad;
+}
+
+.break .time-slot {
+  background: #27ae60;
+}
+
+.summary .time-slot {
+  background: #e74c3c;
+}
+
+.networking .time-slot {
+  background: #f39c12;
+}
+
+.activity-content h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-content h4 {
+  color: #8e44ad;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.activity-desc {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.topic-highlights {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.highlight-tag {
+  background: #e8f4f8;
+  color: #2c3e50;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid #bdc3c7;
+}
+
+.special-note {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.topics-section {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+.topics-section h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.topic-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #8e44ad;
+}
+
+.topic-card h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.topic-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.topic-card li {
+  padding: 0.5rem 0;
+  color: #666;
+  border-bottom: 1px solid #f1f2f6;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.topic-card li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+.topic-card li:last-child {
+  border-bottom: none;
 }

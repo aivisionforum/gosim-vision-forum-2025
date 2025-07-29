@@ -24,8 +24,8 @@ const locale = 'zh';
 	<main>
 		<section class="page-header">
 			<div class="container">
-				<h1>关于论坛 About the Forum</h1>
-				<p>探索AI和人类的共生未来</p>
+				<h1>{t('about.title', locale)}</h1>
+				<p>{t('about.subtitle', locale)}</p>
 			</div>
 		</section>
 
@@ -139,119 +139,4 @@ const locale = 'zh';
 	</main>
 </Layout>
 
-<style>
-	/* About page specific styles */
-	.content-grid {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		gap: 3rem;
-		align-items: start;
-	}
-
-	.main-content h2 {
-		color: #2c3e50;
-		font-size: 1.8rem;
-		margin: 2.5rem 0 1.5rem 0;
-		border-bottom: 2px solid #3498db;
-		padding-bottom: 0.5rem;
-	}
-
-	.main-content h2:first-of-type {
-		margin-top: 0;
-	}
-
-	.main-content p {
-		line-height: 1.8;
-		margin-bottom: 1.5rem;
-		color: #444;
-		font-size: 1.1rem;
-	}
-
-	.sidebar {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-	}
-
-	.info-card {
-		background: #f8f9fa;
-		padding: 2rem;
-		border-radius: 10px;
-		border: 1px solid #e9ecef;
-	}
-
-	.info-card h3 {
-		color: #2c3e50;
-		font-size: 1.3rem;
-		margin-bottom: 1.5rem;
-		border-bottom: 2px solid #3498db;
-		padding-bottom: 0.5rem;
-	}
-
-	.event-info, .organizers, .format-list {
-		list-style: none;
-		padding: 0;
-	}
-
-	.event-info li, .organizers li, .format-list li {
-		padding: 0.5rem 0;
-		border-bottom: 1px solid #e9ecef;
-	}
-
-	.event-info li:last-child, .organizers li:last-child, .format-list li:last-child {
-		border-bottom: none;
-	}
-
-	.outcomes-section {
-		background: #f8f9fa;
-		padding: 4rem 2rem;
-	}
-
-	.outcomes-section h2 {
-		text-align: center;
-		color: #2c3e50;
-		font-size: 2.2rem;
-		margin-bottom: 3rem;
-	}
-
-	.outcomes-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-	}
-
-	.outcome-card {
-		background: white;
-		padding: 2rem;
-		border-radius: 10px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		border-left: 4px solid #3498db;
-	}
-
-	.outcome-card h3 {
-		color: #2c3e50;
-		font-size: 1.4rem;
-		margin-bottom: 1rem;
-	}
-
-	.outcome-card p {
-		color: #666;
-		line-height: 1.6;
-	}
-
-	.lang-switch {
-		background: rgba(255, 255, 255, 0.2);
-		border: 1px solid rgba(255, 255, 255, 0.3);
-	}
-
-	@media (max-width: 768px) {
-		.content-grid {
-			grid-template-columns: 1fr;
-			gap: 2rem;
-		}
-
-		.outcomes-grid {
-			grid-template-columns: 1fr;
-		}
-	}
-</style>
+<!-- About page styles now in global.css -->
