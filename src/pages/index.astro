@@ -22,26 +22,25 @@ const locale = 'zh';
 	</nav>
 
 	<main>
-		<section class="hero">
-			<div class="hero-content">
-				<h1>GOSIM AI Vision Forum 2025</h1>
-				<h2>GOSIM 人工智能愿景论坛</h2>
-				<p class="subtitle">探索AI和人类的共生未来<br>Exploring a Symbiotic Future of AI and Humanity</p>
-				<p class="tagline">科技向善 · 价值共生<br><em>AI for Good · Co-Creating Value</em></p>
+	<section class="hero">
+		<div class="hero-content">
+			<h1>{t('home.title', locale)}</h1>
+			<p class="subtitle">{t('home.description', locale)}<br><em>{t('home.englishDescription', locale)}</em></p>
+			<p class="tagline">{t('home.tagline', locale)}<br><em>{t('home.englishTagline', locale)}</em></p>
 
-				<div class="event-details">
-					<div class="detail">
-						<strong>日期 Date:</strong> 2025年9月12日 September 12, 2025
-					</div>
-					<div class="detail">
-						<strong>地点 Location:</strong> 中国·杭州 Hangzhou, China
-					</div>
-					<div class="detail">
-						<strong>规模 Scale:</strong> 70-100人邀请制 Invitation Only
-					</div>
+			<div class="event-details">
+				<div class="detail">
+					<strong>{t('home.eventDetails.date', locale)}</strong> {t('home.eventDetails.dateValue', locale)}
+				</div>
+				<div class="detail">
+					<strong>{t('home.eventDetails.location', locale)}</strong> {t('home.eventDetails.locationValue', locale)}
+				</div>
+				<div class="detail">
+					<strong>{t('home.eventDetails.scale', locale)}</strong> {t('home.eventDetails.scaleValue', locale)}
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
 		<section class="introduction">
 			<div class="content">

@@ -9,8 +9,8 @@ export const translations = {
 		},
 		// Home page
 		home: {
-			title: "GOSIM AI Vision Forum 2025",
-			subtitle: "GOSIM 人工智能愿景论坛",
+			title: "AI Vision Forum 2025",
+			subtitle: "人工智能愿景论坛",
 			description: "探索AI和人类的共生未来",
 			englishDescription: "Exploring a Symbiotic Future of AI and Humanity",
 			tagline: "科技向善 · 价值共生",
@@ -78,8 +78,8 @@ export const translations = {
 		},
 		// Home page
 		home: {
-			title: "GOSIM AI Vision Forum 2025",
-			subtitle: "GOSIM Artificial Intelligence Vision Forum",
+			title: "AI Vision Forum 2025",
+			subtitle: "Artificial Intelligence Vision Forum",
 			description: "Exploring a Symbiotic Future of AI and Humanity",
 			englishDescription: "探索AI和人类的共生未来",
 			tagline: "AI for Good · Co-Creating Value",
