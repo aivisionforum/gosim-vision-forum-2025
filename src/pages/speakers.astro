@@ -18,7 +18,12 @@ const locale = 'zh';
 				<a href="/about" class="nav-link">{t('nav.about', locale)}</a>
 				<a href="/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
 				<a href="/speakers" class="nav-link active">{t('nav.speakers', locale)}</a>
-				<a href="/en/speakers" class="nav-link lang-switch">English</a>
+			</div>
+			<div class="language-toggle">
+				<a href="/en/speakers" class="lang-toggle-btn" title="Switch to English">
+					<span class="lang-icon active">🇨🇳</span>
+					<span class="lang-icon">🇺🇸</span>
+				</a>
 			</div>
 		</div>
 	</nav>
