@@ -2,10 +2,10 @@ export const translations = {
 	zh: {
 		// Navigation
 		nav: {
-			home: "首页 Home",
-			about: "关于论坛 About", 
-			agenda: "议程安排 Agenda",
-			speakers: "参会者 Participants"
+			home: "首页",
+			about: "关于论坛", 
+			agenda: "议程安排",
+			speakers: "参会者"
 		},
 		// Home page
 		home: {
@@ -16,22 +16,22 @@ export const translations = {
 			tagline: "科技向善 · 价值共生",
 			englishTagline: "AI for Good · Co-Creating Value",
 			eventDetails: {
-				date: "日期 Date:",
-				dateValue: "2025年9月12日 September 12, 2025",
-				location: "地点 Location:",
-				locationValue: "中国·杭州 Hangzhou, China",
-				scale: "规模 Scale:",
-				scaleValue: "70-100人邀请制 Invitation Only"
+				date: "日期:",
+				dateValue: "2025年9月12日（星期五）",
+				location: "地点:",
+				locationValue: "中国·杭州",
+				scale: "规模:",
+				scaleValue: "70-100人邀请制"
 			},
 			introduction: {
-				title: "论坛简介 Forum Introduction",
+				title: "论坛简介",
 				p1: "GOSIM 作为全球开源创新平台，联合中法人工智能协会共同发起本次人工智能愿景论坛，聚焦「AI 能为人类创造何种核心价值」这一关键命题，为思想者、实践者、政策制定者和用户提供一个深度对话空间。",
 				p2: "论坛采用邀请制、非公开、小规模的深度交互机制，汇聚全球顶尖高校、研究机构及企业代表，尤为关注人工智能在人类体验维度的正向价值，聚焦教育革新、文化创造、情感陪伴、技术平权等关键领域。"
 			},
 			themes: {
-				title: "核心议题 Core Themes",
+				title: "核心议题",
 				education: {
-					title: "AI for Education",
+					title: "AI教育革新",
 					description: "探讨生成式AI如何重构学习体验、推动教育公平与知识民主化"
 				},
 				aigc: {
@@ -54,17 +54,17 @@ export const translations = {
 		},
 		// About page
 		about: {
-			title: "关于论坛 About the Forum",
+			title: "关于论坛",
 			subtitle: "探索AI和人类的共生未来"
 		},
 		// Agenda page  
 		agenda: {
-			title: "议程安排 Forum Agenda",
+			title: "议程安排",
 			subtitle: "2025年9月12日（星期五）· 中国·杭州"
 		},
 		// Speakers page
 		speakers: {
-			title: "参会者 Participants", 
+			title: "参会者", 
 			subtitle: "汇聚全球顶尖高校、研究机构及企业代表"
 		}
 	},
