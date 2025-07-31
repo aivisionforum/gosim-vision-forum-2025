@@ -2350,7 +2350,7 @@ html[lang="zh-CN"] .page-header p {
 /* Background Image with Overlay Layout */
 .background-image-content {
   position: relative;
-  background-image: url('/src/assets/forum-intro.png');
+  background-image: url('/forum-intro.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
