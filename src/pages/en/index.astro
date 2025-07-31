@@ -14,26 +14,31 @@ const locale = 'en';
 				</a>
 			</div>
 			<div class="nav-links">
-				<a href="/en/" class="nav-link active">{t('nav.home', locale)}</a>
-				<a href="/en/about" class="nav-link">{t('nav.about', locale)}</a>
+				<a href="/en/" class="nav-link active">Home</a>
 				<a href="/en/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
 				<a href="/en/speakers" class="nav-link">{t('nav.speakers', locale)}</a>
 			</div>
 			<div class="language-toggle">
 				<a href="/" class="lang-toggle-btn" title="Switch to Chinese">
-					<span class="lang-icon">🇨🇳</span>
-					<span class="lang-icon active">🇺🇸</span>
+					<span class="lang-text">CN</span>
 				</a>
 			</div>
 		</div>
 	</nav>
 
-	<main>
+	<main class="main-flex-container">
+		<!-- Hero Section -->
 		<section class="hero">
 			<div class="hero-content">
 				<h1>{t('home.title', locale)}</h1>
 				<p class="subtitle">{t('home.description', locale)}<br><em>{t('home.englishDescription', locale)}</em></p>
 				<p class="tagline">{t('home.tagline', locale)}<br><em>{t('home.englishTagline', locale)}</em></p>
+
+				<div class="organizers-info">
+					<div class="organizer-detail">
+						<strong>Organizers:</strong> GOSIM Global Open Source Innovation Platform, Sino-French Artificial Intelligence Association
+					</div>
+				</div>
 
 				<div class="event-details">
 					<div class="detail">
@@ -49,17 +54,165 @@ const locale = 'en';
 			</div>
 		</section>
 
-		<section class="introduction">
+		<!-- Forum Introduction Section -->
+		<section class="introduction modern-section gradient-banner">
 			<div class="content">
-				<h3>{t('home.introduction.title', locale)}</h3>
-				<p>{t('home.introduction.p1', locale)}</p>
-				<p>{t('home.introduction.p2', locale)}</p>
+				<div class="section-header">
+					<h2>Forum Introduction</h2>
+					<div class="section-subtitle">Focusing on AI's Core Value Creation</div>
+				</div>
+				<div class="content-grid-modern">
+					<div class="content-card">
+						<h3>Global Dialogue Platform</h3>
+						<p>
+							As a global open source innovation platform, GOSIM, together with the Sino-French Artificial Intelligence Association, 
+							jointly launches this AI Vision Forum, focusing on the key proposition of "what core value can AI create for humanity".
+						</p>
+					</div>
+					<div class="content-card">
+						<h3>Thinkers and Practitioners</h3>
+						<p>
+							The forum adopts an invitation-only, non-public, small-scale deep interaction mechanism, bringing together representatives 
+							from top universities, research institutions and enterprises worldwide, focusing on key areas such as educational innovation.
+						</p>
+					</div>
+				</div>
 			</div>
 		</section>
 
+		<!-- Combined Content Section -->
+		<section class="combined-content">
+			<div class="content-wrapper">
+				<!-- Left Column: About Forum -->
+				<div class="content-column">
+					<div class="section-block modern-block">
+						<div class="block-header">
+							<h2>Forum Background</h2>
+						</div>
+						<div class="block-content background-image-content">
+							<div class="background-image-overlay">
+								<div class="overlay-text-content">
+									<div class="highlight-box-dark">
+										<h1 class="highlight-text-light">Core Proposition: What core value can AI create for humanity?</h1>
+									</div>
+									<p>
+										As a global open source innovation platform, GOSIM has always adhered to the core spirit of open source — 
+										with openness and inclusiveness as the foundation, global collaboration as the link, 
+										and community-driven as the driving force. Based on this concept, the platform unites multiple forces 
+										to jointly launch the AI Vision Forum.
+									</p>
+									<div class="tech-evolution-dark">
+										<h4>Technology Evolution Breakthrough</h4>
+										<p>
+											In recent years, large language models (LLM), generative AI and intelligent agents have rapidly iterated. 
+											In areas of high intellectual tasks that were once exclusive to humans, from mathematical proofs and code writing 
+											to literary writing and artistic creation, top AI models continue to break performance boundaries, 
+											refreshing people's understanding of machine intelligence.
+										</p>
+										<p>
+											This breakthrough has stirred complex ripples in human society: on one hand, it seems as if humanity has found 
+											the key to unlocking cosmic mysteries and opening the door to the next generation of civilization; 
+											on the other hand, as AI continues to advance in "human-exclusive" intellectual territories, 
+											people are deeply concerned: will human unique creativity and emotional perception be replaced?
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-block modern-block no-shadow agenda-gradient">
+						<div class="block-header">
+							<h2>Forum Objectives</h2>
+						</div>
+						<div class="block-content">
+							<p>
+								Around these questions, this AI Vision Forum jointly initiated by GOSIM and the Sino-French Artificial Intelligence Association 
+								brings together representatives from top universities, research institutions and enterprises worldwide, 
+								adopting an invitation-only, non-public, small-scale deep interaction mechanism.
+							</p>
+							<p>
+								The forum particularly focuses on the positive value of artificial intelligence in the human experience dimension, 
+								focusing on key areas such as educational innovation, cultural creation, emotional companionship, 
+								and technological equity, and deeply explores the deep proposition of how AI products balance 
+								functionality and ethics, efficiency and warmth in practical applications.
+							</p>
+						</div>
+					</div>
+
+					<div class="section-block modern-block no-shadow">
+						<div class="block-header">
+							<h2>Core Philosophy</h2>
+						</div>
+						<div class="block-content">
+							<div class="philosophy-image-container">
+								<img src="/src/assets/little-prince.png" alt="Little Prince" />
+								<div class="philosophy-text-overlay">
+									<div class="highlight-box-overlay">
+										<h1>From "Tool Enabling" to "Value-Oriented"</h1>
+									</div>
+									<p>
+										We advocate a paradigm leap from "tool enabling" to "value-oriented" — making AI not only a technical empowerment tool, 
+										but also result-oriented, effectively responding to and solving core human concerns.
+										We believe that truly meaningful AI should be able to understand human emotional needs, respect cultural diversity, promote social equity, and play a positive role in education,
+										healthcare, artistic creation, and other fields. Through this value-oriented development model, AI will become an important
+										driving force for human civilization progress, rather than just a cold computational tool.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-block modern-block no-shadow">
+						<div class="block-header">
+							<h2>AIGC Spotlight Dual-Unit Display</h2>
+						</div>
+						<div class="block-content">
+							<p>
+								In activity design, the forum specially sets up the "Technical Products" and "Artistic Creativity" dual-unit 
+								AIGC Spotlight global work display, aiming to build a community of thought that spans technical logic and humanistic perspectives.
+							</p>
+						</div>
+					</div>
+
+					<div class="section-block modern-block no-shadow">
+						<div class="block-header">
+							<h2>International Collaboration</h2>
+						</div>
+						<div class="block-content">
+							<p>
+								This event is not only a cross-border deep dialogue, but also an important practice for China and Europe 
+								to reshape consensus on AI social responsibility and value orientation, committed to creating an international 
+								cooperation platform with continuity, influence and ethical thinking tension.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Column: Forum Details -->
+				<div class="content-column">
+					<div class="info-cards-container">
+
+
+						<div class="info-card">
+							<h3>Forum Format</h3>
+							<ul class="format-list">
+								<li>Keynote Speeches</li>
+								<li>Closed Roundtable Discussions</li>
+								<li>AIGC Spotlight Showcase</li>
+								<li>Cross-disciplinary Dialogue</li>
+								<li>Free Networking</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Core Topics Section -->
 		<section class="themes">
 			<div class="content">
-				<h3>{t('home.themes.title', locale)}</h3>
+				<h2>Core Topics</h2>
 				<div class="theme-grid">
 					<div class="theme-card">
 						<h4>{t('home.themes.education.title', locale)}</h4>
@@ -80,6 +233,27 @@ const locale = 'en';
 					<div class="theme-card">
 						<h4>{t('home.themes.ethics.title', locale)}</h4>
 						<p>{t('home.themes.ethics.description', locale)}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Expected Outcomes Section -->
+		<section class="outcomes-section">
+			<div class="content">
+				<h2>Expected Outcomes</h2>
+				<div class="outcomes-grid">
+					<div class="outcome-card">
+						<h3>China-Europe AI for Good Initiative</h3>
+						<p>Release the "China-Europe Artificial Intelligence Technology for Good Initiative Draft", building a consensus document with "humanistic values guiding AI development" as the core</p>
+					</div>
+					<div class="outcome-card">
+						<h3>AIGC Spotlight Mechanism</h3>
+						<p>Establish a permanent mechanism to promote project implementation and cross-border cooperation, establishing international recommendation and support mechanisms</p>
+					</div>
+					<div class="outcome-card">
+						<h3>Three-element Integration Paradigm</h3>
+						<p>Form a forum paradigm that integrates "technology + humanities + governance", exploring sustainable dialogue mechanisms for future cooperation</p>
 					</div>
 				</div>
 			</div>

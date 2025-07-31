@@ -14,59 +14,223 @@ const locale = 'zh';
 				</a>
 			</div>
 			<div class="nav-links">
-				<a href="/" class="nav-link active">{t('nav.home', locale)}</a>
-				<a href="/about" class="nav-link">{t('nav.about', locale)}</a>
+				<a href="/" class="nav-link active">首页</a>
 				<a href="/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
 				<a href="/speakers" class="nav-link">{t('nav.speakers', locale)}</a>
 			</div>
 			<div class="language-toggle">
 				<a href="/en/" class="lang-toggle-btn" title="Switch to English">
-					<span class="lang-icon active">🇨🇳</span>
-					<span class="lang-icon">🇺🇸</span>
+					<span class="lang-text">EN</span>
 				</a>
 			</div>
 		</div>
 	</nav>
 
-	<main>
-	<section class="hero">
-		<div class="hero-content">
-			<h1>{t('home.title', locale)}</h1>
-			<p class="subtitle">{t('home.description', locale)}<br><em>{t('home.englishDescription', locale)}</em></p>
-			<p class="tagline">{t('home.tagline', locale)}<br><em>{t('home.englishTagline', locale)}</em></p>
+	<main class="main-flex-container">
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero-content">
+				<h1>{t('home.title', locale)}</h1>
+				<p class="subtitle">{t('home.description', locale)}<br><em>{t('home.englishDescription', locale)}</em></p>
+				<p class="tagline">{t('home.tagline', locale)}<br><em>{t('home.englishTagline', locale)}</em></p>
 
-			<div class="event-details">
-				<div class="detail">
-					<strong>{t('home.eventDetails.date', locale)}</strong> {t('home.eventDetails.dateValue', locale)}
+				<div class="organizers-info">
+					<div class="organizer-detail">
+						<strong>主办方:</strong> GOSIM 全球开源创新平台、中法人工智能协会
+					</div>
 				</div>
-				<div class="detail">
-					<strong>{t('home.eventDetails.location', locale)}</strong> {t('home.eventDetails.locationValue', locale)}
-				</div>
-				<div class="detail">
-					<strong>{t('home.eventDetails.scale', locale)}</strong> {t('home.eventDetails.scaleValue', locale)}
-				</div>
-			</div>
-		</div>
-	</section>
 
-		<section class="introduction">
-			<div class="content">
-				<h3>论坛简介</h3>
-				<p>
-					GOSIM 作为全球开源创新平台，联合中法人工智能协会共同发起本次人工智能愿景论坛，
-					聚焦"AI 能为人类创造何种核心价值"这一关键命题，为思想者、实践者、政策制定者和用户
-					提供一个深度对话空间。
-				</p>
-				<p>
-					论坛采用邀请制、非公开、小规模的深度交互机制，汇聚全球顶尖高校、研究机构及企业代表，
-					尤为关注人工智能在人类体验维度的正向价值，聚焦教育革新、文化创造、情感陪伴、技术平权等关键领域。
-				</p>
+				<div class="event-details">
+					<div class="detail">
+						<strong>{t('home.eventDetails.date', locale)}</strong> {t('home.eventDetails.dateValue', locale)}
+					</div>
+					<div class="detail">
+						<strong>{t('home.eventDetails.location', locale)}</strong> {t('home.eventDetails.locationValue', locale)}
+					</div>
+					<div class="detail">
+						<strong>{t('home.eventDetails.scale', locale)}</strong> {t('home.eventDetails.scaleValue', locale)}
+					</div>
+				</div>
 			</div>
 		</section>
 
+		<!-- Forum Introduction Section -->
+		<section class="introduction modern-section gradient-banner">
+			<div class="content">
+				<div class="section-header">
+					<h2>论坛简介</h2>
+					<div class="section-subtitle">聚焦AI核心价值创造</div>
+				</div>
+				<div class="content-grid-modern">
+					<div class="content-card">
+						<h3>全球对话平台</h3>
+						<p>
+							GOSIM 作为全球开源创新平台，联合中法人工智能协会共同发起本次人工智能愿景论坛，
+							聚焦"AI 能为人类创造何种核心价值"这一关键命题。
+						</p>
+					</div>
+					<div class="content-card">
+						<h3>思考者和实践者</h3>
+						<p>
+							论坛采用邀请制、非公开、小规模的深度交互机制，汇聚全球顶尖高校、研究机构及企业代表，
+							聚焦教育革新、文化创造、情感陪伴、技术平权等关键领域。
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Combined Content Section -->
+		<section class="combined-content">
+			<div class="content-wrapper">
+				<!-- About Forum Content -->
+				<div class="content-column">
+					<div class="section-block modern-block">
+						<div class="block-header">
+							<h2>论坛背景</h2>
+						</div>
+						<div class="block-content background-image-content">
+							<div class="background-image-overlay">
+								<div class="overlay-text-content">
+									<div class="highlight-box-dark">
+										<h1 class="highlight-text-light">AI 能为人类创造何种核心价值？</h1>
+									</div>
+									<p>
+										GOSIM 作为全球开源创新平台，始终坚守开源精神内核 —— 以开放包容为底色、以全球协作为纽带、
+										以社区驱动为动力。基于这一理念，平台联合多方力量共同发起 AI Vision Forum。
+									</p>
+									<div class="tech-evolution-dark">
+										<h4>技术迭代突破</h4>
+										<p>
+											近年来，大语言模型（LLM）、生成式 AI 及智能体等技术迅猛迭代，在人类曾独占的高智力任务领域，
+											从数学证明、代码编写到文学写作、艺术创作，顶级 AI 模型不断突破性能边界，
+											刷新着人们对机器智能的认知。
+										</p>
+										<p>
+											这种突破在人类社会激起复杂涟漪：一方面仿佛人类已找到破解宇宙奥秘、打开下一代文明之门的钥匙；
+											另一方面，当 AI 在 "人类专属" 的智力高地持续突进，人们也深深忧虑：
+											人类独特的创造力、情感感知力是否会被取代？
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-block modern-block no-shadow agenda-gradient">
+						<div class="block-header">
+							<h2>论坛目标</h2>
+						</div>
+						<div class="block-content">
+							<div class="goals-grid">
+								<div class="goal-item">
+									<i class="goal-icon fas fa-globe-americas"></i>
+									<h4>全球汇聚</h4>
+									<p>汇聚全球顶尖高校、研究机构及企业代表</p>
+								</div>
+								<div class="goal-item">
+									<i class="goal-icon fas fa-lock"></i>
+									<h4>深度交流</h4>
+									<p>邀请制、非公开、小规模的深度交互机制</p>
+								</div>
+								<div class="goal-item">
+									<i class="goal-icon fas fa-heart"></i>
+									<h4>人文关怀</h4>
+									<p>关注AI在人类体验维度的正向价值</p>
+								</div>
+								<div class="goal-item">
+									<i class="goal-icon fas fa-balance-scale"></i>
+									<h4>平衡发展</h4>
+									<p>探讨功能性与伦理性、效率与温度的平衡</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-block modern-block no-shadow">
+						<div class="block-header">
+							<h2>核心理念</h2>
+						</div>
+						<div class="block-content">
+							<div class="philosophy-image-container">
+								<img src="/src/assets/little-prince.png" alt="Little Prince" />
+								<div class="philosophy-text-overlay">
+									<div class="highlight-box-overlay">
+										<h1>从"工具使能"到"价值导向"</h1>
+									</div>
+									<p>
+										我们倡导一种范式跃迁：让AI不仅仅是技术赋能工具，更要结果导向，有效回应和解决人类核心关切。
+										我们相信，真正有意义的AI应该能够理解人类的情感需求，尊重文化多样性，促进社会公平，并在教育、医疗、
+										艺术创作等领域发挥积极作用。通过这种价值导向的发展模式，AI将成为人类文明进步的重要推动力量，
+										而不仅仅是冰冷的计算工具。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section-block modern-block no-shadow">
+						<div class="block-header">
+							<h2>AIGC Spotlight 双单元展示</h2>
+						</div>
+						<div class="block-content">
+							<p>
+								在活动设计上，论坛特设"技术产品"与"艺术创意"双单元 AIGC Spotlight 全球作品展示，
+								旨在构建跨越技术逻辑与人文视角的思想共同体。
+							</p>
+						</div>
+					</div>
+
+					<div class="section-block modern-block no-shadow">
+						<div class="block-header">
+							<h2>国际合作</h2>
+						</div>
+						<div class="block-content">
+							<div class="cooperation-features">
+								<div class="feature-item">
+									<i class="feature-icon fas fa-bridge-circle-check"></i>
+									<h4>跨界交融</h4>
+									<p>深度对话平台</p>
+								</div>
+								<div class="feature-item">
+									<i class="feature-icon fas fa-flag"></i>
+									<h4>中欧共识</h4>
+									<p>AI社会责任重塑</p>
+								</div>
+								<div class="feature-item">
+									<i class="feature-icon fas fa-scale-balanced"></i>
+									<h4>伦理思辨</h4>
+									<p>影响力合作平台</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Column: Forum Details & Core Topics -->
+				<div class="content-column">
+					<div class="info-cards-container">
+
+
+						<div class="info-card">
+							<h3>论坛形式</h3>
+							<ul class="format-list">
+								<li>主题演讲</li>
+								<li>闭门深度圆桌</li>
+								<li>AIGC Spotlight 作品展示</li>
+								<li>跨领域对话</li>
+								<li>自由交流</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Core Topics Section -->
 		<section class="themes">
 			<div class="content">
-				<h3>核心议题</h3>
+				<h2>核心议题</h2>
 				<div class="theme-grid">
 					<div class="theme-card">
 						<h4>AI for Education</h4>
@@ -87,6 +251,27 @@ const locale = 'zh';
 					<div class="theme-card">
 						<h4>伦理悖论与治理难题</h4>
 						<p>深度讨论"科技向善"在现实中的制度张力</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Expected Outcomes Section -->
+		<section class="outcomes-section">
+			<div class="content">
+				<h2>预期成果</h2>
+				<div class="outcomes-grid">
+					<div class="outcome-card">
+						<h3>中欧AI向善倡议</h3>
+						<p>发布《中欧人工智能科技向善倡议草案》，构建以"人文价值引导AI发展"为核心的共识性文件</p>
+					</div>
+					<div class="outcome-card">
+						<h3>AIGC Spotlight机制</h3>
+						<p>设立常设机制，推动项目落地与跨界合作，建立国际推荐与支持机制</p>
+					</div>
+					<div class="outcome-card">
+						<h3>三元融合范式</h3>
+						<p>形成"科技 + 人文 + 治理"三元融合的论坛范式，为未来合作探索可持续对话机制</p>
 					</div>
 				</div>
 			</div>
