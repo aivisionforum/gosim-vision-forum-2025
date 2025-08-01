@@ -30,12 +30,8 @@ export const translations = {
       themes: {
         title: "核心议题",
         education: {
-          title: "AI教育革新",
-          description: "探讨生成式AI如何重构学习体验、推动教育公平与知识民主化",
-        },
-        aigc: {
-          title: "AIGC与文化创造力",
-          description: "聚焦AI在艺术、文学、设计等领域的创作潜力",
+          title: "AI 4 Education",
+          description: "探讨生成式AI如何重构学习体验，培养学生在艺术、文学、设计等领域的创作能力，推动教育公平与知识民主化，让创意表达成为新一代学生的核心技能",
         },
         emotion: {
           title: "AI与情感关系重构",
@@ -99,14 +95,9 @@ export const translations = {
       themes: {
         title: "Core Themes",
         education: {
-          title: "AI for Education",
+          title: "AI 4 Education",
           description:
-            "Exploring how generative AI reshapes learning experiences and promotes educational equity and knowledge democratization",
-        },
-        aigc: {
-          title: "AIGC and Cultural Creativity",
-          description:
-            "Focusing on AI's creative potential in art, literature, design and other fields",
+            "Exploring how generative AI reshapes learning experiences, cultivates students' creative abilities in art, literature, and design, promotes educational equity and knowledge democratization, making creative expression a core skill for the next generation",
         },
         emotion: {
           title: "AI and Emotional Relationship Reconstruction",

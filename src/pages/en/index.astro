@@ -128,18 +128,22 @@ const locale = 'en';
 						<div class="block-content">
 							<div class="goals-grid">
 								<div class="goal-item">
+									<i class="goal-icon fas fa-globe-americas"></i>
 									<h4>Global Convergence</h4>
 									<p>Bringing together representatives from top universities, research institutions and enterprises worldwide</p>
 								</div>
 								<div class="goal-item">
+									<i class="goal-icon fas fa-lock"></i>
 									<h4>Deep Exchange</h4>
 									<p>Invitation-only, non-public, small-scale deep interaction mechanism</p>
 								</div>
 								<div class="goal-item">
+									<i class="goal-icon fas fa-heart"></i>
 									<h4>Human Care</h4>
 									<p>Focusing on the positive value of AI in the human experience dimension</p>
 								</div>
 								<div class="goal-item">
+									<i class="goal-icon fas fa-balance-scale"></i>
 									<h4>Balanced Development</h4>
 									<p>Exploring the balance between functionality and ethics, efficiency and warmth</p>
 								</div>
@@ -175,11 +179,23 @@ const locale = 'en';
 							<h2>International Collaboration</h2>
 						</div>
 						<div class="block-content">
-							<p>
-								This event is not only a cross-border deep dialogue, but also an important practice for China and Europe 
-								to reshape consensus on AI social responsibility and value orientation, committed to creating an international 
-								cooperation platform with continuity, influence and ethical thinking tension.
-							</p>
+							<div class="cooperation-features">
+								<div class="feature-item">
+									<i class="feature-icon fas fa-bridge-circle-check"></i>
+									<h4>Cross-boundary Integration</h4>
+									<p>Deep dialogue platform</p>
+								</div>
+								<div class="feature-item">
+									<i class="feature-icon fas fa-flag"></i>
+									<h4>China-Europe Consensus</h4>
+									<p>AI social responsibility reshaping</p>
+								</div>
+								<div class="feature-item">
+									<i class="feature-icon fas fa-scale-balanced"></i>
+									<h4>Ethical Deliberation</h4>
+									<p>Influential cooperation platform</p>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -209,49 +225,47 @@ const locale = 'en';
 				<!-- Right Column: Forum Details -->
 				<div class="content-column">
 					<div class="info-cards-container">
-
-
-						<div class="info-card">
-							<h3>Forum Format</h3>
-							<ul class="format-list">
-								<li>Keynote Speeches</li>
-								<li>Closed Roundtable Discussions</li>
-								<li>AIGC Spotlight Showcase</li>
-								<li>Cross-disciplinary Dialogue</li>
-								<li>Free Networking</li>
-							</ul>
-						</div>
+						<!-- Forum format moved to Core Topics section -->
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Core Topics Section -->
-		<section class="themes">
-			<div class="content">
-				<h2>Core Topics</h2>
-				<div class="theme-grid">
-					<div class="theme-card">
-						<h4>{t('home.themes.education.title', locale)}</h4>
-						<p>{t('home.themes.education.description', locale)}</p>
-					</div>
-					<div class="theme-card">
-						<h4>{t('home.themes.aigc.title', locale)}</h4>
-						<p>{t('home.themes.aigc.description', locale)}</p>
-					</div>
-					<div class="theme-card">
-						<h4>{t('home.themes.emotion.title', locale)}</h4>
-						<p>{t('home.themes.emotion.description', locale)}</p>
-					</div>
-					<div class="theme-card">
-						<h4>{t('home.themes.symbiosis.title', locale)}</h4>
-						<p>{t('home.themes.symbiosis.description', locale)}</p>
-					</div>
-					<div class="theme-card">
-						<h4>{t('home.themes.ethics.title', locale)}</h4>
-						<p>{t('home.themes.ethics.description', locale)}</p>
-					</div>
-				</div>
+		<section class="core-topics-section">
+			<h2 class="core-topics-title">Core Topics</h2>
+			<div class="core-topics-image-container">
+								<img src="/xihu-guest-house.png" alt="Xihu Guest House" />
+								<div class="core-topics-overlay">
+									<div class="theme-grid-overlay">
+										<div class="theme-card-overlay">
+											<h4>{t('home.themes.education.title', locale)}</h4>
+											<p>{t('home.themes.education.description', locale)}</p>
+										</div>
+										<div class="theme-card-overlay">
+											<h4>{t('home.themes.emotion.title', locale)}</h4>
+											<p>{t('home.themes.emotion.description', locale)}</p>
+										</div>
+										<div class="theme-card-overlay">
+											<h4>{t('home.themes.symbiosis.title', locale)}</h4>
+											<p>{t('home.themes.symbiosis.description', locale)}</p>
+										</div>
+										<div class="theme-card-overlay">
+											<h4>{t('home.themes.ethics.title', locale)}</h4>
+											<p>{t('home.themes.ethics.description', locale)}</p>
+										</div>
+									</div>
+									
+									<div class="forum-format-overlay">
+										<h3>Forum Format</h3>
+										<ul class="format-list-overlay">
+											<li>Keynote Speeches</li>
+											<li>Closed Roundtable Discussions</li>
+											<li>AIGC Spotlight Showcase</li>
+											<li>Cross-disciplinary Dialogue</li>
+											<li>Free Networking</li>
+										</ul>
+									</div>
 			</div>
 		</section>
 
