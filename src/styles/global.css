@@ -2086,27 +2086,21 @@ html[lang="zh-CN"] .page-header p {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  width: 100%;
 }
 
 .core-topics-title {
-  position: absolute;
-  bottom: 500px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
   color: white;
   font-size: 2.5rem;
   font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin: 0;
+  margin: 0 0 3rem 0;
+  text-align: center;
 }
 
 .core-topics-image-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+  width: 100%;
   margin: 0;
 }
 
@@ -2123,22 +2117,20 @@ html[lang="zh-CN"] .page-header p {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 2rem 4rem;
-  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   overflow: hidden;
+  padding-bottom: 2rem;
 }
 
 .theme-grid-overlay {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
-  margin-bottom: 0.5rem;
-  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .theme-card-overlay {
@@ -2174,24 +2166,27 @@ html[lang="zh-CN"] .page-header p {
 }
 
 .forum-format-overlay {
-  background: rgba(75, 0, 130, 0.15);
-  backdrop-filter: blur(10px);
-  padding: 1.5rem;
-  border-radius: 12px;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 8px;
   text-align: center;
-  border: 1px solid rgba(138, 43, 226, 0.2);
-  width: calc(220px * 4 + 1rem * 3); /* 4 cards * 220px + 3 gaps * 1rem */
-  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: calc(220px * 4 + 1rem * 3);
+  height: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .forum-format-overlay h3 {
   color: white;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .format-list-overlay {
@@ -2200,17 +2195,18 @@ html[lang="zh-CN"] .page-header p {
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
 .format-list-overlay li {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1rem;
-  padding: 0.4rem 1rem;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 1.3;
 }
 
 .content-column.full-width {
@@ -2308,24 +2304,28 @@ html[lang="zh-CN"] .page-header p {
   
   .core-topics-overlay {
     padding: 1rem;
-    justify-content: flex-start;
-    gap: 1rem;
+    width: 100%;
+    left: 0;
+    transform: none;
   }
   
   .core-topics-title {
     font-size: 1.8rem;
-    bottom: 520px;
+    margin-bottom: 2rem;
   }
   
   .theme-grid-overlay {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 0.8rem;
+    width: 100%;
+    justify-content: center;
   }
   
   .theme-card-overlay {
     padding: 0.8rem;
-    width: auto;
+    width: 160px;
+    height: 100px;
     font-size: 0.85rem;
   }
   
@@ -2340,12 +2340,14 @@ html[lang="zh-CN"] .page-header p {
   
   .forum-format-overlay {
     padding: 1rem;
-    width: 100%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 500px;
+    height: 100px;
   }
   
   .forum-format-overlay h3 {
-    font-size: 1.2rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
   }
   
   .format-list-overlay {
@@ -2354,7 +2356,8 @@ html[lang="zh-CN"] .page-header p {
   }
   
   .format-list-overlay li {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
   }
   
   .highlight-box-overlay,
