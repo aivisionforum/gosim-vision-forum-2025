@@ -1021,12 +1021,7 @@ html[lang="zh-CN"] .page-header p {
   margin: 0 auto;
 }
 
-/* Override grid centering for left-aligned sections */
-.outcomes-section.gradient-banner .outcomes-grid {
-  margin: 0;
-}
-
-/* But keep participants grid centered */
+/* Keep participants grid centered */
 .outcomes-section.gradient-banner.participants-gradient .participants-grid-layout {
   margin: 0 auto !important;
 }
@@ -3032,6 +3027,11 @@ h1.highlight-text-light {
 .outcomes-section.gradient-banner h2,
 .outcomes-section.gradient-banner.participants-gradient h2 {
   text-align: left;
+}
+
+/* But center the Expected Outcomes grid */
+section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda-topics-gradient) .outcomes-grid {
+  margin: 0 auto !important;
 }
 
 /* Make 核心参会群体 and 预期成果 headings black */
