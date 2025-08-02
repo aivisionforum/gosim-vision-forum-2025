@@ -240,6 +240,8 @@ h5,
 h6 {
   color: #2c3e50;
   font-weight: 600;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 blockquote {
@@ -911,7 +913,7 @@ html[lang="zh-CN"] .page-header p {
   color: #2c3e50;
   font-size: 1.8rem;
   margin: 2.5rem 0 1.5rem 0;
-  border-bottom: 2px solid #3498db;
+  border-bottom: none;
   padding-bottom: 0.5rem;
 }
 
@@ -1007,70 +1009,119 @@ html[lang="zh-CN"] .page-header p {
   color: rgba(255, 248, 220, 1);
 }
 
-.outcomes-section {
-  background: #dda048;
-  padding: 4rem 2rem;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  position: relative;
-}
-
-.outcomes-section h2 {
-  text-align: center;
-  color: #2c2c1b;
-  font-size: 2.2rem;
-  margin-bottom: 3rem;
-}
+/* Old outcomes-section styles removed - now using .outcomes-section.gradient-banner */
 
 .outcomes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Override grid centering for left-aligned sections */
+.outcomes-section.gradient-banner .outcomes-grid {
+  margin: 0;
+}
+
+/* But keep participants grid centered */
+.outcomes-section.gradient-banner.participants-gradient .participants-grid-layout {
+  margin: 0 auto !important;
+}
+
+/* Custom grid layout for participants section */
+.participants-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto; /* Center the grid while keeping section left-aligned */
+}
+
+/* 2x2 grid layout for agenda topics */
+.grid-2x2 {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Specific gradient for agenda topics section */
+.agenda-topics-gradient {
+  background-image: url('/hangzhou-landscape.svg') !important;
+}
+
+.agenda-topics-gradient::before {
+  background: linear-gradient(135deg, 
+    rgba(129, 135, 197, 0.7) 0%, 
+    rgba(239, 199, 41, 0.7) 100%
+  ) !important;
+}
+
+/* Specific gradient for participants section */
+.outcomes-section.gradient-banner.participants-gradient {
+  background-image: url('/xiangji.svg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.participants-gradient::before {
+  background: linear-gradient(135deg, 
+    rgba(248, 187, 217, 0.7) 0%, 
+    rgba(168, 230, 207, 0.7) 100%
+  ) !important;
+}
+
+
+@media (max-width: 768px) {
+  .participants-grid-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 .outcome-card {
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
+  );
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.outcome-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
-  pointer-events: none;
-}
+/* Removed ::before overlay as transparency is now handled by main background */
 
 .outcome-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.4) 0%, 
+    rgba(255, 255, 255, 0.35) 100%
+  );
 }
 
 .outcome-card h3 {
-  color: #2c2c1b;
+  color: #5a4a3a;
   font-size: 1.4rem;
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
+  font-weight: 600;
 }
 
 .outcome-card p {
-  color: #2c2c1b;
+  color: #6b5d4f;
   line-height: 1.6;
   position: relative;
   z-index: 1;
@@ -1942,15 +1993,9 @@ html[lang="zh-CN"] .page-header p {
   background: transparent !important;
 }
 
-.section-block.no-shadow.international-gradient,
-.modern-block.no-shadow.international-gradient {
-  background: linear-gradient(135deg, #EAD0D6 0%, #ECE9CD 100%) !important;
-}
+/* International gradient styles moved to .international-section.gradient-banner */
 
-.section-block.no-shadow.agenda-gradient,
-.modern-block.no-shadow.agenda-gradient {
-  background: linear-gradient(135deg, #ECE9CD 0%, #a8e6cf 100%) !important;
-}
+/* Agenda gradient styles moved to .agenda-section.gradient-banner */
 
 .section-block.no-shadow::before,
 .modern-block.no-shadow::before {
@@ -1963,34 +2008,7 @@ html[lang="zh-CN"] .page-header p {
   transform: none !important;
 }
 
-.agenda-gradient {
-  background: linear-gradient(
-    135deg,
-    rgba(139, 69, 19, 0.85) 0%,
-    rgba(160, 82, 45, 0.75) 100%
-  ) !important;
-  border: 1px solid rgba(205, 133, 63, 0.3) !important;
-  backdrop-filter: blur(5px);
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-bottom: 0 !important;
-  border-radius: 0 !important;
-  padding-left: max(2rem, calc((100vw - 1200px) / 2 + 3rem));
-  padding-right: max(2rem, calc((100vw - 1200px) / 2 + 3rem));
-}
-
-.agenda-gradient .block-header h2 {
-  color: #2c3e50 !important;
-  text-shadow: none;
-}
-
-.agenda-gradient .block-content {
-  color: #2c3e50;
-}
-
-.agenda-gradient .goal-item h4 {
-  color: #2c3e50;
-}
+/* Old agenda-gradient styles removed - now using .agenda-section.gradient-banner */
 
 .philosophy-image-container {
   position: relative;
@@ -2017,20 +2035,23 @@ html[lang="zh-CN"] .page-header p {
 }
 
 .highlight-box-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
+  );
   padding: 1.5rem 2rem;
   border-radius: 10px;
   margin-bottom: 0;
-  border: none;
-  backdrop-filter: blur(10px);
-  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   flex: 0 0 35%;
   display: flex;
   align-items: center;
 }
 
 .highlight-box-overlay h1 {
-  color: white;
+  color: #2c3e50;
   font-size: 1.4rem;
   margin: 0;
   font-weight: 600;
@@ -2038,45 +2059,26 @@ html[lang="zh-CN"] .page-header p {
 }
 
 .philosophy-text-overlay p {
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
+  );
   padding: 1.5rem 2rem;
   border-radius: 10px;
-  color: rgba(255, 255, 255, 0.95);
+  color: #2c3e50;
   margin: 0;
   font-size: 1.1rem;
   line-height: 1.6;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  text-shadow: none;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   flex: 1;
   display: flex;
   align-items: center;
 }
 
-.international-gradient {
-  background: linear-gradient(135deg, #EAD0D6 0%, #ECE9CD 100%) !important;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-bottom: 0 !important;
-  border-radius: 0 !important;
-  padding-left: max(2rem, calc((100vw - 1200px) / 2 + 3rem));
-  padding-right: max(2rem, calc((100vw - 1200px) / 2 + 3rem));
-}
-
-.international-gradient .block-header h2 {
-  color: #2c3e50 !important;
-}
-
-.international-gradient .block-content {
-  color: #2c3e50;
-}
-
-.international-gradient .feature-item h4 {
-  color: #2c3e50;
-}
-
-.international-gradient .feature-item p {
-  color: #555;
-}
+/* Old international-gradient styles removed - now using .international-section.gradient-banner */
 
 /* Core Topics section with image overlay */
 .core-topics-section {
@@ -2088,7 +2090,7 @@ html[lang="zh-CN"] .page-header p {
 
 .core-topics-title {
   position: absolute;
-  bottom: 400px;
+  bottom: 500px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -2121,19 +2123,22 @@ html[lang="zh-CN"] .page-header p {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 2rem;
+  padding: 2rem 4rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
 }
 
 .theme-grid-overlay {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .theme-card-overlay {
@@ -2143,32 +2148,43 @@ html[lang="zh-CN"] .page-header p {
   border-radius: 8px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 280px;
+  width: 220px;
+  height: 140px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .theme-card-overlay h4 {
   color: white;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .theme-card-overlay p {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 0.75rem;
+  line-height: 1.3;
   margin: 0;
 }
 
 .forum-format-overlay {
   background: rgba(75, 0, 130, 0.15);
   backdrop-filter: blur(10px);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
   border: 1px solid rgba(138, 43, 226, 0.2);
-  width: 100%;
-  max-width: 1200px;
+  width: calc(220px * 4 + 1rem * 3); /* 4 cards * 220px + 3 gaps * 1rem */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .forum-format-overlay h3 {
@@ -2228,13 +2244,16 @@ html[lang="zh-CN"] .page-header p {
 }
 
 .aigc-spotlight-text-overlay .highlight-box-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
+  );
   padding: 1.5rem 2rem;
   border-radius: 10px;
   margin-bottom: 0;
-  border: none;
-  backdrop-filter: blur(10px);
-  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   flex: 0 0 35%;
   display: flex;
   align-items: center;
@@ -2242,7 +2261,7 @@ html[lang="zh-CN"] .page-header p {
 }
 
 .aigc-spotlight-text-overlay .highlight-box-overlay h1 {
-  color: white;
+  color: #2c3e50;
   font-size: 1.4rem;
   margin: 0;
   font-weight: 600;
@@ -2251,15 +2270,20 @@ html[lang="zh-CN"] .page-header p {
 }
 
 .aigc-spotlight-text-overlay p {
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
+  );
   padding: 1.5rem 2rem;
   border-radius: 10px;
-  color: rgba(255, 255, 255, 0.95);
+  color: #2c3e50;
   margin: 0;
   font-size: 1.1rem;
   line-height: 1.6;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  text-shadow: none;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   flex: 1;
   display: flex;
   align-items: center;
@@ -2290,11 +2314,11 @@ html[lang="zh-CN"] .page-header p {
   
   .core-topics-title {
     font-size: 1.8rem;
-    bottom: 420px;
+    bottom: 520px;
   }
   
   .theme-grid-overlay {
-    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 0.8rem;
   }
@@ -2306,16 +2330,18 @@ html[lang="zh-CN"] .page-header p {
   }
   
   .theme-card-overlay h4 {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
   }
   
   .theme-card-overlay p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   
   .forum-format-overlay {
     padding: 1rem;
+    width: 100%;
+    max-width: 600px;
   }
   
   .forum-format-overlay h3 {
@@ -2382,7 +2408,7 @@ html[lang="zh-CN"] .page-header p {
   gap: 1rem;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(160, 82, 45, 0.1);
+  border-bottom: none;
 }
 
 .block-icon {
@@ -2468,26 +2494,33 @@ html[lang="zh-CN"] .page-header p {
 
 .goal-item {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(248, 249, 250, 0.95) 100%
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
   );
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(160, 82, 45, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
   transition: all 0.3s ease;
 }
 
 .goal-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.4) 0%, 
+    rgba(255, 255, 255, 0.35) 100%
+  );
 }
 
 .goal-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
   display: block;
+  color: #2c3e50;
+  opacity: 0.8;
 }
 
 .goal-item h4 {
@@ -2586,26 +2619,33 @@ html[lang="zh-CN"] .page-header p {
 
 .feature-item {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(248, 249, 250, 0.95) 100%
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
   );
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(160, 82, 45, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
   transition: all 0.3s ease;
 }
 
 .feature-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.4) 0%, 
+    rgba(255, 255, 255, 0.35) 100%
+  );
 }
 
 .feature-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
   display: block;
+  color: #2c3e50;
+  opacity: 0.8;
 }
 
 .feature-item h4 {
@@ -2787,7 +2827,10 @@ h1.highlight-text-light {
 
 /* Gradient Banner Styles */
 .gradient-banner {
-  background: linear-gradient(135deg, #f8bbd9 0%, #a8e6cf 100%);
+  background-image: url('/hangzhou.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -2809,8 +2852,8 @@ h1.highlight-text-light {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, 
-    rgba(141, 212, 232, 0.3) 0%, 
-    rgba(135, 206, 235, 0.3) 100%
+    rgba(248, 187, 217, 0.7) 0%, 
+    rgba(168, 230, 207, 0.7) 100%
   );
   pointer-events: none;
 }
@@ -2927,7 +2970,20 @@ h1.highlight-text-light {
   z-index: 2;
 }
 
-.modern-section.gradient-banner {
+.outcomes-section.gradient-banner .content {
+  padding: 4rem 0;
+}
+
+.gradient-banner .block-header,
+.gradient-banner .block-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Full-width sections */
+.introduction.gradient-banner,
+.agenda-section.gradient-banner,
+.international-section.gradient-banner {
   border: none;
   box-shadow: none;
   width: 100vw;
@@ -2935,7 +2991,207 @@ h1.highlight-text-light {
   border-radius: 0;
   padding-left: max(2rem, calc((100vw - 1200px) / 2 + 4rem));
   padding-right: max(2rem, calc((100vw - 1200px) / 2 + 4rem));
+  min-height: 400px;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Left-aligned sections - 核心参会群体 and 预期成果 */
+.outcomes-section.gradient-banner,
+.outcomes-section.gradient-banner.participants-gradient {
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  margin-left: 0;
+  border-radius: 0;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  min-height: 400px;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Override content centering for left-aligned sections */
+.outcomes-section.gradient-banner .content,
+.outcomes-section.gradient-banner.participants-gradient .content {
+  max-width: none;
+  margin: 0;
+}
+
+/* Left-align the headings in these sections */
+.outcomes-section.gradient-banner h2,
+.outcomes-section.gradient-banner.participants-gradient h2 {
+  text-align: left;
+}
+
+/* Make 核心参会群体 and 预期成果 headings black */
+.outcomes-section.gradient-banner.participants-gradient h2,
+.outcomes-section.gradient-banner h2 {
+  color: #000000 !important;
+  text-shadow: none !important;
+  background: none !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Specific rule for introduction section */
+.introduction.gradient-banner {
+  background-image: url('/hangzhou.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Make 论坛简介 heading and subtitle black */
+.introduction.gradient-banner .section-header h2,
+.introduction.gradient-banner .section-subtitle {
+  color: #000000 !important;
+  text-shadow: none !important;
+  background: none !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Specific rule for agenda section */
+.agenda-section.gradient-banner {
+  background-image: url('/origination.svg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Specific rule for international section */
+.international-section.gradient-banner {
+  background-image: url('/heyi.svg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Specific rule for outcomes section */
+.outcomes-section.gradient-banner {
+  background-image: url('/hangzhou-landscape.svg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Custom gradient overlay for outcomes section */
+.outcomes-section.gradient-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 145, 0.7) 0%, 
+    rgba(165, 154, 202, 0.7) 50%, 
+    rgba(252, 226, 213, 0.7) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* Forum Details Section */
+.forum-details-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.forum-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.forum-format-card,
+.communication-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.forum-format-card h2,
+.communication-card h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.forum-format-card .format-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.forum-format-card .format-list li {
+  color: #5a4a3a;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.forum-format-card .format-list li:before {
+  content: "▶";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.forum-format-card .format-list li:last-child {
+  border-bottom: none;
+}
+
+.communication-opportunities {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.opportunity-item {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, 
+    rgba(52, 152, 219, 0.05) 0%, 
+    rgba(155, 89, 182, 0.05) 100%
+  );
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.opportunity-item h4 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.opportunity-item p {
+  color: #5a4a3a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .forum-details-grid {
+    gap: 2rem;
+  }
+  
+  .forum-format-card,
+  .communication-card {
+    padding: 2rem;
+  }
+}
+
+/* Agenda section styles removed - using original agenda-gradient */
 
 /* Adjust text colors for gradient background */
 .gradient-banner .section-header h2 {
@@ -2943,6 +3199,17 @@ h1.highlight-text-light {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background: none;
   -webkit-text-fill-color: #ffffff;
+}
+
+.gradient-banner .content h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
 }
 
 .gradient-banner .section-subtitle {
@@ -2963,11 +3230,11 @@ h1.highlight-text-light {
 
 .gradient-banner .content-card {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(255, 255, 255, 0.9) 100%
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
   );
-  backdrop-filter: blur(10px);
-  border: none;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 125px;
   width: 400px;
   height: 250px;
@@ -2976,6 +3243,7 @@ h1.highlight-text-light {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .gradient-banner .card-icon {
@@ -3073,6 +3341,208 @@ h1.highlight-text-light {
   .content-grid-modern {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+}
+
+/* Footer Styles */
+.site-footer {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  color: #e2e8f0;
+  padding: 60px 0 20px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+  color: #cbd5e0;
+}
+
+.footer-column a {
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-column strong {
+  color: #e2e8f0;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright p {
+  margin: 0;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+.language-switch {
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+.language-switch a {
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.language-switch a:hover {
+  color: #ffffff;
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover svg {
+  transform: scale(1.1);
+}
+
+/* WeChat QR Code */
+.wechat-qr {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e0;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.wechat-qr:hover {
+  color: #ffffff;
+}
+
+.qr-code-popup {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+  width: 180px;
+  text-align: center;
+}
+
+.wechat-qr:hover .qr-code-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.qr-code-popup img {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.qr-code-popup p {
+  color: #2d3748;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Footer Responsive Design */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  /* Adjust left-aligned sections on mobile */
+  .outcomes-section.gradient-banner,
+  .outcomes-section.gradient-banner.participants-gradient {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Further adjust padding on small screens */
+  .outcomes-section.gradient-banner,
+  .outcomes-section.gradient-banner.participants-gradient {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 

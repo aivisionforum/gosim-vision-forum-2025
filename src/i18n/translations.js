@@ -89,30 +89,26 @@ export const translations = {
       },
       introduction: {
         title: "Forum Introduction",
-        p1: "As a global open source innovation platform, GOSIM, together with the Sino-French Artificial Intelligence Association, jointly launches this AI Vision Forum, focusing on the key proposition of 'what core value can AI create for humanity', providing a deep dialogue space for thinkers, practitioners, policy makers and users.",
-        p2: "The forum adopts an invitation-only, non-public, small-scale deep interaction mechanism, bringing together representatives from top universities, research institutions and enterprises worldwide, with particular attention to the positive value of artificial intelligence in the human experience dimension, focusing on key areas such as educational innovation, cultural creation, emotional companionship, and technological equity.",
+        p1: "GOSIM and the Sino-French AI Association launch this Vision Forum to answer one critical question: What core value can AI create for humanity?",
+        p2: "An invitation-only gathering of global thought leaders, researchers, and innovators. We focus on AI's human impact: education, creativity, emotional support, and technological equity.",
       },
       themes: {
         title: "Core Themes",
         education: {
           title: "AI 4 Education",
-          description:
-            "Exploring how generative AI reshapes learning experiences, cultivates students' creative abilities in art, literature, and design, promotes educational equity and knowledge democratization, making creative expression a core skill for the next generation",
+          description: "Transforming learning through generative AI. Democratizing creativity in art, literature, and design. Making creative expression the new literacy.",
         },
         emotion: {
-          title: "AI and Emotional Relationship Reconstruction",
-          description:
-            "Exploring AI's emotional support in elderly companionship, mental health, and child interaction",
+          title: "AI & Emotional Bonds",
+          description: "Redefining connection through AI companionship, mental wellness, and empathetic interaction.",
         },
         symbiosis: {
-          title: "From 'AI Tools' to 'AI Symbiosis'",
-          description:
-            "Beyond efficiency narratives, towards 'co-creation and complementary' collaboration paradigms",
+          title: "From Tools to Symbiosis",
+          description: "Beyond efficiency. Toward true co-creation and complementary intelligence.",
         },
         ethics: {
-          title: "Ethical Paradoxes and Governance Challenges",
-          description:
-            "In-depth discussion of institutional tensions of 'technology for good' in reality",
+          title: "Ethics & Governance",
+          description: "Navigating the tensions between 'technology for good' and real-world implementation.",
         },
       },
     },
