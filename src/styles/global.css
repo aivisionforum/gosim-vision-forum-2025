@@ -1031,6 +1031,11 @@ html[lang="zh-CN"] .page-header p {
   margin: 0 auto !important;
 }
 
+/* Keep agenda topics grid centered */
+.outcomes-section.gradient-banner.agenda-topics-gradient .grid-2x2 {
+  margin: 0 auto !important;
+}
+
 /* Custom grid layout for participants section */
 .participants-grid-layout {
   display: grid;
