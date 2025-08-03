@@ -1,0 +1,326 @@
+---
+export interface Props {
+  id?: string;
+  sectionClass?: string;
+  title?: string;
+  titleZh?: string;
+  titleEn?: string;
+  image?: string;
+  imageAlt?: string;
+  topics?: Array<{
+    title: string;
+    titleEn?: string;
+    description: string;
+    descriptionEn?: string;
+  }>;
+  formatTitle?: string;
+  formatTitleZh?: string;
+  formatTitleEn?: string;
+  formatItems?: string[];
+  formatItemsZh?: string[];
+  formatItemsEn?: string[];
+}
+
+const {
+  id = 'core-topics',
+  sectionClass = 'core-topics-section',
+  title,
+  titleZh = '核心议题',
+  titleEn = 'Core Topics',
+  image = '/xihu-guest-house.png',
+  imageAlt = 'Xihu Guest House',
+  topics,
+  formatTitle,
+  formatTitleZh = '论坛形式',
+  formatTitleEn = 'Forum Format',
+  formatItems,
+  formatItemsZh = ['主题演讲', '深度圆桌讨论', 'AIGC Spotlight 作品展示', '跨领域对话', '早中晚餐社交'],
+  formatItemsEn = ['Keynote Speeches', 'Deep Roundtable Discussions', 'AIGC Spotlight Showcase', 'Cross-disciplinary Dialogue', 'Breakfast, Lunch & Dinner Networking']
+} = Astro.props;
+
+// Default topics if not provided
+const defaultTopicsZh = [
+  {
+    title: 'AI 4 Education',
+    description: '探讨AI如何重构学习体验，推动教育公平与知识民主化，让创意表达成为新一代学生的核心技能'
+  },
+  {
+    title: 'AI与情感关系重构',
+    description: '探索AI在老龄陪伴、心理健康、儿童互动中的情感支持'
+  },
+  {
+    title: '从"AI工具"到"AI共生"',
+    description: '超越效率叙事，转向"共创—互补"的协作范式'
+  },
+  {
+    title: '伦理悖论与治理难题',
+    description: '深度讨论"科技向善"在现实中的制度张力'
+  }
+];
+
+const defaultTopicsEn = [
+  {
+    title: 'AI 4 Education',
+    description: 'Exploring how generative AI reshapes learning, cultivates creativity, and promotes educational equity for the next generation'
+  },
+  {
+    title: 'AI and Emotional Relationship Reconstruction',
+    description: 'Exploring AI\'s emotional support in elderly companionship, mental health, and child interaction'
+  },
+  {
+    title: 'From "AI Tools" to "AI Symbiosis"',
+    description: 'Transcending efficiency narratives, moving towards "co-creation-complementarity" collaboration paradigm'
+  },
+  {
+    title: 'Ethical Paradoxes and Governance Challenges',
+    description: 'Deep discussion on institutional tensions of "technology for good" in reality'
+  }
+];
+
+// Determine which values to use based on locale detection or explicit props
+const currentLang = Astro.url.pathname.includes('/en/') ? 'en' : 'zh';
+const displayTitle = title || (currentLang === 'en' ? titleEn : titleZh);
+const displayTopics = topics || (currentLang === 'en' ? defaultTopicsEn : defaultTopicsZh);
+const displayFormatTitle = formatTitle || (currentLang === 'en' ? formatTitleEn : formatTitleZh);
+const displayFormatItems = formatItems || (currentLang === 'en' ? formatItemsEn : formatItemsZh);
+---
+
+<section class={sectionClass} id={id}>
+  <div class="core-topics-image-container">
+    <img src={image} alt={imageAlt} />
+    <div class="core-topics-overlay">
+      <h2 class="core-topics-title">{displayTitle}</h2>
+      <div class="theme-grid-overlay">
+        {displayTopics.map((topic) => (
+          <div class="theme-card-overlay">
+            <h4>{topic.title}</h4>
+            <p>{topic.description}</p>
+          </div>
+        ))}
+      </div>
+      
+      <div class="forum-format-overlay">
+        <h3>{displayFormatTitle}</h3>
+        <ul class="format-list-overlay">
+          {displayFormatItems.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Core Topics Section */
+  .core-topics-section {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .core-topics-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .core-topics-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    min-height: 600px;
+  }
+
+  .core-topics-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .core-topics-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 0 3rem 0;
+    text-align: center;
+  }
+
+  .theme-grid-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 928px;
+    max-width: 100%;
+  }
+
+  .theme-card-overlay {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 1rem;
+    width: 220px;
+    height: 170px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .theme-card-overlay:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .theme-card-overlay h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .theme-card-overlay p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .forum-format-overlay {
+    background: transparent;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .forum-format-overlay h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .format-list-overlay {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .format-list-overlay li {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .format-list-overlay li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .core-topics-image-container {
+      min-height: 250px;
+    }
+    
+    .core-topics-image-container img {
+      min-height: 250px;
+    }
+    
+    .core-topics-overlay {
+      padding: 1rem;
+      width: 100%;
+      left: 0;
+      transform: none;
+    }
+    
+    .core-topics-title {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    .theme-grid-overlay {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .theme-card-overlay {
+      padding: 0.8rem;
+      width: 160px;
+      height: 100px;
+      font-size: 0.85rem;
+    }
+    
+    .theme-card-overlay h4 {
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .theme-card-overlay p {
+      font-size: 0.7rem;
+    }
+    
+    .forum-format-overlay {
+      padding: 1rem;
+      margin-top: 0.5rem;
+    }
+    
+    .forum-format-overlay h3 {
+      font-size: 1.1rem;
+    }
+    
+    .format-list-overlay li {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+</style>

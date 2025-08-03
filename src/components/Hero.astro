@@ -1,0 +1,77 @@
+---
+import { t } from '../i18n/translations.js';
+
+export interface Props {
+  lang?: string;
+  titleKey?: string;
+  descriptionKey?: string;
+  englishDescriptionKey?: string;
+  taglineKey?: string;
+  englishTaglineKey?: string;
+  organizersText?: string;
+  organizersTextZh?: string;
+  organizersTextEn?: string;
+  organizersList?: string[];
+  organizersListZh?: string[];
+  organizersListEn?: string[];
+}
+
+const {
+  lang,
+  titleKey = 'home.title',
+  descriptionKey = 'home.description',
+  englishDescriptionKey = 'home.englishDescription',
+  taglineKey = 'home.tagline',
+  englishTaglineKey = 'home.englishTagline',
+  organizersText,
+  organizersTextZh = '主办方:',
+  organizersTextEn = 'Organizers:',
+  organizersList,
+  organizersListZh = ['GOSIM 全球开源创新汇', '中法人工智能协会'],
+  organizersListEn = ['GOSIM Global Open-Source Innovation Meetup', 'Sino-French Artificial Intelligence Association']
+} = Astro.props;
+
+// Determine language from URL if not provided
+const currentLang = lang || (Astro.url.pathname.includes('/en/') ? 'en' : 'zh');
+const locale = currentLang;
+
+// Select appropriate text based on language
+const displayOrganizersText = organizersText || (currentLang === 'en' ? organizersTextEn : organizersTextZh);
+const displayOrganizersList = organizersList || (currentLang === 'en' ? organizersListEn : organizersListZh);
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>{t(titleKey, locale)}</h1>
+    <p class="subtitle">
+      {t(descriptionKey, locale)}<br>
+      <em>{t(englishDescriptionKey, locale)}</em>
+    </p>
+    <p class="tagline">
+      {t(taglineKey, locale)}<br>
+      <em>{t(englishTaglineKey, locale)}</em>
+    </p>
+
+    <div class="organizers-info">
+      <div class="organizer-detail">
+        <strong>{displayOrganizersText}</strong> {displayOrganizersList.join('、')}
+      </div>
+    </div>
+
+    <div class="event-details">
+      <div class="detail">
+        <strong>{t('home.eventDetails.date', locale)}</strong> {t('home.eventDetails.dateValue', locale)}
+      </div>
+      <div class="detail">
+        <strong>{t('home.eventDetails.location', locale)}</strong> {t('home.eventDetails.locationValue', locale)}
+      </div>
+      <div class="detail">
+        <strong>{t('home.eventDetails.scale', locale)}</strong> {t('home.eventDetails.scaleValue', locale)}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Hero section styles are in global.css */
+</style>
