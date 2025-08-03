@@ -47,6 +47,7 @@ export interface Props {
   backgroundPosition?: string;
   backgroundSize?: string;
   showHeader?: boolean;
+  allowHtml?: boolean;
   
   // Cards
   cards?: Array<{
@@ -104,6 +105,7 @@ const {
   backgroundPosition = 'center',
   backgroundSize = 'cover',
   showHeader = true,
+  allowHtml = false,
   cards = []
 } = Astro.props;
 
@@ -196,7 +198,11 @@ const buildTaglineStyle = () => {
               <i class={`${card.icon.startsWith('fas') ? card.icon : 'goal-icon fas ' + card.icon}`}></i>
             )}
             <h3>{card.title}</h3>
-            <p>{card.content}</p>
+            {allowHtml ? (
+              <div set:html={card.content} />
+            ) : (
+              <p>{card.content}</p>
+            )}
           </div>
         ))}
       </div>
