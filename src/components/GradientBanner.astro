@@ -1,0 +1,213 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+  
+  // CSS Classes
+  titleClass?: string;
+  subtitleClass?: string;
+  taglineClass?: string;
+  sectionClass?: string;
+  contentClass?: string;
+  gridClass?: string;
+  cardClass?: string;
+  
+  // Inline Styles
+  titleStyle?: string;
+  subtitleStyle?: string;
+  taglineStyle?: string;
+  
+  // Title Customization
+  titleColor?: string;
+  titleSize?: string;
+  titleAlign?: 'left' | 'center' | 'right';
+  titleWeight?: string;
+  titleMargin?: string;
+  
+  // Subtitle Customization
+  subtitleColor?: string;
+  subtitleSize?: string;
+  subtitleAlign?: 'left' | 'center' | 'right';
+  subtitleWeight?: string;
+  subtitleMargin?: string;
+  
+  // Tagline Customization
+  taglineColor?: string;
+  taglineSize?: string;
+  taglineAlign?: 'left' | 'center' | 'right';
+  taglineWeight?: string;
+  taglineMargin?: string;
+  
+  // Section Properties
+  id?: string;
+  columns?: number;
+  gradient?: string;
+  backgroundImage?: string;
+  backgroundPosition?: string;
+  backgroundSize?: string;
+  showHeader?: boolean;
+  allowHtml?: boolean;
+  
+  // Cards
+  cards?: Array<{
+    title: string;
+    content: string;
+    icon?: string;
+  }>;
+}
+
+const { 
+  title, 
+  subtitle, 
+  tagline,
+  
+  // CSS Classes
+  titleClass = '',
+  subtitleClass = '',
+  taglineClass = '',
+  sectionClass = '', 
+  contentClass = '',
+  gridClass = '',
+  cardClass = 'outcome-card',
+  
+  // Inline Styles
+  titleStyle = '',
+  subtitleStyle = '',
+  taglineStyle = '',
+  
+  // Title Customization
+  titleColor,
+  titleSize,
+  titleAlign,
+  titleWeight,
+  titleMargin,
+  
+  // Subtitle Customization
+  subtitleColor,
+  subtitleSize,
+  subtitleAlign,
+  subtitleWeight,
+  subtitleMargin,
+  
+  // Tagline Customization
+  taglineColor,
+  taglineSize,
+  taglineAlign,
+  taglineWeight,
+  taglineMargin,
+  
+  // Section Properties
+  id,
+  columns,
+  gradient,
+  backgroundImage,
+  backgroundPosition = 'center',
+  backgroundSize = 'cover',
+  showHeader = true,
+  allowHtml = false,
+  cards = []
+} = Astro.props;
+
+// Generate grid class based on columns if specified
+// Determine base grid class
+let baseGridClass = 'content-grid-modern';
+if (gridClass.includes('outcomes-grid')) {
+  baseGridClass = 'outcomes-grid';
+} else if (gridClass.includes('goals-grid')) {
+  baseGridClass = 'goals-grid';
+}
+
+// For goals-grid with 4 columns, we don't need to add -4 suffix since goals-grid already has its own styles
+const columnClass = columns === 4 && baseGridClass !== 'goals-grid' ? `${baseGridClass}-4` : '';
+const finalGridClass = gridClass || (columns ? `${baseGridClass} ${columnClass}` : baseGridClass);
+
+// Generate inline styles for background
+const sectionStyle = [
+  gradient && `background: ${gradient}`,
+  backgroundImage && `background-image: url('${backgroundImage}')`,
+  backgroundPosition && backgroundImage && `background-position: ${backgroundPosition}`,
+  backgroundSize && backgroundImage && `background-size: ${backgroundSize}`,
+  backgroundImage && `background-repeat: no-repeat`
+].filter(Boolean).join('; ');
+
+// Build title styles
+const buildTitleStyle = () => {
+  const styles = [
+    titleColor && `color: ${titleColor}`,
+    titleSize && `font-size: ${titleSize}`,
+    titleAlign && `text-align: ${titleAlign}`,
+    titleWeight && `font-weight: ${titleWeight}`,
+    titleMargin && `margin: ${titleMargin}`,
+    titleStyle // Include any additional custom styles
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+// Build subtitle styles
+const buildSubtitleStyle = () => {
+  const styles = [
+    subtitleColor && `color: ${subtitleColor}`,
+    subtitleSize && `font-size: ${subtitleSize}`,
+    subtitleAlign && `text-align: ${subtitleAlign}`,
+    subtitleWeight && `font-weight: ${subtitleWeight}`,
+    subtitleMargin && `margin: ${subtitleMargin}`,
+    subtitleStyle // Include any additional custom styles
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+// Build tagline styles
+const buildTaglineStyle = () => {
+  const styles = [
+    taglineColor && `color: ${taglineColor}`,
+    taglineSize && `font-size: ${taglineSize}`,
+    taglineAlign && `text-align: ${taglineAlign}`,
+    taglineWeight && `font-weight: ${taglineWeight}`,
+    taglineMargin && `margin: ${taglineMargin}`,
+    taglineStyle // Include any additional custom styles
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+---
+
+<section class={`modern-section gradient-banner ${sectionClass}`} id={id} style={sectionStyle || undefined}>
+  <div class={`content ${contentClass}`}>
+    {showHeader && subtitle ? (
+      <div class="section-header">
+        <h2 class={titleClass} style={buildTitleStyle()}>{title}</h2>
+        <div class={`section-subtitle ${subtitleClass}`} style={buildSubtitleStyle()}>{subtitle}</div>
+        {tagline && (
+          <div class={`section-tagline ${taglineClass}`} style={buildTaglineStyle()}>{tagline}</div>
+        )}
+      </div>
+    ) : showHeader ? (
+      <>
+        <h2 class={titleClass} style={buildTitleStyle()}>{title}</h2>
+        {tagline && (
+          <div class={`section-tagline ${taglineClass}`} style={buildTaglineStyle()}>{tagline}</div>
+        )}
+      </>
+    ) : null}
+    
+    {cards.length > 0 && (
+      <div class={finalGridClass}>
+        {cards.map((card) => (
+          <div class={cardClass}>
+            {card.icon && (
+              <i class={`${card.icon.startsWith('fas') ? card.icon : 'goal-icon fas ' + card.icon}`}></i>
+            )}
+            <h3>{card.title}</h3>
+            {allowHtml ? (
+              <div set:html={card.content} />
+            ) : (
+              <p>{card.content}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    )}
+    
+    <slot />
+  </div>
+</section>

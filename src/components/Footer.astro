@@ -1,0 +1,328 @@
+---
+export interface Props {
+  footerClass?: string;
+  lang?: string;
+}
+
+const { 
+  footerClass = 'site-footer',
+  lang = 'zh'
+} = Astro.props;
+
+// Determine language from URL if not provided
+const currentLang = lang || (Astro.url.pathname.includes('/en/') ? 'en' : 'zh');
+const isEnglish = currentLang === 'en';
+
+// Footer content in both languages
+const content = {
+  zh: {
+    aboutForum: '关于论坛',
+    home: '首页',
+    about: '关于我们',
+    agenda: '议程安排',
+    coreContent: '核心内容',
+    corePhilosophy: '核心理念',
+    participantGroups: '参会群体',
+    coreTopics: '核心议题',
+    contact: '联系方式',
+    email: '邮箱：',
+    organizers: '主办方',
+    organizerList: ['GOSIM 全球开源创新汇', '中法人工智能协会'],
+    social: '社交平台',
+    wechat: '微信公众号',
+    scanToFollow: '扫码关注',
+    copyright: '&copy; 2025 GOSIM AI Vision Forum. All rights reserved.',
+    chinese: '中文',
+    english: 'English'
+  },
+  en: {
+    aboutForum: 'About Forum',
+    home: 'Home',
+    about: 'About',
+    agenda: 'Agenda',
+    coreContent: 'Core Content',
+    corePhilosophy: 'Core Philosophy',
+    participantGroups: 'Participant Groups',
+    coreTopics: 'Core Topics',
+    contact: 'Contact',
+    email: 'Email: ',
+    organizers: 'Organizers',
+    organizerList: ['GOSIM Global Open-Source Innovation Meetup', 'Sino-French Artificial Intelligence Association'],
+    social: 'Social Media',
+    wechat: 'WeChat',
+    scanToFollow: 'Scan to Follow',
+    copyright: '&copy; 2025 GOSIM AI Vision Forum. All rights reserved.',
+    chinese: '中文',
+    english: 'English'
+  }
+};
+
+const t = content[currentLang];
+const homeLink = isEnglish ? '/en/' : '/';
+const aboutLink = isEnglish ? '/en/about' : '/about';
+const agendaLink = isEnglish ? '/en/agenda' : '/agenda';
+const langSwitchLink = isEnglish ? '/' : '/en/';
+---
+
+<footer class={footerClass}>
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h3>{t.aboutForum}</h3>
+        <ul>
+          <li><a href={homeLink}>{t.home}</a></li>
+          <li><a href={aboutLink}>{t.about}</a></li>
+          <li><a href={agendaLink}>{t.agenda}</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>{t.coreContent}</h3>
+        <ul>
+          <li><a href="#core-philosophy">{t.corePhilosophy}</a></li>
+          <li><a href="#participants-section">{t.participantGroups}</a></li>
+          <li><a href="#core-topics">{t.coreTopics}</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>{t.contact}</h3>
+        <ul>
+          <li><strong>{t.email}</strong><a href="mailto:support@gosim.org">support@gosim.org</a></li>
+        </ul>
+        <h3 style="margin-top: 1.5rem;">{t.organizers}</h3>
+        <ul>
+          {t.organizerList.map(org => <li>{org}</li>)}
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>{t.social}</h3>
+        <div class="social-links">
+          <a href="https://twitter.com/gosim" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            <span>X (Twitter)</span>
+          </a>
+          <a href="https://linkedin.com/company/gosim" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <div class="wechat-qr">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+            </svg>
+            <span>{t.wechat}</span>
+            <div class="qr-code-popup">
+              <img src="/wechat-qr.png" alt="WeChat QR Code" />
+              <p>{t.scanToFollow}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="copyright">
+        <p set:html={t.copyright}></p>
+      </div>
+      <div class="language-switch">
+        {isEnglish ? (
+          <>
+            <a href={langSwitchLink}>{t.chinese}</a> | <span>{t.english}</span>
+          </>
+        ) : (
+          <>
+            <a href={langSwitchLink}>{t.english}</a> | <span>{t.chinese}</span>
+          </>
+        )}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Footer Styles */
+  .site-footer {
+    background: #1a202c;
+    color: #e2e8f0;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-column h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-column a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .footer-column a:hover {
+    color: #ffffff;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+  }
+
+  .social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .wechat-qr {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cbd5e0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .wechat-qr:hover {
+    color: #ffffff;
+  }
+
+  .wechat-qr svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .qr-code-popup {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+    z-index: 10;
+  }
+
+  .wechat-qr:hover .qr-code-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .qr-code-popup img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0.5rem;
+  }
+
+  .qr-code-popup p {
+    color: #1a202c;
+    text-align: center;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid #2d3748;
+  }
+
+  .copyright {
+    color: #a0aec0;
+    font-size: 0.9rem;
+  }
+
+  .copyright p {
+    margin: 0;
+  }
+
+  .language-switch {
+    color: #a0aec0;
+    font-size: 0.9rem;
+  }
+
+  .language-switch a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .language-switch a:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .qr-code-popup {
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+    }
+
+    .wechat-qr:hover .qr-code-popup {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+</style>

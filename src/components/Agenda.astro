@@ -1,0 +1,156 @@
+---
+export interface ScheduleItem {
+  timeSlot: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
+  highlights?: string[];
+  type?: 'normal' | 'keynote' | 'break' | 'summary' | 'networking';
+  specialNote?: {
+    label: string;
+    content: string;
+  };
+}
+
+export interface Props {
+  title?: string;
+  titleZh?: string;
+  titleEn?: string;
+  scheduleItems?: ScheduleItem[];
+  scheduleItemsZh?: ScheduleItem[];
+  scheduleItemsEn?: ScheduleItem[];
+  sectionClass?: string;
+  containerClass?: string;
+}
+
+const {
+  title,
+  titleZh = '详细议程',
+  titleEn = 'Detailed Agenda',
+  scheduleItems,
+  scheduleItemsZh = [
+    {
+      timeSlot: '09:00-09:30',
+      title: '签到 & 迎宾早餐',
+      description: '参会者签到，享用迎宾早餐，初步交流',
+      type: 'normal'
+    },
+    {
+      timeSlot: '09:30-09:45',
+      title: '主持开场',
+      description: 'GOSIM代表或主持人开场致辞，议程介绍',
+      type: 'normal'
+    },
+    {
+      timeSlot: '09:45-10:45',
+      title: '主题分享 1',
+      subtitle: '《AI驱动下的学习机制重构：来自认知科学的启示》',
+      description: '探讨生成式AI如何重构学习体验、推动教育公平与知识民主化',
+      highlights: ['个性化学习', '教育公平', '认知科学'],
+      type: 'keynote'
+    },
+    {
+      timeSlot: '10:45-11:45',
+      title: '主题分享 2',
+      subtitle: 'AIGC与文化创造力',
+      description: '聚焦AI在艺术、文学、设计等领域的创作潜力，讨论人类创意如何与生成模型协作共创',
+      highlights: ['艺术创作', '人机协作', '版权归属'],
+      type: 'keynote'
+    },
+    {
+      timeSlot: '11:45-13:00',
+      title: '午餐 & AIGC Spotlight',
+      description: '午餐，AIGC Spotlight 作品发奖和展示',
+      specialNote: {
+        label: '特别环节:',
+        content: '"技术产品" 与 "艺术创意" 双单元全球作品展示'
+      },
+      type: 'break'
+    },
+    {
+      timeSlot: '13:00-14:00',
+      title: '主题分享 3',
+      subtitle: 'AI与情感关系重构',
+      description: '探索AI如何在老龄陪伴、心理健康、儿童互动中提供情感支持与共情设计',
+      highlights: ['情感陪伴', '共情设计', '心理健康'],
+      type: 'keynote'
+    },
+    {
+      timeSlot: '14:00-15:00',
+      title: '主题分享 4',
+      subtitle: '从"AI工具"到"AI共生"',
+      description: '呼吁超越"AI替代人类"的效率叙事，转向"共创—互补"的协作范式',
+      highlights: ['共生模式', '协作范式', '互补性'],
+      type: 'keynote'
+    },
+    {
+      timeSlot: '15:00-15:30',
+      title: '茶歇',
+      description: '自由讨论与交流',
+      type: 'break'
+    },
+    {
+      timeSlot: '15:30-16:30',
+      title: '主题分享 5',
+      subtitle: '伦理悖论与治理难题',
+      description: '深度讨论"科技向善"在现实中的制度张力，包括价值观嵌入、跨文化算法偏见等',
+      highlights: ['AI伦理剧场', '黑箱论坛', '治理框架'],
+      type: 'keynote'
+    },
+    {
+      timeSlot: '16:30-17:30',
+      title: '全体汇报与总结发言',
+      description: '代表总结 + 特邀专家闭幕发言',
+      type: 'summary'
+    },
+    {
+      timeSlot: '17:30-21:00',
+      title: '晚餐 & 深度自由交流',
+      description: '延展讨论，建立联系',
+      type: 'networking'
+    }
+  ],
+  scheduleItemsEn = [],
+  sectionClass = 'schedule-section',
+  containerClass = 'container'
+} = Astro.props;
+
+// Determine language from URL if not provided
+const currentLang = Astro.url.pathname.includes('/en/') ? 'en' : 'zh';
+const displayTitle = title || (currentLang === 'en' ? titleEn : titleZh);
+const displayScheduleItems = scheduleItems || (currentLang === 'en' && scheduleItemsEn.length > 0 ? scheduleItemsEn : scheduleItemsZh);
+---
+
+<section class={sectionClass}>
+  <div class={containerClass}>
+    <h2>{displayTitle}</h2>
+    <div class="schedule-timeline">
+      {displayScheduleItems.map((item) => (
+        <div class={`schedule-item ${item.type || ''}`}>
+          <div class="time-slot">{item.timeSlot}</div>
+          <div class="activity-content">
+            <h3>{item.title}</h3>
+            {item.subtitle && <h4>{item.subtitle}</h4>}
+            {item.description && <p class="activity-desc">{item.description}</p>}
+            {item.highlights && item.highlights.length > 0 && (
+              <div class="topic-highlights">
+                {item.highlights.map((highlight) => (
+                  <span class="highlight-tag">{highlight}</span>
+                ))}
+              </div>
+            )}
+            {item.specialNote && (
+              <div class="special-note">
+                <strong>{item.specialNote.label}</strong> {item.specialNote.content}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Styles are in global.css */
+</style>

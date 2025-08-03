@@ -1,0 +1,550 @@
+---
+// Content item interface for structured content
+export interface ContentItem {
+  type: 'paragraph' | 'heading' | 'list' | 'highlight' | 'section';
+  content?: string;
+  items?: string[]; // for lists
+  level?: number; // for headings (h1-h6)
+  style?: string; // custom inline styles
+  className?: string; // custom CSS classes
+  title?: string; // for sections
+}
+
+export interface Props {
+  // Section Properties
+  id?: string;
+  sectionClass?: string;
+  sectionStyle?: string;
+  backgroundColor?: string;
+  padding?: string;
+  
+  // Title Properties
+  title?: string;
+  subtitle?: string;
+  titleClass?: string;
+  subtitleClass?: string;
+  titleStyle?: string;
+  subtitleStyle?: string;
+  titleColor?: string;
+  subtitleColor?: string;
+  titleSize?: string;
+  subtitleSize?: string;
+  titleAlign?: 'left' | 'center' | 'right';
+  subtitleAlign?: 'left' | 'center' | 'right';
+  titleWeight?: string;
+  subtitleWeight?: string;
+  
+  // Image Properties
+  image: string;
+  imageAlt?: string;
+  imageClass?: string;
+  imageStyle?: string;
+  
+  // Overlay Properties
+  overlayClass?: string;
+  overlayStyle?: string;
+  overlayPosition?: string;
+  overlayPadding?: string;
+  overlayType?: 'gradient' | 'dark' | 'custom' | 'bottom-boxes';
+  overlayBackground?: string;
+  
+  // Highlight Box Properties
+  highlightTitle?: string;
+  highlightClass?: string;
+  highlightStyle?: string;
+  highlightColor?: string;
+  highlightBackground?: string;
+  highlightPadding?: string;
+  
+  // Content Properties - now accepts string or array
+  content?: string | ContentItem[];
+  contentClass?: string;
+  contentStyle?: string;
+  contentColor?: string;
+  contentSize?: string;
+  contentAlign?: 'left' | 'center' | 'right' | 'justify';
+  
+  // Layout Properties
+  layoutType?: 'single' | 'two-column';
+  leftContent?: string | ContentItem[];
+  rightContent?: string | ContentItem[];
+  
+  // Container Properties
+  containerClass?: string;
+  containerStyle?: string;
+  containerMaxWidth?: string;
+}
+
+const {
+  // Section Properties
+  id,
+  sectionClass = '',
+  sectionStyle = '',
+  backgroundColor,
+  padding = '4rem 0',
+  
+  // Title Properties
+  title,
+  subtitle,
+  titleClass = '',
+  subtitleClass = '',
+  titleStyle = '',
+  subtitleStyle = '',
+  titleColor = '#1a202c',
+  subtitleColor = '#666',
+  titleSize = '2.5rem',
+  subtitleSize = '1.2rem',
+  titleAlign = 'center',
+  subtitleAlign = 'center',
+  titleWeight = '700',
+  subtitleWeight = '400',
+  
+  // Image Properties
+  image,
+  imageAlt = '',
+  imageClass = '',
+  imageStyle = '',
+  
+  // Overlay Properties
+  overlayClass = '',
+  overlayStyle = '',
+  overlayPosition = 'center',
+  overlayPadding = '3rem',
+  overlayType = 'gradient',
+  overlayBackground,
+  
+  // Highlight Box Properties
+  highlightTitle,
+  highlightClass = '',
+  highlightStyle = '',
+  highlightColor = '#ffffff',
+  highlightBackground = 'rgba(0, 0, 0, 0.7)',
+  highlightPadding = '1.5rem 2.5rem',
+  
+  // Content Properties
+  content,
+  contentClass = '',
+  contentStyle = '',
+  contentColor = '#ffffff',
+  contentSize = '1.1rem',
+  contentAlign = 'left',
+  
+  // Layout Properties
+  layoutType = 'single',
+  leftContent,
+  rightContent,
+  
+  // Container Properties
+  containerClass = '',
+  containerStyle = '',
+  containerMaxWidth = '1200px',
+} = Astro.props;
+
+// Build section styles
+const buildSectionStyle = () => {
+  const styles = [
+    backgroundColor && `background-color: ${backgroundColor}`,
+    padding && `padding: ${padding}`,
+    sectionStyle
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+// Build title styles
+const buildTitleStyle = () => {
+  const styles = [
+    titleColor && `color: ${titleColor}`,
+    titleSize && `font-size: ${titleSize}`,
+    titleAlign && `text-align: ${titleAlign}`,
+    titleWeight && `font-weight: ${titleWeight}`,
+    subtitle ? 'margin-bottom: 0.5rem' : 'margin-bottom: 3rem',
+    titleStyle
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+// Build subtitle styles
+const buildSubtitleStyle = () => {
+  const styles = [
+    subtitleColor && `color: ${subtitleColor}`,
+    subtitleSize && `font-size: ${subtitleSize}`,
+    subtitleAlign && `text-align: ${subtitleAlign}`,
+    subtitleWeight && `font-weight: ${subtitleWeight}`,
+    'margin-bottom: 3rem',
+    subtitleStyle
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+// Build container styles
+const buildContainerStyle = () => {
+  const styles = [
+    containerMaxWidth && `max-width: ${containerMaxWidth}`,
+    'margin: 0 auto',
+    'padding: 0 2rem',
+    containerStyle
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+// Build overlay styles
+const buildOverlayStyle = () => {
+  let background = '';
+  if (overlayBackground) {
+    background = overlayBackground;
+  } else {
+    switch (overlayType) {
+      case 'gradient':
+        background = 'linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0) 100%)';
+        break;
+      case 'dark':
+        background = 'rgba(0, 0, 0, 0.7)';
+        break;
+      case 'bottom-boxes':
+        background = 'transparent';
+        break;
+      default:
+        background = '';
+    }
+  }
+  
+  const styles = [
+    'position: absolute',
+    'top: 0',
+    'left: 0',
+    'right: 0',
+    'bottom: 0',
+    background && `background: ${background}`,
+    overlayType === 'bottom-boxes' ? '' : `padding: ${overlayPadding}`,
+    'display: flex',
+    overlayType === 'bottom-boxes' ? 'align-items: flex-end' : 'align-items: center',
+    overlayType === 'gradient' ? 'justify-content: flex-start' : overlayType === 'bottom-boxes' ? 'justify-content: center' : `justify-content: ${overlayPosition}`,
+    overlayStyle
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+// Build highlight box styles
+const buildHighlightStyle = () => {
+  const styles = [
+    highlightBackground && `background: ${highlightBackground}`,
+    highlightColor && `color: ${highlightColor}`,
+    highlightPadding && `padding: ${highlightPadding}`,
+    'border-radius: 8px',
+    'margin-bottom: 2rem',
+    'display: inline-block',
+    highlightStyle
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+// Build content styles
+const buildContentStyle = () => {
+  const styles = [
+    contentColor && `color: ${contentColor}`,
+    contentSize && `font-size: ${contentSize}`,
+    contentAlign && `text-align: ${contentAlign}`,
+    'line-height: 1.8',
+    'max-width: 800px',
+    'margin: 0 auto',
+    contentStyle
+  ].filter(Boolean).join('; ');
+  return styles || undefined;
+};
+
+---
+
+<section class={sectionClass} id={id} style={buildSectionStyle()}>
+  <div class={`container ${containerClass}`} style={buildContainerStyle()}>
+    {title && (
+      <>
+        <h2 class={`section-title ${titleClass}`} style={buildTitleStyle()}>{title}</h2>
+        {subtitle && (
+          <div class={`section-subtitle ${subtitleClass}`} style={buildSubtitleStyle()}>{subtitle}</div>
+        )}
+      </>
+    )}
+    
+    <div class="image-overlay-container" style="position: relative; display: flex; justify-content: center; align-items: center;">
+      <img 
+        src={image} 
+        alt={imageAlt} 
+        class={imageClass}
+        style={`width: 100%; height: auto; ${imageStyle || ''}`}
+      />
+      
+      <div class={`background-image-overlay ${overlayClass}`} style={buildOverlayStyle()}>
+        {layoutType === 'two-column' && leftContent && rightContent && overlayType === 'bottom-boxes' ? (
+          <div class="philosophy-text-overlay" style="position: absolute; bottom: 20px; left: 20px; right: 20px; z-index: 2; display: flex; gap: 1rem; align-items: stretch;">
+            <div class="highlight-box-overlay" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.25) 100%); padding: 1.5rem 2rem; border-radius: 10px; margin-bottom: 0; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); flex: 0 0 35%; display: flex; align-items: center;">
+              <h1 style="color: #2c3e50; font-size: 1.4rem; margin: 0; font-weight: 600; text-shadow: none;">
+                {typeof leftContent === 'string' ? leftContent : leftContent[0]?.content}
+              </h1>
+            </div>
+            <p style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.25) 100%); padding: 1.5rem 2rem; border-radius: 10px; color: #2c3e50; flex: 1; margin: 0; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); line-height: 1.6; font-size: 1rem;">
+              {typeof rightContent === 'string' ? rightContent : rightContent[0]?.content}
+            </p>
+          </div>
+        ) : layoutType === 'two-column' && leftContent && rightContent ? (
+          <div class="two-column-layout" style="display: flex; gap: 3rem; width: 100%; padding: 0 3rem; align-items: center;">
+            <div class="column-content" style="flex: 1; color: white;">
+              {typeof leftContent === 'string' ? (
+                <p style={buildContentStyle()}>{leftContent}</p>
+              ) : (
+                leftContent.map((item) => {
+                  switch (item.type) {
+                    case 'paragraph':
+                      return <p class={item.className} style={item.style || 'color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin-bottom: 1rem;'}>{item.content}</p>;
+                    case 'heading':
+                      if (item.level === 1) return <h1 class={item.className} style={item.style}>{item.content}</h1>;
+                      if (item.level === 2) return <h2 class={item.className} style={item.style}>{item.content}</h2>;
+                      if (item.level === 3) return <h3 class={item.className} style={item.style}>{item.content}</h3>;
+                      if (item.level === 4) return <h4 class={item.className} style={item.style}>{item.content}</h4>;
+                      if (item.level === 5) return <h5 class={item.className} style={item.style}>{item.content}</h5>;
+                      if (item.level === 6) return <h6 class={item.className} style={item.style}>{item.content}</h6>;
+                      return <h3 class={item.className} style={item.style}>{item.content}</h3>;
+                    case 'list':
+                      return <ul class={item.className} style={item.style}>{item.items?.map((li) => <li>{li}</li>)}</ul>;
+                    default:
+                      return null;
+                  }
+                })
+              )}
+            </div>
+            <div class="column-content" style="flex: 1; color: white;">
+              {typeof rightContent === 'string' ? (
+                <p style={buildContentStyle()}>{rightContent}</p>
+              ) : (
+                rightContent.map((item) => {
+                  switch (item.type) {
+                    case 'paragraph':
+                      return <p class={item.className} style={item.style || 'color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin-bottom: 1rem;'}>{item.content}</p>;
+                    case 'heading':
+                      if (item.level === 1) return <h1 class={item.className} style={item.style}>{item.content}</h1>;
+                      if (item.level === 2) return <h2 class={item.className} style={item.style}>{item.content}</h2>;
+                      if (item.level === 3) return <h3 class={item.className} style={item.style}>{item.content}</h3>;
+                      if (item.level === 4) return <h4 class={item.className} style={item.style}>{item.content}</h4>;
+                      if (item.level === 5) return <h5 class={item.className} style={item.style}>{item.content}</h5>;
+                      if (item.level === 6) return <h6 class={item.className} style={item.style}>{item.content}</h6>;
+                      return <h3 class={item.className} style={item.style}>{item.content}</h3>;
+                    case 'list':
+                      return <ul class={item.className} style={item.style}>{item.items?.map((li) => <li>{li}</li>)}</ul>;
+                    default:
+                      return null;
+                  }
+                })
+              )}
+            </div>
+          </div>
+        ) : (
+          <div class="overlay-text-content" style={overlayType === 'gradient' ? 'max-width: 50%; color: white; z-index: 2;' : 'max-width: 800px; color: white; z-index: 2; text-align: center;'}>
+            {highlightTitle && (
+              <div class={overlayType === 'gradient' ? 'highlight-box-dark' : `highlight-box ${highlightClass}`} style={overlayType !== 'gradient' ? buildHighlightStyle() : undefined}>
+                <h1 class={overlayType === 'gradient' ? 'highlight-text-light' : ''} style={overlayType !== 'gradient' ? 'font-size: 2rem; margin: 0; font-weight: 700;' : undefined}>{highlightTitle}</h1>
+              </div>
+            )}
+            
+            {content && typeof content === 'string' && (
+              <p class={contentClass} style={buildContentStyle()}>{content}</p>
+            )}
+            
+            {content && Array.isArray(content) && content.map((item) => {
+              switch (item.type) {
+                case 'paragraph':
+                  return <p class={item.className} style={item.style || (overlayType === 'gradient' ? 'color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin-bottom: 1rem;' : '')}>{item.content}</p>;
+                case 'heading':
+                  if (item.level === 1) return <h1 class={item.className} style={item.style}>{item.content}</h1>;
+                  if (item.level === 2) return <h2 class={item.className} style={item.style}>{item.content}</h2>;
+                  if (item.level === 3) return <h3 class={item.className} style={item.style}>{item.content}</h3>;
+                  if (item.level === 4) return <h4 class={item.className} style={item.style}>{item.content}</h4>;
+                  if (item.level === 5) return <h5 class={item.className} style={item.style}>{item.content}</h5>;
+                  if (item.level === 6) return <h6 class={item.className} style={item.style}>{item.content}</h6>;
+                  return <h3 class={item.className} style={item.style}>{item.content}</h3>;
+                case 'list':
+                  return <ul class={item.className} style={item.style}>{item.items?.map((listItem) => <li>{listItem}</li>)}</ul>;
+                case 'highlight':
+                  return <div class={`highlight-text ${item.className || ''}`} style={item.style}>{item.content}</div>;
+                case 'section':
+                  return (
+                    <div class={overlayType === 'gradient' ? `tech-evolution-dark ${item.className || ''}` : `content-section ${item.className || ''}`} style={item.style}>
+                      {item.title && <h4>{item.title}</h4>}
+                      {item.content && <p>{item.content}</p>}
+                    </div>
+                  );
+                default:
+                  return null;
+              }
+            })}
+            
+            <slot />
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .image-overlay-container {
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    min-height: 400px;
+  }
+  
+  .background-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .overlay-text-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .overlay-text-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .highlight-box-dark {
+    background: transparent;
+    padding: 0;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  .highlight-text-light {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.3;
+  }
+  
+  .tech-evolution-dark {
+    background: transparent;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border: none;
+  }
+  
+  .tech-evolution-dark h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tech-evolution-dark p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight-text {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0.5rem 0;
+  }
+  
+  .overlay-text-content ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .overlay-text-content ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .two-column-layout {
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    padding: 0 3rem;
+    align-items: center;
+  }
+  
+  .column-content {
+    flex: 1;
+  }
+  
+  .column-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .column-content p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .philosophy-text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  @media (max-width: 768px) {
+    .background-image-overlay {
+      padding: 2rem;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .overlay-text-content {
+      max-width: 100% !important;
+    }
+    
+    .two-column-layout {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+    
+    .philosophy-text-overlay {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      right: 5px;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    
+    .philosophy-text-overlay .highlight-box-overlay {
+      flex: none !important;
+      width: 100% !important;
+      padding: 0.3rem 0.5rem !important;
+    }
+    
+    .philosophy-text-overlay h1 {
+      font-size: 0.7rem !important;
+    }
+    
+    .philosophy-text-overlay p {
+      font-size: 0.55rem !important;
+      padding: 0.3rem 0.5rem !important;
+      line-height: 1.2 !important;
+    }
+  }
+</style>

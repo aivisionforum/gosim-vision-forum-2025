@@ -527,10 +527,10 @@ blockquote {
 .hero-content {
   max-width: 800px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0);
   padding: 3rem;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
 }
 
 .hero h1 {
@@ -1019,6 +1019,25 @@ html[lang="zh-CN"] .page-header p {
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* 4-column grid layout */
+.outcomes-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1400px;
+}
+
+/* Responsive adjustments for 4-column grid */
+@media (max-width: 1200px) {
+  .outcomes-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .outcomes-grid-4 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Keep participants grid centered */
@@ -1884,9 +1903,73 @@ html[lang="zh-CN"] .page-header p {
 
 .content-grid-modern {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
   margin-top: 3rem;
+}
+
+/* 4-column layout for content-grid-modern */
+.content-grid-4 {
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2rem;
+}
+
+.content-grid-4 .content-card,
+.content-grid-4 .goal-item {
+  min-width: 0; /* Allow cards to shrink */
+  width: 100%;
+  max-width: none;
+}
+
+/* Ensure goal items work properly in 4-column grid */
+.content-grid-4 .goal-item {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Override max-width for content cards in 4-column grid */
+.content-grid-4 .content-card {
+  max-width: none;
+  width: 100%;
+}
+
+/* 3-column layout */
+.content-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 2-column layout */
+.content-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Responsive adjustments for column layouts */
+@media (max-width: 1200px) {
+  .content-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .content-grid-4,
+  .content-grid-3,
+  .content-grid-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .content-card {
@@ -2009,6 +2092,26 @@ html[lang="zh-CN"] .page-header p {
 }
 
 /* Old agenda-gradient styles removed - now using .agenda-section.gradient-banner */
+
+/* Core Philosophy Section */
+.core-philosophy-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.core-philosophy-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.core-philosophy-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a202c;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
 
 .philosophy-image-container {
   position: relative;
@@ -2515,9 +2618,83 @@ html[lang="zh-CN"] .page-header p {
 
 .goals-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin: 2rem 0;
+}
+
+.cooperation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 1200px) {
+  .goals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cooperation-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cooperation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cooperation-card {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cooperation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.35) 0%, 
+    rgba(255, 255, 255, 0.25) 100%
+  );
+}
+
+.cooperation-card i {
+  font-size: 2.5rem;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.cooperation-card h4 {
+  color: #1a202c;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.cooperation-card p {
+  color: #4a5568;
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 .goal-item {
@@ -2864,13 +3041,7 @@ h1.highlight-text-light {
 }
 
 /* Forum Introduction Section Layout */
-.content-grid-modern {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  justify-items: center;
-}
+/* Duplicate removed - see line 1904 for .content-grid-modern */
 
 .gradient-banner::before {
   content: "";
@@ -3023,6 +3194,17 @@ h1.highlight-text-light {
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
+}
+
+/* Allow agenda section content to use more width for 4 columns */
+.agenda-section.gradient-banner {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.agenda-section.gradient-banner .content {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* Left-aligned sections - 核心参会群体 and 预期成果 */
@@ -3269,7 +3451,8 @@ section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 125px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 250px;
   display: flex;
   flex-direction: column;
