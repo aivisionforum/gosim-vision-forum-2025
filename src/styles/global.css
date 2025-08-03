@@ -1146,6 +1146,34 @@ html[lang="zh-CN"] .page-header p {
   z-index: 1;
 }
 
+/* White text variant for outcome cards */
+.outcome-card.white-text {
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.08) 0%, 
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.outcome-card.white-text:hover {
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.15) 0%, 
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.outcome-card.white-text h3 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.outcome-card.white-text p {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 /* Speakers Page Styles */
 .participants-overview {
   padding: 3rem 2rem;
@@ -3241,9 +3269,8 @@ section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda
   margin: 0 auto !important;
 }
 
-/* Make 核心参会群体 and 预期成果 headings black */
-.outcomes-section.gradient-banner.participants-gradient h2,
-.outcomes-section.gradient-banner h2 {
+/* Make 核心参会群体 heading black, but allow 预期成果 to be customized */
+.outcomes-section.gradient-banner.participants-gradient h2 {
   color: #000000 !important;
   text-shadow: none !important;
   background: none !important;
@@ -3283,9 +3310,8 @@ section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda
   background-repeat: no-repeat !important;
 }
 
-/* Specific rule for outcomes section */
+/* Specific rule for outcomes section - allow component to set background */
 .outcomes-section.gradient-banner {
-  background-image: url('/hangzhou-landscape.svg') !important;
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -3306,6 +3332,11 @@ section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda
   );
   pointer-events: none;
   z-index: 1;
+}
+
+/* Disable gradient overlay when no-gradient-overlay class is present */
+.gradient-banner.no-gradient-overlay::before {
+  display: none !important;
 }
 
 

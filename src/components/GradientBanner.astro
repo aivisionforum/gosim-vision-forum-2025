@@ -48,6 +48,7 @@ export interface Props {
   backgroundSize?: string;
   showHeader?: boolean;
   allowHtml?: boolean;
+  disableGradientOverlay?: boolean;
   
   // Cards
   cards?: Array<{
@@ -106,6 +107,7 @@ const {
   backgroundSize = 'cover',
   showHeader = true,
   allowHtml = false,
+  disableGradientOverlay = false,
   cards = []
 } = Astro.props;
 
@@ -171,7 +173,7 @@ const buildTaglineStyle = () => {
 };
 ---
 
-<section class={`modern-section gradient-banner ${sectionClass}`} id={id} style={sectionStyle || undefined}>
+<section class={`modern-section gradient-banner ${sectionClass} ${disableGradientOverlay ? 'no-gradient-overlay' : ''}`} id={id} style={sectionStyle || undefined}>
   <div class={`content ${contentClass}`}>
     {showHeader && subtitle ? (
       <div class="section-header">
