@@ -1,0 +1,160 @@
+{
+  "days": [
+    {
+      "date": "September 12",
+      "title": "September 12, 2025",
+      "url": "/en/agenda"
+    }
+  ],
+  "categories": [
+    {
+      "name": "All Sessions",
+      "id": "all-sessions",
+      "room": "Main Hall - Hangzhou International Expo Center"
+    }
+  ],
+  "sessions": {
+    "all-sessions": [
+      {
+        "date": "September 12",
+        "timeSlot": "09:00 - 09:30",
+        "title": "Registration & Welcome Breakfast",
+        "content": "<p>Participant registration, enjoy welcome breakfast, initial networking</p>",
+        "speakers": [],
+        "room": "Lobby",
+        "category": "Networking"
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "09:30 - 09:45",
+        "title": "Opening Remarks",
+        "content": "<p>GOSIM representative or host opening remarks, agenda introduction</p>",
+        "speakers": [
+          {
+            "id": "gosim-representative",
+            "name": "GOSIM Foundation Representative",
+            "roleOrg": "GOSIM Foundation",
+            "tags": ["all-sessions"],
+            "image": "gosim-rep.jpg"
+          }
+        ],
+        "room": "Main Hall"
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "09:45 - 11:45",
+        "title": "Keynote 1: AI-Driven Learning Mechanism Reconstruction: The Leap from Knowledge Learning to Creativity Cultivation",
+        "content": "<p>Exploring how AI drives the transformation of education from traditional knowledge transfer to creativity cultivation, reshaping learning paradigms</p>",
+        "speakers": [
+          {
+            "id": "speaker-education",
+            "name": "Education Technology Expert",
+            "roleOrg": "Zhejiang University School of Education",
+            "tags": ["keynote"],
+            "image": "speaker-edu.jpg"
+          }
+        ],
+        "room": "Main Hall",
+        "category": "Keynote"
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "11:45 - 13:00",
+        "title": "Lunch & AIGC Spotlight",
+        "content": "<p>Lunch, AIGC Spotlight awards ceremony and showcase</p><p><strong>Special Session:</strong> 'Technical Products' and 'Artistic Creativity' dual-unit global showcase</p>",
+        "speakers": [],
+        "room": "Banquet Hall & Exhibition Hall",
+        "category": "AIGC Spotlight",
+        "isSpecialEvent": true
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "13:00 - 14:00",
+        "title": "Keynote 2: The Evolution of AI from Automation Tools to Human Symbiosis",
+        "content": "<p>Exploring the evolutionary path and future vision of AI from simple automation tools to human-machine symbiotic partners</p>",
+        "speakers": [
+          {
+            "id": "speaker-symbiosis",
+            "name": "AI Researcher",
+            "roleOrg": "Zhejiang Lab",
+            "tags": ["keynote"],
+            "image": "speaker-ai.jpg"
+          }
+        ],
+        "room": "Main Hall",
+        "category": "Keynote"
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "14:00 - 15:00",
+        "title": "Keynote 3: AI Ethical Paradoxes and Governance Challenges and Practices",
+        "content": "<p>In-depth exploration of AI ethical dilemmas, governance frameworks, and global practice cases</p>",
+        "speakers": [
+          {
+            "id": "speaker-ethics",
+            "name": "AI Ethics Expert",
+            "roleOrg": "Hangzhou Internet Court",
+            "tags": ["keynote"],
+            "image": "speaker-law.jpg"
+          }
+        ],
+        "room": "Main Hall",
+        "category": "Keynote"
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "15:00 - 15:30",
+        "title": "Tea Break",
+        "content": "<p>Free discussion and networking, enjoy Hangzhou Longjing tea</p>",
+        "speakers": [],
+        "room": "Tea Break Area",
+        "category": "Networking",
+        "isSpecialEvent": true
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "15:30 - 16:30",
+        "title": "Keynote 4: Developing AI as a Global Digital Public Good",
+        "content": "<p>Exploring AI as a global digital public good: open sharing models, governance mechanisms, and sustainable development paths</p>",
+        "speakers": [
+          {
+            "id": "speaker-business",
+            "name": "Business Innovation Expert",
+            "roleOrg": "Alibaba DAMO Academy",
+            "tags": ["keynote"],
+            "image": "speaker-biz.jpg"
+          }
+        ],
+        "room": "Main Hall",
+        "category": "Keynote"
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "16:30 - 17:30",
+        "title": "Panel Summary & Closing Remarks",
+        "content": "<p>Representative summaries + special expert closing remarks</p>",
+        "speakers": [
+          {
+            "id": "gosim-representative",
+            "name": "GOSIM Foundation Representative",
+            "roleOrg": "GOSIM Foundation",
+            "tags": ["all-sessions"],
+            "image": "gosim-rep.jpg"
+          }
+        ],
+        "room": "Main Hall",
+        "category": "Summary"
+      },
+      {
+        "date": "September 12",
+        "timeSlot": "17:30 - 20:30",
+        "title": "Dinner",
+        "content": "<p>Enjoy dinner at West Lake State Guest House with views of West Lake</p>",
+        "speakers": [],
+        "room": "West Lake State Guest House",
+        "category": "Networking",
+        "isSpecialEvent": true
+      }
+    ]
+  }
+}

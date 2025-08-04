@@ -1,0 +1,160 @@
+{
+  "days": [
+    {
+      "date": "9月12日",
+      "title": "2025年9月12日",
+      "url": "/agenda"
+    }
+  ],
+  "categories": [
+    {
+      "name": "全部议程",
+      "id": "all-sessions",
+      "room": "主会场 - 杭州国际博览中心"
+    }
+  ],
+  "sessions": {
+    "all-sessions": [
+      {
+        "date": "9月12日",
+        "timeSlot": "09:00 - 09:30",
+        "title": "签到 & 迎宾早餐",
+        "content": "<p>参会者签到，享用迎宾早餐，初步交流</p>",
+        "speakers": [],
+        "room": "大堂",
+        "category": "交流环节"
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "09:30 - 09:45",
+        "title": "主持开场",
+        "content": "<p>GOSIM代表或主持人开场致辞，议程介绍</p>",
+        "speakers": [
+          {
+            "id": "gosim-representative",
+            "name": "GOSIM基金会代表",
+            "roleOrg": "GOSIM Foundation",
+            "tags": ["all-sessions"],
+            "image": "gosim-rep.jpg"
+          }
+        ],
+        "room": "主会场"
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "09:45 - 11:45",
+        "title": "主题分享 1：AI驱动下的学习机制重构：从知识学习到创造力培养的跃迁",
+        "content": "<p>探讨AI如何推动教育从传统知识传授向创造力培养转型，重塑学习范式</p>",
+        "speakers": [
+          {
+            "id": "speaker-education",
+            "name": "教育科技专家",
+            "roleOrg": "浙江大学教育学院",
+            "tags": ["keynote"],
+            "image": "speaker-edu.jpg"
+          }
+        ],
+        "room": "主会场",
+        "category": "主题分享"
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "11:45 - 13:00",
+        "title": "午餐 & AIGC Spotlight",
+        "content": "<p>午餐，AIGC Spotlight 作品发奖和展示</p><p><strong>特别环节:</strong> '技术产品' 与 '艺术创意' 双单元全球作品展示</p>",
+        "speakers": [],
+        "room": "宴会厅 & 展示厅",
+        "category": "AIGC Spotlight",
+        "isSpecialEvent": true
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "13:00 - 14:00",
+        "title": "主题分享 2：AI从自动化工具到和人类共生的演化",
+        "content": "<p>探讨AI从简单自动化工具向人机共生伙伴的演化路径与未来愿景</p>",
+        "speakers": [
+          {
+            "id": "speaker-symbiosis",
+            "name": "人工智能研究员",
+            "roleOrg": "之江实验室",
+            "tags": ["keynote"],
+            "image": "speaker-ai.jpg"
+          }
+        ],
+        "room": "主会场",
+        "category": "主题分享"
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "14:00 - 15:00",
+        "title": "主题分享 3：AI伦理悖论和治理挑战与实践",
+        "content": "<p>深入探讨AI伦理困境、治理框架与全球实践案例</p>",
+        "speakers": [
+          {
+            "id": "speaker-ethics",
+            "name": "AI伦理专家",
+            "roleOrg": "杭州互联网法院",
+            "tags": ["keynote"],
+            "image": "speaker-law.jpg"
+          }
+        ],
+        "room": "主会场",
+        "category": "主题分享"
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "15:00 - 15:30",
+        "title": "茶歇",
+        "content": "<p>自由讨论与交流，品尝杭州龙井茶</p>",
+        "speakers": [],
+        "room": "茶歇区",
+        "category": "交流环节",
+        "isSpecialEvent": true
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "15:30 - 16:30",
+        "title": "主题分享 4：发展做为全球数字公共产品的AI",
+        "content": "<p>探讨AI作为全球数字公共产品的开放共享模式、治理机制与可持续发展路径</p>",
+        "speakers": [
+          {
+            "id": "speaker-business",
+            "name": "商业创新专家",
+            "roleOrg": "阿里巴巴达摩院",
+            "tags": ["keynote"],
+            "image": "speaker-biz.jpg"
+          }
+        ],
+        "room": "主会场",
+        "category": "主题分享"
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "16:30 - 17:30",
+        "title": "全体汇报与总结发言",
+        "content": "<p>代表总结 + 特邀专家闭幕发言</p>",
+        "speakers": [
+          {
+            "id": "gosim-representative",
+            "name": "GOSIM基金会代表",
+            "roleOrg": "GOSIM Foundation",
+            "tags": ["all-sessions"],
+            "image": "gosim-rep.jpg"
+          }
+        ],
+        "room": "主会场",
+        "category": "总结"
+      },
+      {
+        "date": "9月12日",
+        "timeSlot": "17:30 - 20:30",
+        "title": "晚宴",
+        "content": "<p>在西湖国宾馆享用晚宴，欣赏西湖美景</p>",
+        "speakers": [],
+        "room": "西湖国宾馆",
+        "category": "交流环节",
+        "isSpecialEvent": true
+      }
+    ]
+  }
+}

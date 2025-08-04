@@ -1,11 +1,50 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { t } from '../../i18n/translations.js';
+import GradientBanner from '../../components/GradientBanner.astro';
+import Schedules from '../../components/Schedules.astro';
+import '../../styles/agenda.css';
 
 const locale = 'en';
+
+// Core Topics Deep Dive cards
+const topicsCards = [
+  {
+    title: 'Educational Revolution: Is AI a "Cognitive Partner" or "Algorithmic Supervisor"?',
+    content: `<ul>
+      <li>Personalized learning vs privacy/fairness risks</li>
+      <li>Teacher role reconstruction</li>
+      <li>Implementation path for knowledge democratization</li>
+    </ul>`
+  },
+  {
+    title: 'Symbiosis Paradox: Are Humans Training AI or Is AI Domesticating Humans?',
+    content: `<ul>
+      <li>Critique of technological dependency</li>
+      <li>Complementary collaboration framework design</li>
+      <li>Maintaining human agency</li>
+    </ul>`
+  },
+  {
+    title: 'The Cost of Doing Good: Who Pays for Ethical Dilemmas?',
+    content: `<ul>
+      <li>Cross-national governance conflicts</li>
+      <li>Algorithmic bias case analysis</li>
+      <li>"Black Box Debate" model</li>
+    </ul>`
+  },
+  {
+    title: 'AI as Global Digital Public Good',
+    content: `<ul>
+      <li>Exploring open sharing models</li>
+      <li>Global governance framework design</li>
+      <li>Sustainable development paths</li>
+    </ul>`
+  }
+];
 ---
 
-<Layout title="Forum Agenda - GOSIM AI Vision Forum">
+<Layout title="Forum Agenda - GOSIM AI Vision Forum" lang="en">
 	<nav class="top-nav">
 		<div class="nav-container">
 			<div class="logo">
@@ -33,194 +72,19 @@ const locale = 'en';
 			</div>
 		</section>
 
-		<section class="agenda-overview">
-			<div class="container">
-				<div class="overview-card">
-					<h2>Forum Overview</h2>
-					<p>This forum revolves around "AI for Good" as the main theme, setting up five core topics, taking into account education, humanities, emotion, social governance and ethical dilemmas.</p>
-					<div class="format-info">
-						<div class="format-item">
-							<strong>Format:</strong> Keynote speeches + closed-door deep roundtables (8-10 participants per topic)
-						</div>
-						<div class="format-item">
-							<strong>Features:</strong> Emphasis on cross-disciplinary integration and creating dialogue scenarios with "different cognitive structures"
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<!-- Detailed Agenda Section -->
+		<Schedules currentDay="September 12" activeCategory="All" />
 
-		<section class="schedule-section">
-			<div class="container">
-				<h2>Detailed Schedule</h2>
-				<div class="schedule-timeline">
-					<div class="schedule-item">
-						<div class="time-slot">09:00-09:30</div>
-						<div class="activity-content">
-							<h3>Registration & Welcome Breakfast</h3>
-							<p class="activity-desc">Participant registration, welcome breakfast, initial networking</p>
-						</div>
-					</div>
-
-					<div class="schedule-item">
-						<div class="time-slot">09:30-09:45</div>
-						<div class="activity-content">
-							<h3>Opening Remarks</h3>
-							<p class="activity-desc">Opening remarks by GOSIM representative or host, agenda introduction</p>
-						</div>
-					</div>
-
-					<div class="schedule-item keynote">
-						<div class="time-slot">09:45-10:45</div>
-						<div class="activity-content">
-							<h3>Keynote Speech 1</h3>
-							<h4>Reconstruction of Learning Mechanisms Driven by AI: Insights from Cognitive Science</h4>
-							<p class="activity-desc">Exploring how generative AI reshapes learning experiences and promotes educational equity and knowledge democratization</p>
-							<div class="topic-highlights">
-								<span class="highlight-tag">Personalized Learning</span>
-								<span class="highlight-tag">Educational Equity</span>
-								<span class="highlight-tag">Cognitive Science</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="schedule-item keynote">
-						<div class="time-slot">10:45-11:45</div>
-						<div class="activity-content">
-							<h3>Keynote Speech 2</h3>
-							<h4>AIGC and Cultural Creativity</h4>
-							<p class="activity-desc">Focusing on AI's creative potential in art, literature, design and other fields, discussing how human creativity collaborates with generative models</p>
-							<div class="topic-highlights">
-								<span class="highlight-tag">Artistic Creation</span>
-								<span class="highlight-tag">Human-AI Collaboration</span>
-								<span class="highlight-tag">Copyright Attribution</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="schedule-item break">
-						<div class="time-slot">11:45-13:00</div>
-						<div class="activity-content">
-							<h3>Lunch & AIGC Spotlight</h3>
-							<p class="activity-desc">Lunch, AIGC Spotlight awards ceremony and showcase</p>
-							<div class="special-note">
-								<strong>Special Session:</strong> "Technical Products" and "Artistic Creativity" dual-unit global showcase
-							</div>
-						</div>
-					</div>
-
-					<div class="schedule-item keynote">
-						<div class="time-slot">13:00-14:00</div>
-						<div class="activity-content">
-							<h3>Keynote Speech 3</h3>
-							<h4>AI and Emotional Relationship Reconstruction</h4>
-							<p class="activity-desc">Exploring how AI provides emotional support and empathetic design in elderly companionship, mental health, and child interaction</p>
-							<div class="topic-highlights">
-								<span class="highlight-tag">Emotional Companionship</span>
-								<span class="highlight-tag">Empathetic Design</span>
-								<span class="highlight-tag">Mental Health</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="schedule-item keynote">
-						<div class="time-slot">14:00-15:00</div>
-						<div class="activity-content">
-							<h3>Keynote Speech 4</h3>
-							<h4>From "AI Tools" to "AI Symbiosis"</h4>
-							<p class="activity-desc">Calling for transcending the efficiency narrative of "AI replacing humans" towards a "co-creation and complementarity" collaboration paradigm</p>
-							<div class="topic-highlights">
-								<span class="highlight-tag">Symbiotic Model</span>
-								<span class="highlight-tag">Collaboration Paradigm</span>
-								<span class="highlight-tag">Complementarity</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="schedule-item break">
-						<div class="time-slot">15:00-15:30</div>
-						<div class="activity-content">
-							<h3>Tea Break</h3>
-							<p class="activity-desc">Free discussion and networking</p>
-						</div>
-					</div>
-
-					<div class="schedule-item keynote">
-						<div class="time-slot">15:30-16:30</div>
-						<div class="activity-content">
-							<h3>Keynote Speech 5</h3>
-							<h4>Ethical Paradoxes and Governance Challenges</h4>
-							<p class="activity-desc">In-depth discussion of institutional tensions of "technology for good" in reality, including value embedding, cross-cultural algorithmic bias</p>
-							<div class="topic-highlights">
-								<span class="highlight-tag">AI Ethics Theater</span>
-								<span class="highlight-tag">Black Box Forum</span>
-								<span class="highlight-tag">Governance Framework</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="schedule-item summary">
-						<div class="time-slot">16:30-17:30</div>
-						<div class="activity-content">
-							<h3>Panel Summary & Closing Remarks</h3>
-							<p class="activity-desc">Representative summaries + special expert closing remarks</p>
-						</div>
-					</div>
-
-					<div class="schedule-item networking">
-						<div class="time-slot">17:30-21:00</div>
-						<div class="activity-content">
-							<h3>Dinner & Deep Networking</h3>
-							<p class="activity-desc">Extended discussions, building connections</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="outcomes-section modern-section gradient-banner agenda-topics-gradient">
-			<div class="content">
-				<h2>Core Topics Deep Dive</h2>
-				<div class="outcomes-grid transparent-cards grid-2x2">
-					<div class="outcome-card">
-						<h3>Educational Revolution: Is AI a "Cognitive Partner" or "Algorithmic Supervisor"?</h3>
-						<ul>
-							<li>Personalized learning vs privacy/fairness risks</li>
-							<li>Teacher role reconstruction</li>
-							<li>Implementation path for knowledge democratization</li>
-						</ul>
-					</div>
-
-
-					<div class="outcome-card">
-						<h3>Emotional AI: Filling Loneliness or Creating Relationship Bubbles?</h3>
-						<ul>
-							<li>Case studies of elderly/child companionship</li>
-							<li>Ethical boundaries in empathetic design</li>
-							<li>Technical outsourcing of emotional relationships</li>
-						</ul>
-					</div>
-
-					<div class="outcome-card">
-						<h3>Symbiosis Paradox: Are Humans Training AI or Is AI Domesticating Humans?</h3>
-						<ul>
-							<li>Critique of technological dependency</li>
-							<li>Complementary collaboration framework design</li>
-							<li>Maintaining human agency</li>
-						</ul>
-					</div>
-
-					<div class="outcome-card">
-						<h3>The Cost of Doing Good: Who Pays for Ethical Dilemmas?</h3>
-						<ul>
-							<li>Cross-national governance conflicts</li>
-							<li>Algorithmic bias case analysis</li>
-							<li>"Black Box Debate" model</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+		<!-- Core Topics Analysis Section -->
+		<GradientBanner 
+			title="Core Topics Deep Dive"
+			sectionClass="outcomes-section agenda-topics-gradient"
+			cards={topicsCards}
+			columns={4}
+			gridClass="outcomes-grid transparent-cards grid-2x2"
+			cardClass="outcome-card"
+			allowHtml={true}
+		/>
 
 	</main>
 </Layout>
