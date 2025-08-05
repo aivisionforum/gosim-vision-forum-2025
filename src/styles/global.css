@@ -1078,6 +1078,7 @@ html[lang="zh-CN"] .page-header p {
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
 }
 
 .participants-gradient::before {
@@ -3300,6 +3301,16 @@ section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* Specific rule for international cooperation section */
+.international-cooperation-section.gradient-banner {
+  background-image: url('/heyi.svg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
 }
 
 /* Specific rule for outcomes section - allow component to set background */
