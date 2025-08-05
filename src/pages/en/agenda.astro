@@ -7,42 +7,6 @@ import Footer from '../../components/Footer.astro';
 import '../../styles/agenda.css';
 
 const locale = 'en';
-
-// Core Topics Deep Dive cards
-const topicsCards = [
-  {
-    title: 'Educational Revolution: Is AI a "Cognitive Partner" or "Algorithmic Supervisor"?',
-    content: `<ul>
-      <li>Personalized learning vs privacy/fairness risks</li>
-      <li>Teacher role reconstruction</li>
-      <li>Implementation path for knowledge democratization</li>
-    </ul>`
-  },
-  {
-    title: 'Symbiosis Paradox: Are Humans Training AI or Is AI Domesticating Humans?',
-    content: `<ul>
-      <li>Critique of technological dependency</li>
-      <li>Complementary collaboration framework design</li>
-      <li>Maintaining human agency</li>
-    </ul>`
-  },
-  {
-    title: 'The Cost of Doing Good: Who Pays for Ethical Dilemmas?',
-    content: `<ul>
-      <li>Cross-national governance conflicts</li>
-      <li>Algorithmic bias case analysis</li>
-      <li>"Black Box Debate" model</li>
-    </ul>`
-  },
-  {
-    title: 'AI as Global Digital Public Good',
-    content: `<ul>
-      <li>Exploring open sharing models</li>
-      <li>Global governance framework design</li>
-      <li>Sustainable development paths</li>
-    </ul>`
-  }
-];
 ---
 
 <Layout title="Forum Agenda - GOSIM AI Vision Forum" lang="en">
@@ -57,17 +21,6 @@ const topicsCards = [
 
 		<!-- Detailed Agenda Section -->
 		<Schedules currentDay="September 12" activeCategory="All" />
-
-		<!-- Core Topics Analysis Section -->
-		<GradientBanner 
-			title="Core Topics Deep Dive"
-			sectionClass="outcomes-section agenda-topics-gradient"
-			cards={topicsCards}
-			columns={4}
-			gridClass="outcomes-grid transparent-cards grid-2x2"
-			cardClass="outcome-card"
-			allowHtml={true}
-		/>
 
 	</main>
 

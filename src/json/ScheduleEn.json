@@ -43,8 +43,8 @@
       {
         "date": "September 12",
         "timeSlot": "09:45 - 11:45",
-        "title": "Keynote 1: AI-Driven Learning Mechanism Reconstruction: The Leap from Knowledge Learning to Creativity Cultivation",
-        "content": "<p>Exploring how AI drives the transformation of education from traditional knowledge transfer to creativity cultivation, reshaping learning paradigms</p>",
+        "title": "Keynote 1: Restructuring Learning Paradigms in the Age of AI — From Knowledge Acquisition to Creative Generation",
+        "content": "<p>AI is reshaping human learning mechanisms and the structure of knowledge systems, shifting education away from a knowledge-centered paradigm toward one driven by creative production and cognitive collaboration. This topic explores the tension between AI as a \"cognitive partner\" versus an \"algorithmic supervisor,\" and examines its implications for educational equity, privacy, and the evolving role of teachers. It also considers institutional and technological pathways for achieving knowledge democratization.</p>",
         "speakers": [
           {
             "id": "speaker-education",
@@ -70,8 +70,8 @@
       {
         "date": "September 12",
         "timeSlot": "13:00 - 14:00",
-        "title": "Keynote 2: The Evolution of AI from Automation Tools to Human Symbiosis",
-        "content": "<p>Exploring the evolutionary path and future vision of AI from simple automation tools to human-machine symbiotic partners</p>",
+        "title": "Keynote 2: From Automated Tools to Human-AI Symbiotic Systems — The Evolving Role of Artificial Intelligence",
+        "content": "<p>AI has progressed beyond being a mere tool, increasingly influencing human behavior, cognition, and value formation. This topic addresses the symbiotic paradox—\"Are we training AI, or is AI training us?\"—while critically examining technology dependence, its erosion of human agency, and the theoretical foundations and societal frameworks necessary for designing complementary human-AI collaboration systems.</p>",
         "speakers": [
           {
             "id": "speaker-symbiosis",
@@ -87,8 +87,8 @@
       {
         "date": "September 12",
         "timeSlot": "14:00 - 15:00",
-        "title": "Keynote 3: AI Ethical Paradoxes and Governance Challenges and Practices",
-        "content": "<p>In-depth exploration of AI ethical dilemmas, governance frameworks, and global practice cases</p>",
+        "title": "Keynote 3: Ethical Paradoxes and Governance of AI — Norms and Practices from a Global Perspective",
+        "content": "<p>As AI technology rapidly advances, ethical governance frameworks struggle to keep pace. Who is accountable for algorithmic injustice, data privacy breaches, or misuse? This topic investigates the ethical tensions that arise across cultural and institutional boundaries, calls for anticipatory, inclusive, and enforceable governance mechanisms, and advocates for formats like \"black-box debates\" to enhance transparency and public engagement in AI systems.</p>",
         "speakers": [
           {
             "id": "speaker-ethics",
@@ -114,8 +114,8 @@
       {
         "date": "September 12",
         "timeSlot": "15:30 - 16:30",
-        "title": "Keynote 4: Developing AI as a Global Digital Public Good",
-        "content": "<p>Exploring AI as a global digital public good: open sharing models, governance mechanisms, and sustainable development paths</p>",
+        "title": "Keynote 4: Building Artificial Intelligence as a Global Digital Public Good — Vision, Pathways, and Cooperation",
+        "content": "<p>AI is increasingly becoming a core part of global infrastructure, raising urgent questions about its accessibility, sustainability, and public accountability. Framed through the lens of \"global digital public goods,\" this topic explores open collaboration models, governance frameworks, and how AI can align with the United Nations Sustainable Development Goals (SDGs), promoting cross-border cooperation and long-term institutional arrangements.</p>",
         "speakers": [
           {
             "id": "speaker-business",

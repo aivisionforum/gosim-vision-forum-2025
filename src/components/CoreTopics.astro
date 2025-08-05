@@ -34,13 +34,14 @@ const {
   formatTitleZh = '论坛形式',
   formatTitleEn = 'Forum Format',
   formatItems,
-  formatItemsZh = ['主题演讲', '深度圆桌讨论', 'AIGC Spotlight 作品展示', '跨领域对话', '早中晚餐社交'],
+  formatItemsZh = ['主题演讲', '深度圆桌讨论', 'AIGC Spotlight 作品展示', '跨领域对话', '早中晚餐社交', '查塔姆守则'],
   formatItemsEn = [
     'Keynote Speeches',
     'In-depth Roundtable Dialogues',
     'AIGC Spotlight Showcase',
     'Cross-disciplinary Conversations',
-    'Networking over Breakfast, Lunch & Dinner'
+    'Networking over Breakfast, Lunch & Dinner',
+    'Chatham House Rule'
   ]} = Astro.props;
 
 // Default topics if not provided
@@ -108,7 +109,15 @@ const displayFormatItems = formatItems || (currentLang === 'en' ? formatItemsEn 
         <h3>{displayFormatTitle}</h3>
         <ul class="format-list-overlay">
           {displayFormatItems.map((item) => (
-            <li>{item}</li>
+            <li>
+              {(item === 'Chatham House Rule' || item === '查塔姆守则') ? (
+                <a href="https://www.chathamhouse.org/about-us/chatham-house-rule" target="_blank" rel="noopener noreferrer">
+                  {item}
+                </a>
+              ) : (
+                item
+              )}
+            </li>
           ))}
         </ul>
       </div>
@@ -274,6 +283,24 @@ const displayFormatItems = formatItems || (currentLang === 'en' ? formatItemsEn 
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .format-list-overlay a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .format-list-overlay a:hover {
+    text-decoration: underline;
+  }
+
+  .format-list-overlay a::after {
+    content: '↗';
+    font-size: 0.8em;
+    opacity: 0.8;
   }
 
   @media (max-width: 768px) {
