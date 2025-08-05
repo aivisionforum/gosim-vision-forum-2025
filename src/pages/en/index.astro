@@ -14,7 +14,7 @@ const locale = 'en';
 const forumIntroCards = [
   {
     title: 'Global Dialogue',
-    content: 'GOSIM joins forces with the Sino-French AI Association to launch this AI Vision Forum, focusing on the critical question: "What core value can AI create for humanity?"'
+    content: 'GOSIM joins forces with the Sino-French AI Association to launch this AI Vision Forum, focusing on the critical question: "As AI reshapes human roles, how do we ensure human core values remain central in the AI era?"'
   },
   {
     title: 'Thinkers and Leaders',
@@ -69,8 +69,8 @@ const participantCards = [
 // Expected Outcomes cards
 const expectedOutcomesCards = [
   {
-    title: 'China-Europe AI for Good Initiative',
-    content: 'Release the "China-Europe Artificial Intelligence Technology for Good Initiative Draft", building a consensus document centered on "humanistic values guiding AI development"'
+    title: 'Global Release of AI4Humanity White Paper',
+    content: 'From forum discussions and in-depth participant interviews, the "AI4Humanity White Paper" will be officially released to the open-source community, international AI governance bodies, and the global AI industry. We invite more thinkers and practitioners to join the AI4Humanity dialogue and advance the field collectively.'
   },
   {
     title: 'AIGC Spotlight Mechanism',
@@ -125,28 +125,12 @@ const forumBackgroundContent: ContentItem[] = [
 ---
 
 <Layout title="GOSIM AI Vision Forum 2025">
-	<nav class="top-nav">
-		<div class="nav-container">
-			<div class="logo">
-				<a href="/en/">
-					<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
-				</a>
-			</div>
-			<div class="nav-links">
-				<a href="/en/" class="nav-link active">Home</a>
-				<a href="/en/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
-			</div>
-			<div class="language-toggle">
-				<a href="/" class="lang-toggle-btn" title="Switch to Chinese">
-					<span class="lang-text">CN</span>
-				</a>
-			</div>
-		</div>
-	</nav>
 
 	<main class="main-flex-container">
 		<!-- Hero Section -->
-		<Hero lang="en" />
+		<div data-nav-theme="dark">
+			<Hero lang="en" />
+		</div>
 
 		<!-- Forum Introduction Section -->
 		<GradientBanner 
@@ -178,18 +162,20 @@ const forumBackgroundContent: ContentItem[] = [
 
 
 		<!-- Core Philosophy Section -->
-		<ImageOverlaySection 
-			id="core-philosophy"
-			sectionClass="core-philosophy-section"
-			title="Core Philosophy"
-			image="/arch-bridge.png"
-			imageAlt="Arch Bridge"
-			layoutType="two-column"
-			leftContent='From "Tool Enabling" to "Value-Oriented"'
-			rightContent="We advocate a paradigm shift: making AI not just a technical empowerment tool, but result-oriented, effectively responding to and solving core human concerns. We believe that truly meaningful AI should be able to understand human emotional needs, respect cultural diversity, promote social equity, and play a positive role in education, healthcare, artistic creation and other fields. Through this value-oriented development model, AI will become an important driving force for human civilization progress, not just a cold computational tool."
-			backgroundColor="#f8f9fa"
-			overlayType="bottom-boxes"
-		/>
+		<div data-nav-theme="light">
+			<ImageOverlaySection 
+				id="core-philosophy"
+				sectionClass="core-philosophy-section"
+				title="Core Philosophy"
+				image="/arch-bridge.png"
+				imageAlt="Arch Bridge"
+				layoutType="two-column"
+				leftContent='From "Tool Enabling" to "Value-Oriented"'
+				rightContent="We advocate a paradigm shift: making AI not just a technical empowerment tool, but result-oriented, effectively responding to and solving core human concerns. We believe that truly meaningful AI should be able to understand human emotional needs, respect cultural diversity, promote social equity, and play a positive role in education, healthcare, artistic creation and other fields. Through this value-oriented development model, AI will become an important driving force for human civilization progress, not just a cold computational tool."
+				backgroundColor="#f8f9fa"
+				overlayType="bottom-boxes"
+			/>
+		</div>
 
 		<!-- Forum Objectives Section -->
 		<GradientBanner 
@@ -262,7 +248,7 @@ const forumBackgroundContent: ContentItem[] = [
 		/>
 	</main>
 
-	<Footer />
+	<Footer lang="en" />
 </Layout>
 
 <!-- Uses styles from Chinese home page -->

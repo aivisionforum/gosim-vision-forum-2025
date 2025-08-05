@@ -14,7 +14,7 @@ const locale = 'zh';
 const forumIntroCards = [
   {
     title: '全球对话平台',
-    content: 'GOSIM 全球开源创新汇联合中法人工智能协会共同发起本次人工智能愿景论坛，聚焦"AI 能为人类创造何种核心价值"这一关键命题。'
+    content: 'GOSIM 联合中法人工智能协会发起人工智能愿景论坛，聚焦这一关键问题："当人工智能重塑人类角色，我们如何确保人类核心价值在AI时代仍居于中心？"'
   },
   {
     title: '思考者和实践者',
@@ -69,8 +69,8 @@ const participantCards = [
 // 预期成果 cards
 const expectedOutcomesCards = [
   {
-    title: '中欧AI向善倡议',
-    content: '发布《中欧人工智能科技向善倡议草案》，构建以"人文价值引导AI发展"为核心的共识性文件'
+    title: '《人本人工智能白皮书》全球发布',
+    content: '依托论坛研讨成果及对参会嘉宾的深度访谈，《人本人工智能白皮书》正式面向开源社区、国际 AI 治理组织及 AI 产业全球发布。我们诚挚期待更多思想者与实践者加入人本人工智能的探讨行列，共同推动这一领域的深入发展。'
   },
   {
     title: 'AIGC Spotlight机制',
@@ -125,28 +125,12 @@ const forumBackgroundContent: ContentItem[] = [
 ---
 
 <Layout title="GOSIM AI Vision Forum 2025" lang="zh">
-	<nav class="top-nav">
-		<div class="nav-container">
-			<div class="logo">
-				<a href="/">
-					<img src="https://raw.githubusercontent.com/gosimfoundation/paris-2025/main/public/images/logo.svg" alt="GOSIM" />
-				</a>
-			</div>
-			<div class="nav-links">
-				<a href="/" class="nav-link active">首页</a>
-				<a href="/agenda" class="nav-link">{t('nav.agenda', locale)}</a>
-			</div>
-			<div class="language-toggle">
-				<a href="/en/" class="lang-toggle-btn" title="Switch to English">
-					<span class="lang-text">EN</span>
-				</a>
-			</div>
-		</div>
-	</nav>
 
 	<main class="main-flex-container">
 		<!-- Hero Section -->
-		<Hero lang="zh" />
+		<div data-nav-theme="dark">
+			<Hero lang="zh" />
+		</div>
 
 		<!-- Forum Introduction Section -->
 		<GradientBanner 
@@ -192,18 +176,20 @@ const forumBackgroundContent: ContentItem[] = [
 		/>
 
 		<!-- Core Philosophy Section -->
-		<ImageOverlaySection 
-			id="core-philosophy"
-			sectionClass="core-philosophy-section"
-			title="核心理念"
-			image="/arch-bridge.png"
-			imageAlt="Arch Bridge"
-			layoutType="two-column"
-			leftContent="从「工具使能」到「价值导向」"
-			rightContent="我们倡导一种范式跃迁：让AI不仅仅是技术赋能工具，更要结果导向，有效回应和解决人类核心关切。我们相信，真正有意义的AI应该能够理解人类的情感需求，尊重文化多样性，促进社会公平，并在教育、医疗、艺术创作等领域发挥积极作用。通过这种价值导向的发展模式，AI将成为人类文明进步的重要推动力量，而不仅仅是冰冷的计算工具。"
-			backgroundColor="#f8f9fa"
-			overlayType="bottom-boxes"
-		/>
+		<div data-nav-theme="light">
+			<ImageOverlaySection 
+				id="core-philosophy"
+				sectionClass="core-philosophy-section"
+				title="核心理念"
+				image="/arch-bridge.png"
+				imageAlt="Arch Bridge"
+				layoutType="two-column"
+				leftContent="从「工具使能」到「价值导向」"
+				rightContent="我们倡导一种范式跃迁：让AI不仅仅是技术赋能工具，更要结果导向，有效回应和解决人类核心关切。我们相信，真正有意义的AI应该能够理解人类的情感需求，尊重文化多样性，促进社会公平，并在教育、医疗、艺术创作等领域发挥积极作用。通过这种价值导向的发展模式，AI将成为人类文明进步的重要推动力量，而不仅仅是冰冷的计算工具。"
+				backgroundColor="#f8f9fa"
+				overlayType="bottom-boxes"
+			/>
+		</div>
 
 
 

@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 
-const { lang = 'en' } = Astro.props;
+const { lang = 'en', navTheme = 'dark' } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,7 +20,8 @@ const { lang = 'en' } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{Astro.props.title || "GOSIM AI Vision Forum"}</title>
 	</head>
-	<body>
+	<body data-theme-nav={navTheme}>
+		<Header />
 		<slot />
 	</body>
 </html>
