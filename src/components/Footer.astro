@@ -61,7 +61,24 @@ const t = content[currentLang];
 const homeLink = isEnglish ? '/en/' : '/';
 const aboutLink = isEnglish ? '/en/about' : '/about';
 const agendaLink = isEnglish ? '/en/agenda' : '/agenda';
-const langSwitchLink = isEnglish ? '/' : '/en/';
+
+// Get current path and determine the page
+const currentPath = Astro.url.pathname;
+let pagePath = '';
+
+// Determine the page path without language prefix
+if (currentPath === '/' || currentPath === '/en/') {
+  pagePath = '';
+} else if (currentPath.startsWith('/en/')) {
+  pagePath = currentPath.slice(4); // Remove '/en/' prefix
+} else {
+  pagePath = currentPath.slice(1); // Remove leading '/'
+}
+
+// Construct language switch link
+const langSwitchLink = isEnglish 
+  ? (pagePath === '' ? '/' : '/' + pagePath)
+  : (pagePath === '' ? '/en/' : '/en/' + pagePath);
 ---
 
 <footer class={footerClass}>
@@ -116,7 +133,7 @@ const langSwitchLink = isEnglish ? '/' : '/en/';
             </svg>
             <span>{t.wechat}</span>
             <div class="qr-code-popup">
-              <img src="/wechat-qr.png" alt="WeChat QR Code" />
+              <img src="/icons/gosim-wx.png" alt="WeChat QR Code" />
               <p>{t.scanToFollow}</p>
             </div>
           </div>

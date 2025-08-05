@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { t } from '../i18n/translations.js';
 import GradientBanner from '../components/GradientBanner.astro';
 import Schedules from '../components/Schedules.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/agenda.css';
 
 const locale = 'zh';
@@ -66,10 +67,14 @@ const topicsCards = [
 			columns={4}
 			gridClass="outcomes-grid transparent-cards grid-2x2"
 			cardClass="outcome-card"
+			cardTitleSize="0.9rem"
+			cardContentSize="0.85rem"      
 			allowHtml={true}
 		/>
 
 	</main>
+
+	<Footer />
 </Layout>
 
 <!-- Agenda page styles now in global.css -->

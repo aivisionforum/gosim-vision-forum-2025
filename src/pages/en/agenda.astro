@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { t } from '../../i18n/translations.js';
 import GradientBanner from '../../components/GradientBanner.astro';
 import Schedules from '../../components/Schedules.astro';
+import Footer from '../../components/Footer.astro';
 import '../../styles/agenda.css';
 
 const locale = 'en';
@@ -69,6 +70,8 @@ const topicsCards = [
 		/>
 
 	</main>
+
+	<Footer lang="en" />
 </Layout>
 
 <!-- Agenda page styles now in global.css -->

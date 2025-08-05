@@ -379,6 +379,11 @@ blockquote {
   .categories-grid {
     grid-template-columns: 1fr;
   }
+  
+  /* Adjust agenda topic cards height on mobile */
+  .agenda-topics-gradient .outcome-card {
+    min-height: 200px !important;
+  }
 
   .format-grid {
     grid-template-columns: 1fr;
@@ -1058,6 +1063,7 @@ html[lang="zh-CN"] .page-header p {
   gap: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  align-items: stretch !important;
 }
 
 /* Specific gradient for agenda topics section */
@@ -1070,6 +1076,21 @@ html[lang="zh-CN"] .page-header p {
     rgba(129, 135, 197, 0.7) 0%, 
     rgba(239, 199, 41, 0.7) 100%
   ) !important;
+}
+
+/* Ensure agenda topic cards have top-aligned content and same height */
+.agenda-topics-gradient .outcome-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  min-height: 250px !important;
+  height: 100% !important;
+}
+
+/* Ensure content grids stretch cards to same height */
+.outcomes-grid.transparent-cards {
+  align-items: stretch !important;
 }
 
 /* Specific gradient for participants section */
@@ -1108,6 +1129,10 @@ html[lang="zh-CN"] .page-header p {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 /* Removed ::before overlay as transparency is now handled by main background */
@@ -1135,6 +1160,24 @@ html[lang="zh-CN"] .page-header p {
   line-height: 1.6;
   position: relative;
   z-index: 1;
+}
+
+/* Style lists inside outcome cards */
+.outcome-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.outcome-card li {
+  color: #6b5d4f;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Ensure outcome card content div is also top-aligned */
+.outcome-card > div {
+  width: 100%;
 }
 
 /* White text variant for outcome cards */
@@ -2279,7 +2322,7 @@ html[lang="zh-CN"] .page-header p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -2287,6 +2330,7 @@ html[lang="zh-CN"] .page-header p {
 .theme-card-overlay h4 {
   color: white;
   font-size: 1.15rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
   line-height: 1.2;
