@@ -24,7 +24,7 @@ export const translations = {
       },
       introduction: {
         title: "论坛简介",
-        p1: "GOSIM 作为全球开源创新平台，联合中法人工智能协会共同发起本次人工智能愿景论坛，聚焦「AI 能为人类创造何种核心价值」这一关键命题，为思想者、实践者、政策制定者和用户提供一个深度对话空间。",
+        p1: "GOSIM 作为全球开源创新平台，联合全法中国青年科创办会共同发起本次人工智能愿景论坛，聚焦「AI 能为人类创造何种核心价值」这一关键命题，为思想者、实践者、政策制定者和用户提供一个深度对话空间。",
         p2: "论坛采用邀请制、非公开、小规模的深度交互机制，汇聚全球顶尖高校、研究机构及企业代表，尤为关注人工智能在人类体验维度的正向价值，聚焦教育革新、文化创造、情感陪伴、技术平权等关键领域。",
       },
       themes: {
@@ -89,7 +89,7 @@ export const translations = {
       },
       introduction: {
         title: "Forum Introduction",
-        p1: "GOSIM and the Sino-French AI Association launch this Vision Forum to answer one critical question: What core value can AI create for humanity?",
+        p1: "GOSIM and AJTIS launch this Vision Forum to answer one critical question: What core value can AI create for humanity?",
         p2: "An invitation-only gathering of global thought leaders, researchers, and innovators. We focus on AI's human impact: education, creativity, emotional support, and technological equity.",
       },
       themes: {

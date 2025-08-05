@@ -26,7 +26,7 @@ const {
   sectionClass = 'core-topics-section',
   title,
   titleZh = '核心议题',
-  titleEn = 'Core Topics',
+  titleEn = 'Core Themes',
   image = '/xihu-guest-house.png',
   imageAlt = 'Xihu Guest House',
   topics,
@@ -35,8 +35,13 @@ const {
   formatTitleEn = 'Forum Format',
   formatItems,
   formatItemsZh = ['主题演讲', '深度圆桌讨论', 'AIGC Spotlight 作品展示', '跨领域对话', '早中晚餐社交'],
-  formatItemsEn = ['Keynote Speeches', 'Deep Roundtable Discussions', 'AIGC Spotlight Showcase', 'Cross-disciplinary Dialogue', 'Breakfast, Lunch & Dinner Networking']
-} = Astro.props;
+  formatItemsEn = [
+    'Keynote Speeches',
+    'In-depth Roundtable Dialogues',
+    'AIGC Spotlight Showcase',
+    'Cross-disciplinary Conversations',
+    'Networking over Breakfast, Lunch & Dinner'
+  ]} = Astro.props;
 
 // Default topics if not provided
 const defaultTopicsZh = [

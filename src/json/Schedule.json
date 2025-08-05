@@ -10,7 +10,7 @@
     {
       "name": "全部议程",
       "id": "all-sessions",
-      "room": "主会场 - 杭州国际博览中心"
+      "room": "主会场 - 杭州"
     }
   ],
   "sessions": {
@@ -28,7 +28,7 @@
         "date": "9月12日",
         "timeSlot": "09:30 - 09:45",
         "title": "主持开场",
-        "content": "<p>GOSIM代表或主持人开场致辞，议程介绍</p>",
+        "content": "<p>GOSIM代表和主持人开场致辞，议程介绍</p>",
         "speakers": [
           {
             "id": "gosim-representative",
@@ -49,7 +49,7 @@
           {
             "id": "speaker-education",
             "name": "教育科技专家",
-            "roleOrg": "浙江大学教育学院",
+            "roleOrg": "TBD",
             "tags": ["keynote"],
             "image": "speaker-edu.jpg"
           }
@@ -76,7 +76,7 @@
           {
             "id": "speaker-symbiosis",
             "name": "人工智能研究员",
-            "roleOrg": "之江实验室",
+            "roleOrg": "TBD",
             "tags": ["keynote"],
             "image": "speaker-ai.jpg"
           }
@@ -93,7 +93,7 @@
           {
             "id": "speaker-ethics",
             "name": "AI伦理专家",
-            "roleOrg": "杭州互联网法院",
+            "roleOrg": "TBD",
             "tags": ["keynote"],
             "image": "speaker-law.jpg"
           }
@@ -119,8 +119,8 @@
         "speakers": [
           {
             "id": "speaker-business",
-            "name": "商业创新专家",
-            "roleOrg": "阿里巴巴达摩院",
+            "name": "联合国开源专家",
+            "roleOrg": "TBD",
             "tags": ["keynote"],
             "image": "speaker-biz.jpg"
           }
@@ -149,9 +149,9 @@
         "date": "9月12日",
         "timeSlot": "17:30 - 20:30",
         "title": "晚宴",
-        "content": "<p>在西湖国宾馆享用晚宴，欣赏西湖美景</p>",
+        "content": "<p>用晚宴，欣赏西湖美景</p>",
         "speakers": [],
-        "room": "西湖国宾馆",
+        "room": "TBD",
         "category": "交流环节",
         "isSpecialEvent": true
       }

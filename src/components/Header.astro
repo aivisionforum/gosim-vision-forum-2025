@@ -29,7 +29,7 @@ const currentPath = pathname.replace(/^\/(en)?/, ''); // Remove language prefix
 const langSwitchLink = isChinesePage 
   ? `/en${currentPath.startsWith('/') ? currentPath : '/' + currentPath}`.replace('//', '/')
   : currentPath || '/';
-const langSwitchText = isChinesePage ? 'EN' : 'CN';
+const langSwitchText = isChinesePage ? 'EN' : '中';
 
 const slug = Astro.url.pathname
 ---
@@ -58,7 +58,7 @@ const slug = Astro.url.pathname
         </div>
         
         <div class="language-toggle">
-          <a href={langSwitchLink} class="lang-toggle-btn" title={isChinesePage ? 'Switch to English' : 'Switch to Chinese'}>
+          <a href={langSwitchLink} class="lang-toggle-btn" data-lang={langSwitchText} title={isChinesePage ? 'Switch to English' : 'Switch to Chinese'}>
             <span class="lang-text">{langSwitchText}</span>
           </a>
         </div>
@@ -86,7 +86,7 @@ const slug = Astro.url.pathname
         ))
       }
       <div class="mobile-lang-toggle">
-        <a href={langSwitchLink} class="lang-toggle-btn">
+        <a href={langSwitchLink} class="lang-toggle-btn" data-lang={langSwitchText}>
           {langSwitchText}
         </a>
       </div>
@@ -214,37 +214,53 @@ const slug = Astro.url.pathname
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: transparent !important;
+    background: #1976d2 !important; /* Default blue for EN */
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.55rem;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lang-toggle-btn[data-lang="中"] {
+    background: #de2910 !important; /* Chinese flag red for 中 */
   }
   
   .lang-toggle-btn .lang-text {
     background: transparent !important;
     padding: 0;
     border-radius: 0;
+    color: #ffffff;
   }
   
   body[data-theme-nav="light"] .header .lang-toggle-btn {
-    background: transparent !important;
-    color: #000000;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  body[data-theme-nav="light"] .header .lang-toggle-btn .lang-text {
+    color: #ffffff !important;
   }
 
   .lang-toggle-btn:hover {
-    background: transparent !important;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .lang-toggle-btn[data-lang="EN"]:hover {
+    background: #1565c0 !important; /* Darker blue on hover */
+  }
+  
+  .lang-toggle-btn[data-lang="中"]:hover {
+    background: #c41e0a !important; /* Darker Chinese flag red on hover */
   }
   
   body[data-theme-nav="light"] .header .lang-toggle-btn:hover {
-    background: transparent !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
 
   /* Mobile menu toggle */

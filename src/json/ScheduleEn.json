@@ -10,7 +10,7 @@
     {
       "name": "All Sessions",
       "id": "all-sessions",
-      "room": "Main Hall - Hangzhou International Expo Center"
+      "room": "Main Hall"
     }
   ],
   "sessions": {
@@ -32,7 +32,7 @@
         "speakers": [
           {
             "id": "gosim-representative",
-            "name": "GOSIM Foundation Representative",
+            "name": "GOSIM Foundation ED",
             "roleOrg": "GOSIM Foundation",
             "tags": ["all-sessions"],
             "image": "gosim-rep.jpg"
@@ -49,7 +49,7 @@
           {
             "id": "speaker-education",
             "name": "Education Technology Expert",
-            "roleOrg": "Zhejiang University School of Education",
+            "roleOrg": "TBD",
             "tags": ["keynote"],
             "image": "speaker-edu.jpg"
           }
@@ -76,7 +76,7 @@
           {
             "id": "speaker-symbiosis",
             "name": "AI Researcher",
-            "roleOrg": "Zhejiang Lab",
+            "roleOrg": "TBD",
             "tags": ["keynote"],
             "image": "speaker-ai.jpg"
           }
@@ -93,7 +93,7 @@
           {
             "id": "speaker-ethics",
             "name": "AI Ethics Expert",
-            "roleOrg": "Hangzhou Internet Court",
+            "roleOrg": "TBD",
             "tags": ["keynote"],
             "image": "speaker-law.jpg"
           }
@@ -120,7 +120,7 @@
           {
             "id": "speaker-business",
             "name": "Business Innovation Expert",
-            "roleOrg": "Alibaba DAMO Academy",
+            "roleOrg": "TBD",
             "tags": ["keynote"],
             "image": "speaker-biz.jpg"
           }
@@ -136,7 +136,7 @@
         "speakers": [
           {
             "id": "gosim-representative",
-            "name": "GOSIM Foundation Representative",
+            "name": "GOSIM Foundation Chair",
             "roleOrg": "GOSIM Foundation",
             "tags": ["all-sessions"],
             "image": "gosim-rep.jpg"
@@ -151,7 +151,7 @@
         "title": "Dinner",
         "content": "<p>Enjoy dinner at West Lake State Guest House with views of West Lake</p>",
         "speakers": [],
-        "room": "West Lake State Guest House",
+        "room": "TBD",
         "category": "Networking",
         "isSpecialEvent": true
       }

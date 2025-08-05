@@ -14,7 +14,7 @@ const locale = 'zh';
 const forumIntroCards = [
   {
     title: '全球对话平台',
-    content: 'GOSIM 联合中法人工智能协会发起人工智能愿景论坛，聚焦这一关键问题："当人工智能重塑人类角色，我们如何确保人类核心价值在AI时代仍居于中心？"'
+    content: 'GOSIM 联合全法中国青年科创办会发起人工智能愿景论坛，聚焦这一关键问题："当人工智能重塑人类角色，我们如何确保人类核心价值在AI时代仍居于中心？"'
   },
   {
     title: '思考者和实践者',
@@ -69,16 +69,16 @@ const participantCards = [
 // 预期成果 cards
 const expectedOutcomesCards = [
   {
-    title: '《人本人工智能白皮书》全球发布',
-    content: '依托论坛研讨成果及对参会嘉宾的深度访谈，《人本人工智能白皮书》正式面向开源社区、国际 AI 治理组织及 AI 产业全球发布。我们诚挚期待更多思想者与实践者加入人本人工智能的探讨行列，共同推动这一领域的深入发展。'
+    title: '三元融合范式',
+    content: '构建 "科技 + 人文 + 治理" 三元融合的论坛范式，搭建全球性产业、学术、开源社区及国际 AI 治理组织的持续对话平台，为人本人工智能的可持续发展注入思想动能。'
   },
   {
     title: 'AIGC Spotlight机制',
-    content: '设立常设机制，推动项目落地与跨界合作，建立国际推荐与支持机制'
+    content: '设立 AI 内容创作与交互创新的常设展示机制，逐步组建专业国际评委会，助力获奖项目对接产业合作伙伴及投资机构，为创意落地提供全链条支持。'
   },
   {
-    title: '三元融合范式',
-    content: '形成"科技 + 人文 + 治理"三元融合的论坛范式，为未来合作探索可持续对话机制'
+    title: '《人本人工智能白皮书》全球发布',
+    content: '依托论坛研讨成果及对参会嘉宾的深度访谈，《人本人工智能白皮书》正式面向开源社区、国际 AI 治理组织及 AI 产业全球发布。我们诚挚期待更多思想者与实践者加入人本人工智能的探讨行列，共同推动这一领域的深入发展。'
   }
 ];
 
@@ -86,17 +86,17 @@ const expectedOutcomesCards = [
 const internationalCooperationCards = [
   {
     title: '跨界交融',
-    content: '深度对话平台',
+    content: '产业、学术、开源的深度对话平台',
     icon: 'fa-bridge-circle-check'
   },
   {
-    title: '中欧共识',
-    content: 'AI社会责任重塑',
+    title: '全球共识',
+    content: '人本人工智能的全球共识与合作',
     icon: 'fa-flag'
   },
   {
     title: '伦理思辨',
-    content: '影响力合作平台',
+    content: '伦理与技术的激烈碰撞',
     icon: 'fa-scale-balanced'
   }
 ];
@@ -109,7 +109,7 @@ const forumBackgroundContent: ContentItem[] = [
   },
   {
     type: 'section',
-    title: '技术迭代突破',
+    title: '打开下一代文明之门：科技狂飙与人文守望',
     className: 'tech-evolution-section'
   },
   {
@@ -139,13 +139,14 @@ const forumBackgroundContent: ContentItem[] = [
 			sectionClass="introduction"
 			cards={forumIntroCards}
 			cardClass="content-card"
+			cardTitleSize="1.2rem"
 			backgroundImage="/hangzhou.svg"
 		/>
 
 		<!-- Forum Background Section -->
 		<ImageOverlaySection 
 			id="forum-background"
-			sectionClass="section-block modern-block"
+			sectionClass="fullwidth-section no-shadow"
 			title="论坛背景"
 			image="/forum-intro.png"
 			imageAlt="Forum Background"
@@ -157,7 +158,7 @@ const forumBackgroundContent: ContentItem[] = [
 			titleColor="#1a202c"
 			titleSize="2rem"
 			titleWeight="700"
-			containerMaxWidth="1200px"
+			containerMaxWidth="100%"
 		/>
 
 
@@ -167,12 +168,16 @@ const forumBackgroundContent: ContentItem[] = [
 			title="论坛目标"
 			titleAlign="left"
 			titleColor="#000000"
+			titleSize="1.8rem"
+			cardTitleSize="1.2rem"
 			sectionClass="agenda-section"
 			cards={forumGoalsCards}
 			columns={4}
 			cardClass="goal-item"
 			backgroundImage="/origination.svg"
 			gridClass="goals-grid"
+			cardContentSize="1rem"
+			cardContentLineHeight="1.4"				
 		/>
 
 		<!-- Core Philosophy Section -->
@@ -204,6 +209,9 @@ const forumBackgroundContent: ContentItem[] = [
 			gridClass="outcomes-grid outcomes-grid-4"
 			titleAlign="left"
 			titleColor="#000000"
+			cardTitleSize="1.2rem"
+			cardContentSize="1rem"
+			cardContentLineHeight="1.4"				
 		/>
 
 		<!-- Core Topics Section -->
@@ -220,6 +228,9 @@ const forumBackgroundContent: ContentItem[] = [
 			cardClass="cooperation-card"
 			gridClass="cooperation-grid"
 			backgroundImage="/heyi.svg"
+			cardTitleSize="1.2rem"
+			cardContentSize="1rem"
+			cardContentLineHeight="1.4"				
 		/>
 
 		<!-- AIGC Spotlight Section -->
@@ -250,6 +261,7 @@ const forumBackgroundContent: ContentItem[] = [
 			cards={expectedOutcomesCards}
 			gridClass="outcomes-grid"
 			cardClass="outcome-card white-text"
+			cardTitleSize="1.2rem"
 			backgroundImage="/lingyin-temple.jpg"
 			disableGradientOverlay={true}
 		/>

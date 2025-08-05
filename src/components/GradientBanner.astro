@@ -24,6 +24,7 @@ export interface Props {
   titleAlign?: 'left' | 'center' | 'right';
   titleWeight?: string;
   titleMargin?: string;
+  titleIcon?: string;
   
   // Subtitle Customization
   subtitleColor?: string;
@@ -88,6 +89,7 @@ const {
   titleAlign,
   titleWeight,
   titleMargin,
+  titleIcon,
   
   // Subtitle Customization
   subtitleColor,
@@ -188,7 +190,10 @@ const buildTaglineStyle = () => {
   <div class={`content ${contentClass}`}>
     {showHeader && subtitle ? (
       <div class="section-header">
-        <h2 class={titleClass} style={buildTitleStyle()}>{title}</h2>
+        <h2 class={titleClass} style={buildTitleStyle()}>
+          {titleIcon && <i class={`${titleIcon.startsWith('fas') || titleIcon.startsWith('fa-') ? 'fas ' + (titleIcon.startsWith('fa-') ? titleIcon : titleIcon) : titleIcon} title-icon`}></i>}
+          {title}
+        </h2>
         <div class={`section-subtitle ${subtitleClass}`} style={buildSubtitleStyle()}>{subtitle}</div>
         {tagline && (
           <div class={`section-tagline ${taglineClass}`} style={buildTaglineStyle()}>{tagline}</div>
@@ -196,7 +201,10 @@ const buildTaglineStyle = () => {
       </div>
     ) : showHeader ? (
       <>
-        <h2 class={titleClass} style={buildTitleStyle()}>{title}</h2>
+        <h2 class={titleClass} style={buildTitleStyle()}>
+          {titleIcon && <i class={`${titleIcon.startsWith('fas') || titleIcon.startsWith('fa-') ? 'fas ' + (titleIcon.startsWith('fa-') ? titleIcon : titleIcon) : titleIcon} title-icon`}></i>}
+          {title}
+        </h2>
         {tagline && (
           <div class={`section-tagline ${taglineClass}`} style={buildTaglineStyle()}>{tagline}</div>
         )}

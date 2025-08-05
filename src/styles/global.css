@@ -2083,7 +2083,8 @@ html[lang="zh-CN"] .page-header p {
 }
 
 .section-block.no-shadow,
-.modern-block.no-shadow {
+.modern-block.no-shadow,
+.section-block.modern-block.no-shadow {
   box-shadow: none !important;
   border: none !important;
   border-left: none !important;
@@ -2104,7 +2105,8 @@ html[lang="zh-CN"] .page-header p {
 }
 
 .section-block.no-shadow:hover,
-.modern-block.no-shadow:hover {
+.modern-block.no-shadow:hover,
+.section-block.modern-block.no-shadow:hover {
   box-shadow: none !important;
   transform: none !important;
 }
@@ -3486,6 +3488,97 @@ section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda
 .gradient-banner .card-icon {
   color: #2c3e50;
   opacity: 0.8;
+}
+
+/* Title icon styles */
+.title-icon {
+  margin-right: 0.75rem;
+  font-size: 1em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.gradient-banner h2 .title-icon {
+  opacity: 0.9;
+}
+
+/* English font styles */
+html[lang="en"] body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4,
+html[lang="en"] h5,
+html[lang="en"] h6,
+html[lang="en"] .hero h1,
+html[lang="en"] .section-title,
+html[lang="en"] .page-header h1,
+html[lang="en"] .gradient-banner h2 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+}
+
+/* Specific heading adjustments for EB Garamond */
+html[lang="en"] h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+html[lang="en"] h2 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+html[lang="en"] p,
+html[lang="en"] li,
+html[lang="en"] .content-card p,
+html[lang="en"] .nav-link {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Fullwidth section styles */
+.fullwidth-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 4rem 0;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.fullwidth-section.no-shadow {
+  box-shadow: none !important;
+  border: none !important;
+  background: #f8f9fa;
+}
+
+.fullwidth-section .container,
+.fullwidth-section .content-container {
+  max-width: 100% !important;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* Remove all shadows from forum background section */
+#forum-background {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#forum-background .image-overlay-container {
+  box-shadow: none !important;
+}
+
+#forum-background img {
+  box-shadow: none !important;
+}
+
+#forum-background .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .gradient-banner .content-card h3 {
