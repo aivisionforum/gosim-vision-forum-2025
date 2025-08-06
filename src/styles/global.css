@@ -3096,6 +3096,7 @@ h1.highlight-text-light {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
 }
@@ -3300,13 +3301,6 @@ section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda
   margin: 0 auto !important;
 }
 
-/* Make 核心参会群体 heading black, but allow 预期成果 to be customized */
-.outcomes-section.gradient-banner.participants-gradient h2 {
-  color: #000000 !important;
-  text-shadow: none !important;
-  background: none !important;
-  -webkit-text-fill-color: #000000 !important;
-}
 
 
 /* Specific rule for agenda section */
@@ -3622,6 +3616,16 @@ html[lang="en"] .nav-link {
   color: rgba(44, 62, 80, 0.8);
 }
 
+/* Nuclear option for Forum Introduction title */
+@media (max-width: 768px) {
+  #__astro * .introduction h2,
+  #__astro .introduction * h2,
+  * .introduction h2 {
+    font-size: 0.7rem !important;
+    max-font-size: 0.7rem !important;
+  }
+}
+
 /* Responsive Design for Modern Elements */
 @media (max-width: 768px) {
   .content-grid-modern {
@@ -3671,6 +3675,42 @@ html[lang="en"] .nav-link {
     font-size: 0.9rem;
   }
   
+  /* Forum Introduction inner boxes on mobile */
+  .introduction .content-card h3 {
+    font-size: 0.95rem !important;
+  }
+  
+  .introduction .content-card p {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Forum Introduction section title on mobile */
+  .introduction.gradient-banner h2,
+  .introduction.gradient-banner .section-header h2,
+  .gradient-banner.introduction h2,
+  .gradient-banner.introduction .content h2,
+  section.introduction .section-header h2,
+  section.introduction h2 {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Override inline styles for Forum Introduction */
+  section.introduction h2[style] {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Very specific override for Forum Introduction title */
+  body main section.introduction.gradient-banner .content .section-header h2,
+  body main .introduction.gradient-banner .content .section-header h2,
+  body .modern-section.gradient-banner.introduction .content .section-header h2 {
+    font-size: 0.7rem !important;
+    line-height: 1 !important;
+    margin-bottom: 0.3rem !important;
+  }
+  
   .gradient-banner .content-card {
     width: 350px;
     height: 220px;
@@ -3713,6 +3753,43 @@ html[lang="en"] .nav-link {
   .content-card p {
     font-size: 0.85rem;
     line-height: 1.5;
+  }
+  
+  /* Forum Introduction inner boxes on extra small screens */
+  .introduction .content-card h3 {
+    font-size: 0.85rem !important;
+  }
+  
+  .introduction .content-card p {
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Forum Introduction section title on extra small screens */
+  .introduction.gradient-banner h2,
+  .introduction.gradient-banner .section-header h2,
+  .gradient-banner.introduction h2,
+  .gradient-banner.introduction .content h2,
+  section.introduction .section-header h2,
+  section.introduction h2 {
+    font-size: 0.75rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Override inline styles for Forum Introduction on small screens */
+  section.introduction h2[style] {
+    font-size: 0.75rem !important;
+  }
+  
+  /* Very specific override for Forum Introduction title on small screens */
+  body main section.introduction.gradient-banner .content .section-header h2,
+  body main .introduction.gradient-banner .content .section-header h2,
+  body .modern-section.gradient-banner.introduction .content .section-header h2 {
+    font-size: 0.65rem !important;
+    line-height: 1 !important;
+    margin-bottom: 0.3rem !important;
+    font-weight: 600 !important;
   }
   
   .gradient-banner .content-card {
