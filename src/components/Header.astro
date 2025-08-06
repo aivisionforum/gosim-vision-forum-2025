@@ -75,6 +75,13 @@ const slug = Astro.url.pathname
   <!-- Mobile Menu -->
   <nav class="mobile-nav">
     <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <div class="mobile-lang-toggle">
+          <a href={langSwitchLink} class="lang-toggle-btn" data-lang={langSwitchText}>
+            {langSwitchText}
+          </a>
+        </div>
+      </div>
       {
         links.map((loop) => (
           <a 
@@ -85,11 +92,6 @@ const slug = Astro.url.pathname
           </a>
         ))
       }
-      <div class="mobile-lang-toggle">
-        <a href={langSwitchLink} class="lang-toggle-btn" data-lang={langSwitchText}>
-          {langSwitchText}
-        </a>
-      </div>
     </div>
   </nav>
 </header>
@@ -296,8 +298,11 @@ const slug = Astro.url.pathname
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     transform: translateY(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     padding: 2rem 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
   
   body[data-theme-nav="light"] .mobile-nav {
@@ -306,6 +311,8 @@ const slug = Astro.url.pathname
 
   .mobile-nav.active {
     transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .mobile-nav-content {
@@ -340,15 +347,30 @@ const slug = Astro.url.pathname
     color: #000000;
   }
 
-  .mobile-lang-toggle {
-    margin-top: 1rem;
+  .mobile-nav-header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  body[data-theme-nav="light"] .mobile-nav-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-lang-toggle {
+    display: flex;
+    justify-content: flex-end;
   }
 
   /* Responsive */
   @media (max-width: 768px) {
     .desktop-nav {
+      display: none;
+    }
+
+    .language-toggle {
       display: none;
     }
 

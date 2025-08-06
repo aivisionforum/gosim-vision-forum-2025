@@ -93,8 +93,8 @@ const displayFormatItems = formatItems || (currentLang === 'en' ? formatItemsEn 
 
 <section class={sectionClass} id={id}>
   <div class="core-topics-image-container">
-    <img src={image} alt={imageAlt} />
-    <div class="core-topics-overlay">
+    <img src={image} alt={imageAlt} class="core-topics-image" />
+    <div class="core-topics-overlay desktop-only">
       <h2 class="core-topics-title">{displayTitle}</h2>
       <div class="theme-grid-overlay">
         {displayTopics.map((topic) => (
@@ -108,6 +108,36 @@ const displayFormatItems = formatItems || (currentLang === 'en' ? formatItemsEn 
       <div class="forum-format-overlay">
         <h3>{displayFormatTitle}</h3>
         <ul class="format-list-overlay">
+          {displayFormatItems.map((item) => (
+            <li>
+              {(item === 'Chatham House Rule' || item === '查塔姆守则') ? (
+                <a href="https://www.chathamhouse.org/about-us/chatham-house-rule" target="_blank" rel="noopener noreferrer">
+                  {item}
+                </a>
+              ) : (
+                item
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Mobile Content Below Image -->
+    <div class="mobile-content-below">
+      <h2 class="mobile-title">{displayTitle}</h2>
+      <div class="mobile-theme-grid">
+        {displayTopics.map((topic) => (
+          <div class="mobile-theme-card">
+            <h4>{topic.title}</h4>
+            <p>{topic.description}</p>
+          </div>
+        ))}
+      </div>
+      
+      <div class="mobile-forum-format">
+        <h3>{displayFormatTitle}</h3>
+        <ul class="mobile-format-list">
           {displayFormatItems.map((item) => (
             <li>
               {(item === 'Chatham House Rule' || item === '查塔姆守则') ? (
@@ -303,69 +333,117 @@ const displayFormatItems = formatItems || (currentLang === 'en' ? formatItemsEn 
     opacity: 0.8;
   }
 
+  /* Hide mobile content on desktop */
+  .mobile-content-below {
+    display: none;
+  }
+  
+  /* Mobile Styles */
   @media (max-width: 768px) {
     .core-topics-image-container {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .core-topics-image {
       min-height: 250px;
+      border-radius: 20px;
     }
     
-    .core-topics-image-container img {
-      min-height: 250px;
+    /* Hide desktop overlay on mobile */
+    .desktop-only {
+      display: none !important;
     }
     
-    .core-topics-overlay {
-      padding: 1rem;
-      width: 100%;
-      left: 0;
-      transform: none;
+    /* Show mobile content */
+    .mobile-content-below {
+      display: block;
+      padding: 2rem 1rem;
+      background: #f8f9fa;
     }
     
-    .core-topics-title {
+    .mobile-title {
+      color: #1a202c;
       font-size: 1.8rem;
+      font-weight: 600;
+      text-align: center;
       margin-bottom: 2rem;
     }
     
-    .theme-grid-overlay {
+    .mobile-theme-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .mobile-theme-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+    
+    .mobile-theme-card h4 {
+      color: #1a202c;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .mobile-theme-card p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+    
+    .mobile-forum-format {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .mobile-forum-format h3 {
+      color: #1a202c;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    .mobile-format-list {
+      display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.8rem;
-      width: 100%;
+      gap: 0.75rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
       justify-content: center;
     }
     
-    .theme-card-overlay {
-      padding: 0.8rem;
-      padding-top: 1rem;
-      width: 160px;
-      height: 100px;
+    .mobile-format-list li {
+      background: #e3f2fd;
+      color: #1976d2;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
       font-size: 0.85rem;
-      justify-content: flex-start;
+      font-weight: 500;
     }
     
-    .theme-card-overlay h4 {
-      font-size: 0.85rem;
-      margin-bottom: 0.25rem;
+    .mobile-format-list a {
+      color: inherit;
+      text-decoration: none;
     }
     
-    .theme-card-overlay p {
-      font-size: 0.7rem;
-    }
-    
-    .forum-format-overlay {
-      padding: 0.8rem;
-      padding-top: 1rem;
-      margin-top: 0.5rem;
-      justify-content: flex-start;
-    }
-    
-    .forum-format-overlay h3 {
-      font-size: 1.1rem;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-    
-    .format-list-overlay li {
-      font-size: 0.75rem;
-      padding: 0.4rem 0.8rem;
+    .mobile-format-list a::after {
+      content: '↗';
+      font-size: 0.8em;
+      margin-left: 0.3rem;
+      opacity: 0.8;
     }
   }
 </style>

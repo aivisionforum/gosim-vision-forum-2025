@@ -628,13 +628,8 @@ html[lang="zh-CN"] .page-header p {
   margin-bottom: 0;
 }
 
-.introduction,
 .themes {
   padding: 4rem 2rem;
-}
-
-.introduction {
-  background: #f8f9fa;
 }
 
 .theme-grid {
@@ -3245,7 +3240,6 @@ h1.highlight-text-light {
 }
 
 /* Full-width sections */
-.introduction.gradient-banner,
 .agenda-section.gradient-banner,
 .international-section.gradient-banner {
   border: none;
@@ -3314,22 +3308,6 @@ section.outcomes-section.gradient-banner:not(.participants-gradient):not(.agenda
   -webkit-text-fill-color: #000000 !important;
 }
 
-/* Specific rule for introduction section */
-.introduction.gradient-banner {
-  background-image: url('/hangzhou.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Make 论坛简介 heading and subtitle black */
-.introduction.gradient-banner .section-header h2,
-.introduction.gradient-banner .section-subtitle {
-  color: #000000 !important;
-  text-shadow: none !important;
-  background: none !important;
-  -webkit-text-fill-color: #000000 !important;
-}
 
 /* Specific rule for agenda section */
 .agenda-section.gradient-banner {
@@ -3649,6 +3627,7 @@ html[lang="en"] .nav-link {
   .content-grid-modern {
     grid-template-columns: 1fr;
     gap: 2rem;
+    justify-items: center;
   }
   
   .goals-grid {
@@ -3684,6 +3663,14 @@ html[lang="en"] .nav-link {
     height: 220px;
   }
   
+  .content-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .content-card p {
+    font-size: 0.9rem;
+  }
+  
   .gradient-banner .content-card {
     width: 350px;
     height: 220px;
@@ -3707,6 +3694,7 @@ html[lang="en"] .nav-link {
   .content-grid-modern {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    justify-items: center;
   }
 }
 
@@ -3718,6 +3706,15 @@ html[lang="en"] .nav-link {
     padding: 1.5rem;
   }
   
+  .content-card h3 {
+    font-size: 1rem;
+  }
+  
+  .content-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
   .gradient-banner .content-card {
     width: 280px;
     height: 180px;
@@ -3726,6 +3723,7 @@ html[lang="en"] .nav-link {
   .content-grid-modern {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    justify-items: center;
   }
 }
 

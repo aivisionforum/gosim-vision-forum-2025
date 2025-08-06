@@ -269,11 +269,12 @@ const buildContentStyle = () => {
       <img 
         src={image} 
         alt={imageAlt} 
-        class={imageClass}
+        class={`image-main ${imageClass}`}
         style={`width: 100%; height: auto; ${imageStyle || ''}`}
       />
       
-      <div class={`background-image-overlay ${overlayClass}`} style={buildOverlayStyle()}>
+      <!-- Desktop Overlay -->
+      <div class={`background-image-overlay desktop-overlay ${overlayClass}`} style={buildOverlayStyle()}>
         {layoutType === 'two-column' && leftContent && rightContent && overlayType === 'bottom-boxes' ? (
           <div class="philosophy-text-overlay" style="position: absolute; bottom: 20px; left: 20px; right: 20px; z-index: 2; display: flex; gap: 1rem; align-items: stretch;">
             <div class="highlight-box-overlay" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.25) 100%); padding: 1.5rem 2rem; border-radius: 10px; margin-bottom: 0; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); flex: 0 0 35%; display: flex; align-items: center;">
@@ -380,6 +381,96 @@ const buildContentStyle = () => {
           </div>
         )}
       </div>
+      
+      <!-- Mobile Content Below Image -->
+      <div class="mobile-content-below">
+        {layoutType === 'two-column' && leftContent && rightContent && overlayType === 'bottom-boxes' ? (
+          <div class="philosophy-boxes-mobile">
+            <div class="highlight-box-mobile">
+              <h1>{typeof leftContent === 'string' ? leftContent : leftContent[0]?.content}</h1>
+            </div>
+            <div class="content-box-mobile">
+              <p>{typeof rightContent === 'string' ? rightContent : rightContent[0]?.content}</p>
+            </div>
+          </div>
+        ) : layoutType === 'two-column' && leftContent && rightContent ? (
+          <div class="two-column-mobile">
+            <div class="column-mobile">
+              {typeof leftContent === 'string' ? (
+                <p>{leftContent}</p>
+              ) : (
+                leftContent.map((item) => {
+                  switch (item.type) {
+                    case 'paragraph':
+                      return <p>{item.content}</p>;
+                    case 'heading':
+                      const HeadingTag = `h${item.level || 3}`;
+                      return <HeadingTag>{item.content}</HeadingTag>;
+                    case 'list':
+                      return <ul>{item.items?.map((li) => <li>{li}</li>)}</ul>;
+                    default:
+                      return null;
+                  }
+                })
+              )}
+            </div>
+            <div class="column-mobile">
+              {typeof rightContent === 'string' ? (
+                <p>{rightContent}</p>
+              ) : (
+                rightContent.map((item) => {
+                  switch (item.type) {
+                    case 'paragraph':
+                      return <p>{item.content}</p>;
+                    case 'heading':
+                      const HeadingTag = `h${item.level || 3}`;
+                      return <HeadingTag>{item.content}</HeadingTag>;
+                    case 'list':
+                      return <ul>{item.items?.map((li) => <li>{li}</li>)}</ul>;
+                    default:
+                      return null;
+                  }
+                })
+              )}
+            </div>
+          </div>
+        ) : (
+          <div class="single-content-mobile">
+            {highlightTitle && (
+              <div class="highlight-box-mobile">
+                <h1>{highlightTitle}</h1>
+              </div>
+            )}
+            
+            {content && typeof content === 'string' && (
+              <p>{content}</p>
+            )}
+            
+            {content && Array.isArray(content) && content.map((item) => {
+              switch (item.type) {
+                case 'paragraph':
+                  return <p>{item.content}</p>;
+                case 'heading':
+                  const HeadingTag = `h${item.level || 3}`;
+                  return <HeadingTag>{item.content}</HeadingTag>;
+                case 'list':
+                  return <ul>{item.items?.map((listItem) => <li>{listItem}</li>)}</ul>;
+                case 'highlight':
+                  return <div class="highlight-text-mobile">{item.content}</div>;
+                case 'section':
+                  return (
+                    <div class="content-section-mobile">
+                      {item.title && <h4>{item.title}</h4>}
+                      {item.content && <p>{item.content}</p>}
+                    </div>
+                  );
+                default:
+                  return null;
+              }
+            })}
+          </div>
+        )}
+      </div>
     </div>
   </div>
 </section>
@@ -390,6 +481,18 @@ const buildContentStyle = () => {
     border-radius: 20px;
     position: relative;
     min-height: 400px;
+  }
+  
+  @media (max-width: 768px) {
+    .image-overlay-container {
+      overflow: visible;
+      min-height: auto;
+      flex-direction: column;
+    }
+    
+    .image-main {
+      border-radius: 20px;
+    }
   }
   
   .background-image-overlay {
@@ -505,7 +608,137 @@ const buildContentStyle = () => {
     align-items: stretch;
   }
   
+  /* Hide mobile content on desktop */
+  .mobile-content-below {
+    display: none;
+  }
+  
+  /* Mobile Styles */
   @media (max-width: 768px) {
+    /* Hide desktop overlay on mobile */
+    .desktop-overlay {
+      display: none !important;
+    }
+    
+    /* Show mobile content below image */
+    .mobile-content-below {
+      display: block;
+      padding: 2rem 1rem;
+      background: #f8f9fa;
+    }
+    
+    /* Mobile content styling */
+    .philosophy-boxes-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .highlight-box-mobile {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .highlight-box-mobile h1 {
+      color: #2c3e50;
+      font-size: 1.2rem;
+      margin: 0;
+      font-weight: 600;
+    }
+    
+    .content-box-mobile {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .content-box-mobile p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    .two-column-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .column-mobile {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .column-mobile h3 {
+      color: #1a202c;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    .column-mobile p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .single-content-mobile {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .single-content-mobile h1 {
+      color: #1a202c;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .single-content-mobile p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    .highlight-text-mobile {
+      font-weight: 600;
+      color: #0091ea;
+      background: rgba(0, 145, 234, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+    
+    .content-section-mobile {
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+    
+    .content-section-mobile h4 {
+      color: #1a202c;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .content-section-mobile p {
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    /* Keep existing mobile styles for overlay text */
     .background-image-overlay {
       padding: 2rem;
       justify-content: center;
