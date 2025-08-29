@@ -1,0 +1,593 @@
+---
+// Cultural Tour Page (Chinese Version)
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="杭州文化一日游 - GOSIM 2025" description="2025年9月11日杭州国际开源会议嘉宾一日游 - 西湖手摇船、博物馆、美食体验">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-background">
+        <img src="/xihu-guest-house.png" alt="西湖美景" class="hero-image">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badges">
+          <span class="badge">2025年9月11日（四） · 杭州 · 西湖</span>
+          <span class="badge">06:30 酒店集合 · 07:00 登船 · 11:30 午餐</span>
+        </div>
+        <h1 class="hero-title">杭州国际开源会议嘉宾一日游</h1>
+        <p class="hero-subtitle">清晨手摇船 · 私享西湖 · 中英导览</p>
+      </div>
+    </section>
+
+    <!-- All Activities Section -->
+    <section class="activities-section">
+      <div class="container">
+        <h2>上午活动</h2>
+        <div class="activities-grid">
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>06:30 酒店集合</h3>
+              <p>杭州白金汉爵酒店大堂集合，统一前往西湖</p>
+            </div>
+          </div>
+          
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>07:00 登船游湖</h3>
+              <p>私人手摇船（含英文导游），全程约 3小时30分（预计 07:00–10:30）</p>
+            </div>
+          </div>
+          
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>11:30 西湖午餐</h3>
+              <p>西湖畔午餐（已预订；步行/短驳前往）</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>下午活动选项</h2>
+        <div class="activities-grid">
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>城市漫步</h3>
+              <p>西湖博物馆 → 中国丝绸博物馆 → 湖滨银泰 in77（购物/咖啡）</p>
+            </div>
+            <div class="activity-images">
+              <img src="/lingyin-temple.jpg" alt="丝绸博物馆" loading="lazy">
+              <img src="/xihu-guest-house.png" alt="西湖区域" loading="lazy">
+              <img src="/in77.webp" alt="湖滨银泰 in77" loading="lazy">
+            </div>
+          </div>
+          
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>轻徒步</h3>
+              <p>云栖竹径 / 九溪十八涧（约 4–6 公里）+ 宋代古寺（净慈/法喜，依当日安排）</p>
+            </div>
+            <div class="activity-images">
+              <img src="/hangzhou.gif" alt="云栖竹径" loading="lazy">
+              <img src="/arch-bridge.png" alt="九溪" loading="lazy">
+              <img src="/xihu-guest-house.jpeg" alt="西湖夜景" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <h2>晚上活动选项</h2>
+        <div class="activities-grid">
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>实景演出</h3>
+              <p>《最忆是杭州·印象西湖》（以当日场次为准）</p>
+            </div>
+            <div class="activity-images">
+              <img src="/xihu-guest-house.jpeg" alt="西湖夜景" loading="lazy">
+              <img src="/bridge.svg" alt="游船夜景" loading="lazy">
+              <img src="/hangzhou-landscape.svg" alt="古街氛围" loading="lazy">
+            </div>
+          </div>
+          
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>夜游</h3>
+              <p>南宋御街 & 清河坊历史街区夜市 → 湖滨步行街/音乐喷泉</p>
+            </div>
+            <div class="activity-images">
+              <img src="/hangzhou-landscape.svg" alt="南宋御街" loading="lazy">
+              <img src="/xihu-guest-house.png" alt="湖滨区域" loading="lazy">
+              <img src="/arch-bridge.png" alt="音乐喷泉区域" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration-section">
+      <div class="container">
+        <h2>立即报名</h2>
+        <p class="registration-intro"><strong>注意：此文化一日游仅限 GOSIM 2025 会议注册嘉宾参加。</strong><br><br>请填写以下信息完成文化一日游报名。我们将根据您的选择安排相应活动。</p>
+        
+        <form class="registration-form" id="cultural-tour-form">
+          <!-- Personal Information -->
+          <div class="form-section">
+            <h3>基本信息</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">姓名 *</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">邮箱 *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">手机号码</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              <div class="form-group">
+                <label for="organization">机构/公司</label>
+                <input type="text" id="organization" name="organization">
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity Preferences -->
+          <div class="form-section">
+            <h3>活动偏好</h3>
+            <div class="form-group">
+              <label>下午活动选择 *</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="afternoon_activity" value="city_walk" required>
+                  <span>City Walk（博物馆 + 购物）</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="afternoon_activity" value="hiking" required>
+                  <span>B 轻徒步 Hiking（竹径 + 古寺）</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>晚上活动选择 *</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="evening_activity" value="show" required>
+                  <span>1 实景演出《印象西湖》</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="evening_activity" value="night_tour" required>
+                  <span>2 夜游（御街 + 夜市 + 音乐喷泉）</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Information -->
+          <div class="form-section">
+            <h3>其他信息</h3>
+            <div class="form-group">
+              <label for="dietary">饮食限制/过敏信息</label>
+              <textarea id="dietary" name="dietary" placeholder="请告知任何饮食限制、过敏或特殊需求"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="emergency_contact">紧急联系人及电话</label>
+              <input type="text" id="emergency_contact" name="emergency_contact" placeholder="姓名 + 电话号码">
+            </div>
+
+            <div class="form-group">
+              <label>交通需求</label>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="transportation" value="hotel_pickup">
+                  <span>需要酒店接送</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="transportation" value="self_transport">
+                  <span>自行前往集合点</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="special_requests">特殊需求/备注</label>
+              <textarea id="special_requests" name="special_requests" placeholder="任何特殊需求或其他备注"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">提交报名</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section">
+      <div class="container">
+        <h2>小贴士</h2>
+        <ul class="tips-list">
+          <li>舒适防滑鞋、防晒/遮阳、驱蚊、水；遇降雨优先选择"下午 A 室内线"。</li>
+          <li>建议统一安排交通往返；晚间活动后送返酒店。</li>
+          <li>实际登船码头与餐厅以当日安排为准。</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero-section {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.06) brightness(1.04);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.5) 55%, rgba(255,255,255,0.95) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(20px, 6vw, 64px);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  .badge {
+    background: #eef6ff;
+    border: 1px solid #e6edf4;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-weight: 600;
+    color: #1d3b74;
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 4.2vw, 60px);
+    line-height: 1.08;
+    margin: 0.2em 0;
+    font-weight: 700;
+  }
+
+  .hero-subtitle {
+    color: #666;
+    font-size: clamp(16px, 1.4vw, 20px);
+    margin: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(20px, 5vw, 60px);
+  }
+
+  .schedule-section,
+  .activities-section,
+  .registration-section,
+  .tips-section {
+    padding: 40px 0;
+  }
+
+  .schedule-section {
+    background: #fafcff;
+  }
+
+  .activities-section {
+    background: #fff;
+  }
+
+  .registration-section {
+    background: #f8fafc;
+  }
+
+  .tips-section {
+    background: #fff;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0f172a;
+    text-align: left;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e6edf4;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  .time {
+    font-weight: 800;
+    color: #0e7aff;
+    font-size: 1.1rem;
+    min-width: 80px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .content h3 {
+    margin: 0 0 8px 0;
+    color: #0f172a;
+    font-size: 1.1rem;
+  }
+
+  .content p {
+    margin: 0;
+    color: #516072;
+    line-height: 1.5;
+  }
+
+  .activities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 3rem;
+  }
+
+  .activities-section:first-of-type .activities-grid {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    .activities-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .activity-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid #e6edf4;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  .activity-header h3 {
+    color: #0f172a;
+    margin: 0 0 12px 0;
+    font-size: 1.2rem;
+  }
+
+  .activity-header p {
+    color: #516072;
+    margin: 0 0 16px 0;
+    line-height: 1.5;
+  }
+
+  .activity-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .activity-images img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e6edf4;
+  }
+
+  .registration-form {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #e6edf4;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .form-section {
+    margin-bottom: 32px;
+  }
+
+  .form-section h3 {
+    margin: 0 0 20px 0;
+    color: #0f172a;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #e6edf4;
+    padding-bottom: 8px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #0e7aff;
+    box-shadow: 0 0 0 3px rgba(14, 122, 255, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .radio-option,
+  .checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .radio-option:hover,
+  .checkbox-option:hover {
+    border-color: #0e7aff;
+    background-color: #fafcff;
+  }
+
+  .radio-option input,
+  .checkbox-option input {
+    width: auto;
+    margin: 0;
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: #0e7aff;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .submit-btn:hover {
+    background: #0d70e6;
+  }
+
+  .submit-btn:active {
+    background: #0c66d3;
+  }
+
+  .tips-list {
+    margin: 0 0 20px 20px;
+  }
+
+  .tips-list li {
+    margin: 12px 0;
+    color: #516072;
+    line-height: 1.6;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+    padding: 16px;
+    background: #fafcff;
+    border-radius: 8px;
+    color: #666;
+  }
+
+  .registration-intro {
+    color: #516072;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('cultural-tour-form');
+    
+    form?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      // Collect checkbox values
+      const transportationOptions = [];
+      const checkboxes = form.querySelectorAll('input[name="transportation"]:checked');
+      checkboxes.forEach(checkbox => {
+        transportationOptions.push(checkbox.value);
+      });
+      data.transportation = transportationOptions.join(', ');
+      
+      try {
+        // Here you would implement the actual form submission
+        // For now, just show success message
+        alert('报名提交成功！我们会尽快与您联系确认详情。');
+        form.reset();
+      } catch (error) {
+        alert('提交失败，请稍后再试或联系我们。');
+      }
+    });
+  });
+</script>
