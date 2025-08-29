@@ -91,11 +91,58 @@
         "content": "<p>面对快速演化的AI技术，伦理治理体系滞后的问题日益突出。谁为算法不公、隐私泄露与失控使用负责？本议题将探讨全球治理中不同文化与制度的伦理张力，呼吁构建有前瞻性、包容性与可执行性的治理机制，并通过“黑箱辩论”等形式提升技术透明度与公众参与度。</p>",
         "speakers": [
           {
-            "id": "speaker-ethics",
-            "name": "AI伦理专家",
-            "roleOrg": "TBD",
+            "id": "florent-zara",
+            "name": "Florent Zara",
+            "roleOrg": "Eclipse Foundation",
+            "role": "开源AI倡导者（主持人）",
+            "tags": ["moderator"],
+            "image": "florent-zara.jpg",
+            "bio": "Eclipse基金会开源AI倡导者，担任话题主持人，促进全球AI社区的合作与对话。"
+          },
+          {
+            "id": "yang-qingfeng",
+            "name": "杨庆峰",
+            "roleOrg": "中国科协-复旦大学科技伦理与人类未来研究院教授、研究员",
+            "role": "教授，研究员（主题演讲人）",
             "tags": ["keynote"],
-            "image": "speaker-law.jpg"
+            "image": "yang-qingfeng.jpg",
+            "bio": "哲学博士，复旦大学哲学学院博士生导师。专注技术哲学、AI伦理研究。曾任美国达特茅斯学院访问学者，现任中国自然辩证法研究会技术哲学专业委员会常务理事、CCF职业伦理委员会委员。主持国家社科基金项目3项，出版专著4部。"
+          },
+          {
+            "id": "cailean-osborne",
+            "name": "Dr. Cailean Osborne",
+            "roleOrg": "Linux Foundation Research",
+            "role": "高级研究员（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "cailean-osborne.jpg",
+            "bio": "Linux基金会高级研究员，博士，领导开源AI战略、治理和社区资源工作。曾任英国政府数据伦理与创新中心国际政策负责人，参与起草英国AI战略，牛津大学博士。"
+          },
+          {
+            "id": "jesse-mccrosky",
+            "name": "Jesse McCrosky",
+            "roleOrg": "Egen",
+            "role": "首席架构师 – 生成式AI（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "jesse-mccrosky.jpg",
+            "bio": "Egen公司生成式AI首席架构师，专注于构建AI治理系统。强调透明度、偏见缓解和负责任的治理作为创新和社会价值的催化剂。"
+          },
+          {
+            "id": "xiaohu-zhu",
+            "name": "朱晓虎",
+            "roleOrg": "Center for Safe AGI",
+            "role": "创始人（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "xiaohu-zhu.jpg",
+            "bio": "安全AGI中心创始人，致力于将先进AI能力与人类集体安全和长期管理相结合的工作。"
+          },
+          {
+            "id": "christian-maitre",
+            "name": "Christian Maitre",
+            "roleOrg": "Caspera.lab",
+            "role": "CEO兼创始人（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "christian-maitre.jpg",
+            "bio": "前Orange创新副总裁，曾领导电信和智慧城市的数字化与可持续发展项目。现任Caspera-Lab CEO，专注于指导组织进行数字化转型并追求全球卓越。"
           }
         ],
         "room": "主会场",
@@ -118,11 +165,76 @@
         "content": "<p>AI正逐步成为全球基础设施的一部分，其公共性、可及性与可持续性问题日益重要。本议题以“全球数字公共产品”为框架，探讨AI的开放共享模式、治理机制设计及与联合国可持续发展目标（SDGs）的融合路径，推动跨国协作、资源共建与长远制度安排。</p>",
         "speakers": [
           {
-            "id": "speaker-business",
-            "name": "联合国开源专家",
-            "roleOrg": "TBD",
+            "id": "emily-chen",
+            "name": "陈美",
+            "roleOrg": "开源社 (KAIYUANSHE) 联合创始人",
+            "role": "圆桌讨论主持人",
+            "tags": ["moderator"],
+            "image": "emily-chen.jpg",
+            "bio": "开源社联合创始人，中国领先的开源倡导组织之一。在促进开源文化和中国与全球技术社区之间的国际合作方面发挥着关键作用。"
+          },
+          {
+            "id": "mehdi-snene",
+            "name": "Mehdi Snene 博士",
+            "roleOrg": "联合国数字经济与技术办公室 (UN/ODET)",
+            "role": "人工智能顾问（主题演讲人）",
             "tags": ["keynote"],
-            "image": "speaker-biz.jpg"
+            "image": "mehdi-snene.jpg",
+            "bio": "联合国数字经济与技术办公室人工智能顾问，专注于人工智能伦理、数字化转型和公共部门创新。曾任日内瓦大学教授。"
+          },
+          {
+            "id": "sameer-chauhan",
+            "name": "Sameer Chauhan",
+            "roleOrg": "联合国国际计算中心 (UNICC)",
+            "role": "主任（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "sameer-chauhan.jpg",
+            "bio": "联合国国际计算中心主任，领导联合国系统的数字创新工作，拥有超过二十年的全球领导经验，曾在德意志银行和瑞士信贷等公司任职。"
+          },
+          {
+            "id": "emily-bennett",
+            "name": "Emily Bennett",
+            "roleOrg": "联合国国际计算中心 (UNICC)",
+            "role": "数字公共解决方案负责人（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "emily-bennett.jpg",
+            "bio": "领导联合国数字公共解决方案部门，专注于构建开源数字公共基础设施，支持包容性发展和跨国数字合作。"
+          },
+          {
+            "id": "carlos-correia",
+            "name": "Carlos Correia",
+            "roleOrg": "联合国国际计算中心 (UNICC)",
+            "role": "高级IT官员，数字基础（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "carlos-correia.jpg",
+            "bio": "联合国国际计算中心高级IT架构师，推动云原生基础设施、平台工程和跨机构数字化转型的数字基础建设。"
+          },
+          {
+            "id": "yonghua-lin",
+            "name": "林咏华",
+            "roleOrg": "北京智源人工智能研究院 (BAAI)",
+            "role": "副院长（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "yonghua-lin.jpg",
+            "bio": "北京智源人工智能研究院副院长，领导大规模AI模型研究战略以及学术界和工业界的协作创新。"
+          },
+          {
+            "id": "qin-wang",
+            "name": "王勤",
+            "roleOrg": "中国社会科学院 (CASS)",
+            "role": "教授（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "qin-wang.jpg",
+            "bio": "中国社会科学院资深学者，专长于技术伦理、数字治理以及人工智能与社会发展的交叉研究。"
+          },
+          {
+            "id": "richard-bian",
+            "name": "边思康 (Richard Bian)",
+            "roleOrg": "蚂蚁集团",
+            "role": "开源战略与产品总监（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "richard-bian.jpg",
+            "bio": "蚂蚁集团开源战略与产品负责人，倡导全球开源软件合作，积极构建亚洲及其他地区的社区驱动的金融科技和AI生态系统。"
           }
         ],
         "room": "主会场",

@@ -91,11 +91,57 @@
         "content": "<p>As AI technology rapidly advances, ethical governance frameworks struggle to keep pace. Who is accountable for algorithmic injustice, data privacy breaches, or misuse? This topic investigates the ethical tensions that arise across cultural and institutional boundaries, calls for anticipatory, inclusive, and enforceable governance mechanisms, and advocates for formats like \"black-box debates\" to enhance transparency and public engagement in AI systems.</p>",
         "speakers": [
           {
-            "id": "speaker-ethics",
-            "name": "AI Ethics Expert",
-            "roleOrg": "TBD",
+            "id": "florent-zara",
+            "name": "Florent Zara",
+            "roleOrg": "Eclipse Foundation",
+            "role": "Open Source AI Advocate (Moderator)",
+            "tags": ["moderator"],
+            "image": "florent-zara.jpg",
+            "bio": "Advocate for open source AI at the Eclipse Foundation. Serves as topic moderator, fostering collaboration and dialogue across global AI communities."
+          },
+          {
+            "id": "yang-qingfeng",
+            "name": "Yang Qingfeng",
+            "roleOrg": "Professor & Researcher, China Association for Science and Technology-Fudan University Institute of Science and Technology Ethics and Human Future",
             "tags": ["keynote"],
-            "image": "speaker-law.jpg"
+            "image": "yang-qingfeng.jpg",
+            "bio": "PhD in Philosophy, doctoral supervisor at Fudan University. Specializes in technology philosophy and AI ethics research. Former visiting scholar at Dartmouth College. Currently serves as executive director of Professional Committee of Philosophy of Technology and CCF Ethics Committee member. Has led 3 National Social Science Foundation projects and published 4 monographs."
+          },
+          {
+            "id": "cailean-osborne",
+            "name": "Dr. Cailean Osborne",
+            "roleOrg": "Linux Foundation Research",
+            "role": "Senior Researcher (Panelist)",
+            "tags": ["panelist"],
+            "image": "cailean-osborne.jpg",
+            "bio": "Cailean Osborne, PhD, is a Senior Researcher at the Linux Foundation, leading work on open source AI strategy, governance, and community resources. Formerly at the UK Government's Centre for Data Ethics and Innovation, he co-authored the UK's AI Strategy and has a PhD from Oxford."
+          },
+          {
+            "id": "jesse-mccrosky",
+            "name": "Jesse McCrosky",
+            "roleOrg": "Egen",
+            "role": "Principal Architect – Gen AI (Panelist)",
+            "tags": ["panelist"],
+            "image": "jesse-mccrosky.jpg",
+            "bio": "Jesse McCrosky is Principal Architect for Gen AI at Egen, focused on building AI governance systems. He emphasizes transparency, bias mitigation, and responsible governance as catalysts for both innovation and social value."
+          },
+          {
+            "id": "xiaohu-zhu",
+            "name": "Xiaohu Zhu",
+            "roleOrg": "Center for Safe AGI",
+            "role": "Founder (Panelist)",
+            "tags": ["panelist"],
+            "image": "xiaohu-zhu.jpg",
+            "bio": "Founder of the Center for Safe AGI, leading efforts to align advanced AI power with collective human safety and long-term stewardship."
+          },
+          {
+            "id": "christian-maitre",
+            "name": "Christian Maitre",
+            "roleOrg": "Caspera.lab",
+            "role": "CEO and Founder (Panelist)",
+            "tags": ["panelist"],
+            "image": "christian-maitre.jpg",
+            "bio": "Former VP of Innovation at Orange, Christian has led digital and sustainability initiatives across telecom and smart cities. As CEO of Caspera-Lab, he now focuses on guiding organizations toward digital transformation and global excellence."
           }
         ],
         "room": "Main Hall",
@@ -118,11 +164,76 @@
         "content": "<p>AI is increasingly becoming a core part of global infrastructure, raising urgent questions about its accessibility, sustainability, and public accountability. Framed through the lens of \"global digital public goods,\" this topic explores open collaboration models, governance frameworks, and how AI can align with the United Nations Sustainable Development Goals (SDGs), promoting cross-border cooperation and long-term institutional arrangements.</p>",
         "speakers": [
           {
-            "id": "speaker-business",
-            "name": "Business Innovation Expert",
-            "roleOrg": "TBD",
+            "id": "emily-chen",
+            "name": "Emily Chen",
+            "roleOrg": "KAIYUANSHE",
+            "role": "Co-Founder (Panel Moderator)",
+            "tags": ["moderator"],
+            "image": "emily-chen.jpg",
+            "bio": "Emily Chen is the co-founder of KAIYUANSHE, one of China's leading open-source advocacy organizations. She plays a key role in promoting open-source culture and international collaboration between Chinese and global tech communities."
+          },
+          {
+            "id": "mehdi-snene",
+            "name": "Dr. Mehdi Snene",
+            "roleOrg": "UN / ODET",
+            "role": "AI Advisor (Keynote Speaker)",
             "tags": ["keynote"],
-            "image": "speaker-biz.jpg"
+            "image": "mehdi-snene.jpg",
+            "bio": "Dr. Mehdi Snene is an AI Advisor at the UN Office of Digital Economy and Technology (ODET). He specializes in AI ethics, digital transformation, and public sector innovation. Formerly a professor at the University of Geneva."
+          },
+          {
+            "id": "sameer-chauhan",
+            "name": "Sameer Chauhan",
+            "roleOrg": "UNICC",
+            "role": "Director (Panelist)",
+            "tags": ["panelist"],
+            "image": "sameer-chauhan.jpg",
+            "bio": "Sameer Chauhan is the Director of the UN International Computing Centre (UNICC). He leads digital innovation across the UN system and brings over two decades of global leadership from firms like Deutsche Bank and Credit Suisse."
+          },
+          {
+            "id": "emily-bennett",
+            "name": "Emily Bennett",
+            "roleOrg": "UNICC",
+            "role": "Head, Digital Public Solutions (Panelist)",
+            "tags": ["panelist"],
+            "image": "emily-bennett.jpg",
+            "bio": "Emily Bennett leads the UN's Digital Public Solutions unit. She focuses on building open-source digital public infrastructure to support inclusive development and digital cooperation across nations."
+          },
+          {
+            "id": "carlos-correia",
+            "name": "Carlos Correia",
+            "roleOrg": "UNICC",
+            "role": "Senior IT Officer, Digital Foundations (Panelist)",
+            "tags": ["panelist"],
+            "image": "carlos-correia.jpg",
+            "bio": "Carlos J. Correia is a senior IT architect at UNICC, driving cloud-native infrastructure, platform engineering, and digital foundations for inter-agency digital transformation."
+          },
+          {
+            "id": "yonghua-lin",
+            "name": "Dr. Yonghua Lin",
+            "roleOrg": "BAAI",
+            "role": "Vice President (Panelist)",
+            "tags": ["panelist"],
+            "image": "yonghua-lin.jpg",
+            "bio": "Dr. Yonghua Lin is Vice President at the Beijing Academy of Artificial Intelligence (BAAI), where he leads research strategy in large-scale AI models and collaborative innovation across academia and industry."
+          },
+          {
+            "id": "qin-wang",
+            "name": "Prof. Qin Wang",
+            "roleOrg": "CASS",
+            "role": "Professor (Panelist)",
+            "tags": ["panelist"],
+            "image": "qin-wang.jpg",
+            "bio": "Professor Qin Wang is a senior academic at the Chinese Academy of Social Sciences (CASS), with expertise in technology ethics, digital governance, and the intersection of AI with societal development."
+          },
+          {
+            "id": "richard-bian",
+            "name": "Richard Bian (Si-Kang Bian)",
+            "roleOrg": "Ant Group",
+            "role": "Director of Strategy and Product, OSS (Panelist)",
+            "tags": ["panelist"],
+            "image": "richard-bian.jpg",
+            "bio": "Richard Bian leads open-source strategy and product at Ant Group. He champions global OSS collaboration and is active in building community-led fintech and AI ecosystems across Asia and beyond."
           }
         ],
         "room": "Main Hall",
