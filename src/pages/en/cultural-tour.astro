@@ -50,22 +50,24 @@ import Layout from "../../layouts/Layout.astro";
             </div>
             
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email">Email *</label>
               <input 
                 type="email" 
                 id="email" 
                 name="entry.1954615972" 
+                required
                 placeholder="Please enter your email address"
                 class="form-input"
               >
             </div>
             
             <div class="form-group">
-              <label for="phone">Phone Number</label>
+              <label for="phone">Phone Number *</label>
               <input 
                 type="tel" 
                 id="phone" 
                 name="entry.636412973" 
+                required
                 placeholder="Please enter your phone number"
                 class="form-input"
               >
@@ -83,28 +85,28 @@ import Layout from "../../layouts/Layout.astro";
             </div>
             
             <div class="form-group">
-              <label>Afternoon Activity Selection</label>
+              <label>Afternoon Activity Selection *</label>
               <div class="radio-group">
                 <label class="radio-option">
-                  <input type="radio" name="entry.1403219245" value="City Walk (Museums + Shopping)">
+                  <input type="radio" name="entry.1403219245" value="City Walk (Museums + Shopping)" required>
                   <span>City Walk (Museums + Shopping)</span>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="entry.1403219245" value="Light Hiking (Bamboo Path + Temple)">
+                  <input type="radio" name="entry.1403219245" value="Light Hiking (Bamboo Path + Temple)" required>
                   <span>Light Hiking (Bamboo Path + Temple)</span>
                 </label>
               </div>
             </div>
             
             <div class="form-group">
-              <label>Evening Activity Selection</label>
+              <label>Evening Activity Selection *</label>
               <div class="radio-group">
                 <label class="radio-option">
-                  <input type="radio" name="entry.410721717" value="Live Performance (Impression West Lake)">
+                  <input type="radio" name="entry.410721717" value="Live Performance (Impression West Lake)" required>
                   <span>Live Performance (Impression West Lake)</span>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="entry.410721717" value="Night Tour (Historical Streets + Music Fountain)">
+                  <input type="radio" name="entry.410721717" value="Night Tour (Historical Streets + Music Fountain)" required>
                   <span>Night Tour (Historical Streets + Music Fountain)</span>
                 </label>
               </div>
@@ -122,11 +124,12 @@ import Layout from "../../layouts/Layout.astro";
             </div>
             
             <div class="form-group">
-              <label for="emergency_contact">Emergency Contact</label>
+              <label for="emergency_contact">Emergency Contact *</label>
               <input 
                 type="text" 
                 id="emergency_contact" 
                 name="entry.870922209" 
+                required
                 placeholder="Name + Phone Number"
                 class="form-input"
               >
