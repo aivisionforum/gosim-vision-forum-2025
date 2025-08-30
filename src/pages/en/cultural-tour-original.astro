@@ -111,28 +111,58 @@ import Layout from "../../layouts/Layout.astro";
         <h2>Register Now</h2>
         <p class="registration-intro"><strong>Note: This cultural tour is exclusively for GOSIM 2025 conference registered guests only.</strong><br><br>Please fill out the following information to complete your cultural tour registration. We will arrange activities based on your preferences.</p>
         
-        <form class="registration-form" id="cultural-tour-form">
+        <!-- Direct Google Form Submission -->
+        <form 
+          id="cultural-tour-form" 
+          action="https://docs.google.com/forms/d/e/1FAIpQLSf3dqBnDy8RsIBkoj6EkxDYPvaBbujUEI7tCyDgd3VMwjTLNg/formResponse" 
+          method="POST" 
+          target="hidden_iframe"
+          class="registration-form"
+        >
           <!-- Personal Information -->
           <div class="form-section">
             <h3>Personal Information</h3>
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" required>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="entry.1792155962" 
+                  required 
+                  placeholder="Please enter your name"
+                >
               </div>
               <div class="form-group">
                 <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="entry.1954615972" 
+                  required
+                  placeholder="Please enter your email address"
+                >
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="entry.636412973" 
+                  required
+                  placeholder="Please enter your phone number"
+                >
               </div>
               <div class="form-group">
                 <label for="organization">Organization/Company</label>
-                <input type="text" id="organization" name="organization">
+                <input 
+                  type="text" 
+                  id="organization" 
+                  name="entry.1965499526" 
+                  placeholder="Please enter your organization or company name"
+                >
               </div>
             </div>
           </div>
@@ -144,11 +174,11 @@ import Layout from "../../layouts/Layout.astro";
               <label>Afternoon Activity Choice *</label>
               <div class="radio-group">
                 <label class="radio-option">
-                  <input type="radio" name="afternoon_activity" value="City Walk (Museums + Shopping)" required>
+                  <input type="radio" name="entry.1403219245" value="City Walk (Museums + Shopping)" required>
                   <span>City Walk (Museums + Shopping)</span>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="afternoon_activity" value="Light Hiking (Bamboo Path + Temple)" required>
+                  <input type="radio" name="entry.1403219245" value="Light Hiking (Bamboo Path + Temple)" required>
                   <span>Light Hiking (Bamboo Trail + Temples)</span>
                 </label>
               </div>
@@ -158,11 +188,11 @@ import Layout from "../../layouts/Layout.astro";
               <label>Evening Activity Choice *</label>
               <div class="radio-group">
                 <label class="radio-option">
-                  <input type="radio" name="evening_activity" value="Live Performance (Impression West Lake)" required>
-                  <span>Live Performance "Impression West Lake"</span>
+                  <input type="radio" name="entry.410721717" value="Live Performance (Impression West Lake)" required>
+                  <span>Live Performance (Impression West Lake)</span>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="evening_activity" value="Night Tour (Historical Streets + Music Fountain)" required>
+                  <input type="radio" name="entry.410721717" value="Night Tour (Historical Streets + Music Fountain)" required>
                   <span>Night Tour (Imperial Street + Night Market + Musical Fountain)</span>
                 </label>
               </div>
@@ -174,23 +204,33 @@ import Layout from "../../layouts/Layout.astro";
             <h3>Additional Information</h3>
             <div class="form-group">
               <label for="dietary">Dietary Restrictions/Allergies</label>
-              <textarea id="dietary" name="dietary" placeholder="Please let us know about any dietary restrictions, allergies, or special needs"></textarea>
+              <textarea 
+                id="dietary" 
+                name="entry.1676644653" 
+                placeholder="Please let us know about any dietary restrictions, allergies, or special needs"
+              ></textarea>
             </div>
             
             <div class="form-group">
               <label for="emergency_contact">Emergency Contact & Phone *</label>
-              <input type="text" id="emergency_contact" name="emergency_contact" placeholder="Contact name + phone number" required>
+              <input 
+                type="text" 
+                id="emergency_contact" 
+                name="entry.870922209" 
+                required
+                placeholder="Contact name + phone number"
+              >
             </div>
 
             <div class="form-group">
               <label>Transportation Needs</label>
-              <div class="checkbox-group">
-                <label class="checkbox-option">
-                  <input type="checkbox" name="transportation" value="Hotel pickup needed">
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="entry.1315373062" value="Need hotel pickup">
                   <span>Need hotel pickup/return service</span>
                 </label>
-                <label class="checkbox-option">
-                  <input type="checkbox" name="transportation" value="Will go to meeting point myself">
+                <label class="radio-option">
+                  <input type="radio" name="entry.1315373062" value="Will go to meeting point myself">
                   <span>Will make own way to meeting point</span>
                 </label>
               </div>
@@ -198,12 +238,28 @@ import Layout from "../../layouts/Layout.astro";
 
             <div class="form-group">
               <label for="special_requests">Special Requests/Notes</label>
-              <textarea id="special_requests" name="special_requests" placeholder="Any special requirements or other notes"></textarea>
+              <textarea 
+                id="special_requests" 
+                name="entry.863109825" 
+                placeholder="Any special requirements or other notes"
+              ></textarea>
             </div>
           </div>
 
           <button type="submit" class="submit-btn">Submit Registration</button>
         </form>
+        
+        <!-- Success message outside the form -->
+        <div id="success-message" class="success-message" style="display: none;">
+          <div class="success-content">
+            <div class="success-icon">✓</div>
+            <h3>Registration Submitted Successfully!</h3>
+            <p>We have received your registration information and will contact you soon to confirm details.</p>
+          </div>
+        </div>
+        
+        <!-- Hidden iframe for form submission -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
 
       </div>
     </section>
@@ -561,9 +617,63 @@ import Layout from "../../layouts/Layout.astro";
     margin-bottom: 2rem;
     line-height: 1.6;
   }
+
+  .success-message {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f0fdf4;
+    border: 2px solid #22c55e;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .success-message h3 {
+    color: #166534;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .success-message p {
+    color: #15803d;
+    font-size: 1rem;
+  }
 </style>
 
 <script>
+  // Handle form submission and show success message
+  document.getElementById('cultural-tour-form').addEventListener('submit', function(e) {
+    // Allow the form to submit to Google Forms
+    setTimeout(function() {
+      // Show popup message
+      alert('Registration submitted successfully! We will contact you soon to confirm details.');
+      // Reset the form
+      document.getElementById('cultural-tour-form').reset();
+    }, 1000);
+  });
+</script>
+
+<script>
+  // Original script removed - form now submits directly to Google Forms
+  /*
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('cultural-tour-form');
     const submitButton = form?.querySelector('.submit-btn');
@@ -629,4 +739,5 @@ import Layout from "../../layouts/Layout.astro";
       }
     });
   });
+  */
 </script>

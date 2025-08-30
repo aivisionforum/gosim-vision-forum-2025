@@ -22,6 +22,84 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
+    <!-- All Activities Section -->
+    <section class="activities-section">
+      <div class="container">
+        <h2 class="section-title">上午活动</h2>
+        <div class="activities-grid">
+          <div class="activity-card">
+            <h3>06:30 酒店集合</h3>
+            <p>杭州白金汉爵酒店大堂集合，统一前往西湖</p>
+          </div>
+          
+          <div class="activity-card">
+            <h3>07:00 登船游湖</h3>
+            <p>私人手摇船（含英文导游），全程约 3小时30分（预计 07:00–10:30）</p>
+          </div>
+        </div>
+        
+        <div class="activity-card-full">
+          <h3>11:30 西湖午餐</h3>
+          <p>西湖畔午餐（已预订；步行/短驳前往）</p>
+        </div>
+
+        <h2 class="section-title">下午活动选项</h2>
+        <div class="activities-grid">
+          <div class="activity-card">
+            <h3>城市漫步</h3>
+            <p>西湖博物馆 → 中国丝绸博物馆 → 湖滨银泰 in77（购物/咖啡）</p>
+          </div>
+          
+          <div class="activity-card">
+            <h3>轻徒步</h3>
+            <p>云栖竹径 / 九溪十八涧（约 4–6 公里）+ 宋代古寺（净慈/法喜，依当日安排）</p>
+          </div>
+        </div>
+
+        <h2 class="section-title">晚上活动选项</h2>
+        <div class="activities-grid">
+          <div class="activity-card">
+            <h3>实景演出</h3>
+            <p>《最忆是杭州·印象西湖》（以当日场次为准）</p>
+          </div>
+          
+          <div class="activity-card">
+            <h3>夜游</h3>
+            <p>南宋御街 & 清河坊历史街区夜市 → 湖滨步行街/音乐喷泉</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+      <div class="container">
+        <h2>活动亮点</h2>
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <div class="highlight-icon">🛶</div>
+            <h3>私享西湖</h3>
+            <p>清晨包船游览，避开人群，体验最美西湖</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🎭</div>
+            <h3>文化体验</h3>
+            <p>博物馆参观、古寺探访，深度了解杭州文化</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🍜</div>
+            <h3>地道美食</h3>
+            <p>西湖畔午餐，品尝正宗杭帮菜</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🌃</div>
+            <h3>夜景观赏</h3>
+            <p>音乐喷泉、历史街区，感受杭州夜晚魅力</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Simplified Registration Form -->
     <section class="registration-section">
       <div class="container">
@@ -37,51 +115,55 @@ import Layout from "../layouts/Layout.astro";
             target="hidden_iframe"
             class="registration-form"
           >
-            <div class="form-group">
-              <label for="name">姓名 *</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="entry.1792155962" 
-                required 
-                placeholder="请输入您的姓名"
-                class="form-input"
-              >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">姓名 *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="entry.1792155962" 
+                  required 
+                  placeholder="请输入您的姓名"
+                  class="form-input"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="email">邮箱 *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="entry.1954615972" 
+                  required
+                  placeholder="请输入您的邮箱地址"
+                  class="form-input"
+                >
+              </div>
             </div>
             
-            <div class="form-group">
-              <label for="email">邮箱 *</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="entry.1954615972" 
-                required
-                placeholder="请输入您的邮箱地址"
-                class="form-input"
-              >
-            </div>
-            
-            <div class="form-group">
-              <label for="phone">手机号码 *</label>
-              <input 
-                type="tel" 
-                id="phone" 
-                name="entry.636412973" 
-                required
-                placeholder="请输入您的手机号码"
-                class="form-input"
-              >
-            </div>
-            
-            <div class="form-group">
-              <label for="organization">机构/公司</label>
-              <input 
-                type="text" 
-                id="organization" 
-                name="entry.1965499526" 
-                placeholder="请输入您的机构或公司名称"
-                class="form-input"
-              >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">手机号码 *</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="entry.636412973" 
+                  required
+                  placeholder="请输入您的手机号码"
+                  class="form-input"
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="organization">机构/公司</label>
+                <input 
+                  type="text" 
+                  id="organization" 
+                  name="entry.1965499526" 
+                  placeholder="请输入您的机构或公司名称"
+                  class="form-input"
+                >
+              </div>
             </div>
             
             <div class="form-group">
@@ -185,6 +267,153 @@ import Layout from "../layouts/Layout.astro";
   </main>
 
   <style>
+    /* Activities Section */
+    .activities-section {
+      padding: 4rem 2rem;
+      background: #f5f5f5;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: #1e293b;
+      margin-bottom: 3rem;
+      text-align: left;
+      letter-spacing: -0.5px;
+    }
+
+    .activities-section h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      color: #1e293b;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .activity-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .activity-card-full {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 2rem;
+    }
+
+    .activity-card:hover, .activity-card-full:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .activity-card h3, .activity-card-full h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 0.75rem;
+    }
+
+    .activity-card p, .activity-card-full p {
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .activity-header h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-header p {
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .activity-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .activity-images img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Highlights Section */
+    .highlights-section {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+
+    .highlights-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .highlight-item {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .highlight-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .highlight-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-item h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-item p {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
     /* Hero Section */
     .hero-section {
       position: relative;
@@ -302,8 +531,19 @@ import Layout from "../layouts/Layout.astro";
       text-align: left;
     }
 
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
     .form-group {
       margin-bottom: 2rem;
+    }
+
+    .form-row .form-group {
+      margin-bottom: 0;
     }
 
     .form-group label {
@@ -472,6 +712,23 @@ import Layout from "../layouts/Layout.astro";
       .container {
         padding: 0 1rem;
       }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .form-row .form-group {
+        margin-bottom: 2rem;
+      }
+
+      .activities-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
@@ -480,15 +737,10 @@ import Layout from "../layouts/Layout.astro";
     document.getElementById('cultural-tour-form').addEventListener('submit', function(e) {
       // Allow the form to submit to Google Forms
       setTimeout(function() {
-        // Show success message after a brief delay
-        document.getElementById('success-message').style.display = 'block';
-        // Hide the entire form including title and subtitle
-        document.getElementById('cultural-tour-form').style.display = 'none';
-        // Also hide the title and subtitle
-        var formTitle = document.querySelector('.registration-card h2');
-        var formSubtitle = document.querySelector('.registration-subtitle');
-        if (formTitle) formTitle.style.display = 'none';
-        if (formSubtitle) formSubtitle.style.display = 'none';
+        // Show popup message
+        alert('报名提交成功！我们会尽快与您联系确认详情。');
+        // Reset the form
+        document.getElementById('cultural-tour-form').reset();
       }, 1000);
     });
   </script>

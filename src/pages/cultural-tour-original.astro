@@ -111,28 +111,58 @@ import Layout from "../layouts/Layout.astro";
         <h2>立即报名</h2>
         <p class="registration-intro"><strong>注意：此文化一日游仅限 GOSIM 2025 会议注册嘉宾参加。</strong><br><br>请填写以下信息完成文化一日游报名。我们将根据您的选择安排相应活动。</p>
         
-        <form class="registration-form" id="cultural-tour-form">
+        <!-- Direct Google Form Submission -->
+        <form 
+          id="cultural-tour-form" 
+          action="https://docs.google.com/forms/d/e/1FAIpQLSf3dqBnDy8RsIBkoj6EkxDYPvaBbujUEI7tCyDgd3VMwjTLNg/formResponse" 
+          method="POST" 
+          target="hidden_iframe"
+          class="registration-form"
+        >
           <!-- Personal Information -->
           <div class="form-section">
             <h3>基本信息</h3>
             <div class="form-row">
               <div class="form-group">
                 <label for="name">姓名 *</label>
-                <input type="text" id="name" name="name" required>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="entry.1792155962" 
+                  required 
+                  placeholder="请输入您的姓名"
+                >
               </div>
               <div class="form-group">
                 <label for="email">邮箱 *</label>
-                <input type="email" id="email" name="email" required>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="entry.1954615972" 
+                  required
+                  placeholder="请输入您的邮箱地址"
+                >
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="phone">手机号码 *</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="entry.636412973" 
+                  required
+                  placeholder="请输入您的手机号码"
+                >
               </div>
               <div class="form-group">
                 <label for="organization">机构/公司</label>
-                <input type="text" id="organization" name="organization">
+                <input 
+                  type="text" 
+                  id="organization" 
+                  name="entry.1965499526" 
+                  placeholder="请输入您的机构或公司名称"
+                >
               </div>
             </div>
           </div>
@@ -144,11 +174,11 @@ import Layout from "../layouts/Layout.astro";
               <label>下午活动选择 *</label>
               <div class="radio-group">
                 <label class="radio-option">
-                  <input type="radio" name="afternoon_activity" value="City Walk (Museums + Shopping)" required>
+                  <input type="radio" name="entry.1403219245" value="City Walk (Museums + Shopping)" required>
                   <span>City Walk（博物馆 + 购物）</span>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="afternoon_activity" value="Light Hiking (Bamboo Path + Temple)" required>
+                  <input type="radio" name="entry.1403219245" value="Light Hiking (Bamboo Path + Temple)" required>
                   <span>轻徒步（竹径 + 古寺）</span>
                 </label>
               </div>
@@ -158,11 +188,11 @@ import Layout from "../layouts/Layout.astro";
               <label>晚上活动选择 *</label>
               <div class="radio-group">
                 <label class="radio-option">
-                  <input type="radio" name="evening_activity" value="Live Performance (Impression West Lake)" required>
-                  <span>实景演出《印象西湖》</span>
+                  <input type="radio" name="entry.410721717" value="Live Performance (Impression West Lake)" required>
+                  <span>实景演出（印象西湖）</span>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="evening_activity" value="Night Tour (Historical Streets + Music Fountain)" required>
+                  <input type="radio" name="entry.410721717" value="Night Tour (Historical Streets + Music Fountain)" required>
                   <span>夜游（御街 + 夜市 + 音乐喷泉）</span>
                 </label>
               </div>
@@ -174,23 +204,33 @@ import Layout from "../layouts/Layout.astro";
             <h3>其他信息</h3>
             <div class="form-group">
               <label for="dietary">饮食限制/过敏信息</label>
-              <textarea id="dietary" name="dietary" placeholder="请告知任何饮食限制、过敏或特殊需求"></textarea>
+              <textarea 
+                id="dietary" 
+                name="entry.1676644653" 
+                placeholder="请告知任何饮食限制、过敏或特殊需求"
+              ></textarea>
             </div>
             
             <div class="form-group">
               <label for="emergency_contact">紧急联系人及电话 *</label>
-              <input type="text" id="emergency_contact" name="emergency_contact" placeholder="姓名 + 电话号码" required>
+              <input 
+                type="text" 
+                id="emergency_contact" 
+                name="entry.870922209" 
+                required
+                placeholder="姓名 + 电话号码"
+              >
             </div>
 
             <div class="form-group">
               <label>交通需求</label>
-              <div class="checkbox-group">
-                <label class="checkbox-option">
-                  <input type="checkbox" name="transportation" value="Hotel pickup needed">
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="entry.1315373062" value="Need hotel pickup">
                   <span>需要酒店接送</span>
                 </label>
-                <label class="checkbox-option">
-                  <input type="checkbox" name="transportation" value="Will go to meeting point myself">
+                <label class="radio-option">
+                  <input type="radio" name="entry.1315373062" value="Will go to meeting point myself">
                   <span>自行前往集合点</span>
                 </label>
               </div>
@@ -198,12 +238,28 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="form-group">
               <label for="special_requests">特殊需求/备注</label>
-              <textarea id="special_requests" name="special_requests" placeholder="任何特殊需求或其他备注"></textarea>
+              <textarea 
+                id="special_requests" 
+                name="entry.863109825" 
+                placeholder="任何特殊需求或其他备注"
+              ></textarea>
             </div>
           </div>
 
           <button type="submit" class="submit-btn">提交报名</button>
         </form>
+        
+        <!-- Success message outside the form -->
+        <div id="success-message" class="success-message" style="display: none;">
+          <div class="success-content">
+            <div class="success-icon">✓</div>
+            <h3>报名提交成功！</h3>
+            <p>我们已收到您的报名信息，会尽快与您联系确认详情。</p>
+          </div>
+        </div>
+        
+        <!-- Hidden iframe for form submission -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
 
       </div>
     </section>
@@ -562,16 +618,63 @@ import Layout from "../layouts/Layout.astro";
     margin-bottom: 2rem;
     line-height: 1.6;
   }
+
+  .success-message {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f0fdf4;
+    border: 2px solid #22c55e;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    background: #22c55e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .success-message h3 {
+    color: #166534;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .success-message p {
+    color: #15803d;
+    font-size: 1rem;
+  }
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('cultural-tour-form');
-    const submitButton = form?.querySelector('.submit-btn');
-    
-    // Handle form submission
-    form?.addEventListener('submit', async function(e) {
-      e.preventDefault();
+  // Handle form submission and show success message
+  document.getElementById('cultural-tour-form').addEventListener('submit', function(e) {
+    // Allow the form to submit to Google Forms
+    setTimeout(function() {
+      // Show popup message
+      alert('报名提交成功！我们会尽快与您联系确认详情。');
+      // Reset the form
+      document.getElementById('cultural-tour-form').reset();
+    }, 1000);
+  });
+</script>
+
+<script>
+  // Original script removed - form now submits directly to Google Forms
+  /*
       
       if (submitButton) {
         submitButton.textContent = '提交中...';
@@ -630,4 +733,5 @@ import Layout from "../layouts/Layout.astro";
       }
     });
   });
+  */
 </script>
