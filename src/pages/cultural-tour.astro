@@ -96,6 +96,42 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
             
+            <div class="form-group">
+              <label>晚上活动选择</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="entry.410721717" value="Live Performance (Impression West Lake)">
+                  <span>实景演出（印象西湖）</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="entry.410721717" value="Night Tour (Historical Streets + Music Fountain)">
+                  <span>夜游（御街 + 夜市 + 音乐喷泉）</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="dietary">饮食限制/过敏信息</label>
+              <textarea 
+                id="dietary" 
+                name="entry.1676644653" 
+                placeholder="请告知任何饮食限制、过敏或特殊需求"
+                class="form-input"
+                rows="3"
+              ></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="emergency_contact">紧急联系人及电话</label>
+              <input 
+                type="text" 
+                id="emergency_contact" 
+                name="entry.870922209" 
+                placeholder="姓名 + 电话号码"
+                class="form-input"
+              >
+            </div>
+            
             
             <div class="form-actions">
               <button type="submit" class="submit-btn">
