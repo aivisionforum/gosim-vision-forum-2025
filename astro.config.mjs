@@ -5,8 +5,9 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  output: 'server',
+  output: 'static',
   site: 'https://gosimfoundation.github.io',
+  base: '/gosim-vision-forum-2025',
   i18n: {
     defaultLocale: "zh",
     locales: ["zh", "en"],
