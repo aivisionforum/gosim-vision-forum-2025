@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Microsoft Forms Submission</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: #0078d4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Microsoft Forms Test</h1>
+    <p>Testing direct submission to Microsoft Forms</p>
+    
+    <form id="test-form" 
+          action="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMTC4u" 
+          method="GET" 
+          target="hidden_iframe">
+        
+        <!-- Name field with Microsoft Forms parameter -->
+        <label for="name">Name:</label>
+        <input type="text" 
+               id="name" 
+               name="r80243ee18afd4903973d6b8da3b285d5" 
+               placeholder="Enter your name"
+               value="Test Name">
+        
+        <button type="submit">Submit to Microsoft Forms</button>
+    </form>
+    
+    <div id="status" class="status">
+        Form submitted! Check Microsoft Forms responses to verify.
+    </div>
+    
+    <!-- Hidden iframe to prevent redirect -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    
+    <script>
+        document.getElementById('test-form').addEventListener('submit', function(e) {
+            // Show status message after a short delay
+            setTimeout(function() {
+                document.getElementById('status').style.display = 'block';
+                alert('Form submitted! The data should appear in Microsoft Forms responses.');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

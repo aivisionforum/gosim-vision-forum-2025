@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minimal MS Forms Test</title>
+</head>
+<body>
+    <h1>Minimal Microsoft Forms Test</h1>
+    
+    <!-- Method 1: Simple form with action URL containing ID -->
+    <h2>Method 1: Form with ID in action URL</h2>
+    <form action="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMVC4u" 
+          method="GET" 
+          target="_blank">
+        <input type="text" name="r80243ee18afd4903973d6b8da3b285d5" value="Test Name 1">
+        <button type="submit">Submit Method 1</button>
+    </form>
+    
+    <hr>
+    
+    <!-- Method 2: Form with ID as hidden field -->
+    <h2>Method 2: Form with ID as parameter</h2>
+    <form action="https://forms.microsoft.com/Pages/ResponsePage.aspx" 
+          method="GET" 
+          target="_blank">
+        <input type="hidden" name="id" value="DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMVC4u">
+        <input type="text" name="r80243ee18afd4903973d6b8da3b285d5" value="Test Name 2">
+        <button type="submit">Submit Method 2</button>
+    </form>
+    
+    <hr>
+    
+    <!-- Method 3: Direct link construction -->
+    <h2>Method 3: Direct Link</h2>
+    <button onclick="window.open('https://forms.microsoft.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMVC4u&r80243ee18afd4903973d6b8da3b285d5=DirectLinkTest', '_blank')">
+        Open Direct Link with Name
+    </button>
+</body>
+</html>

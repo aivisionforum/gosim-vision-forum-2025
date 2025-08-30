@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Cultural Tour Form</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; max-width: 800px; margin: 0 auto; }
+        .test { background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        input { padding: 10px; margin: 10px 0; width: 300px; }
+        button { background: #0078d4; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Debug: Cultural Tour Form Submission</h1>
+    
+    <div class="test">
+        <h2>Test 1: Exact copy from working test page (Method 2)</h2>
+        <form action="https://forms.microsoft.com/Pages/ResponsePage.aspx" 
+              method="GET" 
+              target="hidden_iframe_1">
+            <input type="hidden" name="id" value="DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMVC4u">
+            <input type="text" name="r80243ee18afd4903973d6b8da3b285d5" value="Test from Method 2" placeholder="Enter name">
+            <button type="submit">Submit Test 1</button>
+        </form>
+        <iframe name="hidden_iframe_1" style="display:none;"></iframe>
+    </div>
+
+    <div class="test">
+        <h2>Test 2: With JavaScript alert (like cultural tour page)</h2>
+        <form id="form-with-alert" 
+              action="https://forms.microsoft.com/Pages/ResponsePage.aspx" 
+              method="GET" 
+              target="hidden_iframe_2">
+            <input type="hidden" name="id" value="DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMVC4u">
+            <input type="text" name="r80243ee18afd4903973d6b8da3b285d5" value="Test with Alert" placeholder="Enter name">
+            <button type="submit">Submit Test 2</button>
+        </form>
+        <iframe name="hidden_iframe_2" style="display:none;"></iframe>
+    </div>
+
+    <div class="test">
+        <h2>Test 3: Without iframe (opens in new tab)</h2>
+        <form action="https://forms.microsoft.com/Pages/ResponsePage.aspx" 
+              method="GET" 
+              target="_blank">
+            <input type="hidden" name="id" value="DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMVC4u">
+            <input type="text" name="r80243ee18afd4903973d6b8da3b285d5" value="Test New Tab" placeholder="Enter name">
+            <button type="submit">Submit Test 3 (Opens New Tab)</button>
+        </form>
+    </div>
+
+    <div class="test">
+        <h2>Test 4: With preventDefault and manual submission</h2>
+        <form id="manual-submit">
+            <input type="text" id="manual-name" value="Manual Submit Test" placeholder="Enter name">
+            <button type="submit">Submit Test 4</button>
+        </form>
+    </div>
+
+    <script>
+        // Test 2: Alert after submission (like cultural tour page)
+        document.getElementById('form-with-alert').addEventListener('submit', function(e) {
+            // Allow form to submit, then show alert
+            setTimeout(function() {
+                alert('Test 2: Form submitted with alert!');
+            }, 1500);
+        });
+
+        // Test 4: Manual submission
+        document.getElementById('manual-submit').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('manual-name').value;
+            const url = `https://forms.microsoft.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMVC4u&r80243ee18afd4903973d6b8da3b285d5=${encodeURIComponent(name)}`;
+            
+            // Submit via iframe
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.name = 'temp_iframe';
+            document.body.appendChild(iframe);
+            
+            const form = document.createElement('form');
+            form.method = 'GET';
+            form.action = 'https://forms.microsoft.com/Pages/ResponsePage.aspx';
+            form.target = 'temp_iframe';
+            
+            const idInput = document.createElement('input');
+            idInput.type = 'hidden';
+            idInput.name = 'id';
+            idInput.value = 'DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAEWl0wxoyhUNks2VjBaUjVMTUJWMFdTTU4yRkNJTzNMVC4u';
+            form.appendChild(idInput);
+            
+            const nameInput = document.createElement('input');
+            nameInput.type = 'hidden';
+            nameInput.name = 'r80243ee18afd4903973d6b8da3b285d5';
+            nameInput.value = name;
+            form.appendChild(nameInput);
+            
+            document.body.appendChild(form);
+            form.submit();
+            
+            setTimeout(function() {
+                alert('Test 4: Manual submission completed!');
+                document.body.removeChild(form);
+                document.body.removeChild(iframe);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
