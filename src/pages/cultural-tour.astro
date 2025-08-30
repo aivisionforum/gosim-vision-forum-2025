@@ -163,15 +163,16 @@ import Layout from "../layouts/Layout.astro";
                 提交报名
               </button>
             </div>
-            
-            <div id="success-message" class="success-message" style="display: none;">
-              <div class="success-content">
-                <div class="success-icon">✓</div>
-                <h3>报名提交成功！</h3>
-                <p>我们已收到您的报名信息，会尽快与您联系确认详情。</p>
-              </div>
-            </div>
           </form>
+          
+          <!-- Success message outside the form -->
+          <div id="success-message" class="success-message" style="display: none;">
+            <div class="success-content">
+              <div class="success-icon">✓</div>
+              <h3>报名提交成功！</h3>
+              <p>我们已收到您的报名信息，会尽快与您联系确认详情。</p>
+            </div>
+          </div>
           
           <!-- Hidden iframe for form submission -->
           <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -478,8 +479,13 @@ import Layout from "../layouts/Layout.astro";
       setTimeout(function() {
         // Show success message after a brief delay
         document.getElementById('success-message').style.display = 'block';
-        // Hide the form
-        document.querySelector('.registration-form').style.display = 'none';
+        // Hide the entire form including title and subtitle
+        document.getElementById('cultural-tour-form').style.display = 'none';
+        // Also hide the title and subtitle
+        var formTitle = document.querySelector('.registration-card h2');
+        var formSubtitle = document.querySelector('.registration-subtitle');
+        if (formTitle) formTitle.style.display = 'none';
+        if (formSubtitle) formSubtitle.style.display = 'none';
       }, 1000);
     });
   </script>

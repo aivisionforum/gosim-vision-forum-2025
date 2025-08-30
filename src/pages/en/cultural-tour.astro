@@ -163,15 +163,16 @@ import Layout from "../../layouts/Layout.astro";
                 Submit Registration
               </button>
             </div>
-            
-            <div id="success-message" class="success-message" style="display: none;">
-              <div class="success-content">
-                <div class="success-icon">✓</div>
-                <h3>Registration Submitted Successfully!</h3>
-                <p>We have received your registration information and will contact you soon to confirm details.</p>
-              </div>
-            </div>
           </form>
+          
+          <!-- Success message outside the form -->
+          <div id="success-message" class="success-message" style="display: none;">
+            <div class="success-content">
+              <div class="success-icon">✓</div>
+              <h3>Registration Submitted Successfully!</h3>
+              <p>We have received your registration information and will contact you soon to confirm details.</p>
+            </div>
+          </div>
           
           <!-- Hidden iframe for form submission -->
           <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -478,8 +479,13 @@ import Layout from "../../layouts/Layout.astro";
       setTimeout(function() {
         // Show success message after a brief delay
         document.getElementById('success-message').style.display = 'block';
-        // Hide the form
-        document.querySelector('.registration-form').style.display = 'none';
+        // Hide the entire form including title and subtitle
+        document.getElementById('cultural-tour-form').style.display = 'none';
+        // Also hide the title and subtitle
+        var formTitle = document.querySelector('.registration-card h2');
+        var formSubtitle = document.querySelector('.registration-subtitle');
+        if (formTitle) formTitle.style.display = 'none';
+        if (formSubtitle) formSubtitle.style.display = 'none';
       }, 1000);
     });
   </script>
