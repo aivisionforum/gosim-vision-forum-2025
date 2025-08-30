@@ -105,6 +105,35 @@ import Layout from "../../layouts/Layout.astro";
       </div>
     </section>
 
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+      <div class="container">
+        <h2>Tour Highlights</h2>
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <div class="highlight-icon">🛶</div>
+            <h3>Private West Lake</h3>
+            <p>Early morning private boat tour, avoiding crowds for the best experience</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🎭</div>
+            <h3>Cultural Immersion</h3>
+            <p>Museum visits, temple exploration, deep dive into Hangzhou culture</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🍜</div>
+            <h3>Authentic Cuisine</h3>
+            <p>Lakeside lunch featuring authentic Hangzhou local dishes</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🌃</div>
+            <h3>Evening Spectacle</h3>
+            <p>Musical fountain, historic quarters, experience Hangzhou's night charm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Registration Section -->
     <section class="registration-section">
       <div class="container">
@@ -370,6 +399,60 @@ import Layout from "../../layouts/Layout.astro";
 
   .activities-section {
     background: #fff;
+  }
+
+  /* Highlights Section */
+  .highlights-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+
+  .highlights-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .highlight-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .highlight-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlight-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight-item p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .registration-section {
