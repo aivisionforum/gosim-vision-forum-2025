@@ -145,6 +145,106 @@
       "bio": "音乐教育与AI跨学科实践者，央与国际钢琴学院联合创始人。毕业于新英格兰音乐学院(NEC)，是该校古典萨克斯系首位华人助教及首位研究生助教。2023年探索AI在音乐教育中的可行性，提出渐进式方法论：AI应先用小工具解决具体痛点，再拼合成系统解决方案。设计“真人助教+AI辅助总结”模式，为AI与教育共生提供现实案例，致力于推动AI在教育中发挥赋能而非取代的作用。",
       "type": "Panelist",
       "draft": false
+    },
+    {
+      "id": "zhan-yiwen",
+      "name": "展翼文",
+      "roleOrg": "副教授，北京大学",
+      "tag": "keynote",
+      "image": "",
+      "bio": "展翼文是北京大学副教授。他拥有北京大学科学和哲学双学士学位，并在慕尼黑大学和莱比锡大学获得哲学硕士和博士学位。他的研究涵盖科学哲学、科学形而上学和形式认识论，并日益关注人工智能等前沿技术的哲学意义。他在中文和国际期刊上发表了大量论文，撰写和翻译了数本书籍，并主持了多项国家重大研究项目。他还积极参与国际学术交流，担任中国自然辩证法研究会国际学术交流委员会秘书长和亚洲科学哲学协会对外联络副会长。",
+      "type": "Keynote",
+      "draft": false
+    },
+    {
+      "id": "li-jianzhong",
+      "name": "李建忠",
+      "roleOrg": "SVP，CSDN",
+      "tag": "moderator",
+      "image": "",
+      "bio": "",
+      "type": "Moderator",
+      "draft": false
+    },
+    {
+      "id": "du-kai",
+      "name": "杜凯",
+      "roleOrg": "心理与认知科学助理教授，清华大学（刘嘉团队，站在新进化节点上 AGI与第二次认知革命）",
+      "tag": "panelist",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "nicolas-flores-herr",
+      "name": "Nicolas Flores Herr",
+      "roleOrg": "基础模型与生成式AI系统团队负责人，弗劳恩霍夫IAIS研究所",
+      "tag": "panelist",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "chen-yao",
+      "name": "陈瑶",
+      "roleOrg": "COO，傲意机器人",
+      "tag": "panelist",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "yin-danqing",
+      "name": "尹丹青",
+      "roleOrg": "联合创始人，Saint Novel Biotech",
+      "tag": "panelist",
+      "image": "",
+      "bio": "尹丹青为香港大学李嘉诚医学院生物信息学博士，本科毕业于墨尔本大学医学院，硕士就读于悉尼大学计算机科学。凭借医学与计算机的跨学科背景，她在生物信息与AI制药领域取得了突出成绩。在博士期间创办AI制药公司，获香港科学园千万级资助，与清华、剑桥等团队合作，探索生成式AI加速药物研发。她的创业项目屡获国内外大奖，包括中国'互联网+'大赛金奖、剑桥大学创新杯等，被广泛海内外官方媒体报道，荣登2024香港大学年度报告学生创新创业代表人物。她的研究进一步跨越生命科学与人工智能伦理的边界，关注生成式AI在心理健康与情感陪伴中的风险与潜能，探索正念驱动、文化中立的情感AI设计框架。",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "zhao-simiao",
+      "name": "赵思邈",
+      "roleOrg": "CEO，爪子制药 | 牛津大学AI医药方向博士研究生",
+      "tag": "panelist",
+      "image": "",
+      "bio": "牛津大学AI医药方向博士研究生，师从牛津大学Claus Nerlov教授研究跨物种的造血干细胞衰老机制，项目获得英国国家生物技术与生物科学研究理事会（BBSRC）资金支持。2022年获牛津大学高级计算机科学硕士学位。罗氏2024年HDRUK人工智能制药竞赛冠军。曾担任MIT计算生物系主任Manolis Kellis教授及剑桥Pietro Lio教授助教，并做过关于食物抗癌、蛋白分析、药物发现等多项研究。曾在SCI一区包括Brief in Bioinformatics等国际期刊发表多篇论文。现任AI跨物种延寿药物发现平台——爪子制药CEO。",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "liu-qunkai",
+      "name": "刘群凯",
+      "roleOrg": "CEO & Founder，ABCD Tech | 法国风投Breega的中国代表",
+      "tag": "panelist",
+      "image": "",
+      "bio": "ABCD Tech的首席执行官兼创始人，这是一家总部位于巴黎的人工智能公司，专注于为企业打造人工智能、数据与自动化解决方案。他同时担任BREEGA（欧洲领先的风险投资公司）的高级顾问，代表该基金在大中华区开展业务。作为精通英语、法语和中文的三语人才，刘群凯拥有超过20年国际经验，涵盖创新、业务拓展、销售与市场、以及高管领导力。他曾担任阿里云法国、南欧、比荷卢和以色列区国家经理，支付宝法国与比荷卢区国家经理等职位。在学术方面，刘群凯拥有巴黎多菲纳大学–PSL的管理学博士，巴黎电信学院的工程师学位，以及中国南京大学的电气工程学士学位。",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "zhao-weiqi",
+      "name": "赵维奇",
+      "roleOrg": "高级产品技术总监、全球开发者生态负责人，Rokid",
+      "tag": "panelist",
+      "image": "",
+      "bio": "赵维奇，超过10年AI/AR软硬件产品技术研发，涉及包括游戏、移动互联网、IoT可穿戴，云计算领域等产品研发经验，现任Rokid高级产品技术总监、Rokid全球开发者生态负责人，负责Rokid AR开发者生态运营及发展，致力于和合作伙伴和开发者一起，持续探索技术创新以及新兴商业场景应用。",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "kuang-kun",
+      "name": "况琨",
+      "roleOrg": "副教授，博士生导师，人工智能系副主任，浙江大学计算机学院",
+      "tag": "panelist",
+      "image": "",
+      "bio": "况琨，浙江大学计算机学院副教授，博士生导师，人工智能系副主任。",
+      "type": "Panelist",
+      "draft": false
     }
   ]
 }

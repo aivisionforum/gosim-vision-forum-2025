@@ -168,12 +168,12 @@
             "roleOrg": "Associate Professor, Peking University",
             "tags": ["keynote"],
             "image": "",
-            "bio": ""
+            "bio": "Zhan Yiwen is an Associate Professor at Peking University. He holds dual bachelor's degrees in Science and Philosophy from Peking University, and earned his master's and Ph.D. in Philosophy from LMU Munich and Leipzig University. His research spans philosophy of science, metaphysics of science, and formal epistemology, with growing focus on the philosophical implications of frontier technologies such as artificial intelligence. He has published extensively in both Chinese and international journals, authored and translated several books, and led major national research projects. He also plays active roles in international academic exchange, serving as Secretary-General of the International Academic Exchange Committee of the Chinese Society for Dialectics of Nature and Vice President for Outreach of the Asian Philosophy of Science Association."
           },
           {
             "id": "li-jianzhong",
             "name": "Li Jianzhong",
-            "roleOrg": "President of Singularity Intelligence Research Institute, Senior Vice President of CSDN",
+            "roleOrg": "SVP, CSDN",
             "tags": ["moderator"],
             "image": "",
             "bio": ""
@@ -181,7 +181,7 @@
           {
             "id": "du-kai",
             "name": "Du Kai",
-            "roleOrg": "Assistant Professor of Psychology and Cognitive Science, Tsinghua University",
+            "roleOrg": "Assistant Professor of Psychology and Cognitive Science, Tsinghua University (Liu Jia's team, AGI and the Second Cognitive Revolution at the New Evolutionary Node)",
             "tags": ["panelist"],
             "image": "",
             "bio": ""
@@ -200,7 +200,7 @@
             "roleOrg": "Head of Health Tech & AI & Biology Department, Associate Professor, EFREI Paris Panthéon-Assas",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Kuang Kun, Associate Professor, PhD Supervisor, Deputy Director of AI Department, School of Computer Science, Zhejiang University."
           },
           {
             "id": "kuang-kun",
@@ -224,23 +224,23 @@
             "roleOrg": "Co-Founder, Saint Novel Biotech",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Dr. Yin Danqing holds a PhD in Bioinformatics from the University of Hong Kong Li Ka Shing Faculty of Medicine, with a bachelor's degree from the University of Melbourne Faculty of Medicine and a master's in Computer Science from the University of Sydney. Leveraging her interdisciplinary background in medicine and computing, she has achieved outstanding results in bioinformatics and AI drug discovery. During her doctoral studies, she founded an AI pharmaceutical company, receiving million-level funding from Hong Kong Science Park and collaborating with teams from Tsinghua and Cambridge to explore generative AI for accelerating drug development. Her entrepreneurial projects have won numerous international awards, including the China 'Internet+' Competition Gold Award and Cambridge Innovation Cup, and she was featured as a representative student entrepreneur in the 2024 HKU Annual Report. Her research further bridges life sciences and AI ethics, focusing on the risks and potential of generative AI in mental health and emotional companionship, exploring mindfulness-driven, culturally neutral emotional AI design frameworks."
           },
           {
             "id": "zhao-simiao",
             "name": "Zhao Simiao",
-            "roleOrg": "CEO of Pawmed, PhD Candidate in AI Medicine at Oxford University",
+            "roleOrg": "CEO, Pawmed | PhD Candidate in AI Medicine at Oxford University",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "PhD candidate in AI Medicine at Oxford University, studying cross-species hematopoietic stem cell aging mechanisms under Professor Claus Nerlov at Oxford University, with funding from the UK Biotechnology and Biological Sciences Research Council (BBSRC). Graduated with MSc in Advanced Computer Science from Oxford University in 2022. Winner of Roche's 2024 HDRUK AI Pharmaceutical Competition. Previously served as teaching assistant for MIT Computational Biology Department Chair Manolis Kellis and Cambridge Professor Pietro Lio, conducting research on food anti-cancer properties, protein analysis, and drug discovery. Published multiple papers in SCI Tier 1 journals including Brief in Bioinformatics. Currently CEO of Pawmed, an AI cross-species longevity drug discovery platform."
           },
           {
             "id": "liu-qunkai",
             "name": "Liu Qunkai",
-            "roleOrg": "CEO & Founder of ABCD Tech, China Representative of French VC Breega",
+            "roleOrg": "CEO & Founder, ABCD Tech | China Representative of French VC Breega",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "CEO and Founder of ABCD Tech, a Paris-based AI company specializing in AI, data, and automation solutions for businesses. He also serves as Senior Advisor to BREEGA (Europe's leading VC) representing the fund in Greater China. As a trilingual professional fluent in English, French, and Chinese, Liu Qunkai has over 20 years of international experience spanning innovation, business development, sales & marketing, and executive leadership. His career has spanned Europe, Middle East, and Asia, including roles as Country Manager for Alibaba Cloud France, Southern Europe, Benelux and Israel, and Country Manager for Alipay France and Benelux. Academically, he holds a Doctorate in Management from Paris Dauphine University - PSL, an engineering degree from Télécom Paris, and a Bachelor's in Electrical Engineering from Nanjing University, China."
           },
           {
             "id": "zhao-weiqi",
@@ -248,7 +248,7 @@
             "roleOrg": "Senior Product Technology Director & Head of Global Developer Ecosystem, Rokid",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Zhao Weiqi, with over 10 years of experience in AI/AR software and hardware product technology R&D, covering gaming, mobile internet, IoT wearables, and cloud computing. Currently Senior Product Technology Director and Head of Global Developer Ecosystem at Rokid, responsible for Rokid AR developer ecosystem operations and development, committed to exploring technological innovation and emerging business applications with partners and developers."
           }
         ],
         "room": "Main Hall",
