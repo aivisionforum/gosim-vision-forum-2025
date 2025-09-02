@@ -49,7 +49,7 @@
           {
             "id": "salim-nahle",
             "name": "Salim NAHLE",
-            "roleOrg": "Head of Department of Data and Artificial Intelligence, Associate Professor, EFREI Paris Panthéon-Assas",
+            "roleOrg": "数据与人工智能系主任，副教授，EFREI巴黎万神殿-阿萨斯大学",
             "tags": ["keynote"],
             "image": "",
             "bio": ""
@@ -189,7 +189,7 @@
           {
             "id": "nicolas-flores-herr",
             "name": "Nicolas Flores Herr",
-            "roleOrg": "Team Lead Foundation Models & Gen AI Systems, Fraunhofer IAIS",
+            "roleOrg": "基础模型与生成式AI系统团队负责人，弗劳恩霍夫IAIS研究所",
             "tags": ["panelist"],
             "image": "",
             "bio": ""
