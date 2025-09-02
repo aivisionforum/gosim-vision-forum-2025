@@ -236,8 +236,7 @@ const getEventUrl = (title: string): string => {
                                           <p>{speaker.roleOrg}</p>
                                           {speaker.role && <p class="speaker-role">{speaker.role}</p>}
                                         </div>
-                                        {/* Bio section hidden until all speaker bios are available */}
-                                        {false && speaker.bio && (
+                                        {speaker.bio && (
                                           <div class="speaker-bio-row">
                                             <div class="speaker-bio-container">
                                               <span class="bio-indicator">ⓘ Bio</span>

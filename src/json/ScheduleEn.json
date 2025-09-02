@@ -52,7 +52,7 @@
             "roleOrg": "Head of Department of Data and Artificial Intelligence, Associate Professor, EFREI Paris Panthéon-Assas",
             "tags": ["keynote"],
             "image": "",
-            "bio": ""
+            "bio": "Graduated from Lebanese University Faculty of Engineering in 2005 with a degree in Telecommunications and Computer Engineering, earned a Master's in Computer Science from University of Maryland (UMPC) in 2006, and received his PhD from University of Pittsburgh Medical Center (UPMC) in 2009. Previously served as a temporary teaching and research assistant at Paris XIII University. Currently researches the role of generative AI in education, focusing on open-source solutions and covering key considerations for AI tool deployment including cost, infrastructure, and deployment challenges."
           },
           {
             "id": "ji-bo",
@@ -60,23 +60,23 @@
             "roleOrg": "Chief Representative in Europe & Assistant Dean, Cheung Kong Graduate School of Business",
             "tags": ["keynote"],
             "image": "",
-            "bio": ""
+            "bio": "Chief Representative in Europe & Assistant Dean at Cheung Kong Graduate School of Business. Founder of China Start program. TEDx speaker and entrepreneurship mentor. Author of '5G Changes the World'. Former senior executive at headquarters of numerous Fortune 500 companies including Monsanto, Cargill, Pfizer, Wrigley, and Mars."
           },
           {
             "id": "vivian-cai",
             "name": "Vivian Cai",
-            "roleOrg": "Co-Founder & CEO, Sustentra",
+            "roleOrg": "Co-Founder & CEO, Sustentra | 2025 Yale Entrepreneurship Fellowship Cover Story",
             "tags": ["moderator"],
             "image": "",
-            "bio": ""
+            "bio": "Yale MBA & HEC Paris dual master's. Former ESG Investment Head at Natixis Asset Management and financial analyst at Amazon Europe. Founded Sustentra, creating FactFlow AI for 'audit-grade' ESG verification, mapping 1,000+ global regulations, reducing compliance cycles by 40%. Y Combinator S25 Top 1% Finalist, winner of all three top Yale entrepreneurship awards, one of five global Yale SOM Entrepreneurial Fellows."
           },
           {
             "id": "liu-yuegang",
             "name": "Liu Yuegang",
-            "roleOrg": "Vice Principal, Sun Yat-sen University Shenzhen Affiliated School",
+            "roleOrg": "Vice Principal, Sun Yat-sen University Shenzhen Affiliated School | Ministry of Education Art Textbook Committee Member",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Vice Principal of Sun Yat-sen University Shenzhen Affiliated School, Ministry of Education Art Textbook Committee Member."
           },
           {
             "id": "wang-wei",
@@ -92,7 +92,7 @@
             "roleOrg": "Co-Founder, AskSia",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Co-Founder of AskSia, focusing on AI-driven EdTech innovation. Former Huawei engineer with 7 years of Canadian CS and AI academic background. Led team to build AskSia into a global intelligent learning assistant, achieving million-dollar ARR within a year and significantly improving student learning efficiency across multiple scenarios."
           },
           {
             "id": "zheng-haoyun",
@@ -100,7 +100,7 @@
             "roleOrg": "Co-Founder, Dolphin Intelligence",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Master of Economics from University of Edinburgh, member of China Cultural Information Association, serial entrepreneur, Co-Founder of Dolphin Intelligence. Previous venture achieved multi-million revenue within six months, spanning education, AI, and healthcare sectors. Currently Co-Founder of intelligent medical device company, selected for Zhejiang Talent Program. Company developed world's first universal ultrasound multimodal large model, established cooperation with over 110 Class-A tertiary hospitals nationwide, with future deployment of large models in hospitals."
           },
           {
             "id": "sun-zhigang",
@@ -108,7 +108,7 @@
             "roleOrg": "Founder & CEO, AI Master",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Founder and CEO of AI Shifu. Previously served as Partner, Chief Product Officer, and CTO at an online education unicorn; Vice President of Dedao App, leading teaching and academic product affairs; Chief Product Architect, Strategy Director, and Head of Operations for NetEase Cloud Classroom; and Associate Professor at the School of Computer Science, Harbin Institute of Technology (HIT). Also holds concurrent positions including Adjunct Professor at HIT School of Software, Expert Committee Member of the Technical Standards Committee of China Educational Technology Association, Vice Chairman of Zhejiang Software Industry Association, and Executive Committee Member of the Hangzhou Chapter of China Computer Federation."
           },
           {
             "id": "wei-wei",
@@ -116,7 +116,7 @@
             "roleOrg": "Famous Bilibili Art Creator \"Youdian Yisi Oh\"",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Famous Bilibili art creator \"Youdian Yisi Oh\" with extensive influence in digital art creation."
           },
           {
             "id": "yan-feng",
@@ -124,7 +124,7 @@
             "roleOrg": "First-Class Artist, Chinese Academy of Arts",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "First-Class Artist at the Chinese Academy of Arts."
           },
           {
             "id": "alexandra-boucherifi",
@@ -132,7 +132,7 @@
             "roleOrg": "Artist, Founder of European AI and Augmented Humanism Biennial",
             "tags": ["panelist"],
             "image": "",
-            "bio": "Artist & Art-Science Researcher / Curator / PROXIMA, Founder of European AI and Augmented Humanism Biennial"
+            "bio": "French-Italian artist, curator, and researcher working at the intersection of art, science, and emerging technologies. Founded the \"Augmentism\" movement in 2019, advocating for AI to augment rather than replace human creativity. As founder of PROXIMA European AI and Augmented Humanism Biennial, brings together global artists, scientists, and technologists to promote cross-cultural dialogue. Has curated international exhibitions and lectured at institutions including Sorbonne University and Lyon II University. Committed to building symbiotic relationships between humans and intelligent systems."
           },
           {
             "id": "wang-juchen",
@@ -140,7 +140,7 @@
             "roleOrg": "Founder, Central & International Piano Academy",
             "tags": ["panelist"],
             "image": "",
-            "bio": ""
+            "bio": "Cross-disciplinary practitioner in music education and AI, Co-Founder of Central & International Piano Academy. Graduate of New England Conservatory (NEC), first Chinese teaching assistant and first graduate assistant in the classical saxophone department. In 2023, explored AI feasibility in music education, proposing a progressive methodology: AI should first solve specific pain points with small tools, then combine into systematic solutions. Designed \"human assistant + AI-assisted summary\" model, providing real-world cases for AI-education symbiosis, committed to promoting AI's enabling rather than replacing role in education."
           }
         ],
         "room": "Main Hall",
