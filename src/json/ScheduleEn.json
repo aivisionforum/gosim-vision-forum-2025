@@ -47,11 +47,100 @@
         "content": "<p>AI is reshaping human learning mechanisms and the structure of knowledge systems, shifting education away from a knowledge-centered paradigm toward one driven by creative production and cognitive collaboration. This topic explores the tension between AI as a \"cognitive partner\" versus an \"algorithmic supervisor,\" and examines its implications for educational equity, privacy, and the evolving role of teachers. It also considers institutional and technological pathways for achieving knowledge democratization.</p>",
         "speakers": [
           {
-            "id": "speaker-education",
-            "name": "Education Technology Expert",
-            "roleOrg": "TBD",
+            "id": "salim-nahle",
+            "name": "Salim NAHLE",
+            "roleOrg": "Head of Department of Data and Artificial Intelligence, Associate Professor, EFREI Paris Panthéon-Assas",
             "tags": ["keynote"],
-            "image": "speaker-edu.jpg"
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "ji-bo",
+            "name": "Ji Bo",
+            "roleOrg": "Chief Representative in Europe & Assistant Dean, Cheung Kong Graduate School of Business",
+            "tags": ["keynote"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "vivian-cai",
+            "name": "Vivian Cai",
+            "roleOrg": "Co-Founder & CEO, Sustentra",
+            "tags": ["moderator"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "liu-yuegang",
+            "name": "Liu Yuegang",
+            "roleOrg": "Vice Principal, Sun Yat-sen University Shenzhen Affiliated School",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "wang-wei",
+            "name": "Wang Wei",
+            "roleOrg": "Professor at East China Normal University",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "Director of Open Source Technology Committee at Singularity Intelligence Research Institute, Group Leader of Open Source Governance Standards at MIIT Electronic Standards Institute, Secretary-General of UN ECOSOC Open Source Innovation Committee, Professor at East China Normal University, CCF Distinguished Member."
+          },
+          {
+            "id": "bella-ren",
+            "name": "Bella Ren",
+            "roleOrg": "Co-Founder, AskSia",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "zheng-haoyun",
+            "name": "Zheng Haoyun",
+            "roleOrg": "Co-Founder, Dolphin Intelligence",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "sun-zhigang",
+            "name": "Sun Zhigang",
+            "roleOrg": "Founder & CEO, AI Master",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "wei-wei",
+            "name": "Wei Wei",
+            "roleOrg": "Famous Bilibili Art Creator \"Youdian Yisi Oh\"",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "yan-feng",
+            "name": "Yan Feng",
+            "roleOrg": "First-Class Artist, Chinese Academy of Arts",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "alexandra-boucherifi",
+            "name": "Alexandra Boucherifi-Kornmann",
+            "roleOrg": "Artist, Founder of European AI and Augmented Humanism Biennial",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "Artist & Art-Science Researcher / Curator / PROXIMA, Founder of European AI and Augmented Humanism Biennial"
+          },
+          {
+            "id": "wang-juchen",
+            "name": "Wang Juchen",
+            "roleOrg": "Founder, Central & International Piano Academy",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
           }
         ],
         "room": "Main Hall",
@@ -74,11 +163,92 @@
         "content": "<p>AI has progressed beyond being a mere tool, increasingly influencing human behavior, cognition, and value formation. This topic addresses the symbiotic paradox—\"Are we training AI, or is AI training us?\"—while critically examining technology dependence, its erosion of human agency, and the theoretical foundations and societal frameworks necessary for designing complementary human-AI collaboration systems.</p>",
         "speakers": [
           {
-            "id": "speaker-symbiosis",
-            "name": "AI Researcher",
-            "roleOrg": "TBD",
+            "id": "zhan-yiwen",
+            "name": "Zhan Yiwen",
+            "roleOrg": "Associate Professor, Peking University",
             "tags": ["keynote"],
-            "image": "speaker-ai.jpg"
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "li-jianzhong",
+            "name": "Li Jianzhong",
+            "roleOrg": "President of Singularity Intelligence Research Institute, Senior Vice President of CSDN",
+            "tags": ["moderator"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "du-kai",
+            "name": "Du Kai",
+            "roleOrg": "Assistant Professor of Psychology and Cognitive Science, Tsinghua University",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "nicolas-flores-herr",
+            "name": "Nicolas Flores Herr",
+            "roleOrg": "Team Lead Foundation Models & Gen AI Systems, Fraunhofer IAIS",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "mano-joseph-mathew",
+            "name": "Mano Joseph MATHEW",
+            "roleOrg": "Head of Health Tech & AI & Biology Department, Associate Professor, EFREI Paris Panthéon-Assas",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "kuang-kun",
+            "name": "Kuang Kun",
+            "roleOrg": "Associate Professor, PhD Supervisor, Deputy Director of AI Department, School of Computer Science, Zhejiang University",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "chen-yao",
+            "name": "Chen Yao",
+            "roleOrg": "COO, OYMotion Technologies",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "yin-danqing",
+            "name": "Yin Danqing",
+            "roleOrg": "Co-Founder, Saint Novel Biotech",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "zhao-simiao",
+            "name": "Zhao Simiao",
+            "roleOrg": "CEO of Pawmed, PhD Candidate in AI Medicine at Oxford University",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "liu-qunkai",
+            "name": "Liu Qunkai",
+            "roleOrg": "CEO & Founder of ABCD Tech, China Representative of French VC Breega",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "zhao-weiqi",
+            "name": "Zhao Weiqi",
+            "roleOrg": "Senior Product Technology Director & Head of Global Developer Ecosystem, Rokid",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
           }
         ],
         "room": "Main Hall",

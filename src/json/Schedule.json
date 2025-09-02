@@ -47,11 +47,100 @@
         "content": "<p>人工智能正在重塑人类的学习机制与知识体系结构，推动教育从以知识掌握为核心的范式迈向以创造力生成与认知协作为导向的新模式。本议题将探讨AI作为“认知伙伴”与“算法监工”之间的张力，如何影响教育公平、隐私保护与教师角色重构，并审视实现知识民主化的制度与技术路径。</p>",
         "speakers": [
           {
-            "id": "speaker-education",
-            "name": "教育科技专家",
-            "roleOrg": "TBD",
+            "id": "salim-nahle",
+            "name": "Salim NAHLE",
+            "roleOrg": "Head of Department of Data and Artificial Intelligence, Associate Professor, EFREI Paris Panthéon-Assas",
             "tags": ["keynote"],
-            "image": "speaker-edu.jpg"
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "ji-bo",
+            "name": "季波",
+            "roleOrg": "欧洲首席代表兼助理院长，长江商学院",
+            "tags": ["keynote"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "vivian-cai",
+            "name": "Vivian Cai",
+            "roleOrg": "Co-Founder & CEO, Sustentra",
+            "tags": ["moderator"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "liu-yuegang",
+            "name": "刘月刚",
+            "roleOrg": "副校长，中山大学深圳附属学校",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "wang-wei",
+            "name": "王伟",
+            "roleOrg": "华东师范大学教授",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "奇点智能研究院开源技术委员会主任，工业和信息化部电子标准院开源治理标准总体组组长，联合国咨商开源创新专委会秘书长，华东师范大学教授，CCF杰出会员。"
+          },
+          {
+            "id": "bella-ren",
+            "name": "Bella Ren",
+            "roleOrg": "Co-Founder, AskSia",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "zheng-haoyun",
+            "name": "郑浩云",
+            "roleOrg": "联合创始人，海豚智能",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "sun-zhigang",
+            "name": "孙志岗",
+            "roleOrg": "创始人、CEO, AI师傅",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "wei-wei",
+            "name": "唯伟",
+            "roleOrg": "bilibili知名绘画UP主\"有点艺思哦\"",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "yan-feng",
+            "name": "彦风",
+            "roleOrg": "一级美术师, 中国艺术研究院",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "alexandra-boucherifi",
+            "name": "Alexandra Boucherifi-Kornmann",
+            "roleOrg": "艺术家，欧洲人工智能与增生主义双年展创始人",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "艺术家 & 艺术与科学研究者 / 策展人 / PROXIMA, 欧洲人工智能与增生主义双年展创始人"
+          },
+          {
+            "id": "wang-juchen",
+            "name": "王钜辰",
+            "roleOrg": "Founder, Central & International Piano Academy",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
           }
         ],
         "room": "主会场",
@@ -74,11 +163,92 @@
         "content": "<p>AI不再只是工具，更逐步介入人类行为、思维与价值塑造的深层空间。本议题聚焦“人类训练AI”与“AI驯化人类”的共生悖论，审视技术依赖对人类主体性与判断力的侵蚀，进而探讨建立互补性人机协作框架的理论基础与社会适应路径。</p>",
         "speakers": [
           {
-            "id": "speaker-symbiosis",
-            "name": "人工智能研究员",
-            "roleOrg": "TBD",
+            "id": "zhan-yiwen",
+            "name": "展翼文",
+            "roleOrg": "副教授，北京大学",
             "tags": ["keynote"],
-            "image": "speaker-ai.jpg"
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "li-jianzhong",
+            "name": "李建忠",
+            "roleOrg": "奇点智能研究院院长，CSDN高级副总裁",
+            "tags": ["moderator"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "du-kai",
+            "name": "杜凯",
+            "roleOrg": "心理与认知科学助理教授, 清华大学",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "nicolas-flores-herr",
+            "name": "Nicolas Flores Herr",
+            "roleOrg": "Team Lead Foundation Models & Gen AI Systems, Fraunhofer IAIS",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "mano-joseph-mathew",
+            "name": "Mano Joseph MATHEW",
+            "roleOrg": "健康科技与人工智能与生物学系负责人， 副教授, EFREI Paris Panthéon-Assas",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "kuang-kun",
+            "name": "况琨",
+            "roleOrg": "副教授，博士生导师，人工智能系副主任，浙江大学计算机学院",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "chen-yao",
+            "name": "陈瑶",
+            "roleOrg": "COO, 傲意机器人",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "yin-danqing",
+            "name": "尹丹青",
+            "roleOrg": "联合创始人, Saint Novel Biotech",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "zhao-simiao",
+            "name": "赵思邈",
+            "roleOrg": "爪子制药CEO, 牛津大学AI医药方向博士研究生",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "liu-qunkai",
+            "name": "刘群凯",
+            "roleOrg": "CEO & Founder of ABCD Tech, 法国风投Breega的中国代表",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
+          },
+          {
+            "id": "zhao-weiqi",
+            "name": "赵维奇",
+            "roleOrg": "高级产品技术总监、全球开发者生态负责人，Rokid",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": ""
           }
         ],
         "room": "主会场",

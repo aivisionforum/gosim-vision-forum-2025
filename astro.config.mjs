@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   site: 'https://gosimfoundation.github.io',
-  base: '/gosim-vision-forum-2025',
+  base: process.env.NODE_ENV === 'production' ? '/gosim-vision-forum-2025' : '/',
   i18n: {
     defaultLocale: "zh",
     locales: ["zh", "en"],

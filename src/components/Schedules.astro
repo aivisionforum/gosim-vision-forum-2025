@@ -194,50 +194,59 @@ const getEventUrl = (title: string): string => {
                                       class="single-speakers-card"
                                       href={`/speakers/${speaker.id}/`}
                                     >
-                                      <div class="card-row card-row-image">
-                                        <div class="card-image">
-                                          {speaker?.image &&
-                                            images[
-                                              `/src/assets/speakers/${speaker.image}`
-                                            ] && (
-                                              <Picture
-                                                src={images[
-                                                  `/src/assets/speakers/${speaker.image}`
-                                                ]()}
-                                                formats={["webp", "jpg"]}
-                                                alt={speaker.name}
-                                                class="overlay"
-                                                widths={[
-                                                  275, 400, 500, 600, 750, 900,
-                                                ]}
-                                                sizes="(max-width: 700px) 58vw, 450px"
-                                              />
-                                            )}
+                                      {speaker?.image &&
+                                      images[
+                                        `/src/assets/speakers/${speaker.image}`
+                                      ] ? (
+                                        <div class="card-row card-row-image">
+                                          <div class="card-image">
+                                            <Picture
+                                              src={images[
+                                                `/src/assets/speakers/${speaker.image}`
+                                              ]()}
+                                              formats={["webp", "jpg"]}
+                                              alt={speaker.name}
+                                              class="overlay"
+                                              widths={[
+                                                275, 400, 500, 600, 750, 900,
+                                              ]}
+                                              sizes="(max-width: 700px) 58vw, 450px"
+                                            />
+                                          </div>
+                                          <div class="card-tags group-tags">
+                                            {speaker.tags.map((tag) => (
+                                              <div class="single-tag">
+                                                <p>{getCategoryNameFromTag(tag)}</p>
+                                              </div>
+                                            ))}
+                                          </div>
                                         </div>
-                                        <div class="card-tags group-tags">
+                                      ) : (
+                                        <div class="card-tags group-tags" style="margin-bottom: 1rem;">
                                           {speaker.tags.map((tag) => (
                                             <div class="single-tag">
                                               <p>{getCategoryNameFromTag(tag)}</p>
                                             </div>
                                           ))}
                                         </div>
-                                      </div>
+                                      )}
                                       <div class="card-row card-row-info">
                                         <div class="speaker-text-content">
                                           <h3 class="h5">{speaker.name}</h3>
                                           <p>{speaker.roleOrg}</p>
                                           {speaker.role && <p class="speaker-role">{speaker.role}</p>}
                                         </div>
-                                        <div class="speaker-bio-row">
-                                          {speaker.bio && (
+                                        {/* Bio section hidden until all speaker bios are available */}
+                                        {false && speaker.bio && (
+                                          <div class="speaker-bio-row">
                                             <div class="speaker-bio-container">
                                               <span class="bio-indicator">ⓘ Bio</span>
                                               <div class="speaker-bio-tooltip">
                                                 {speaker.bio}
                                               </div>
                                             </div>
-                                          )}
-                                        </div>
+                                          </div>
+                                        )}
                                       </div>
                                     </a>
                                   </div>

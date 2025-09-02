@@ -19,70 +19,131 @@
     {
       "name": "伦理治理",
       "id": "ethics"
+    },
+    {
+      "name": "艺术创新",
+      "id": "arts"
     }
   ],
   "speakers": [
     {
-      "id": "speaker-1",
-      "name": "张明",
-      "roleOrg": "GOSIM基金会主席",
-      "tag": "ai-for-good",
-      "image": "speaker-1.jpg",
-      "bio": "在开源软件和人工智能领域拥有20年经验，致力于推动AI技术的道德发展和社会责任。",
-      "draft": false
-    },
-    {
-      "id": "speaker-2",
-      "name": "李教授",
-      "roleOrg": "北京大学教育学院",
+      "id": "salim-nahle",
+      "name": "Salim NAHLE",
+      "roleOrg": "Head of Department of Data and Artificial Intelligence, Associate Professor, EFREI Paris Panthéon-Assas",
       "tag": "education",
-      "image": "speaker-2.jpg",
-      "bio": "教育技术专家，专注于AI在个性化学习和教育公平方面的研究。",
+      "image": "",
+      "bio": "",
+      "type": "Keynote",
       "draft": false
     },
     {
-      "id": "speaker-3",
-      "name": "王博士",
-      "roleOrg": "中科院心理研究所",
-      "tag": "emotional-ai",
-      "image": "speaker-3.jpg",
-      "bio": "认知心理学专家，研究人机交互中的情感计算和共情设计。",
+      "id": "ji-bo",
+      "name": "季波",
+      "roleOrg": "欧洲首席代表兼助理院长，长江商学院",
+      "tag": "education",
+      "image": "",
+      "bio": "",
+      "type": "Keynote",
       "draft": false
     },
     {
-      "id": "speaker-4",
-      "name": "刘研究员",
-      "roleOrg": "清华大学人工智能研究院",
-      "tag": "emotional-ai",
-      "image": "speaker-4.jpg",
-      "bio": "专注于情感AI和社会机器人的研究与开发。",
+      "id": "vivian-cai",
+      "name": "Vivian Cai",
+      "roleOrg": "Co-Founder & CEO, Sustentra",
+      "tag": "education",
+      "image": "",
+      "bio": "",
+      "type": "Moderator",
       "draft": false
     },
     {
-      "id": "speaker-5",
-      "name": "陈总监",
-      "roleOrg": "阿里巴巴达摩院",
-      "tag": "ai-for-good",
-      "image": "speaker-5.jpg",
-      "bio": "负责AI伦理和社会影响研究，推动负责任的AI创新。",
+      "id": "liu-yuegang",
+      "name": "刘月刚",
+      "roleOrg": "副校长，中山大学深圳附属学校",
+      "tag": "education",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
       "draft": false
     },
     {
-      "id": "speaker-6",
-      "name": "赵律师",
-      "roleOrg": "北京互联网法院",
-      "tag": "ethics",
-      "image": "speaker-6.jpg",
-      "bio": "专注于人工智能法律和算法治理的专家。",
+      "id": "wang-wei",
+      "name": "王伟",
+      "roleOrg": "华东师范大学教授",
+      "tag": "education",
+      "image": "",
+      "bio": "奇点智能研究院开源技术委员会主任，工业和信息化部电子标准院开源治理标准总体组组长，联合国咨商开源创新专委会秘书长，华东师范大学教授，CCF杰出会员。",
+      "type": "Panelist",
       "draft": false
     },
     {
-      "id": "speaker-7",
-      "name": "孙教授",
-      "roleOrg": "复旦大学法学院",
-      "tag": "ethics",
-      "image": "speaker-7.jpg",
-      "bio": "AI伦理和科技法律研究专家，参与多项国家AI治理政策制定。",
+      "id": "bella-ren",
+      "name": "Bella Ren",
+      "roleOrg": "Co-Founder, AskSia",
+      "tag": "education",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "zheng-haoyun",
+      "name": "郑浩云",
+      "roleOrg": "联合创始人，海豚智能",
+      "tag": "education",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "sun-zhigang",
+      "name": "孙志岗",
+      "roleOrg": "创始人、CEO, AI师傅",
+      "tag": "education",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "wei-wei",
+      "name": "唯伟",
+      "roleOrg": "bilibili知名绘画UP主\"有点艺思哦\"",
+      "tag": "arts",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "yan-feng",
+      "name": "彦风",
+      "roleOrg": "一级美术师, 中国艺术研究院",
+      "tag": "arts",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "alexandra-boucherifi",
+      "name": "Alexandra Boucherifi-Kornmann",
+      "roleOrg": "艺术家，欧洲人工智能与增生主义双年展创始人",
+      "tag": "arts",
+      "image": "",
+      "bio": "艺术家 & 艺术与科学研究者 / 策展人 / PROXIMA, 欧洲人工智能与增生主义双年展创始人",
+      "type": "Panelist",
+      "draft": false
+    },
+    {
+      "id": "wang-juchen",
+      "name": "王钜辰",
+      "roleOrg": "Founder, Central & International Piano Academy",
+      "tag": "arts",
+      "image": "",
+      "bio": "",
+      "type": "Panelist",
       "draft": false
     }
   ]

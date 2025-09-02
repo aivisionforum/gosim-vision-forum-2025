@@ -87,10 +87,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               data-modal-card-status="not-active"
               data-modal-card-id={speaker.id}
             >
-              <div class="card-row card-row-image">
-                <div class="card-image">
-                  {speaker?.image &&
-                    images[`/public/images/speakers/${speaker.image}`] && (
+              {speaker?.image &&
+                images[`/public/images/speakers/${speaker.image}`] && (
+                  <div class="card-row card-row-image">
+                    <div class="card-image">
                       <Picture
                         src={images[
                           `/public/images/speakers/${speaker.image}`
@@ -102,9 +102,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                         sizes="(max-width: 700px) 58vw, 450px"
                         style="object-position: center 15% !important;"
                       />
-                    )}
-                </div>
-              </div>
+                    </div>
+                  </div>
+                )}
               <div class="card-row card-row-info">
                 <h2 class="h5">{speaker.name}</h2>
                 <p>{speaker.roleOrg}</p>
