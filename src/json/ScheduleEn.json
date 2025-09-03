@@ -75,7 +75,7 @@
             "name": "Wang Wei",
             "roleOrg": "Professor at East China Normal University",
             "tags": ["panelist"],
-            "image": "",
+            "image": "wang-wei.jpg",
             "bio": "Director of Open Source Technology Committee at Singularity Intelligence Research Institute, Group Leader of Open Source Governance Standards at MIIT Electronic Standards Institute, Secretary-General of UN ECOSOC Open Source Innovation Committee, Professor at East China Normal University, CCF Distinguished Member."
           },
           {
@@ -195,14 +195,6 @@
             "bio": ""
           },
           {
-            "id": "chen-yao",
-            "name": "Chen Yao",
-            "roleOrg": "COO, OYMotion Technologies",
-            "tags": ["panelist"],
-            "image": "",
-            "bio": ""
-          },
-          {
             "id": "yin-danqing",
             "name": "Yin Danqing",
             "roleOrg": "Co-Founder, Saint Novel Biotech",
@@ -225,14 +217,6 @@
             "tags": ["panelist"],
             "image": "",
             "bio": "CEO and Founder of ABCD Tech, a Paris-based AI company specializing in AI, data, and automation solutions for businesses. He also serves as Senior Advisor to BREEGA (Europe's leading VC) representing the fund in Greater China. As a trilingual professional fluent in English, French, and Chinese, Liu Qunkai has over 20 years of international experience spanning innovation, business development, sales & marketing, and executive leadership. His career has spanned Europe, Middle East, and Asia, including roles as Country Manager for Alibaba Cloud France, Southern Europe, Benelux and Israel, and Country Manager for Alipay France and Benelux. Academically, he holds a Doctorate in Management from Paris Dauphine University - PSL, an engineering degree from Télécom Paris, and a Bachelor's in Electrical Engineering from Nanjing University, China."
-          },
-          {
-            "id": "zhao-weiqi",
-            "name": "Zhao Weiqi",
-            "roleOrg": "Senior Product Technology Director & Head of Global Developer Ecosystem, Rokid",
-            "tags": ["panelist"],
-            "image": "",
-            "bio": "Zhao Weiqi, with over 10 years of experience in AI/AR software and hardware product technology R&D, covering gaming, mobile internet, IoT wearables, and cloud computing. Currently Senior Product Technology Director and Head of Global Developer Ecosystem at Rokid, responsible for Rokid AR developer ecosystem operations and development, committed to exploring technological innovation and emerging business applications with partners and developers."
           }
         ],
         "room": "Main Hall",
