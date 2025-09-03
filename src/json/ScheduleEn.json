@@ -357,6 +357,15 @@
             "bio": "Dr. Yonghua Lin is Vice President at the Beijing Academy of Artificial Intelligence (BAAI), where he leads research strategy in large-scale AI models and collaborative innovation across academia and industry."
           },
           {
+            "id": "tao-jiang",
+            "name": "Tao Jiang",
+            "roleOrg": "CSDN",
+            "role": "Founder & Chairman (Panelist)",
+            "tags": ["panelist"],
+            "image": "tao-jiang.jpg",
+            "bio": "Founder and Chairman of CSDN with over 30 years of industry experience. He founded 'Programmer' magazine and several brands, and supported over 80 technology companies as an investor. He currently serves as a director of OpenAtom Foundation, Vice Chairman of COPU, and launched the Global Open-source Innovation Meet (GOSIM), dedicated to promoting the development of software and open-source technology in China."
+          },
+          {
             "id": "qin-wang",
             "name": "Prof. Qin Wang",
             "roleOrg": "CASS",
