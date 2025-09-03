@@ -10,6 +10,9 @@ const { lang = 'en', navTheme = 'dark' } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+		<meta http-equiv="content-language" content={lang} />
+		<meta name="language" content={lang} />
+		<meta name="google" content="notranslate" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">

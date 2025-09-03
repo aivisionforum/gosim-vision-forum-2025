@@ -55,19 +55,11 @@
             "bio": "Graduated from Lebanese University Faculty of Engineering in 2005 with a degree in Telecommunications and Computer Engineering, earned a Master's in Computer Science from University of Maryland (UMPC) in 2006, and received his PhD from University of Pittsburgh Medical Center (UPMC) in 2009. Previously served as a temporary teaching and research assistant at Paris XIII University. Currently researches the role of generative AI in education, focusing on open-source solutions and covering key considerations for AI tool deployment including cost, infrastructure, and deployment challenges."
           },
           {
-            "id": "ji-bo",
-            "name": "Ji Bo",
-            "roleOrg": "Chief Representative in Europe & Assistant Dean, Cheung Kong Graduate School of Business",
-            "tags": ["keynote"],
-            "image": "",
-            "bio": "Chief Representative in Europe & Assistant Dean at Cheung Kong Graduate School of Business. Founder of China Start program. TEDx speaker and entrepreneurship mentor. Author of '5G Changes the World'. Former senior executive at headquarters of numerous Fortune 500 companies including Monsanto, Cargill, Pfizer, Wrigley, and Mars."
-          },
-          {
             "id": "vivian-cai",
             "name": "Vivian Cai",
             "roleOrg": "Co-Founder & CEO, Sustentra | 2025 Yale Entrepreneurship Fellowship Cover Story",
             "tags": ["moderator"],
-            "image": "",
+            "image": "vivian-cai.jpg",
             "bio": "Yale MBA & HEC Paris dual master's. Former ESG Investment Head at Natixis Asset Management and financial analyst at Amazon Europe. Founded Sustentra, creating FactFlow AI for 'audit-grade' ESG verification, mapping 1,000+ global regulations, reducing compliance cycles by 40%. Y Combinator S25 Top 1% Finalist, winner of all three top Yale entrepreneurship awards, one of five global Yale SOM Entrepreneurial Fellows."
           },
           {
@@ -91,7 +83,7 @@
             "name": "Bella Ren",
             "roleOrg": "Co-Founder, AskSia",
             "tags": ["panelist"],
-            "image": "",
+            "image": "bella-ren.jpg",
             "bio": "Co-Founder of AskSia, focusing on AI-driven EdTech innovation. Former Huawei engineer with 7 years of Canadian CS and AI academic background. Led team to build AskSia into a global intelligent learning assistant, achieving million-dollar ARR within a year and significantly improving student learning efficiency across multiple scenarios."
           },
           {
@@ -99,7 +91,7 @@
             "name": "Zheng Haoyun",
             "roleOrg": "Co-Founder, Dolphin Intelligence",
             "tags": ["panelist"],
-            "image": "",
+            "image": "zheng-haoyun.jpg",
             "bio": "Master of Economics from University of Edinburgh, member of China Cultural Information Association, serial entrepreneur, Co-Founder of Dolphin Intelligence. Previous venture achieved multi-million revenue within six months, spanning education, AI, and healthcare sectors. Currently Co-Founder of intelligent medical device company, selected for Zhejiang Talent Program. Company developed world's first universal ultrasound multimodal large model, established cooperation with over 110 Class-A tertiary hospitals nationwide, with future deployment of large models in hospitals."
           },
           {
@@ -131,7 +123,7 @@
             "name": "Alexandra Boucherifi-Kornmann",
             "roleOrg": "Artist, Founder of European AI and Augmented Humanism Biennial",
             "tags": ["panelist"],
-            "image": "",
+            "image": "alexandra-boucherifi.jpg",
             "bio": "French-Italian artist, curator, and researcher working at the intersection of art, science, and emerging technologies. Founded the \"Augmentism\" movement in 2019, advocating for AI to augment rather than replace human creativity. As founder of PROXIMA European AI and Augmented Humanism Biennial, brings together global artists, scientists, and technologists to promote cross-cultural dialogue. Has curated international exhibitions and lectured at institutions including Sorbonne University and Lyon II University. Committed to building symbiotic relationships between humans and intelligent systems."
           },
           {
@@ -139,7 +131,7 @@
             "name": "Wang Juchen",
             "roleOrg": "Founder, Central & International Piano Academy",
             "tags": ["panelist"],
-            "image": "",
+            "image": "wang-juchen.jpg",
             "bio": "Cross-disciplinary practitioner in music education and AI, Co-Founder of Central & International Piano Academy. Graduate of New England Conservatory (NEC), first Chinese teaching assistant and first graduate assistant in the classical saxophone department. In 2023, explored AI feasibility in music education, proposing a progressive methodology: AI should first solve specific pain points with small tools, then combine into systematic solutions. Designed \"human assistant + AI-assisted summary\" model, providing real-world cases for AI-education symbiosis, committed to promoting AI's enabling rather than replacing role in education."
           }
         ],
@@ -195,14 +187,6 @@
             "bio": ""
           },
           {
-            "id": "mano-joseph-mathew",
-            "name": "Mano Joseph MATHEW",
-            "roleOrg": "Head of Health Tech & AI & Biology Department, Associate Professor, EFREI Paris Panthéon-Assas",
-            "tags": ["panelist"],
-            "image": "",
-            "bio": "Kuang Kun, Associate Professor, PhD Supervisor, Deputy Director of AI Department, School of Computer Science, Zhejiang University."
-          },
-          {
             "id": "kuang-kun",
             "name": "Kuang Kun",
             "roleOrg": "Associate Professor, PhD Supervisor, Deputy Director of AI Department, School of Computer Science, Zhejiang University",
@@ -223,7 +207,7 @@
             "name": "Yin Danqing",
             "roleOrg": "Co-Founder, Saint Novel Biotech",
             "tags": ["panelist"],
-            "image": "",
+            "image": "yin-danqing.jpg",
             "bio": "Dr. Yin Danqing holds a PhD in Bioinformatics from the University of Hong Kong Li Ka Shing Faculty of Medicine, with a bachelor's degree from the University of Melbourne Faculty of Medicine and a master's in Computer Science from the University of Sydney. Leveraging her interdisciplinary background in medicine and computing, she has achieved outstanding results in bioinformatics and AI drug discovery. During her doctoral studies, she founded an AI pharmaceutical company, receiving million-level funding from Hong Kong Science Park and collaborating with teams from Tsinghua and Cambridge to explore generative AI for accelerating drug development. Her entrepreneurial projects have won numerous international awards, including the China 'Internet+' Competition Gold Award and Cambridge Innovation Cup, and she was featured as a representative student entrepreneur in the 2024 HKU Annual Report. Her research further bridges life sciences and AI ethics, focusing on the risks and potential of generative AI in mental health and emotional companionship, exploring mindfulness-driven, culturally neutral emotional AI design frameworks."
           },
           {
@@ -231,7 +215,7 @@
             "name": "Zhao Simiao",
             "roleOrg": "CEO, Pawmed | PhD Candidate in AI Medicine at Oxford University",
             "tags": ["panelist"],
-            "image": "",
+            "image": "zhao-simiao.jpg",
             "bio": "PhD candidate in AI Medicine at Oxford University, studying cross-species hematopoietic stem cell aging mechanisms under Professor Claus Nerlov at Oxford University, with funding from the UK Biotechnology and Biological Sciences Research Council (BBSRC). Graduated with MSc in Advanced Computer Science from Oxford University in 2022. Winner of Roche's 2024 HDRUK AI Pharmaceutical Competition. Previously served as teaching assistant for MIT Computational Biology Department Chair Manolis Kellis and Cambridge Professor Pietro Lio, conducting research on food anti-cancer properties, protein analysis, and drug discovery. Published multiple papers in SCI Tier 1 journals including Brief in Bioinformatics. Currently CEO of Pawmed, an AI cross-species longevity drug discovery platform."
           },
           {
@@ -270,12 +254,13 @@
             "bio": "Advocate for open source AI at the Eclipse Foundation. Serves as topic moderator, fostering collaboration and dialogue across global AI communities."
           },
           {
-            "id": "yang-qingfeng",
-            "name": "Yang Qingfeng",
-            "roleOrg": "Professor & Researcher, China Association for Science and Technology-Fudan University Institute of Science and Technology Ethics and Human Future",
+            "id": "zhou-hui",
+            "name": "Zhou Hui",
+            "roleOrg": "Institute of Law, Chinese Academy of Social Sciences",
+            "role": "Deputy Director",
             "tags": ["keynote"],
-            "image": "yang-qingfeng.jpg",
-            "bio": "PhD in Philosophy, doctoral supervisor at Fudan University. Specializes in technology philosophy and AI ethics research. Former visiting scholar at Dartmouth College. Currently serves as executive director of Professional Committee of Philosophy of Technology and CCF Ethics Committee member. Has led 3 National Social Science Foundation projects and published 4 monographs."
+            "image": "zhou-hui.jpg",
+            "bio": "Deputy Director and Associate Research Fellow at the Network and Information Law Research Office, Chinese Academy of Social Sciences. Visiting Scholar at Yale Law School, PhD in Law from Peking University. Executive Deputy Secretary-General of China Law Society's Cyber and Information Law Research Association. Participated in drafting the Personal Information Protection Law and Data Security Law. Legal expert for China's first compliant cross-border data transfer case."
           },
           {
             "id": "cailean-osborne",
