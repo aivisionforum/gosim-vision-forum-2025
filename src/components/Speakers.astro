@@ -88,12 +88,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               data-modal-card-id={speaker.id}
             >
               {speaker?.image &&
-                images[`/public/images/speakers/${speaker.image}`] && (
+                images[`/src/assets/speakers/${speaker.image}`] && (
                   <div class="card-row card-row-image">
                     <div class="card-image">
                       <Picture
                         src={images[
-                          `/public/images/speakers/${speaker.image}`
+                          `/src/assets/speakers/${speaker.image}`
                         ]()}
                         formats={["webp", "jpg"]}
                         alt={speaker.name}
