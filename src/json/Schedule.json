@@ -17,32 +17,24 @@
     "all-sessions": [
       {
         "date": "9月12日",
-        "timeSlot": "09:00 - 09:30",
-        "title": "签到 & 迎宾早餐",
-        "content": "<p>参会者签到，享用迎宾早餐，初步交流</p>",
-        "speakers": [],
-        "room": "大堂",
-        "category": "交流环节"
-      },
-      {
-        "date": "9月12日",
-        "timeSlot": "09:30 - 09:45",
+        "timeSlot": "09:30 - 09:40",
         "title": "主持开场",
-        "content": "<p>GOSIM代表和主持人开场致辞，议程介绍</p>",
+        "content": "<p>GOSIM创始人开场致辞，议程介绍</p>",
         "speakers": [
           {
-            "id": "gosim-representative",
-            "name": "GOSIM基金会代表",
-            "roleOrg": "GOSIM Foundation",
+            "id": "tao-jiang",
+            "name": "蒋涛",
+            "roleOrg": "CSDN创始人&董事长，GOSIM发起人",
             "tags": ["all-sessions"],
-            "image": "gosim-rep.jpg"
+            "image": "tao-jiang.jpg",
+            "bio": "CSDN的创始人兼董事长，拥有30余年的行业经验，曾领导金山词霸等知名项目。创办了《程序员》杂志等多个品牌，并作为投资人支持了80多家科技公司。现任开放原子开源基金会理事，COPU开源联盟副主席，并发起全球开源创新汇GOSIM，致力于推动中国软件与开源技术的发展。"
           }
         ],
         "room": "主会场"
       },
       {
         "date": "9月12日",
-        "timeSlot": "09:45 - 11:45",
+        "timeSlot": "09:40 - 11:40",
         "title": "主题分享 1：人工智能驱动下的学习机制重构：从知识掌握到创造力生成的范式转型",
         "content": "<p>人工智能正在重塑人类的学习机制与知识体系结构，推动教育从以知识掌握为核心的范式迈向以创造力生成与认知协作为导向的新模式。本议题将探讨AI作为“认知伙伴”与“算法监工”之间的张力，如何影响教育公平、隐私保护与教师角色重构，并审视实现知识民主化的制度与技术路径。</p>",
         "speakers": [
@@ -156,7 +148,7 @@
       },
       {
         "date": "9月12日",
-        "timeSlot": "11:45 - 13:00",
+        "timeSlot": "11:40 - 13:00",
         "title": "午餐 & AIGC Spotlight",
         "content": "<p>午餐，AIGC Spotlight 作品发奖和展示</p><p><strong>特别环节:</strong> '技术产品' 与 '艺术创意' 双单元全球作品展示</p>",
         "speakers": [],
@@ -183,8 +175,8 @@
             "name": "李建忠",
             "roleOrg": "SVP，CSDN",
             "tags": ["moderator"],
-            "image": "",
-            "bio": ""
+            "image": "li-jianzhong.jpg",
+            "bio": "CSDN高级副总裁，负责战略规划和业务发展。"
           },
           {
             "id": "du-kai",
@@ -297,6 +289,24 @@
             "tags": ["panelist"],
             "image": "christian-maitre.jpg",
             "bio": "前Orange创新副总裁，曾领导电信和智慧城市的数字化与可持续发展项目。现任Caspera-Lab CEO，专注于指导组织进行数字化转型并追求全球卓越。"
+          },
+          {
+            "id": "wu-shaoqing",
+            "name": "吴少卿",
+            "roleOrg": "DeepSeek",
+            "role": "AI治理负责人（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "DeepSeek AI治理负责人，专注于人工智能伦理、合规性和负责任的AI发展。"
+          },
+          {
+            "id": "abdallah-essa",
+            "name": "Abdallah ESSA",
+            "roleOrg": "AFNOR Group",
+            "role": "AI与NLP负责人（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "法国标准化协会（AFNOR Group）人工智能与自然语言处理负责人，致力于AI标准制定和治理框架建设。"
           }
         ],
         "room": "主会场",
@@ -416,14 +426,15 @@
         "date": "9月12日",
         "timeSlot": "16:30 - 17:30",
         "title": "全体汇报与总结发言",
-        "content": "<p>代表总结 + 特邀专家闭幕发言</p>",
+        "content": "<p>论坛赞助方致闭幕辞</p>",
         "speakers": [
           {
-            "id": "gosim-representative",
-            "name": "GOSIM基金会代表",
-            "roleOrg": "GOSIM Foundation",
+            "id": "ren-xudong",
+            "name": "任旭东",
+            "roleOrg": "论坛赞助方",
             "tags": ["all-sessions"],
-            "image": "gosim-rep.jpg"
+            "image": "ren-xudong.jpg",
+            "bio": "GOSIM 2025 论坛主要赞助方代表，致闭幕辞。"
           }
         ],
         "room": "主会场",
