@@ -119,6 +119,22 @@
             "bio": "中国艺术研究院一级美术师。"
           },
           {
+            "id": "yan-yuqing",
+            "name": "严玉庆",
+            "roleOrg": "广东省人力资源研究会基础教育与教师发展专业委员会副会长，广东教师继续再教育专委会常务理事，腾讯教育顾问",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "广东省人力资源研究会基础教育与教师发展专业委员会副会长，广东教师继续再教育专委会常务理事，腾讯教育顾问。"
+          },
+          {
+            "id": "zhou-maohua",
+            "name": "周茂华",
+            "roleOrg": "深圳市第二高级中学创客中心负责人，中国电子学会现代教育技术分会副主任委员",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "深圳市第二高级中学创客中心负责人，中国电子学会现代教育技术分会副主任委员。"
+          },
+          {
             "id": "alexandra-boucherifi",
             "name": "Alexandra Boucherifi-Kornmann",
             "roleOrg": "艺术家，欧洲人工智能与增生主义双年展创始人",
@@ -382,6 +398,15 @@
             "tags": ["panelist"],
             "image": "richard-bian.jpg",
             "bio": "蚂蚁集团开源战略与产品负责人，倡导全球开源软件合作，积极构建亚洲及其他地区的社区驱动的金融科技和AI生态系统。"
+          },
+          {
+            "id": "piao-geshi",
+            "name": "朴戈石",
+            "roleOrg": "DeepSeek",
+            "role": "数据负责人（圆桌讨论成员）",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "DeepSeek数据负责人，负责大规模AI模型训练的数据架构和质量控制。"
           }
         ],
         "room": "主会场",

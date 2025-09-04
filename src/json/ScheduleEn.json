@@ -119,6 +119,22 @@
             "bio": "First-Class Artist at the Chinese Academy of Arts."
           },
           {
+            "id": "yan-yuqing",
+            "name": "Yan Yuqing",
+            "roleOrg": "Vice Chairman of Basic Education and Teacher Development Committee, Guangdong HR Research Association; Executive Director, Guangdong Teacher Continuing Education Committee; Tencent Education Consultant",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "Vice Chairman of Basic Education and Teacher Development Committee, Guangdong HR Research Association; Executive Director, Guangdong Teacher Continuing Education Committee; Tencent Education Consultant."
+          },
+          {
+            "id": "zhou-maohua",
+            "name": "Zhou Maohua",
+            "roleOrg": "Head of Maker Center, Shenzhen No.2 Senior High School; Deputy Chairman, Modern Educational Technology Committee, Chinese Institute of Electronics",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "Head of Maker Center at Shenzhen No.2 Senior High School, Deputy Chairman of Modern Educational Technology Committee of Chinese Institute of Electronics."
+          },
+          {
             "id": "alexandra-boucherifi",
             "name": "Alexandra Boucherifi-Kornmann",
             "roleOrg": "Artist, Founder of European AI and Augmented Humanism Biennial",
@@ -382,6 +398,15 @@
             "tags": ["panelist"],
             "image": "richard-bian.jpg",
             "bio": "Richard Bian leads open-source strategy and product at Ant Group. He champions global OSS collaboration and is active in building community-led fintech and AI ecosystems across Asia and beyond."
+          },
+          {
+            "id": "piao-geshi",
+            "name": "Piao Geshi",
+            "roleOrg": "DeepSeek",
+            "role": "Head of Data (Panelist)",
+            "tags": ["panelist"],
+            "image": "",
+            "bio": "Head of Data at DeepSeek, responsible for data architecture and quality control for large-scale AI model training."
           }
         ],
         "room": "Main Hall",
