@@ -81,7 +81,14 @@ const newWindowUrl = url; // URL to open in new window
     align-items: center;
     justify-content: flex-start;
     padding-bottom: 0px;
+    flex-wrap: wrap;
   }
+  
+  .social-share-container p {
+    margin: 0;
+    white-space: nowrap;
+  }
+  
   .social-share-row {
     margin-top: 0.25rem;
     padding-top: 0.25rem;
@@ -90,5 +97,36 @@ const newWindowUrl = url; // URL to open in new window
     justify-content: space-between;
     padding-top: 1.5rem;
     margin-top: 1.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .social-share-container {
+      gap: 0.75rem;
+    }
+    
+    .social-share-row {
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .social-share-container {
+      gap: 0.5rem;
+    }
+    
+    .social-share-container p {
+      font-size: 0.85rem;
+    }
+    
+    .social-link img {
+      height: 16px;
+    }
+    
+    .social-share-row {
+      padding-top: 0.75rem;
+      margin-top: 0.75rem;
+    }
   }
 </style>

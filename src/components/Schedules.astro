@@ -310,7 +310,33 @@ const getEventUrl = (title: string): string => {
   .single-speakers-card {
     display: flex;
     flex-direction: column;
+    /* Remove height: 100% to prevent flex issues */
+  }
+  
+  .card-row-image {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    flex-shrink: 0; /* Prevent image from shrinking */
+  }
+  
+  .card-image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Use padding trick for 1:1 aspect ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f0f0f0;
+  }
+  
+  .card-image img,
+  .card-image picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
   }
   
   .card-row-info {
@@ -318,6 +344,7 @@ const getEventUrl = (title: string): string => {
     flex-direction: column;
     flex: 1;
     justify-content: space-between;
+    min-width: 0; /* Allow text to shrink */
   }
   
   .speaker-text-content {
@@ -326,13 +353,21 @@ const getEventUrl = (title: string): string => {
     justify-content: flex-start;
     gap: 0.2rem;
     margin-bottom: 0.5rem;
+    min-width: 0; /* Allow text to shrink */
+  }
+  
+  .speaker-text-content h3,
+  .speaker-text-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .speaker-bio-row {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 28px;
+    min-height: 28px;
+    /* Remove fixed height to allow bio icon to display properly */
   }
   
   .speaker-bio-container {
@@ -390,6 +425,85 @@ const getEventUrl = (title: string): string => {
   .speaker-bio-container:hover .speaker-bio-tooltip {
     visibility: visible;
     opacity: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .single-speaker-card {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .card-row-info {
+      width: 100%;
+    }
+    
+    .speaker-bio-row {
+      margin-top: 0.25rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .speaker-bio-tooltip {
+      min-width: 240px;
+      max-width: 280px;
+      left: auto;
+      right: -10px;
+      font-size: 0.8rem;
+    }
+    
+    .speaker-bio-tooltip::after {
+      left: auto;
+      right: 20px;
+    }
+    
+    .single-speaker-card {
+      padding: 1rem;
+    }
+    
+    .speaker-text-content h3 {
+      font-size: 1rem;
+    }
+    
+    .speaker-text-content p {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .speaker-bio-tooltip {
+      position: fixed;
+      left: 10px !important;
+      right: 10px !important;
+      bottom: auto !important;
+      top: 50% !important;
+      transform: translateY(-50%);
+      min-width: unset;
+      max-width: unset;
+      width: auto;
+      font-size: 0.75rem;
+      padding: 10px 12px;
+    }
+    
+    .speaker-bio-tooltip::after {
+      display: none;
+    }
+    
+    .bio-indicator {
+      font-size: 0.7rem;
+      padding: 1px 5px;
+      white-space: nowrap;
+    }
+    
+    .single-speaker-card {
+      padding: 0.75rem;
+      gap: 0.5rem;
+    }
+    
+    .speaker-text-content {
+      gap: 0.1rem;
+      margin-bottom: 0.25rem;
+    }
   }
 </style>
 

@@ -36,7 +36,7 @@
         "date": "September 12",
         "timeSlot": "09:40 - 11:40",
         "title": "Session 1: Restructuring Learning Paradigms in the Age of AI — From Knowledge Acquisition to Creative Generation",
-        "content": "<p>AI is reshaping human learning mechanisms and the structure of knowledge systems, shifting education away from a knowledge-centered paradigm toward one driven by creative production and cognitive collaboration. This topic explores the tension between AI as a 'cognitive partner' versus an 'algorithmic supervisor,' and examines its implications for educational equity, privacy, and the evolving role of teachers. It also considers institutional and technological pathways for achieving knowledge democratization.</p><p><strong>Panel 1: AI+Education</strong> - Yan Yuqing, Wang Wei, Liu Yuegang, Bella Ren, Zheng Haoyun, Sun Zhigang</p><p><strong>Panel 2: AI+Creativity</strong> - Wei Wei, Yan Feng, Alexandra Boucherifi-Kornmann, Wang Juchen, Zhou Maohua</p>",
+        "content": "<p>AI is reshaping human learning mechanisms and the structure of knowledge systems, shifting education away from a knowledge-centered paradigm toward one driven by creative production and cognitive collaboration. This topic explores the tension between AI as a 'cognitive partner' versus an 'algorithmic supervisor,' and examines its implications for educational equity, privacy, and the evolving role of teachers. It also considers institutional and technological pathways for achieving knowledge democratization.</p><p><strong>Panel 1: AI+Education</strong> - Yan Yuqing, Wang Wei, Liu Yuegang, Bella Ren, Zheng Haoyun, Sun Zhigang</p><p><strong>Panel 2: AI+Creativity</strong> - Wei Wei, Wang Juchen, Alexandra Boucherifi-Kornmann, Yan Feng, Zhou Maohua</p>",
         "speakers": [
           {
             "id": "salim-nahle",
@@ -103,6 +103,22 @@
             "bio": "Famous Bilibili art creator \"Youdian Yisi Oh\" with extensive influence in digital art creation."
           },
           {
+            "id": "wang-juchen",
+            "name": "Wang Juchen",
+            "roleOrg": "Founder, Cenya Piano Academy",
+            "tags": ["panelist"],
+            "image": "wang-juchen.jpg",
+            "bio": "Cross-disciplinary practitioner in music education and AI, Co-Founder of Central & International Piano Academy. Graduate of New England Conservatory (NEC), first Chinese teaching assistant and first graduate assistant in the classical saxophone department. In 2023, explored AI feasibility in music education, proposing a progressive methodology: AI should first solve specific pain points with small tools, then combine into systematic solutions. Designed \"human assistant + AI-assisted summary\" model, providing real-world cases for AI-education symbiosis, committed to promoting AI's enabling rather than replacing role in education."
+          },
+          {
+            "id": "alexandra-boucherifi",
+            "name": "Alexandra Boucherifi-Kornmann",
+            "roleOrg": "Artist, Founder of European AI and Augmented Humanism Biennial",
+            "tags": ["panelist"],
+            "image": "alexandra-boucherifi.jpg",
+            "bio": "French-Italian artist, curator, and researcher working at the intersection of art, science, and emerging technologies. Founded the \"Augmentism\" movement in 2019, advocating for AI to augment rather than replace human creativity. As founder of PROXIMA European AI and Augmented Humanism Biennial, brings together global artists, scientists, and technologists to promote cross-cultural dialogue. Has curated international exhibitions and lectured at institutions including Sorbonne University and Lyon II University. Committed to building symbiotic relationships between humans and intelligent systems."
+          },
+          {
             "id": "yan-feng",
             "name": "Yan Feng",
             "roleOrg": "First-Class Artist, Chinese Academy of Arts",
@@ -125,22 +141,6 @@
             "tags": ["panelist"],
             "image": "",
             "bio": "Head of Maker Center at Shenzhen No.2 Senior High School, Deputy Chairman of Modern Educational Technology Committee of Chinese Institute of Electronics. Personal maker projects received 100,000 RMB funding from Shenzhen Government. Teaching achievements won the 5th Shenzhen Basic Education Achievement Award. Chief editor of national high school IT textbook 'Open Source Hardware Project Design' (People's Education Map Edition), core author of compulsory education course 'Information Technology Student Manual' (People's Education Edition). Host of Guangdong Province Science and Technology Master Teacher Workshop, leading figure in Shenzhen science and technology innovation education, and the 5th batch of educational research experts in Shenzhen."
-          },
-          {
-            "id": "alexandra-boucherifi",
-            "name": "Alexandra Boucherifi-Kornmann",
-            "roleOrg": "Artist, Founder of European AI and Augmented Humanism Biennial",
-            "tags": ["panelist"],
-            "image": "alexandra-boucherifi.jpg",
-            "bio": "French-Italian artist, curator, and researcher working at the intersection of art, science, and emerging technologies. Founded the \"Augmentism\" movement in 2019, advocating for AI to augment rather than replace human creativity. As founder of PROXIMA European AI and Augmented Humanism Biennial, brings together global artists, scientists, and technologists to promote cross-cultural dialogue. Has curated international exhibitions and lectured at institutions including Sorbonne University and Lyon II University. Committed to building symbiotic relationships between humans and intelligent systems."
-          },
-          {
-            "id": "wang-juchen",
-            "name": "Wang Juchen",
-            "roleOrg": "Founder, Central & International Piano Academy",
-            "tags": ["panelist"],
-            "image": "wang-juchen.jpg",
-            "bio": "Cross-disciplinary practitioner in music education and AI, Co-Founder of Central & International Piano Academy. Graduate of New England Conservatory (NEC), first Chinese teaching assistant and first graduate assistant in the classical saxophone department. In 2023, explored AI feasibility in music education, proposing a progressive methodology: AI should first solve specific pain points with small tools, then combine into systematic solutions. Designed \"human assistant + AI-assisted summary\" model, providing real-world cases for AI-education symbiosis, committed to promoting AI's enabling rather than replacing role in education."
           }
         ],
         "room": "Main Hall",
@@ -167,7 +167,7 @@
             "name": "Zhan Yiwen",
             "roleOrg": "Associate Professor, Peking University",
             "tags": ["keynote"],
-            "image": "",
+            "image": "zhan-yiwen.jpg",
             "bio": "Zhan Yiwen is an Associate Professor at Peking University. He holds dual bachelor's degrees in Science and Philosophy from Peking University, and earned his master's and Ph.D. in Philosophy from LMU Munich and Leipzig University. His research spans philosophy of science, metaphysics of science, and formal epistemology, with growing focus on the philosophical implications of frontier technologies such as artificial intelligence. He has published extensively in both Chinese and international journals, authored and translated several books, and led major national research projects. He also plays active roles in international academic exchange, serving as Secretary-General of the International Academic Exchange Committee of the Chinese Society for Dialectics of Nature and Vice President for Outreach of the Asian Philosophy of Science Association."
           },
           {
@@ -177,6 +177,30 @@
             "tags": ["moderator"],
             "image": "li-jianzhong.jpg",
             "bio": "Senior Vice President at CSDN, responsible for strategic planning and business development."
+          },
+          {
+            "id": "yin-danqing",
+            "name": "Yin Danqing",
+            "roleOrg": "Co-Founder, Saint Novel Biotech",
+            "tags": ["panelist"],
+            "image": "yin-danqing.jpg",
+            "bio": "Dr. Yin Danqing holds a PhD in Bioinformatics from the University of Hong Kong Li Ka Shing Faculty of Medicine, with a bachelor's degree from the University of Melbourne Faculty of Medicine and a master's in Computer Science from the University of Sydney. Leveraging her interdisciplinary background in medicine and computing, she has achieved outstanding results in bioinformatics and AI drug discovery. During her doctoral studies, she founded an AI pharmaceutical company, receiving million-level funding from Hong Kong Science Park and collaborating with teams from Tsinghua and Cambridge to explore generative AI for accelerating drug development. Her entrepreneurial projects have won numerous international awards, including the China 'Internet+' Competition Gold Award and Cambridge Innovation Cup, and she was featured as a representative student entrepreneur in the 2024 HKU Annual Report. Her research further bridges life sciences and AI ethics, focusing on the risks and potential of generative AI in mental health and emotional companionship, exploring mindfulness-driven, culturally neutral emotional AI design frameworks."
+          },
+          {
+            "id": "zhao-simiao",
+            "name": "Zhao Simiao",
+            "roleOrg": "CEO, Pawmed | PhD Candidate in AI Medicine at Oxford University",
+            "tags": ["panelist"],
+            "image": "zhao-simiao.jpg",
+            "bio": "PhD candidate in AI Medicine at Oxford University, studying cross-species hematopoietic stem cell aging mechanisms under Professor Claus Nerlov at Oxford University, with funding from the UK Biotechnology and Biological Sciences Research Council (BBSRC). Graduated with MSc in Advanced Computer Science from Oxford University in 2022. Winner of Roche's 2024 HDRUK AI Pharmaceutical Competition. Previously served as teaching assistant for MIT Computational Biology Department Chair Manolis Kellis and Cambridge Professor Pietro Lio, conducting research on food anti-cancer properties, protein analysis, and drug discovery. Published multiple papers in SCI Tier 1 journals including Brief in Bioinformatics. Currently CEO of Pawmed, an AI cross-species longevity drug discovery platform."
+          },
+          {
+            "id": "liu-qunkai",
+            "name": "Liu Qunkai",
+            "roleOrg": "CEO & Founder, ABCD Tech | China Representative of French VC Breega",
+            "tags": ["panelist"],
+            "image": "liu-qunkai.jpg",
+            "bio": "CEO and Founder of ABCD Tech, a Paris-based AI company specializing in AI, data, and automation solutions for businesses. He also serves as Senior Advisor to BREEGA (Europe's leading VC) representing the fund in Greater China. As a trilingual professional fluent in English, French, and Chinese, Liu Qunkai has over 20 years of international experience spanning innovation, business development, sales & marketing, and executive leadership. His career has spanned Europe, Middle East, and Asia, including roles as Country Manager for Alibaba Cloud France, Southern Europe, Benelux and Israel, and Country Manager for Alipay France and Benelux. Academically, he holds a Doctorate in Management from Paris Dauphine University - PSL, an engineering degree from Télécom Paris, and a Bachelor's in Electrical Engineering from Nanjing University, China."
           },
           {
             "id": "du-kai",
@@ -201,30 +225,6 @@
             "tags": ["panelist"],
             "image": "",
             "bio": ""
-          },
-          {
-            "id": "yin-danqing",
-            "name": "Yin Danqing",
-            "roleOrg": "Co-Founder, Saint Novel Biotech",
-            "tags": ["panelist"],
-            "image": "yin-danqing.jpg",
-            "bio": "Dr. Yin Danqing holds a PhD in Bioinformatics from the University of Hong Kong Li Ka Shing Faculty of Medicine, with a bachelor's degree from the University of Melbourne Faculty of Medicine and a master's in Computer Science from the University of Sydney. Leveraging her interdisciplinary background in medicine and computing, she has achieved outstanding results in bioinformatics and AI drug discovery. During her doctoral studies, she founded an AI pharmaceutical company, receiving million-level funding from Hong Kong Science Park and collaborating with teams from Tsinghua and Cambridge to explore generative AI for accelerating drug development. Her entrepreneurial projects have won numerous international awards, including the China 'Internet+' Competition Gold Award and Cambridge Innovation Cup, and she was featured as a representative student entrepreneur in the 2024 HKU Annual Report. Her research further bridges life sciences and AI ethics, focusing on the risks and potential of generative AI in mental health and emotional companionship, exploring mindfulness-driven, culturally neutral emotional AI design frameworks."
-          },
-          {
-            "id": "zhao-simiao",
-            "name": "Zhao Simiao",
-            "roleOrg": "CEO, Pawmed | PhD Candidate in AI Medicine at Oxford University",
-            "tags": ["panelist"],
-            "image": "zhao-simiao.jpg",
-            "bio": "PhD candidate in AI Medicine at Oxford University, studying cross-species hematopoietic stem cell aging mechanisms under Professor Claus Nerlov at Oxford University, with funding from the UK Biotechnology and Biological Sciences Research Council (BBSRC). Graduated with MSc in Advanced Computer Science from Oxford University in 2022. Winner of Roche's 2024 HDRUK AI Pharmaceutical Competition. Previously served as teaching assistant for MIT Computational Biology Department Chair Manolis Kellis and Cambridge Professor Pietro Lio, conducting research on food anti-cancer properties, protein analysis, and drug discovery. Published multiple papers in SCI Tier 1 journals including Brief in Bioinformatics. Currently CEO of Pawmed, an AI cross-species longevity drug discovery platform."
-          },
-          {
-            "id": "liu-qunkai",
-            "name": "Liu Qunkai",
-            "roleOrg": "CEO & Founder, ABCD Tech | China Representative of French VC Breega",
-            "tags": ["panelist"],
-            "image": "",
-            "bio": "CEO and Founder of ABCD Tech, a Paris-based AI company specializing in AI, data, and automation solutions for businesses. He also serves as Senior Advisor to BREEGA (Europe's leading VC) representing the fund in Greater China. As a trilingual professional fluent in English, French, and Chinese, Liu Qunkai has over 20 years of international experience spanning innovation, business development, sales & marketing, and executive leadership. His career has spanned Europe, Middle East, and Asia, including roles as Country Manager for Alibaba Cloud France, Southern Europe, Benelux and Israel, and Country Manager for Alipay France and Benelux. Academically, he holds a Doctorate in Management from Paris Dauphine University - PSL, an engineering degree from Télécom Paris, and a Bachelor's in Electrical Engineering from Nanjing University, China."
           }
         ],
         "room": "Main Hall",
