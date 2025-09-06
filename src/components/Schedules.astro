@@ -396,11 +396,14 @@ const getEventUrl = (title: string): string => {
   .speaker-bio-tooltip {
     visibility: hidden;
     opacity: 0;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
+    position: fixed;
+    bottom: auto;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
     min-width: 280px;
-    max-width: 350px;
+    max-width: 450px;
+    max-height: 70vh;
     background-color: #333;
     color: white;
     padding: 12px 16px;
@@ -410,19 +413,16 @@ const getEventUrl = (title: string): string => {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    margin-bottom: 8px;
+    overflow-y: auto;
+    word-wrap: break-word;
   }
   
   .speaker-bio-tooltip::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 20px;
-    border: 5px solid transparent;
-    border-top-color: #333;
+    display: none;
   }
   
-  .speaker-bio-container:hover .speaker-bio-tooltip {
+  .speaker-bio-container:hover .speaker-bio-tooltip,
+  .speaker-bio-container.tooltip-active .speaker-bio-tooltip {
     visibility: visible;
     opacity: 1;
   }
@@ -446,10 +446,12 @@ const getEventUrl = (title: string): string => {
   @media (max-width: 768px) {
     .speaker-bio-tooltip {
       min-width: 240px;
-      max-width: 280px;
+      max-width: 320px;
+      max-height: none;
       left: auto;
       right: -10px;
       font-size: 0.8rem;
+      overflow-y: auto;
     }
     
     .speaker-bio-tooltip::after {
@@ -476,13 +478,15 @@ const getEventUrl = (title: string): string => {
       left: 10px !important;
       right: 10px !important;
       bottom: auto !important;
-      top: 50% !important;
-      transform: translateY(-50%);
+      top: 10% !important;
+      transform: none;
       min-width: unset;
       max-width: unset;
+      max-height: 80vh;
       width: auto;
       font-size: 0.75rem;
       padding: 10px 12px;
+      overflow-y: auto;
     }
     
     .speaker-bio-tooltip::after {
@@ -573,6 +577,43 @@ const getEventUrl = (title: string): string => {
           }
         });
       });
+    });
+
+    // Handle bio tooltip positioning
+    const bioContainers = document.querySelectorAll('.speaker-bio-container');
+    
+    bioContainers.forEach(container => {
+      const tooltip = container.querySelector('.speaker-bio-tooltip');
+      if (!tooltip) return;
+
+      const showTooltip = (e) => {
+        const rect = container.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const viewportWidth = window.innerWidth;
+        
+        // Position tooltip in center of viewport vertically
+        const centerY = viewportHeight / 2;
+        tooltip.style.top = centerY + 'px';
+        tooltip.style.transform = 'translateX(-50%) translateY(-50%)';
+        
+        // Adjust horizontal position if needed
+        if (rect.left < viewportWidth / 2) {
+          tooltip.style.left = '25%';
+        } else {
+          tooltip.style.left = '75%';
+        }
+        
+        container.classList.add('tooltip-active');
+      };
+
+      const hideTooltip = () => {
+        container.classList.remove('tooltip-active');
+      };
+
+      container.addEventListener('mouseenter', showTooltip);
+      container.addEventListener('mouseleave', hideTooltip);
+      container.addEventListener('touchstart', showTooltip);
+      container.addEventListener('touchend', hideTooltip);
     });
   });
 </script>

@@ -107,7 +107,7 @@
             "name": "刘月刚",
             "roleOrg": "副校长，中山大学深圳附属学校",
             "tags": ["panelist"],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "中山大学深圳附属学校副校长，教育部美术教科书编委。"
           },
           {
@@ -123,7 +123,7 @@
             "name": "唯伟",
             "roleOrg": "bilibili知名绘画UP主\"有点艺思哦\"",
             "tags": ["panelist"],
-            "image": "",
+            "image": "wei-wei.jpg",
             "bio": "bilibili知名绘画UP主\"有点艺思哦\"，在数字艺术创作领域拥有广泛影响力。"
           },
           {
@@ -131,7 +131,7 @@
             "name": "严玉庆",
             "roleOrg": "顾问，腾讯",
             "tags": ["panelist"],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "腾讯教育顾问，专注于教育创新和教师发展。"
           },
           {
@@ -139,7 +139,7 @@
             "name": "周茂华",
             "roleOrg": "创客中心负责人，深圳市第二高级中学",
             "tags": ["panelist"],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "深圳市第二高级中学创客中心负责人，中国电子学会现代教育技术分会副主任委员。个人创客项目曾荣获深圳市政府十万元资助，教学成果曾荣获深圳市第五届基础教育成果奖。全国普通高中信息技术教材《开源硬件项目设计》（人教地图版）分册主编，义务教育课程《信息科技学生手册》（人教版）核心作者，广东省科技名师工作室主持人，深圳科技创新教育领军人物，深圳市第五批教育科研骨干。"
           }
         ],
@@ -207,7 +207,7 @@
             "name": "杜凯",
             "roleOrg": "心理与认知科学助理教授，清华大学（刘嘉团队，站在新进化节点上 AGI与第二次认知革命）",
             "tags": ["panelist"],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": ""
           },
           {
@@ -215,7 +215,7 @@
             "name": "Nicolas Flores Herr",
             "roleOrg": "基础模型与生成式AI系统团队负责人，弗劳恩霍夫IAIS研究所",
             "tags": ["panelist"],
-            "image": "",
+            "image": "nicolas-flores-herr.jpg",
             "bio": ""
           },
           {
@@ -223,7 +223,7 @@
             "name": "况琨",
             "roleOrg": "副教授，博士生导师，人工智能系副主任，浙江大学计算机学院",
             "tags": ["panelist"],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": ""
           }
         ],
@@ -296,7 +296,7 @@
             "roleOrg": "DeepSeek",
             "role": "AI治理负责人（圆桌讨论成员）",
             "tags": ["panelist"],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "DeepSeek AI治理负责人，专注于人工智能伦理、合规性和负责任的AI发展。"
           },
           {
@@ -305,7 +305,7 @@
             "roleOrg": "AFNOR Group",
             "role": "AI与NLP负责人（圆桌讨论成员）",
             "tags": ["panelist"],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "法国标准化协会（AFNOR Group）人工智能与自然语言处理负责人，致力于AI标准制定和治理框架建设。"
           }
         ],
@@ -410,12 +410,12 @@
             "bio": "蚂蚁集团开源战略与产品负责人，倡导全球开源软件合作，积极构建亚洲及其他地区的社区驱动的金融科技和AI生态系统。"
           },
           {
-            "id": "piao-geshi",
-            "name": "朴戈石",
+            "id": "piao-yoshi",
+            "name": "朴弋石",
             "roleOrg": "DeepSeek",
             "role": "数据负责人（圆桌讨论成员）",
             "tags": ["panelist"],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "DeepSeek数据负责人，负责大规模AI模型训练的数据架构和质量控制。"
           }
         ],

@@ -127,7 +127,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "Vice Principal of Sun Yat-sen University Shenzhen Affiliated School, Ministry of Education Art Textbook Committee Member."
           },
           {
@@ -147,7 +147,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "wei-wei.jpg",
             "bio": "Famous Bilibili art creator \"Youdian Yisi Oh\" with extensive influence in digital art creation."
           },
           {
@@ -157,7 +157,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "Consultant at Tencent Education, focusing on educational innovation and teacher development."
           },
           {
@@ -167,7 +167,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "Head of Maker Center at Shenzhen No.2 Senior High School, Deputy Chairman of Modern Educational Technology Committee of Chinese Institute of Electronics. Personal maker projects received 100,000 RMB funding from Shenzhen Government. Teaching achievements won the 5th Shenzhen Basic Education Achievement Award. Chief editor of national high school IT textbook 'Open Source Hardware Project Design' (People's Education Map Edition), core author of compulsory education course 'Information Technology Student Manual' (People's Education Edition). Host of Guangdong Province Science and Technology Master Teacher Workshop, leading figure in Shenzhen science and technology innovation education, and the 5th batch of educational research experts in Shenzhen."
           }
         ],
@@ -247,7 +247,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": ""
           },
           {
@@ -257,7 +257,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "nicolas-flores-herr.jpg",
             "bio": ""
           },
           {
@@ -267,7 +267,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": ""
           }
         ],
@@ -354,7 +354,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "Head of AI Governance at DeepSeek, focusing on AI ethics, compliance, and responsible AI development."
           },
           {
@@ -365,7 +365,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "Head of AI and Natural Language Processing at AFNOR Group (French Standards Association), dedicated to AI standardization and governance framework development."
           }
         ],
@@ -488,14 +488,14 @@
             "bio": "Richard Bian leads open-source strategy and product at Ant Group. He champions global OSS collaboration and is active in building community-led fintech and AI ecosystems across Asia and beyond."
           },
           {
-            "id": "piao-geshi",
+            "id": "piao-yishi",
             "name": "Piao Geshi",
             "roleOrg": "DeepSeek",
             "role": "Head of Data (Panelist)",
             "tags": [
               "panelist"
             ],
-            "image": "",
+            "image": "0-placeholder-person.png",
             "bio": "Head of Data at DeepSeek, responsible for data architecture and quality control for large-scale AI model training."
           }
         ],
