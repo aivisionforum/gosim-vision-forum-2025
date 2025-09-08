@@ -254,7 +254,7 @@
 }
 
 .single-agenda-card[data-accordion-status="active"] .bottom {
-  max-height: 2000px;
+  max-height: 5000px;
   transition: max-height 0.5s ease-in;
 }
 
