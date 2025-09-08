@@ -127,7 +127,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "0-placeholder-person.png",
+            "image": "liu-yuegang.jpg",
             "bio": "Vice Principal of Sun Yat-sen University Shenzhen Affiliated School, Ministry of Education Art Textbook Committee Member."
           },
           {
@@ -167,7 +167,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "0-placeholder-person.png",
+            "image": "",
             "bio": "Head of Maker Center at Shenzhen No.2 Senior High School, Deputy Chairman of Modern Educational Technology Committee of Chinese Institute of Electronics. Personal maker projects received 100,000 RMB funding from Shenzhen Government. Teaching achievements won the 5th Shenzhen Basic Education Achievement Award. Chief editor of national high school IT textbook 'Open Source Hardware Project Design' (People's Education Map Edition), core author of compulsory education course 'Information Technology Student Manual' (People's Education Edition). Host of Guangdong Province Science and Technology Master Teacher Workshop, leading figure in Shenzhen science and technology innovation education, and the 5th batch of educational research experts in Shenzhen."
           }
         ],
@@ -239,16 +239,6 @@
             ],
             "image": "liu-qunkai.jpg",
             "bio": "CEO and Founder of ABCD Tech, a Paris-based AI company specializing in AI, data, and automation solutions for businesses. He also serves as Senior Advisor to BREEGA (Europe's leading VC) representing the fund in Greater China. As a trilingual professional fluent in English, French, and Chinese, Liu Qunkai has over 20 years of international experience spanning innovation, business development, sales & marketing, and executive leadership. His career has spanned Europe, Middle East, and Asia, including roles as Country Manager for Alibaba Cloud France, Southern Europe, Benelux and Israel, and Country Manager for Alipay France and Benelux. Academically, he holds a Doctorate in Management from Paris Dauphine University - PSL, an engineering degree from Télécom Paris, and a Bachelor's in Electrical Engineering from Nanjing University, China."
-          },
-          {
-            "id": "du-kai",
-            "name": "Du Kai",
-            "roleOrg": "Assistant Professor of Psychology and Cognitive Science, Tsinghua University (Liu Jia's team, AGI and the Second Cognitive Revolution at the New Evolutionary Node)",
-            "tags": [
-              "panelist"
-            ],
-            "image": "0-placeholder-person.png",
-            "bio": ""
           },
           {
             "id": "nicolas-flores-herr",

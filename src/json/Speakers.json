@@ -51,7 +51,7 @@
       "name": "刘月刚",
       "roleOrg": "副校长，中山大学深圳附属学校",
       "tag": "education",
-      "image": "",
+      "image": "liu-yuegang.jpg",
       "bio": "中山大学深圳附属学校副校长，教育部美术教科书编委。",
       "type": "Panelist",
       "draft": false
@@ -154,16 +154,6 @@
       "image": "",
       "bio": "",
       "type": "Moderator",
-      "draft": false
-    },
-    {
-      "id": "du-kai",
-      "name": "杜凯",
-      "roleOrg": "心理与认知科学助理教授，清华大学（刘嘉团队，站在新进化节点上 AGI与第二次认知革命）",
-      "tag": "panelist",
-      "image": "",
-      "bio": "",
-      "type": "Panelist",
       "draft": false
     },
     {
