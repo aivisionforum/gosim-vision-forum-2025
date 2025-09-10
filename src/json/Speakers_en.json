@@ -107,16 +107,6 @@
       "draft": false
     },
     {
-      "id": "yan-feng",
-      "name": "彦风",
-      "roleOrg": "一级美术师, 中国艺术研究院",
-      "tag": "arts",
-      "image": "yan-feng.png",
-      "bio": "中国艺术研究院一级美术师。",
-      "type": "Panelist",
-      "draft": false
-    },
-    {
       "id": "alexandra-boucherifi",
       "name": "Alexandra Boucherifi-Kornmann",
       "roleOrg": "艺术家，欧洲人工智能与增生主义双年展创始人",
@@ -201,7 +191,7 @@
       "name": "况琨",
       "roleOrg": "副教授，博士生导师，人工智能系副主任，浙江大学计算机学院",
       "tag": "panelist",
-      "image": "",
+      "image": "kuang-kun.jpg",
       "bio": "况琨，浙江大学计算机学院副教授，博士生导师，人工智能系副主任。",
       "type": "Panelist",
       "draft": false

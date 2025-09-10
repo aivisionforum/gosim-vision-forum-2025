@@ -38,7 +38,7 @@
         "date": "September 12",
         "timeSlot": "09:40 - 11:40",
         "title": "Session 1: Restructuring Learning Paradigms in the Age of AI — From Knowledge Acquisition to Creative Generation",
-        "content": "<p>AI is reshaping human learning mechanisms and the structure of knowledge systems, shifting education away from a knowledge-centered paradigm toward one driven by creative production and cognitive collaboration. This topic explores the tension between AI as a 'cognitive partner' versus an 'algorithmic supervisor,' and examines its implications for educational equity, privacy, and the evolving role of teachers. It also considers institutional and technological pathways for achieving knowledge democratization.</p><p><strong>Panel 1: AI+Education</strong> - Yan Yuqing, Wang Wei, Liu Yuegang, Bella Ren, Zheng Haoyun, Sun Zhigang</p><p><strong>Panel 2: AI+Creativity</strong> - Wei Wei, Wang Juchen, Alexandra Boucherifi-Kornmann, Yan Feng, Zhou Maohua</p>",
+        "content": "<p>AI is reshaping human learning mechanisms and the structure of knowledge systems, shifting education away from a knowledge-centered paradigm toward one driven by creative production and cognitive collaboration. This topic explores the tension between AI as a 'cognitive partner' versus an 'algorithmic supervisor,' and examines its implications for educational equity, privacy, and the evolving role of teachers. It also considers institutional and technological pathways for achieving knowledge democratization.</p><p><strong>Panel 1: AI+Education</strong> - Yan Yuqing, Wang Wei, Liu Yuegang, Bella Ren, Zheng Haoyun, Sun Zhigang</p><p><strong>Panel 2: AI+Creativity</strong> - Wei Wei, Wang Juchen, Alexandra Boucherifi-Kornmann, Zhou Maohua</p>",
         "speakers": [
           {
             "id": "salim-nahle",
@@ -109,16 +109,6 @@
             ],
             "image": "alexandra-boucherifi.jpg",
             "bio": "French-Italian artist, curator, and researcher working at the intersection of art, science, and emerging technologies. Founded the \"Augmentism\" movement in 2019, advocating for AI to augment rather than replace human creativity. As founder of PROXIMA European AI and Augmentism Biennial, brings together global artists, scientists, and technologists to promote cross-cultural dialogue. Has curated international exhibitions and lectured at institutions including Sorbonne University and Lyon II University. Committed to building symbiotic relationships between humans and intelligent systems."
-          },
-          {
-            "id": "yan-feng",
-            "name": "Yan Feng",
-            "roleOrg": "First-Class Artist, Chinese Academy of Arts",
-            "tags": [
-              "panelist"
-            ],
-            "image": "yan-feng.png",
-            "bio": "First-Class Artist at the Chinese Academy of Arts."
           },
           {
             "id": "liu-yuegang",
@@ -257,7 +247,7 @@
             "tags": [
               "panelist"
             ],
-            "image": "0-placeholder-person.png",
+            "image": "kuang-kun.jpg",
             "bio": ""
           }
         ],
