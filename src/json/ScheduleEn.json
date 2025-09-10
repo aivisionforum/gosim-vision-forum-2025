@@ -38,7 +38,7 @@
         "date": "September 12",
         "timeSlot": "09:40 - 11:40",
         "title": "Session 1: Restructuring Learning Paradigms in the Age of AI — From Knowledge Acquisition to Creative Generation",
-        "content": "<p>AI is reshaping human learning mechanisms and the structure of knowledge systems, shifting education away from a knowledge-centered paradigm toward one driven by creative production and cognitive collaboration. This topic explores the tension between AI as a 'cognitive partner' versus an 'algorithmic supervisor,' and examines its implications for educational equity, privacy, and the evolving role of teachers. It also considers institutional and technological pathways for achieving knowledge democratization.</p><p><strong>Panel 1: AI+Education</strong> - Yan Yuqing, Wang Wei, Liu Yuegang, Bella Ren, Zheng Haoyun, Sun Zhigang</p><p><strong>Panel 2: AI+Creativity</strong> - Wei Wei, Wang Juchen, Alexandra Boucherifi-Kornmann, Zhou Maohua</p>",
+        "content": "<p>AI is reshaping human learning mechanisms and the structure of knowledge systems, shifting education away from a knowledge-centered paradigm toward one driven by creative production and cognitive collaboration. This topic explores the tension between AI as a 'cognitive partner' versus an 'algorithmic supervisor,' and examines its implications for educational equity, privacy, and the evolving role of teachers. It also considers institutional and technological pathways for achieving knowledge democratization.</p><p><strong>Panel 1: AI+Education</strong> - Yan Yuqing, Wang Wei, Liu Yuegang, Bella Ren, Zheng Haoyun, Sun Zhigang</p><p><strong>Panel 2: AI+Creativity</strong> - Wei Wei, Wang Juchen, Alexandra Boucherifi-Kornmann, Zhou Maohua, Katarzyna Z. Staroslawska</p>",
         "speakers": [
           {
             "id": "salim-nahle",
@@ -159,7 +159,18 @@
             ],
             "image": "zhou-maohua.jpg",
             "bio": "Head of Maker Center at Shenzhen No.2 Senior High School, Deputy Chairman of Modern Educational Technology Committee of Chinese Institute of Electronics. Personal maker projects received 100,000 RMB funding from Shenzhen Government. Teaching achievements won the 5th Shenzhen Basic Education Achievement Award. Chief editor of national high school IT textbook 'Open Source Hardware Project Design' (People's Education Map Edition), core author of compulsory education course 'Information Technology Student Manual' (People's Education Edition). Host of Guangdong Province Science and Technology Master Teacher Workshop, leading figure in Shenzhen science and technology innovation education, and the 5th batch of educational research experts in Shenzhen."
+          },
+          {
+            "id": "katarzyna-z-staroslawska",
+            "name": "Katarzyna Z. Staroslawska",
+            "roleOrg": "Vice President SpeakLeash Foundation/ Bielik.ai, Member European Commission Expert Group on Interoperability",
+            "tags": [
+              "panelist"
+            ],
+            "image": "katarzyna-z-staroslawska.jpeg",
+            "bio": "She specializes in advanced data analytics and the development of technology solutions centered on artificial intelligence, particularly within the healthcare and life science sectors. Through her company, she assists organizations in designing and implementing data-driven systems to optimize processes, enhance product development, and improve strategic decision-making."
           }
+
         ],
         "room": "Main Hall",
         "category": "Session"
