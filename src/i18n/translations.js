@@ -9,7 +9,7 @@ export const translations = {
     },
     // Home page
     home: {
-      title: "人工智能愿景论坛",
+      title: "人工智能愿景论坛（活动已结束，感谢参与）",
       description: "探索AI和人类的共生未来",
       englishDescription: "Exploring a Symbiotic Future of AI and Humanity",
       tagline: "科技向善 · 价值共生",
@@ -54,12 +54,12 @@ export const translations = {
     },
     // Agenda page
     agenda: {
-      title: "议程安排",
+      title: "议程安排（活动已结束，感谢参与）",
       subtitle: "2025年9月12日（星期五）· 中国·杭州",
     },
     // Speakers page
     speakers: {
-      title: "参会者",
+      title: "参会者（活动已结束，感谢参与）",
       subtitle: "汇聚全球顶尖高校、研究机构及企业代表",
     },
   },
@@ -73,7 +73,7 @@ export const translations = {
     },
     // Home page
     home: {
-      title: "AI Vision Forum 2025",
+      title: "AI Vision Forum 2025 (The event has ended, thanks for attending)",
       subtitle: "Artificial Intelligence Vision Forum",
       description: "Exploring a Symbiotic Future of AI and Humanity",
       englishDescription: "探索AI和人类的共生未来",
@@ -114,17 +114,17 @@ export const translations = {
     },
     // About page
     about: {
-      title: "About the Forum",
+      title: "About the Forum (The event has ended, thanks for attending)",
       subtitle: "Exploring a Symbiotic Future of AI and Humanity",
     },
     // Agenda page
     agenda: {
-      title: "Forum Agenda",
+      title: "Forum Agenda (The event has ended, thanks for attending)",
       subtitle: "September 12, 2025 (Friday) · Hangzhou, China",
     },
     // Speakers page
     speakers: {
-      title: "Participants",
+      title: "Participants (The event has ended, thanks for attending)",
       subtitle:
         "Bringing together representatives from top global universities, research institutions and enterprises",
     },
