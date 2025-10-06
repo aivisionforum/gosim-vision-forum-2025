@@ -9,7 +9,7 @@ export const translations = {
     },
     // Home page
     home: {
-      title: "人工智能愿景论坛（活动已结束，感谢参与）",
+      title: "人工智能愿景论坛",
       description: "探索AI和人类的共生未来",
       englishDescription: "Exploring a Symbiotic Future of AI and Humanity",
       tagline: "科技向善 · 价值共生",
@@ -114,7 +114,7 @@ export const translations = {
     },
     // About page
     about: {
-      title: "About the Forum (The event has ended, thanks for attending)",
+      title: "About the Forum",
       subtitle: "Exploring a Symbiotic Future of AI and Humanity",
     },
     // Agenda page
