@@ -7,6 +7,14 @@ import Footer from '../components/Footer.astro';
 import '../styles/agenda.css';
 
 const locale = 'zh';
+
+// Helper function to linkify visionforum.ai in text
+function linkifyVisionForum(text: string) {
+  return text.replace(
+    /visionforum\.ai/g,
+    '<a href="https://visionforum.ai" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline;">visionforum.ai</a>'
+  );
+}
 ---
 
 <Layout title="议程安排 - GOSIM AI Vision Forum" lang="zh">
@@ -15,6 +23,7 @@ const locale = 'zh';
 		<section class="page-header">
 			<div class="container">
 				<h1>{t('agenda.title', locale)}</h1>
+				<div class="event-ended-notice" set:html={linkifyVisionForum(t('home.eventEndedNotice', locale))} />
 				<p>{t('agenda.subtitle', locale)}</p>
 			</div>
 		</section>
@@ -28,4 +37,31 @@ const locale = 'zh';
 	<Footer />
 </Layout>
 
-<!-- Agenda page styles now in global.css -->
+<style>
+  .event-ended-notice {
+    background: rgba(96, 165, 250, 0.15);
+    border: 2px solid rgba(96, 165, 250, 0.5);
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin: 16px auto;
+    max-width: 700px;
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-ended-notice :global(a) {
+    color: #60a5fa !important;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid #60a5fa;
+    transition: all 0.2s ease;
+  }
+  
+  .event-ended-notice :global(a:hover) {
+    color: #93c5fd !important;
+    border-bottom-color: #93c5fd;
+  }
+</style>

@@ -51,7 +51,7 @@ const displayOrganizersList = organizersList || (currentLang === 'en' ? organize
 <section class="hero">
   <div class="hero-content">
     <h1>{t(titleKey, locale)}</h1>
-    {locale === 'en' && t('home.eventEndedNotice', locale) && (
+    {t('home.eventEndedNotice', locale) && (
       <div class="event-ended-notice" set:html={linkifyVisionForum(t('home.eventEndedNotice', locale))} />
     )}
     <p class="subtitle">

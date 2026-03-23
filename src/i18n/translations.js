@@ -46,6 +46,7 @@ export const translations = {
           description: "深度讨论「科技向善」在现实中的制度张力",
         },
       },
+      eventEndedNotice: "活动已结束，感谢参与。更多活动信息请访问 visionforum.ai",
     },
     // About page
     about: {
@@ -54,12 +55,12 @@ export const translations = {
     },
     // Agenda page
     agenda: {
-      title: "议程安排（活动已结束，感谢参与）",
+      title: "议程安排",
       subtitle: "2025年9月12日（星期五）· 中国·杭州",
     },
     // Speakers page
     speakers: {
-      title: "参会者（活动已结束，感谢参与）",
+      title: "参会者",
       subtitle: "汇聚全球顶尖高校、研究机构及企业代表",
     },
   },
