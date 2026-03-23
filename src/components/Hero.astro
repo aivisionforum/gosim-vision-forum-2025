@@ -5,7 +5,7 @@ import { t } from '../i18n/translations.js';
 function linkifyVisionForum(text: string) {
   return text.replace(
     /visionforum\.ai/g,
-    '<a href="https://visionforum.ai" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline;">visionforum.ai</a>'
+    '<a href="https://visionforum.ai" target="_blank" rel="noopener noreferrer" style="color: #1e40af; font-weight: 600; text-decoration: underline;">visionforum.ai</a>'
   );
 }
 
@@ -109,16 +109,14 @@ const displayOrganizersList = organizersList || (currentLang === 'en' ? organize
   }
   
   .event-ended-notice :global(a) {
-    color: #60a5fa !important;
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 2px solid #60a5fa;
+    color: #1e40af !important;
+    font-weight: 700;
+    text-decoration: underline;
     transition: all 0.2s ease;
   }
   
   .event-ended-notice :global(a:hover) {
-    color: #93c5fd !important;
-    border-bottom-color: #93c5fd;
+    color: #1e3a8a !important;
   }
   
   .post-event-link {
@@ -131,18 +129,18 @@ const displayOrganizersList = organizersList || (currentLang === 'en' ? organize
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: #60a5fa;
-    font-weight: 600;
+    color: #1e40af;
+    font-weight: 700;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 8px;
-    background: rgba(96, 165, 250, 0.1);
+    background: rgba(30, 64, 175, 0.15);
     transition: all 0.2s ease;
   }
   
   .post-event-link a:hover {
-    background: rgba(96, 165, 250, 0.2);
-    color: #93c5fd;
+    background: rgba(30, 64, 175, 0.25);
+    color: #1e3a8a;
     transform: translateY(-1px);
   }
 </style>
