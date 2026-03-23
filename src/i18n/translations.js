@@ -73,7 +73,8 @@ export const translations = {
     },
     // Home page
     home: {
-      title: "AI Vision Forum 2025 (The event has ended, thanks for attending. For upcoming events, go to visionforum.ai)",
+      title: "AI Vision Forum 2025",
+      eventEndedNotice: "The event has ended, thanks for attending. For upcoming events, go to visionforum.ai",
       subtitle: "Artificial Intelligence Vision Forum",
       description: "Exploring a Symbiotic Future of AI and Humanity",
       englishDescription: "探索AI和人类的共生未来",
@@ -119,12 +120,12 @@ export const translations = {
     },
     // Agenda page
     agenda: {
-      title: "Forum Agenda (The event has ended, thanks for attending. For upcoming events, go to visionforum.ai)",
+      title: "Forum Agenda",
       subtitle: "September 12, 2025 (Friday) · Hangzhou, China",
     },
     // Speakers page
     speakers: {
-      title: "Participants (The event has ended, thanks for attending. For upcoming events, go to visionforum.ai)",
+      title: "Participants",
       subtitle:
         "Bringing together representatives from top global universities, research institutions and enterprises",
     },
