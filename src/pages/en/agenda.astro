@@ -7,6 +7,14 @@ import Footer from '../../components/Footer.astro';
 import '../../styles/agenda.css';
 
 const locale = 'en';
+
+// Helper function to linkify visionforum.ai in text
+function linkifyVisionForum(text: string) {
+  return text.replace(
+    /visionforum\.ai/g,
+    '<a href="https://visionforum.ai" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline;">visionforum.ai</a>'
+  );
+}
 ---
 
 <Layout title="Forum Agenda - GOSIM AI Vision Forum" lang="en">
@@ -14,7 +22,7 @@ const locale = 'en';
 	<main>
 		<section class="page-header">
 			<div class="container">
-				<h1>{t('agenda.title', locale)}</h1>
+				<h1 set:html={linkifyVisionForum(t('agenda.title', locale))} />
 				<p>{t('agenda.subtitle', locale)}</p>
 			</div>
 		</section>

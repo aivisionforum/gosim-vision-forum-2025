@@ -1,6 +1,14 @@
 ---
 import { t } from '../i18n/translations.js';
 
+// Helper function to linkify visionforum.ai in text
+function linkifyVisionForum(text: string) {
+  return text.replace(
+    /visionforum\.ai/g,
+    '<a href="https://visionforum.ai" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline;">visionforum.ai</a>'
+  );
+}
+
 export interface Props {
   lang?: string;
   titleKey?: string;
@@ -42,7 +50,7 @@ const displayOrganizersList = organizersList || (currentLang === 'en' ? organize
 
 <section class="hero">
   <div class="hero-content">
-    <h1>{t(titleKey, locale)}</h1>
+    <h1 set:html={linkifyVisionForum(t(titleKey, locale))} />
     <p class="subtitle">
       {t(descriptionKey, locale)}<br>
       <em>{t(englishDescriptionKey, locale)}</em>
