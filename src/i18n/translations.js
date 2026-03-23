@@ -47,6 +47,8 @@ export const translations = {
         },
       },
       eventEndedNotice: "活动已结束，感谢参与。更多活动信息请访问 visionforum.ai",
+      postEventLink: "https://medium.com/@gosimfoundation/from-leading-the-charts-in-china-to-global-open-source-new-reflections-on-ai-d89157232891",
+      postEventText: "查看活动回顾",
     },
     // About page
     about: {
@@ -76,6 +78,8 @@ export const translations = {
     home: {
       title: "AI Vision Forum 2025",
       eventEndedNotice: "The event has ended, thanks for attending. For upcoming events, go to visionforum.ai",
+      postEventLink: "https://medium.com/@gosimfoundation/from-leading-the-charts-in-china-to-global-open-source-new-reflections-on-ai-d89157232891",
+      postEventText: "Read Post-Event Reflections",
       subtitle: "Artificial Intelligence Vision Forum",
       description: "Exploring a Symbiotic Future of AI and Humanity",
       englishDescription: "探索AI和人类的共生未来",
